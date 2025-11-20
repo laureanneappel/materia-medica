@@ -1846,7 +1846,7 @@ window.PLANTS_DATA = [
       "Cholesterol lowering",
       "Circulatory stimulant"
     ],
-    "status": "in-progress",
+    "status": "completed",
     "fileSlug": "hawthorn"
   },
   {
