@@ -135,7 +135,7 @@
             const navHtml = createNavigation();
             if (!navHtml || typeof navHtml !== 'string') {
                 console.error('[Navigation] Invalid navigation HTML generated');
-                placeholder.innerHTML = '<p style="color: red; text-align: center;">Navigation failed to load</p>';
+                placeholder.innerHTML = '<p class="error-message">Navigation failed to load</p>';
                 return;
             }
 
@@ -144,7 +144,7 @@
             console.error('[Navigation] Error in injectNavigation:', error);
             const placeholder = document.getElementById('nav-placeholder');
             if (placeholder) {
-                placeholder.innerHTML = '<p style="color: red; text-align: center;">Navigation error occurred</p>';
+                placeholder.innerHTML = '<p class="error-message">Navigation error occurred</p>';
             }
         }
     }
