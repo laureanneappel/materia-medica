@@ -470,6 +470,7 @@ header h1 {
 .common-names .lang-label {
     font-weight: 600;
     color: #888;
+    margin-right: 0;
 }
 
 /* Plant Detail Page Styles */
@@ -768,7 +769,7 @@ footer {
     color: var(--color-primary);
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    margin-right: 6px;
+    margin-right: 0;
     display: inline-block;
     min-width: 28px;
 }

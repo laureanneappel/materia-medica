@@ -70,10 +70,10 @@
 
             const parts = [];
             if (plant.danishName && typeof plant.danishName === 'string') {
-                parts.push(`<span class="lang-label">DA:</span> ${escapeHtml(plant.danishName)}`);
+                parts.push(`<span class="lang-label">DA:</span>${escapeHtml(plant.danishName.trim())}`);
             }
             if (plant.frenchName && typeof plant.frenchName === 'string') {
-                parts.push(`<span class="lang-label">FR:</span> ${escapeHtml(plant.frenchName)}`);
+                parts.push(`<span class="lang-label">FR:</span>${escapeHtml(plant.frenchName.trim())}`);
             }
 
             return parts.length > 0 ? `<p class="common-names">${parts.join(' · ')}</p>` : '';
