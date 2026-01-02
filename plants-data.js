@@ -741,7 +741,7 @@ window.PLANTS_DATA = [
     "fileSlug": "chaga"
   },
   {
-    "commonName": "Chamomile",
+    "commonName": "Roman Chamomile",
     "botanicalName": "Anthemis nobilis/Chamaemelum nobile",
     "family": "Asteraceae (Daisy family)",
     "danishName": "Romersk kamille",
@@ -774,7 +774,7 @@ window.PLANTS_DATA = [
     "fileSlug": "chamomile"
   },
   {
-    "commonName": "Chamomile",
+    "commonName": "German Chamomile",
     "botanicalName": "Matricaria chamomilla",
     "danishName": "Kamille",
     "frenchName": "Camomille",
