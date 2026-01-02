@@ -27,7 +27,7 @@
     function showError(message) {
         const container = document.getElementById('plant-list-container');
         if (container) {
-            container.innerHTML = '<div class="error-message" role="alert" style="color: red; text-align: center; padding: 20px;">' + escapeHtml(message) + '</div>';
+            container.innerHTML = '<div class="error-message" role="alert">' + escapeHtml(message) + '</div>';
         }
     }
 
@@ -37,7 +37,7 @@
     function showInfo(message) {
         const container = document.getElementById('plant-list-container');
         if (container) {
-            container.innerHTML = '<div class="info-message" role="status" style="color: var(--color-placeholder); text-align: center; padding: 20px;">' + escapeHtml(message) + '</div>';
+            container.innerHTML = '<div class="info-message" role="status">' + escapeHtml(message) + '</div>';
         }
     }
 
@@ -290,22 +290,24 @@
             a.commonName.localeCompare(b.commonName)
         );
 
-        // Use existing renderer to create cards with sanitization
-        const html = sorted.map(plant => {
-            const basePath = 'plants/';
-            const commonNames = createCommonNamesHTML(plant);
-            const systemBadges = createSystemBadgesHTML(plant);
-
-            return `
-                <div class="plant-card ${escapeHtml(plant.status || '')}">
-                    <h3><a href="${basePath}${escapeHtml(plant.fileSlug)}.html">${escapeHtml(plant.commonName)}</a></h3>
-                    <p class="botanical-name">${escapeHtml(plant.botanicalName)}</p>
-                    ${commonNames}
-                    ${systemBadges}
-                </div>`;
-        }).join('\n');
-
-        container.innerHTML = html;
+        // Use PlantsRenderer to create cards if available
+        if (window.PlantsRenderer && window.PlantsRenderer.createPlantCardHTML) {
+            const html = sorted.map(plant =>
+                window.PlantsRenderer.createPlantCardHTML(plant, { basePath: 'plants/' })
+            ).filter(Boolean).join('\n');
+            container.innerHTML = html;
+        } else {
+            // Fallback rendering if PlantsRenderer is not available
+            console.warn('[SearchFilter] PlantsRenderer not available, using fallback rendering');
+            const html = sorted.map(plant => {
+                return `
+                    <div class="plant-card ${escapeHtml(plant.status || '')}">
+                        <h3><a href="plants/${escapeHtml(plant.fileSlug)}.html">${escapeHtml(plant.commonName)}</a></h3>
+                        <p class="botanical-name">${escapeHtml(plant.botanicalName)}</p>
+                    </div>`;
+            }).join('\n');
+            container.innerHTML = html;
+        }
     }
 
     /**
@@ -321,48 +323,6 @@
         } else {
             countElement.textContent = `Showing ${count} of ${total} plants`;
         }
-    }
-
-    /**
-     * Helper function to create common names HTML with sanitization
-     */
-    function createCommonNamesHTML(plant) {
-        if (!plant.danishName && !plant.frenchName) {
-            return '';
-        }
-
-        const parts = [];
-        if (plant.danishName) {
-            parts.push(`<span class="lang-label">DA:</span> ${escapeHtml(plant.danishName)}`);
-        }
-        if (plant.frenchName) {
-            parts.push(`<span class="lang-label">FR:</span> ${escapeHtml(plant.frenchName)}`);
-        }
-
-        return `<p class="common-names">${parts.join(' · ')}</p>`;
-    }
-
-    /**
-     * Helper function to create system badges HTML with sanitization
-     */
-    function createSystemBadgesHTML(plant) {
-        if (!plant.systems || !Array.isArray(plant.systems)) {
-            return '<p></p>';
-        }
-
-        const SYSTEM_CONFIG = window.PlantsRenderer ? window.PlantsRenderer.SYSTEM_CONFIG : null;
-        if (!SYSTEM_CONFIG) {
-            console.warn('[SearchFilter] SYSTEM_CONFIG not available');
-            return '<p></p>';
-        }
-
-        const badges = plant.systems.map(systemId => {
-            const system = SYSTEM_CONFIG[escapeHtml(systemId)];
-            if (!system) return '';
-            return `<span class="system-badge ${escapeHtml(system.class)}">${escapeHtml(system.label)}</span>`;
-        }).join(' ');
-
-        return `<p>${badges}</p>`;
     }
 
     /**

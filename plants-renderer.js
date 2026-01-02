@@ -305,6 +305,7 @@
         renderPlantCards,
         renderSystemPage,
         renderIndexPage,
+        createPlantCardHTML,
         SYSTEM_CONFIG
     };
 

@@ -262,6 +262,21 @@ body {
     font-size: 1.1em;
 }
 
+/* Error and Info Messages */
+.error-message,
+.error {
+    color: #c41e3a;
+    text-align: center;
+    padding: var(--spacing-md);
+}
+
+.info-message,
+.info {
+    color: var(--color-placeholder);
+    text-align: center;
+    padding: var(--spacing-md);
+}
+
 /* Visually Hidden (for accessibility) */
 .visually-hidden {
     position: absolute;
@@ -275,54 +290,11 @@ body {
     border-width: 0;
 }
 
-/* Landing page background botanicals */
+/* Background botanical illustrations - shared styles */
 /* Note: Uses :has() pseudo-class - requires modern browsers (Firefox 121+, Safari 15.4+) */
-/* bg1 botanical illustration positioned at top right corner */
-body:has(main .plant-list)::after {
-    content: '';
-    position: fixed;
-    top: -50px;
-    right: -120px;
-    width: 550px;
-    height: 700px;
-    background-image: url('images/bg1.jpg');
-    background-size: cover;
-    background-position: -15px -5px;
-    z-index: 0;
-    clip-path: inset(8px 8px 12px 15px);
-    opacity: 0.25;
-    mask-image: radial-gradient(ellipse 180% 150% at 25% 35%, black 30%, rgba(0,0,0,0.85) 45%, rgba(0,0,0,0.5) 65%, rgba(0,0,0,0.2) 80%, transparent 95%);
-    -webkit-mask-image: radial-gradient(ellipse 180% 150% at 25% 35%, black 30%, rgba(0,0,0,0.85) 45%, rgba(0,0,0,0.5) 65%, rgba(0,0,0,0.2) 80%, transparent 95%);
-}
-
-/* bg2 botanical illustration positioned at bottom left corner */
-body:has(main .plant-list)::before {
-    content: '';
-    position: fixed;
-    bottom: -50px;
-    left: -120px;
-    width: 550px;
-    height: 650px;
-    background-image: url('images/bg2.jpg');
-    background-size: cover;
-    background-position: -15px -5px;
-    z-index: 0;
-    clip-path: inset(8px 8px 12px 15px);
-    opacity: 0.25;
-    mask-image: radial-gradient(ellipse 180% 150% at 75% 65%, black 30%, rgba(0,0,0,0.85) 45%, rgba(0,0,0,0.5) 65%, rgba(0,0,0,0.2) 80%, transparent 95%);
-    -webkit-mask-image: radial-gradient(ellipse 180% 150% at 75% 65%, black 30%, rgba(0,0,0,0.85) 45%, rgba(0,0,0,0.5) 65%, rgba(0,0,0,0.2) 80%, transparent 95%);
-    pointer-events: none;
-}
-
-/* Ensure content appears above background effects */
-body:has(main .plant-list) .container {
-    position: relative;
-    z-index: 1;
-}
-
-/* System page backgrounds - bg1 at top right, bg2 at bottom left (matching landing page) */
 
 /* bg1 botanical illustration positioned at top right corner */
+body:has(main .plant-list)::after,
 body.nervous-system-page::after,
 body.immune-system-page::after,
 body.woman-reproductive-system-page::after,
@@ -332,69 +304,7 @@ body.digestive-system-page::after,
 body.respiratory-system-page::after,
 body.urinary-system-page::after,
 body.cardiovascular-system-page::after,
-body.endocrine-system-page::after {
-    content: '';
-    position: fixed;
-    top: -50px;
-    right: -120px;
-    width: 550px;
-    height: 700px;
-    background-image: url('images/bg1.jpg');
-    background-size: cover;
-    background-position: -15px -5px;
-    z-index: 0;
-    clip-path: inset(8px 8px 12px 15px);
-    opacity: 0.25;
-    mask-image: radial-gradient(ellipse 180% 150% at 25% 35%, black 30%, rgba(0,0,0,0.85) 45%, rgba(0,0,0,0.5) 65%, rgba(0,0,0,0.2) 80%, transparent 95%);
-    -webkit-mask-image: radial-gradient(ellipse 180% 150% at 25% 35%, black 30%, rgba(0,0,0,0.85) 45%, rgba(0,0,0,0.5) 65%, rgba(0,0,0,0.2) 80%, transparent 95%);
-}
-
-/* bg2 botanical illustration positioned at bottom left corner */
-body.nervous-system-page::before,
-body.immune-system-page::before,
-body.woman-reproductive-system-page::before,
-body.skin-system-page::before,
-body.male-reproductive-system-page::before,
-body.digestive-system-page::before,
-body.respiratory-system-page::before,
-body.urinary-system-page::before,
-body.cardiovascular-system-page::before,
-body.endocrine-system-page::before {
-    content: '';
-    position: fixed;
-    bottom: -50px;
-    left: -120px;
-    width: 550px;
-    height: 650px;
-    background-image: url('images/bg2.jpg');
-    background-size: cover;
-    background-position: -15px -5px;
-    z-index: 0;
-    clip-path: inset(8px 8px 12px 15px);
-    opacity: 0.25;
-    mask-image: radial-gradient(ellipse 180% 150% at 75% 65%, black 30%, rgba(0,0,0,0.85) 45%, rgba(0,0,0,0.5) 65%, rgba(0,0,0,0.2) 80%, transparent 95%);
-    -webkit-mask-image: radial-gradient(ellipse 180% 150% at 75% 65%, black 30%, rgba(0,0,0,0.85) 45%, rgba(0,0,0,0.5) 65%, rgba(0,0,0,0.2) 80%, transparent 95%);
-    pointer-events: none;
-}
-
-/* Ensure content appears above background effects */
-body.nervous-system-page .container,
-body.immune-system-page .container,
-body.woman-reproductive-system-page .container,
-body.skin-system-page .container,
-body.male-reproductive-system-page .container,
-body.digestive-system-page .container,
-body.respiratory-system-page .container,
-body.urinary-system-page .container,
-body.cardiovascular-system-page .container,
-body.endocrine-system-page .container {
-    position: relative;
-    z-index: 1;
-}
-
-/* Individual plant detail page backgrounds - bg1 at top right, bg2 at bottom left (matching landing page) */
-
-/* bg1 botanical illustration positioned at top right corner */
+body.endocrine-system-page::after,
 body:has(.plant-detail)::after {
     content: '';
     position: fixed;
@@ -413,6 +323,17 @@ body:has(.plant-detail)::after {
 }
 
 /* bg2 botanical illustration positioned at bottom left corner */
+body:has(main .plant-list)::before,
+body.nervous-system-page::before,
+body.immune-system-page::before,
+body.woman-reproductive-system-page::before,
+body.skin-system-page::before,
+body.male-reproductive-system-page::before,
+body.digestive-system-page::before,
+body.respiratory-system-page::before,
+body.urinary-system-page::before,
+body.cardiovascular-system-page::before,
+body.endocrine-system-page::before,
 body:has(.plant-detail)::before {
     content: '';
     position: fixed;
@@ -432,6 +353,17 @@ body:has(.plant-detail)::before {
 }
 
 /* Ensure content appears above background effects */
+body:has(main .plant-list) .container,
+body.nervous-system-page .container,
+body.immune-system-page .container,
+body.woman-reproductive-system-page .container,
+body.skin-system-page .container,
+body.male-reproductive-system-page .container,
+body.digestive-system-page .container,
+body.respiratory-system-page .container,
+body.urinary-system-page .container,
+body.cardiovascular-system-page .container,
+body.endocrine-system-page .container,
 body:has(.plant-detail) .container {
     position: relative;
     z-index: 1;
@@ -699,7 +631,7 @@ footer {
 /* Responsive Design */
 
 /* Small phones and tablets - responsive search/filter */
-@media (max-width: 900px) {
+@media (max-width: 1349px) {
     /* Hide only bg2 (bottom left) background images on mobile devices - keep bg1 (top right) visible */
     body:has(main .plant-list)::before,
     body.nervous-system-page::before,
@@ -808,151 +740,15 @@ footer {
     }
 }
 
-/* Tablets landscape - iPad Air and similar */
-@media (min-width: 901px) and (max-width: 1023px) {
-    .search-filter-row {
-        gap: 18px;
-    }
-
-    .search-box input {
-        font-size: 1em;
-        padding: 14px 16px;
-    }
-
-    .filter-box {
-        flex-shrink: 0;
-    }
-
-    .filter-box select {
-        font-size: 1em;
-        padding: 14px 40px 14px 16px;
-        min-width: 240px;
-    }
-
-    .plant-list {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 22px;
-    }
-
-    header h1 {
-        font-size: 2.8em;
-    }
-
-    .container {
-        padding: 30px;
-    }
-
-    /* Fix text justification on tablets */
-    .section p {
-        text-align: left;
-    }
-
-    .system-nav a {
-        display: inline-block;
-        margin: 8px 12px;
-        padding: 12px 18px;
-        min-height: 44px;
-    }
-
-    .filter-tag {
-        font-size: 0.9em;
-        padding: 6px 12px;
-    }
-}
-
-/* iPad Pro portrait and large tablets */
-@media (min-width: 1024px) and (max-width: 1180px) {
-    /* Stack search and filter vertically for better usability */
-    .search-filter-row {
-        flex-direction: column !important;
-        gap: 12px !important;
-        align-items: stretch !important;
-    }
-
-    .search-box {
-        width: 100% !important;
-    }
-
-    .search-box input {
-        font-size: 16px !important;
-        padding: 14px !important;
-        width: 100% !important;
-        box-sizing: border-box !important;
-    }
-
-    .filter-box {
-        width: 100% !important;
-        flex-direction: column !important;
-        align-items: stretch !important;
-        gap: 8px !important;
-    }
-
-    .filter-box label {
-        font-size: 0.95em !important;
-        text-align: left !important;
-    }
-
-    .filter-box select {
-        width: 100% !important;
-        min-width: unset !important;
-        font-size: 16px !important;
-        padding: 14px 40px 14px 14px !important;
-        box-sizing: border-box !important;
-    }
-
-    .plant-list {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-    }
-
-    header h1 {
-        font-size: 2.8em;
-    }
-
-    .container {
-        max-width: 100%;
-        padding: 25px;
-    }
-
-    .section p {
-        text-align: left;
-    }
-
-    .system-nav a {
-        margin: 8px 12px;
-        padding: 10px 16px;
-    }
-
-    .filter-tag {
-        font-size: 0.9em;
-        padding: 6px 12px;
-    }
-}
-
-/* iPad Pro landscape and larger tablets */
-@media (min-width: 1181px) and (max-width: 1439px) {
+/* Large tablets and small desktops */
+@media (min-width: 1350px) and (max-width: 1439px) {
+    /* Optimize search/filter layout - smaller dropdowns */
     .search-filter-row {
         gap: 20px;
     }
 
-    .search-box {
-        flex: 1;
-        min-width: 0;
-    }
-
-    .search-box input {
-        font-size: 1em;
-        padding: 12px 16px;
-    }
-
-    .filter-box {
-        flex-shrink: 0;
-    }
-
     .filter-box select {
-        font-size: 1em;
-        padding: 12px 40px 12px 16px;
-        min-width: 220px;
+        min-width: 180px;
     }
 
     .plant-list {
@@ -994,17 +790,8 @@ footer {
         grid-template-columns: repeat(4, 1fr);
     }
 
-    /* Adjust background image positioning on large screens for landing page - bg1 on right */
-    body:has(main .plant-list)::after {
-        right: calc((100vw - 1400px) / 2 - 250px);
-    }
-
-    /* Adjust background image positioning on large screens for landing page - bg2 on left */
-    body:has(main .plant-list)::before {
-        left: calc((100vw - 1400px) / 2 - 250px);
-    }
-
-    /* Adjust background image positioning on large screens for system pages - bg1 on right */
+    /* Adjust background image positioning on large screens - bg1 on right */
+    body:has(main .plant-list)::after,
     body.nervous-system-page::after,
     body.immune-system-page::after,
     body.woman-reproductive-system-page::after,
@@ -1014,11 +801,13 @@ footer {
     body.respiratory-system-page::after,
     body.urinary-system-page::after,
     body.cardiovascular-system-page::after,
-    body.endocrine-system-page::after {
+    body.endocrine-system-page::after,
+    body:has(.plant-detail)::after {
         right: calc((100vw - 1400px) / 2 - 250px);
     }
 
-    /* Adjust background image positioning on large screens for system pages - bg2 on left */
+    /* Adjust background image positioning on large screens - bg2 on left */
+    body:has(main .plant-list)::before,
     body.nervous-system-page::before,
     body.immune-system-page::before,
     body.woman-reproductive-system-page::before,
@@ -1028,16 +817,7 @@ footer {
     body.respiratory-system-page::before,
     body.urinary-system-page::before,
     body.cardiovascular-system-page::before,
-    body.endocrine-system-page::before {
-        left: calc((100vw - 1400px) / 2 - 250px);
-    }
-
-    /* Adjust background image positioning on large screens for plant detail pages - bg1 on right */
-    body:has(.plant-detail)::after {
-        right: calc((100vw - 1400px) / 2 - 250px);
-    }
-
-    /* Adjust background image positioning on large screens for plant detail pages - bg2 on left */
+    body.endocrine-system-page::before,
     body:has(.plant-detail)::before {
         left: calc((100vw - 1400px) / 2 - 250px);
     }
@@ -1045,17 +825,8 @@ footer {
 
 /* Extra large screens */
 @media (min-width: 1920px) {
-    /* Keep background image from going too far right on very large screens - landing page bg1 */
-    body:has(main .plant-list)::after {
-        right: calc((100vw - 1400px) / 2 - 200px);
-    }
-
-    /* Keep background image from going too far left on very large screens - landing page bg2 */
-    body:has(main .plant-list)::before {
-        left: calc((100vw - 1400px) / 2 - 200px);
-    }
-
-    /* Keep background image from going too far right on very large screens - system pages bg1 */
+    /* Keep background image from going too far right on very large screens - bg1 */
+    body:has(main .plant-list)::after,
     body.nervous-system-page::after,
     body.immune-system-page::after,
     body.woman-reproductive-system-page::after,
@@ -1065,11 +836,13 @@ footer {
     body.respiratory-system-page::after,
     body.urinary-system-page::after,
     body.cardiovascular-system-page::after,
-    body.endocrine-system-page::after {
+    body.endocrine-system-page::after,
+    body:has(.plant-detail)::after {
         right: calc((100vw - 1400px) / 2 - 200px);
     }
 
-    /* Keep background image from going too far left on very large screens - system pages bg2 */
+    /* Keep background image from going too far left on very large screens - bg2 */
+    body:has(main .plant-list)::before,
     body.nervous-system-page::before,
     body.immune-system-page::before,
     body.woman-reproductive-system-page::before,
@@ -1079,16 +852,7 @@ footer {
     body.respiratory-system-page::before,
     body.urinary-system-page::before,
     body.cardiovascular-system-page::before,
-    body.endocrine-system-page::before {
-        left: calc((100vw - 1400px) / 2 - 200px);
-    }
-
-    /* Keep background image from going too far right on very large screens - plant detail pages bg1 */
-    body:has(.plant-detail)::after {
-        right: calc((100vw - 1400px) / 2 - 200px);
-    }
-
-    /* Keep background image from going too far left on very large screens - plant detail pages bg2 */
+    body.endocrine-system-page::before,
     body:has(.plant-detail)::before {
         left: calc((100vw - 1400px) / 2 - 200px);
     }
