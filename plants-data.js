@@ -44,6 +44,24 @@ window.PLANTS_DATA = [
     "fileSlug": "aloe-vera"
   },
   {
+    "commonName": "Albizia",
+    "botanicalName": "Albizia lebbeck",
+    "family": "Fabaceae (Legume family)",
+    "danishName": "Albizia",
+    "frenchName": "Albizia",
+    "systems": [
+      "immune",
+      "respiratory"
+    ],
+    "properties": [
+      "Anti-allergic",
+      "Immunosuppressive",
+      "Cholesterol lowering"
+    ],
+    "status": "enabled",
+    "fileSlug": "albizia"
+  },
+  {
     "commonName": "Andrographis",
     "botanicalName": "Andrographis paniculata",
     "family": "Acanthaceae (Acanthus family)",
@@ -69,7 +87,7 @@ window.PLANTS_DATA = [
       "Blood purifier",
       "Blood sugar regulating",
       "Cholagogue",
-      "Hepatic cell regenerating"
+      "Liver regenerating"
     ],
     "status": "enabled",
     "fileSlug": "andrographis"
@@ -167,7 +185,7 @@ window.PLANTS_DATA = [
       "Blood purifier",
       "Diuretic",
       "Cholagogue",
-      "Hepatic cell regenerating"
+      "Liver regenerating"
     ],
     "status": "enabled",
     "fileSlug": "artichoke"
@@ -261,7 +279,7 @@ window.PLANTS_DATA = [
     "botanicalName": "Trillium erectum",
     "family": "Melanthiaceae (False hellebore family)",
     "danishName": "Treblad",
-    "frenchName": "Trille dressé",
+    "frenchName": "Trille rouge",
     "systems": [
       "woman-reproductive",
       "endocrine"
@@ -379,7 +397,7 @@ window.PLANTS_DATA = [
       "Antispasmodic",
       "Emmenagogue"
     ],
-    "status": "enabled",
+    "status": "disabled",
     "fileSlug": "blue-cohosh",
     "family": "Berberidaceae (Barberry family)"
   },
@@ -567,7 +585,7 @@ window.PLANTS_DATA = [
       "Bitter tonic",
       "Appetite stimulant"
     ],
-    "status": "enabled",
+    "status": "disabled",
     "fileSlug": "calamus"
   },
   {
@@ -649,7 +667,7 @@ window.PLANTS_DATA = [
       "nervous"
     ],
     "properties": [],
-    "status": "enabled",
+    "status": "disabled",
     "fileSlug": "catnip"
   },
   {
@@ -804,7 +822,7 @@ window.PLANTS_DATA = [
       "Hypnotic",
       "Analgesic (pain relief)"
     ],
-    "status": "enabled",
+    "status": "disabled",
     "fileSlug": "chamomile-german",
     "family": "Asteraceae (Daisy family)"
   },
@@ -819,12 +837,12 @@ window.PLANTS_DATA = [
       "skin"
     ],
     "properties": [],
-    "status": "enabled",
+    "status": "disabled",
     "fileSlug": "chaparral"
   },
   {
     "commonName": "Chickweed",
-    "botanicalName": "Stillaria media",
+    "botanicalName": "Stellaria media",
     "family": "Caryophyllaceae (Pink family)",
     "danishName": "Fuglegræs",
     "frenchName": "Mouron des oiseaux",
@@ -918,7 +936,7 @@ window.PLANTS_DATA = [
       "cardiovascular"
     ],
     "properties": [],
-    "status": "enabled",
+    "status": "disabled",
     "fileSlug": "cloves"
   },
   {
@@ -962,7 +980,7 @@ window.PLANTS_DATA = [
       "Blood pressure regulating",
       "Heart tonic"
     ],
-    "status": "enabled",
+    "status": "disabled",
     "fileSlug": "coleus"
   },
   {
@@ -975,7 +993,7 @@ window.PLANTS_DATA = [
       "respiratory"
     ],
     "properties": [],
-    "status": "enabled",
+    "status": "disabled",
     "fileSlug": "coltsfoot"
   },
   {
@@ -988,7 +1006,7 @@ window.PLANTS_DATA = [
       "respiratory"
     ],
     "properties": [],
-    "status": "enabled",
+    "status": "disabled",
     "fileSlug": "comfrey"
   },
   {
@@ -1141,7 +1159,7 @@ window.PLANTS_DATA = [
   },
   {
     "commonName": "Dandelion",
-    "botanicalName": "Taraxacum officinale",
+    "botanicalName": "Taraxacum officinalis",
     "family": "Asteraceae (Daisy family)",
     "danishName": "Mælkebøtte",
     "frenchName": "Pissenlit",
@@ -1201,7 +1219,7 @@ window.PLANTS_DATA = [
       "Antispasmodic",
       "Bitter tonic"
     ],
-    "status": "enabled",
+    "status": "disabled",
     "fileSlug": "dill"
   },
   {
@@ -1314,7 +1332,7 @@ window.PLANTS_DATA = [
       "cardiovascular"
     ],
     "properties": [],
-    "status": "enabled",
+    "status": "disabled",
     "fileSlug": "ephedra"
   },
   {
@@ -1450,7 +1468,7 @@ window.PLANTS_DATA = [
       "respiratory"
     ],
     "properties": [],
-    "status": "enabled",
+    "status": "disabled",
     "fileSlug": "flax"
   },
   {
@@ -1571,7 +1589,7 @@ window.PLANTS_DATA = [
   },
   {
     "commonName": "Ginseng",
-    "botanicalName": "Panax and related species",
+    "botanicalName": "Panax ginseng",
     "family": "Araliaceae (Ginseng family)",
     "danishName": "Ginseng",
     "frenchName": "Ginseng",
@@ -1698,7 +1716,7 @@ window.PLANTS_DATA = [
       "digestive"
     ],
     "properties": [],
-    "status": "enabled",
+    "status": "disabled",
     "fileSlug": "goldenseal"
   },
   {
@@ -1846,7 +1864,7 @@ window.PLANTS_DATA = [
       "Cholesterol lowering",
       "Circulatory stimulant"
     ],
-    "status": "completed",
+    "status": "enabled",
     "fileSlug": "hawthorn"
   },
   {
@@ -1928,7 +1946,7 @@ window.PLANTS_DATA = [
       "Anti-inflammatory",
       "Venotonic"
     ],
-    "status": "enabled",
+    "status": "disabled",
     "fileSlug": "horse-chestnut"
   },
   {
@@ -1992,7 +2010,7 @@ window.PLANTS_DATA = [
       "respiratory"
     ],
     "properties": [],
-    "status": "enabled",
+    "status": "disabled",
     "fileSlug": "irish-moss",
     "family": "Gigartinaceae (Red algae family)"
   },
@@ -2025,7 +2043,7 @@ window.PLANTS_DATA = [
       "urinary"
     ],
     "properties": [],
-    "status": "enabled",
+    "status": "disabled",
     "fileSlug": "juniper-berries",
     "family": "Cupressaceae (Cypress family)"
   },
@@ -2148,7 +2166,7 @@ window.PLANTS_DATA = [
       "Hepatoprotective",
       "Kidney tonic"
     ],
-    "status": "enabled",
+    "status": "disabled",
     "fileSlug": "ligustrum"
   },
   {
@@ -2213,7 +2231,7 @@ window.PLANTS_DATA = [
       "skin"
     ],
     "properties": [],
-    "status": "enabled",
+    "status": "disabled",
     "fileSlug": "lobelia"
   },
   {
@@ -2233,7 +2251,7 @@ window.PLANTS_DATA = [
       "Emollient",
       "Vulnerary"
     ],
-    "status": "enabled",
+    "status": "disabled",
     "fileSlug": "marshmallow",
     "family": "Malvaceae (Mallow family)"
   },
@@ -2299,7 +2317,7 @@ window.PLANTS_DATA = [
       "Bitter tonic",
       "Choleretic",
       "Hepatoprotective",
-      "Hepatic cell regenerating",
+      "Liver regenerating",
       "Cholagogue"
     ],
     "status": "enabled",
@@ -2366,7 +2384,7 @@ window.PLANTS_DATA = [
   },
   {
     "commonName": "Myrrh",
-    "botanicalName": "Commiphora molmol",
+    "botanicalName": "Commiphora mol-mol",
     "family": "Burseraceae (Frankincense family)",
     "danishName": "Myrra",
     "frenchName": "Myrrhe",
@@ -2502,7 +2520,7 @@ window.PLANTS_DATA = [
       "urinary"
     ],
     "properties": [],
-    "status": "enabled",
+    "status": "disabled",
     "fileSlug": "parsley-root",
     "family": "Apiaceae (Carrot family)"
   },
@@ -2563,7 +2581,7 @@ window.PLANTS_DATA = [
       "Antiparasitic",
       "Immunomodulating"
     ],
-    "status": "enabled",
+    "status": "disabled",
     "fileSlug": "pau-darco",
     "family": "Bignoniaceae (Trumpet vine family)"
   },
@@ -2580,13 +2598,13 @@ window.PLANTS_DATA = [
       "Antispasmodic",
       "Carminative"
     ],
-    "status": "enabled",
+    "status": "disabled",
     "fileSlug": "pennyroyal",
     "family": "Lamiaceae (Mint family)"
   },
   {
     "commonName": "Peppermint",
-    "botanicalName": "Mentha piperita",
+    "botanicalName": "Mentha x piperita",
     "family": "Lamiaceae (Mint family)",
     "danishName": "Pebermynte",
     "frenchName": "Menthe poivrée",
@@ -2697,7 +2715,7 @@ window.PLANTS_DATA = [
       "urinary"
     ],
     "properties": [],
-    "status": "enabled",
+    "status": "disabled",
     "fileSlug": "pipsissewa",
     "family": "Ericaceae (Heath family)"
   },
@@ -2752,7 +2770,7 @@ window.PLANTS_DATA = [
       "Antirheumatic",
       "Analgesic"
     ],
-    "status": "enabled",
+    "status": "disabled",
     "fileSlug": "prickly-ash",
     "family": "Rutaceae (Rue family)"
   },
@@ -2812,7 +2830,7 @@ window.PLANTS_DATA = [
       "Anti-inflammatory (prostate)",
       "Nutritive"
     ],
-    "status": "enabled",
+    "status": "disabled",
     "fileSlug": "pumpkin-seeds"
   },
   {
@@ -2827,7 +2845,7 @@ window.PLANTS_DATA = [
     "properties": [
       "Analgesic",
       "Anti-inflammatory (general)",
-      "Antipyretic",
+      "Febrifuge",
       "Anti-inflammatory (musculoskeletal)",
       "Anti-inflammatory (female reproductive)"
     ],
@@ -2996,6 +3014,24 @@ window.PLANTS_DATA = [
     "fileSlug": "rosemary"
   },
   {
+    "commonName": "Rose Hips",
+    "botanicalName": "Rosa canina",
+    "family": "Rosaceae (Rose family)",
+    "danishName": "Hyben",
+    "frenchName": "Églantier",
+    "systems": [
+      "immune",
+      "digestive"
+    ],
+    "properties": [
+      "Astringent",
+      "Hemostatic",
+      "Expectorant"
+    ],
+    "status": "enabled",
+    "fileSlug": "rose-hips"
+  },
+  {
     "commonName": "Sage",
     "botanicalName": "Salvia officinalis",
     "family": "Lamiaceae (Mint family)",
@@ -3070,7 +3106,7 @@ window.PLANTS_DATA = [
       "Blood purifier",
       "Diaphoretic"
     ],
-    "status": "enabled",
+    "status": "disabled",
     "fileSlug": "sassafras"
   },
   {
@@ -3174,7 +3210,7 @@ window.PLANTS_DATA = [
       "Cholesterol lowering",
       "Antiviral"
     ],
-    "status": "enabled",
+    "status": "disabled",
     "fileSlug": "shiitake"
   },
   {
@@ -3243,7 +3279,7 @@ window.PLANTS_DATA = [
       "Weight reducing",
       "Healing"
     ],
-    "status": "enabled",
+    "status": "disabled",
     "fileSlug": "slippery-elm"
   },
   {
@@ -3467,7 +3503,7 @@ window.PLANTS_DATA = [
       "Nerve tonic",
       "Analgesic"
     ],
-    "status": "completed",
+    "status": "enabled",
     "fileSlug": "valerian"
   },
   {
@@ -3553,7 +3589,7 @@ window.PLANTS_DATA = [
       "Analgesic",
       "Anti-inflammatory (general)",
       "Antirheumatic",
-      "Antipyretic",
+      "Febrifuge",
       "Astringent",
       "Anti-inflammatory (musculoskeletal)",
       "Anti-inflammatory (female reproductive)"
@@ -3634,7 +3670,7 @@ window.PLANTS_DATA = [
       "nervous"
     ],
     "properties": [],
-    "status": "enabled",
+    "status": "disabled",
     "fileSlug": "wood-betony",
     "family": "Lamiaceae (Mint family)"
   },
