@@ -73,18 +73,6 @@
     }
 
     /**
-     * Safely get a property from an object with a default value
-     * @param {Object} obj - The object to get property from
-     * @param {string} key - The property key
-     * @param {*} defaultValue - The default value if property doesn't exist
-     * @returns {*} - The property value or default
-     */
-    function safeGet(obj, key, defaultValue = '') {
-        if (!obj || typeof obj !== 'object') return defaultValue;
-        return obj[key] !== undefined ? obj[key] : defaultValue;
-    }
-
-    /**
      * Debounce function execution
      * @param {Function} func - The function to debounce
      * @param {number} wait - The wait time in milliseconds
@@ -110,7 +98,6 @@
         logInfo,
         isValidString,
         isValidArray,
-        safeGet,
         debounce
     };
 

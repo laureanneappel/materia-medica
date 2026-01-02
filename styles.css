@@ -2,6 +2,7 @@
 :root {
     /* Color Palette */
     --color-primary: #5a6f4f;
+    --color-primary-rgb: 90, 111, 79;
     --color-primary-hover: #7a8f6f;
     --color-secondary: #8b7355;
     --color-background: #f5f1e8;
@@ -161,7 +162,7 @@ body {
 .filter-box select:focus {
     outline: none;
     border-color: var(--color-primary);
-    box-shadow: 0 0 0 3px rgba(90, 111, 79, 0.1);
+    box-shadow: 0 0 0 3px rgba(var(--color-primary-rgb), 0.1);
 }
 
 /* Active Filters Display */
@@ -180,8 +181,8 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    background: linear-gradient(135deg, rgba(90, 111, 79, 0.12) 0%, rgba(90, 111, 79, 0.08) 100%);
-    border: 1px solid rgba(90, 111, 79, 0.25);
+    background: linear-gradient(135deg, rgba(var(--color-primary-rgb), 0.12) 0%, rgba(var(--color-primary-rgb), 0.08) 100%);
+    border: 1px solid rgba(var(--color-primary-rgb), 0.25);
     color: var(--color-text);
     padding: 6px 12px;
     border-radius: 16px;
@@ -192,14 +193,14 @@ body {
 }
 
 .filter-tag:hover {
-    background: linear-gradient(135deg, rgba(90, 111, 79, 0.18) 0%, rgba(90, 111, 79, 0.12) 100%);
-    border-color: rgba(90, 111, 79, 0.35);
+    background: linear-gradient(135deg, rgba(var(--color-primary-rgb), 0.18) 0%, rgba(var(--color-primary-rgb), 0.12) 100%);
+    border-color: rgba(var(--color-primary-rgb), 0.35);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transform: translateY(-1px);
 }
 
 .remove-filter {
-    background: rgba(90, 111, 79, 0.15);
+    background: rgba(var(--color-primary-rgb), 0.15);
     border: none;
     border-radius: 50%;
     color: var(--color-text);
@@ -220,7 +221,7 @@ body {
 
 .remove-filter:hover {
     opacity: 1;
-    background: rgba(90, 111, 79, 0.3);
+    background: rgba(var(--color-primary-rgb), 0.3);
     transform: scale(1.1);
 }
 
@@ -239,8 +240,8 @@ body {
 }
 
 .clear-all-filters:hover {
-    background-color: rgba(90, 111, 79, 0.08);
-    border-color: rgba(90, 111, 79, 0.3);
+    background-color: rgba(var(--color-primary-rgb), 0.08);
+    border-color: rgba(var(--color-primary-rgb), 0.3);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transform: translateY(-1px);
 }
@@ -556,33 +557,6 @@ header h1 {
     font-weight: normal;
 }
 
-/* Botanical illustration with caption */
-/* Floats to right on desktop, centered on mobile */
-/* DISABLED: Images not being used
-.plant-illustration {
-    float: right;
-    margin: 0 0 var(--spacing-md) 30px;
-    max-width: 600px;
-    border: 1px solid var(--color-card-border);
-    padding: var(--spacing-sm);
-    background-color: #fafaf8;
-}
-
-.plant-illustration img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.plant-illustration figcaption {
-    font-size: 0.9em;
-    font-style: italic;
-    color: #8b7355;
-    margin-top: 10px;
-    text-align: center;
-}
-*/
-
 .section {
     margin-bottom: 30px;
 }
@@ -598,19 +572,8 @@ header h1 {
     padding-bottom: 5px;
     font-weight: normal;
     border-bottom: 1px solid #8b7355;
-    display: block; /* Full width - no image space needed */
-}
-
-/* DISABLED: Image layout no longer needed
-.section:not(.clear) h2 {
-    display: inline-block;
-    min-width: 50%;
-}
-
-.section.clear h2 {
     display: block;
 }
-*/
 
 .section h3 {
     color: #8b7355;
@@ -716,6 +679,11 @@ header h1 {
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border-width: 0;
+}
+
+/* Indented List */
+.indented-list {
+    margin-left: 20px;
 }
 
 /* Footer Styles */
