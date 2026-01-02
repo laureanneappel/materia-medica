@@ -6,10 +6,10 @@
     --color-secondary: #8b7355;
     --color-background: #f5f1e8;
     --color-text: #3a3a3a;
-    --color-card-bg: #fff;
+    --color-card-bg: #f8f5f0;
     --color-card-border: #8b7355;
     --color-placeholder: #999;
-    --color-in-progress-bg: #f8f6f2;
+    --color-in-progress-bg: #f0ede6;
     --color-in-progress-text: #8b9784;
     --color-in-progress-botanical: #a89888;
 
@@ -36,6 +36,16 @@ body {
     color: var(--color-text);
     line-height: 1.6;
     overflow-x: hidden;
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 /* Skip Navigation Link */
@@ -520,6 +530,7 @@ header h1 {
     font-size: 0.85em;
     color: #666;
     margin-top: 5px;
+    margin-bottom: 10px;
     line-height: 1.4;
 }
 
@@ -669,7 +680,7 @@ header h1 {
 
 /* System Badge Styles */
 .system-badge {
-    display: inline;
+    display: block;
     font-size: 0.9em;
     color: var(--color-secondary);
     font-style: italic;

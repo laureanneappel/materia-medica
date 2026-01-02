@@ -13,7 +13,7 @@ window.PLANTS_DATA = [
       "Choleretic",
       "Hemostatic"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "agrimony"
   },
   {
@@ -40,7 +40,7 @@ window.PLANTS_DATA = [
       "Anti-inflammatory (general)",
       "Healing"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "aloe-vera"
   },
   {
@@ -71,7 +71,7 @@ window.PLANTS_DATA = [
       "Cholagogue",
       "Hepatic cell regenerating"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "andrographis"
   },
   {
@@ -104,7 +104,7 @@ window.PLANTS_DATA = [
       "Antirheumatic",
       "Estrogen regulating"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "angelica",
     "family": "Apiaceae (Carrot family)"
   },
@@ -123,7 +123,7 @@ window.PLANTS_DATA = [
       "Antispasmodic",
       "Expectorant"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "anise"
   },
   {
@@ -144,7 +144,7 @@ window.PLANTS_DATA = [
       "Anti-inflammatory (general)",
       "Antifungal"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "arnica"
   },
   {
@@ -169,7 +169,7 @@ window.PLANTS_DATA = [
       "Cholagogue",
       "Hepatic cell regenerating"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "artichoke"
   },
   {
@@ -198,7 +198,7 @@ window.PLANTS_DATA = [
       "Emmenagogue",
       "Diuretic"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "ashwagandha"
   },
   {
@@ -227,7 +227,7 @@ window.PLANTS_DATA = [
       "Blood pressure lowering",
       "Interferon stimulating"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "astragalus"
   },
   {
@@ -253,7 +253,7 @@ window.PLANTS_DATA = [
       "Sedative",
       "Anticonvulsant (epilepsy)"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "bacopa"
   },
   {
@@ -271,7 +271,7 @@ window.PLANTS_DATA = [
       "Hemostatic",
       "Estrogen regulating"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "beth-root"
   },
   {
@@ -300,7 +300,7 @@ window.PLANTS_DATA = [
       "Nootropic",
       "Weight reducing"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "bilberry"
   },
   {
@@ -320,7 +320,7 @@ window.PLANTS_DATA = [
       "Antirheumatic",
       "Antilithic"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "birch"
   },
   {
@@ -344,7 +344,7 @@ window.PLANTS_DATA = [
       "Anhidrotic",
       "Estrogen regulating"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "black-cohosh",
     "family": "Ranunculaceae (Buttercup family)"
   },
@@ -363,7 +363,7 @@ window.PLANTS_DATA = [
       "Weight reducing",
       "Emollient"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "bladderwrack"
   },
   {
@@ -379,7 +379,7 @@ window.PLANTS_DATA = [
       "Antispasmodic",
       "Emmenagogue"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "blue-cohosh",
     "family": "Berberidaceae (Barberry family)"
   },
@@ -400,7 +400,7 @@ window.PLANTS_DATA = [
       "Diuretic",
       "Weight reducing"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "blue-flag"
   },
   {
@@ -421,7 +421,7 @@ window.PLANTS_DATA = [
       "Anti-inflammatory (cardiovascular)",
       "Analgesic (pain relief)"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "boswellia"
   },
   {
@@ -439,7 +439,7 @@ window.PLANTS_DATA = [
       "Diuretic",
       "Antiseptic (urinary)"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "buchu"
   },
   {
@@ -458,7 +458,7 @@ window.PLANTS_DATA = [
       "Thyroid regulating",
       "Vasodilator"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "bugleweed"
   },
   {
@@ -481,7 +481,7 @@ window.PLANTS_DATA = [
       "Expectorant",
       "Kidney tonic"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "bupleurum"
   },
   {
@@ -498,7 +498,7 @@ window.PLANTS_DATA = [
       "Laxative",
       "Lymphatic stimulant"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "burdock"
   },
   {
@@ -516,7 +516,7 @@ window.PLANTS_DATA = [
       "Venotonic",
       "Laxative"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "butchers-broom"
   },
   {
@@ -531,7 +531,7 @@ window.PLANTS_DATA = [
     "properties": [
       "Laxative"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "butternut"
   },
   {
@@ -551,7 +551,7 @@ window.PLANTS_DATA = [
       "Vasodilator",
       "Anticancer preventive"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "cacao"
   },
   {
@@ -567,7 +567,7 @@ window.PLANTS_DATA = [
       "Bitter tonic",
       "Appetite stimulant"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "calamus"
   },
   {
@@ -597,7 +597,7 @@ window.PLANTS_DATA = [
       "Cholagogue",
       "Healing"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "calendula"
   },
   {
@@ -613,7 +613,7 @@ window.PLANTS_DATA = [
       "Laxative",
       "Bitter tonic"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "cascara-sagrada"
   },
   {
@@ -636,7 +636,7 @@ window.PLANTS_DATA = [
       "Blood purifier",
       "Antifungal"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "cats-claw"
   },
   {
@@ -649,15 +649,15 @@ window.PLANTS_DATA = [
       "nervous"
     ],
     "properties": [],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "catnip"
   },
   {
     "commonName": "Cayenne",
     "botanicalName": "Capsicum minimum and related species",
     "family": "Solanaceae (Nightshade family)",
-    "danishName": null,
-    "frenchName": null,
+    "danishName": "Cayennepeber",
+    "frenchName": "Piment de Cayenne",
     "systems": [
       "cardiovascular"
     ],
@@ -678,7 +678,7 @@ window.PLANTS_DATA = [
       "Weight reducing",
       "Mucolytic"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "cayenne"
   },
   {
@@ -701,7 +701,7 @@ window.PLANTS_DATA = [
       "Anti-inflammatory (musculoskeletal)",
       "Blood pressure regulating"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "celery-seed"
   },
   {
@@ -737,7 +737,7 @@ window.PLANTS_DATA = [
       "Antiparasitic",
       "Antifungal"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "chaga"
   },
   {
@@ -804,7 +804,7 @@ window.PLANTS_DATA = [
       "Hypnotic",
       "Analgesic (pain relief)"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "chamomile-german",
     "family": "Asteraceae (Daisy family)"
   },
@@ -819,7 +819,7 @@ window.PLANTS_DATA = [
       "skin"
     ],
     "properties": [],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "chaparral"
   },
   {
@@ -843,7 +843,7 @@ window.PLANTS_DATA = [
       "Antacid",
       "Healing"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "chickweed"
   },
   {
@@ -861,15 +861,15 @@ window.PLANTS_DATA = [
       "Antiviral (internal)",
       "Blood pressure regulating"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "chinese-skullcap"
   },
   {
     "commonName": "Cinnamon",
     "botanicalName": "Cinnamomum zeylanicum",
     "family": "Lauraceae (Laurel family)",
-    "danishName": null,
-    "frenchName": null,
+    "danishName": "Kanel",
+    "frenchName": "Cannelle",
     "systems": [
       "cardiovascular",
       "skin",
@@ -888,7 +888,7 @@ window.PLANTS_DATA = [
       "Antiparasitic",
       "Antifungal"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "cinnamon"
   },
   {
@@ -905,20 +905,20 @@ window.PLANTS_DATA = [
       "Laxative",
       "Lymphatic stimulant"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "cleavers"
   },
   {
     "commonName": "Cloves",
     "botanicalName": "Caryophyllus zeylanicum",
     "family": "Myrtaceae (Myrtle family)",
-    "danishName": null,
-    "frenchName": null,
+    "danishName": "Nellike",
+    "frenchName": "Clou de girofle",
     "systems": [
       "cardiovascular"
     ],
     "properties": [],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "cloves"
   },
   {
@@ -940,7 +940,7 @@ window.PLANTS_DATA = [
       "Blood sugar regulating",
       "Blood strengthening"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "codonopsis"
   },
   {
@@ -962,7 +962,7 @@ window.PLANTS_DATA = [
       "Blood pressure regulating",
       "Heart tonic"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "coleus"
   },
   {
@@ -975,7 +975,7 @@ window.PLANTS_DATA = [
       "respiratory"
     ],
     "properties": [],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "coltsfoot"
   },
   {
@@ -988,7 +988,7 @@ window.PLANTS_DATA = [
       "respiratory"
     ],
     "properties": [],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "comfrey"
   },
   {
@@ -1018,7 +1018,7 @@ window.PLANTS_DATA = [
       "Analgesic (pain relief)",
       "Weight reducing"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "cordyceps"
   },
   {
@@ -1034,7 +1034,7 @@ window.PLANTS_DATA = [
       "Anti-inflammatory (urinary)",
       "Emollient"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "cornsilk"
   },
   {
@@ -1055,7 +1055,7 @@ window.PLANTS_DATA = [
       "Antilithic",
       "Emollient"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "couch-grass"
   },
   {
@@ -1079,7 +1079,7 @@ window.PLANTS_DATA = [
       "Uterine relaxant",
       "Uterine tonic"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "cramp-bark"
   },
   {
@@ -1097,7 +1097,7 @@ window.PLANTS_DATA = [
       "Anti-inflammatory (urinary)",
       "Antiseptic (urinary)"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "cranberry"
   },
   {
@@ -1115,7 +1115,7 @@ window.PLANTS_DATA = [
       "Diuretic",
       "Bladder tonic"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "crataeva"
   },
   {
@@ -1136,7 +1136,7 @@ window.PLANTS_DATA = [
       "Nerve tonic",
       "Tonic"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "damiana"
   },
   {
@@ -1160,7 +1160,7 @@ window.PLANTS_DATA = [
       "Hepatoprotective",
       "Diuretic"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "dandelion"
   },
   {
@@ -1184,7 +1184,7 @@ window.PLANTS_DATA = [
       "Vasodilator",
       "Diuretic"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "devils-claw"
   },
   {
@@ -1201,7 +1201,7 @@ window.PLANTS_DATA = [
       "Antispasmodic",
       "Bitter tonic"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "dill"
   },
   {
@@ -1227,7 +1227,7 @@ window.PLANTS_DATA = [
       "Heart tonic",
       "Emmenagogue"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "dong-quai"
   },
   {
@@ -1260,7 +1260,7 @@ window.PLANTS_DATA = [
       "Antifungal",
       "Healing"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "echinacea"
   },
   {
@@ -1277,7 +1277,7 @@ window.PLANTS_DATA = [
       "Antiviral (internal)",
       "Diaphoretic"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "elderberry"
   },
   {
@@ -1300,21 +1300,21 @@ window.PLANTS_DATA = [
       "Blood pressure regulating",
       "Mucolytic"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "elecampane"
   },
   {
     "commonName": "Ephedra",
     "botanicalName": "Ephedra sinica",
     "family": "Ephedraceae (Ephedra family)",
-    "danishName": null,
-    "frenchName": null,
+    "danishName": "Efedra",
+    "frenchName": "Éphédra",
     "systems": [
       "respiratory",
       "cardiovascular"
     ],
     "properties": [],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "ephedra"
   },
   {
@@ -1332,7 +1332,7 @@ window.PLANTS_DATA = [
       "Expectorant",
       "Antiparasitic"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "euphorbia"
   },
   {
@@ -1351,7 +1351,7 @@ window.PLANTS_DATA = [
       "Mucous membrane tonic",
       "Mucostatic (upper respiratory)"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "eyebright"
   },
   {
@@ -1369,7 +1369,7 @@ window.PLANTS_DATA = [
       "Emmenagogue",
       "Estrogen regulating"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "false-unicorn-root"
   },
   {
@@ -1393,7 +1393,7 @@ window.PLANTS_DATA = [
       "Antimicrobial",
       "Mucolytic"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "fennel"
   },
   {
@@ -1416,7 +1416,7 @@ window.PLANTS_DATA = [
       "Weight reducing",
       "Anti-inflammatory (general)"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "fenugreek"
   },
   {
@@ -1437,7 +1437,7 @@ window.PLANTS_DATA = [
       "Antiallergic",
       "Bitter tonic"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "feverfew"
   },
   {
@@ -1450,7 +1450,7 @@ window.PLANTS_DATA = [
       "respiratory"
     ],
     "properties": [],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "flax"
   },
   {
@@ -1480,7 +1480,7 @@ window.PLANTS_DATA = [
       "Blood pressure regulating",
       "Antifungal"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "garlic",
     "family": "Amaryllidaceae (Amaryllis family)"
   },
@@ -1498,7 +1498,7 @@ window.PLANTS_DATA = [
       "Choleretic",
       "Sialagogue"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "gentian",
     "family": "Gentianaceae (Gentian family)"
   },
@@ -1506,8 +1506,8 @@ window.PLANTS_DATA = [
     "commonName": "Ginger",
     "botanicalName": "Zingiber officinale",
     "family": "Zingiberaceae (Ginger family)",
-    "danishName": null,
-    "frenchName": null,
+    "danishName": "Ingefær",
+    "frenchName": "Gingembre",
     "systems": [
       "cardiovascular",
       "woman-reproductive"
@@ -1542,15 +1542,15 @@ window.PLANTS_DATA = [
       "Weight reducing",
       "Mucolytic"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "ginger"
   },
   {
     "commonName": "Ginkgo",
     "botanicalName": "Ginkgo biloba",
     "family": "Ginkgoaceae (Ginkgo family)",
-    "danishName": null,
-    "frenchName": null,
+    "danishName": "Tempeltræ",
+    "frenchName": "Ginkgo",
     "systems": [
       "cardiovascular"
     ],
@@ -1566,15 +1566,15 @@ window.PLANTS_DATA = [
       "Nootropic",
       "Venotonic"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "ginkgo"
   },
   {
     "commonName": "Ginseng",
     "botanicalName": "Panax and related species",
     "family": "Araliaceae (Ginseng family)",
-    "danishName": null,
-    "frenchName": null,
+    "danishName": "Ginseng",
+    "frenchName": "Ginseng",
     "systems": [
       "cardiovascular",
       "woman-reproductive",
@@ -1604,7 +1604,7 @@ window.PLANTS_DATA = [
       "Cardioprotective",
       "Cholesterol lowering"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "ginseng"
   },
   {
@@ -1622,7 +1622,7 @@ window.PLANTS_DATA = [
       "Blood sugar regulating",
       "Galactagogue"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "goats-rue"
   },
   {
@@ -1658,7 +1658,7 @@ window.PLANTS_DATA = [
       "Antiparasitic",
       "Antifungal"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "golden-oyster"
   },
   {
@@ -1685,7 +1685,7 @@ window.PLANTS_DATA = [
       "Mucostatic (upper respiratory)",
       "Antifungal"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "goldenrod"
   },
   {
@@ -1698,15 +1698,15 @@ window.PLANTS_DATA = [
       "digestive"
     ],
     "properties": [],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "goldenseal"
   },
   {
     "commonName": "Gotu Kola",
     "botanicalName": "Centella asiatica, Hydrocotyle asiatica",
     "family": "Apiaceae (Carrot family)",
-    "danishName": null,
-    "frenchName": null,
+    "danishName": "Asiatisk centella",
+    "frenchName": "Centella",
     "systems": [
       "cardiovascular",
       "endocrine"
@@ -1724,7 +1724,7 @@ window.PLANTS_DATA = [
       "Tonic",
       "Healing"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "gotu-kola"
   },
   {
@@ -1745,7 +1745,7 @@ window.PLANTS_DATA = [
       "Connective tissue strengthening",
       "Venotonic"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "grape-seed"
   },
   {
@@ -1760,7 +1760,7 @@ window.PLANTS_DATA = [
     "properties": [
       "Antilithic"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "gravel-root",
     "family": "Asteraceae (Daisy family)"
   },
@@ -1783,7 +1783,7 @@ window.PLANTS_DATA = [
       "Anti-inflammatory (brain)",
       "Metabolism raising"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "green-tea"
   },
   {
@@ -1802,7 +1802,7 @@ window.PLANTS_DATA = [
       "Mucostatic (lower respiratory)",
       "Mucolytic"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "grindelia"
   },
   {
@@ -1820,7 +1820,7 @@ window.PLANTS_DATA = [
       "Diaphoretic",
       "Anti-inflammatory (musculoskeletal)"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "guaiacum"
   },
   {
@@ -1867,7 +1867,7 @@ window.PLANTS_DATA = [
       "Anti-inflammatory (musculoskeletal)",
       "Laxative"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "heartsease"
   },
   {
@@ -1891,7 +1891,7 @@ window.PLANTS_DATA = [
       "Healing",
       "Anhidrotic"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "hops"
   },
   {
@@ -1912,7 +1912,7 @@ window.PLANTS_DATA = [
       "Cholagogue",
       "Mucolytic"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "horehound"
   },
   {
@@ -1928,19 +1928,19 @@ window.PLANTS_DATA = [
       "Anti-inflammatory",
       "Venotonic"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "horse-chestnut"
   },
   {
     "commonName": "Horseradish",
     "botanicalName": "Armoracia rusticana",
-    "danishName": null,
-    "frenchName": null,
+    "danishName": "Peberrod",
+    "frenchName": "Raifort",
     "systems": [
       "cardiovascular"
     ],
     "properties": [],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "horseradish",
     "family": "Brassicaceae (Mustard family)"
   },
@@ -1961,7 +1961,7 @@ window.PLANTS_DATA = [
       "Hemostatic",
       "Vulnerary"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "horsetail"
   },
   {
@@ -1980,7 +1980,7 @@ window.PLANTS_DATA = [
       "Anti-inflammatory (musculoskeletal)",
       "Immunosuppressive"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "indian-sarsaparilla"
   },
   {
@@ -1992,7 +1992,7 @@ window.PLANTS_DATA = [
       "respiratory"
     ],
     "properties": [],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "irish-moss",
     "family": "Gigartinaceae (Red algae family)"
   },
@@ -2013,7 +2013,7 @@ window.PLANTS_DATA = [
       "Blood pressure regulating",
       "Blood pressure lowering"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "jujube"
   },
   {
@@ -2025,7 +2025,7 @@ window.PLANTS_DATA = [
       "urinary"
     ],
     "properties": [],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "juniper-berries",
     "family": "Cupressaceae (Cypress family)"
   },
@@ -2047,7 +2047,7 @@ window.PLANTS_DATA = [
       "Estrogen regulating",
       "Hemostatic"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "ladys-mantle"
   },
   {
@@ -2066,7 +2066,7 @@ window.PLANTS_DATA = [
       "Sedative",
       "Antispasmodic"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "lavender",
     "family": "Lamiaceae (Mint family)"
   },
@@ -2089,7 +2089,7 @@ window.PLANTS_DATA = [
       "Hypnotic",
       "Diaphoretic"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "lemon-balm"
   },
   {
@@ -2130,7 +2130,7 @@ window.PLANTS_DATA = [
       "Healing",
       "Mucolytic"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "licorice"
   },
   {
@@ -2148,7 +2148,7 @@ window.PLANTS_DATA = [
       "Hepatoprotective",
       "Kidney tonic"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "ligustrum"
   },
   {
@@ -2170,7 +2170,7 @@ window.PLANTS_DATA = [
       "Antiarrhythmic",
       "Circulatory stimulant"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "linden"
   },
   {
@@ -2198,7 +2198,7 @@ window.PLANTS_DATA = [
       "Antioxidant",
       "Blood sugar regulating"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "lions-mane"
   },
   {
@@ -2213,7 +2213,7 @@ window.PLANTS_DATA = [
       "skin"
     ],
     "properties": [],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "lobelia"
   },
   {
@@ -2233,7 +2233,7 @@ window.PLANTS_DATA = [
       "Emollient",
       "Vulnerary"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "marshmallow",
     "family": "Malvaceae (Mallow family)"
   },
@@ -2258,7 +2258,7 @@ window.PLANTS_DATA = [
       "Vulnerary",
       "Healing"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "marshmallow-root"
   },
   {
@@ -2281,7 +2281,7 @@ window.PLANTS_DATA = [
       "Antiseptic (urinary)",
       "Emollient"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "meadowsweet"
   },
   {
@@ -2302,7 +2302,7 @@ window.PLANTS_DATA = [
       "Hepatic cell regenerating",
       "Cholagogue"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "milk-thistle"
   },
   {
@@ -2324,7 +2324,7 @@ window.PLANTS_DATA = [
       "Blood pressure lowering",
       "Antispasmodic"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "motherwort"
   },
   {
@@ -2341,7 +2341,7 @@ window.PLANTS_DATA = [
       "Choleretic",
       "Cholagogue"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "mugwort"
   },
   {
@@ -2361,7 +2361,7 @@ window.PLANTS_DATA = [
       "Healing",
       "Mucolytic"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "mullein"
   },
   {
@@ -2383,7 +2383,7 @@ window.PLANTS_DATA = [
       "Vulnerary",
       "Healing"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "myrrh"
   },
   {
@@ -2410,7 +2410,7 @@ window.PLANTS_DATA = [
       "Galactagogue",
       "Prostate growth inhibiting"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "nettles"
   },
   {
@@ -2431,7 +2431,7 @@ window.PLANTS_DATA = [
       "Antidepressant",
       "Hypnotic"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "oat-straw"
   },
   {
@@ -2451,7 +2451,7 @@ window.PLANTS_DATA = [
       "Bitter tonic",
       "Blood pressure lowering"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "olive-leaf"
   },
   {
@@ -2469,7 +2469,7 @@ window.PLANTS_DATA = [
       "Antibacterial",
       "Antimicrobial"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "oregano"
   },
   {
@@ -2489,7 +2489,7 @@ window.PLANTS_DATA = [
       "Bitter tonic",
       "Cholagogue"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "oregon-grape",
     "family": "Berberidaceae (Barberry family)"
   },
@@ -2502,7 +2502,7 @@ window.PLANTS_DATA = [
       "urinary"
     ],
     "properties": [],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "parsley-root",
     "family": "Apiaceae (Carrot family)"
   },
@@ -2522,7 +2522,7 @@ window.PLANTS_DATA = [
       "Galactagogue",
       "Uterine tonic"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "partridgeberry"
   },
   {
@@ -2542,7 +2542,7 @@ window.PLANTS_DATA = [
       "Blood pressure lowering",
       "Analgesic"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "passionflower"
   },
   {
@@ -2563,7 +2563,7 @@ window.PLANTS_DATA = [
       "Antiparasitic",
       "Immunomodulating"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "pau-darco",
     "family": "Bignoniaceae (Trumpet vine family)"
   },
@@ -2580,7 +2580,7 @@ window.PLANTS_DATA = [
       "Antispasmodic",
       "Carminative"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "pennyroyal",
     "family": "Lamiaceae (Mint family)"
   },
@@ -2588,8 +2588,8 @@ window.PLANTS_DATA = [
     "commonName": "Peppermint",
     "botanicalName": "Mentha piperita",
     "family": "Lamiaceae (Mint family)",
-    "danishName": null,
-    "frenchName": null,
+    "danishName": "Pebermynte",
+    "frenchName": "Menthe poivrée",
     "systems": [
       "cardiovascular"
     ],
@@ -2609,7 +2609,7 @@ window.PLANTS_DATA = [
       "Diaphoretic",
       "Anti-inflammatory (digestive/mucous membranes/skin)"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "peppermint"
   },
   {
@@ -2628,7 +2628,7 @@ window.PLANTS_DATA = [
       "Hepatoprotective",
       "Urinary antiseptic"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "phyllanthus"
   },
   {
@@ -2647,7 +2647,7 @@ window.PLANTS_DATA = [
       "Hepatoprotective",
       "Immunomodulating"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "picrorrhiza"
   },
   {
@@ -2685,7 +2685,7 @@ window.PLANTS_DATA = [
       "Mucolytic",
       "Mucous membrane strengthening"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "pine-bark"
   },
   {
@@ -2697,7 +2697,7 @@ window.PLANTS_DATA = [
       "urinary"
     ],
     "properties": [],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "pipsissewa",
     "family": "Ericaceae (Heath family)"
   },
@@ -2720,7 +2720,7 @@ window.PLANTS_DATA = [
       "Healing",
       "Mucolytic"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "plantain",
     "family": "Plantaginaceae (Plantain family)"
   },
@@ -2736,15 +2736,15 @@ window.PLANTS_DATA = [
     "properties": [
       "Bronchial spasmolytic"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "pleurisy",
     "family": "Apocynaceae (Dogbane family)"
   },
   {
     "commonName": "Prickly Ash",
     "botanicalName": "Zanthoxylum americanum",
-    "danishName": null,
-    "frenchName": null,
+    "danishName": "Tandved",
+    "frenchName": "Clavalier d'Amérique",
     "systems": [
       "cardiovascular"
     ],
@@ -2752,7 +2752,7 @@ window.PLANTS_DATA = [
       "Antirheumatic",
       "Analgesic"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "prickly-ash",
     "family": "Rutaceae (Rue family)"
   },
@@ -2779,7 +2779,7 @@ window.PLANTS_DATA = [
       "Analgesic (pain relief)",
       "Antifungal"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "propolis"
   },
   {
@@ -2793,7 +2793,7 @@ window.PLANTS_DATA = [
     "properties": [
       "Emollient"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "psyllium",
     "family": "Plantaginaceae (Plantain family)"
   },
@@ -2812,7 +2812,7 @@ window.PLANTS_DATA = [
       "Anti-inflammatory (prostate)",
       "Nutritive"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "pumpkin-seeds"
   },
   {
@@ -2831,7 +2831,7 @@ window.PLANTS_DATA = [
       "Anti-inflammatory (musculoskeletal)",
       "Anti-inflammatory (female reproductive)"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "purple-willow"
   },
   {
@@ -2850,7 +2850,7 @@ window.PLANTS_DATA = [
       "Galactagogue",
       "Anti-inflammatory (female reproductive)"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "raspberry-leaf"
   },
   {
@@ -2874,7 +2874,7 @@ window.PLANTS_DATA = [
       "Estrogen regulating",
       "Anti-inflammatory (female reproductive)"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "red-clover"
   },
   {
@@ -2895,7 +2895,7 @@ window.PLANTS_DATA = [
       "Anti-inflammatory (musculoskeletal)",
       "Interferon stimulating"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "rehmannia"
   },
   {
@@ -2938,7 +2938,7 @@ window.PLANTS_DATA = [
       "Vasodilator",
       "Mucostatic (upper respiratory)"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "reishi"
   },
   {
@@ -2966,7 +2966,7 @@ window.PLANTS_DATA = [
       "Woman tonic",
       "Nootropic"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "rhodiola"
   },
   {
@@ -2992,7 +2992,7 @@ window.PLANTS_DATA = [
       "Antimicrobial",
       "Antispasmodic"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "rosemary"
   },
   {
@@ -3033,7 +3033,7 @@ window.PLANTS_DATA = [
       "Heart tonic",
       "Kidney tonic"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "sage"
   },
   {
@@ -3052,7 +3052,7 @@ window.PLANTS_DATA = [
       "Male tonic",
       "Anti-inflammatory (general)"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "sarsaparilla",
     "family": "Smilacaceae (Greenbrier family)"
   },
@@ -3070,7 +3070,7 @@ window.PLANTS_DATA = [
       "Blood purifier",
       "Diaphoretic"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "sassafras"
   },
   {
@@ -3091,7 +3091,7 @@ window.PLANTS_DATA = [
       "Prostate growth inhibiting",
       "Anti-inflammatory (general)"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "saw-palmetto"
   },
   {
@@ -3122,7 +3122,7 @@ window.PLANTS_DATA = [
       "Galactagogue",
       "Tonic"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "schisandra"
   },
   {
@@ -3136,7 +3136,7 @@ window.PLANTS_DATA = [
     "properties": [
       "Laxative"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "senna",
     "family": "Fabaceae (Legume family)"
   },
@@ -3156,7 +3156,7 @@ window.PLANTS_DATA = [
       "Antiseptic (urinary)",
       "Blood pressure regulating"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "shepherds-purse"
   },
   {
@@ -3174,7 +3174,7 @@ window.PLANTS_DATA = [
       "Cholesterol lowering",
       "Antiviral"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "shiitake"
   },
   {
@@ -3200,7 +3200,7 @@ window.PLANTS_DATA = [
       "Interferon stimulating",
       "Tonic"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "siberian-ginseng"
   },
   {
@@ -3217,7 +3217,7 @@ window.PLANTS_DATA = [
       "Antispasmodic",
       "Nerve tonic"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "skullcap"
   },
   {
@@ -3243,7 +3243,7 @@ window.PLANTS_DATA = [
       "Weight reducing",
       "Healing"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "slippery-elm"
   },
   {
@@ -3267,7 +3267,7 @@ window.PLANTS_DATA = [
       "Antifungal",
       "Healing"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "st-johns-wort"
   },
   {
@@ -3286,7 +3286,7 @@ window.PLANTS_DATA = [
       "Lymphatic stimulant",
       "Blood purifier"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "sweet-violet"
   },
   {
@@ -3302,7 +3302,7 @@ window.PLANTS_DATA = [
       "Antimicrobial",
       "Antifungal"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "tea-tree",
     "family": "Myrtaceae (Myrtle family)"
   },
@@ -3322,7 +3322,7 @@ window.PLANTS_DATA = [
       "Diuretic",
       "Expectorant"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "thuja"
   },
   {
@@ -3351,7 +3351,7 @@ window.PLANTS_DATA = [
       "Antifungal",
       "Mucolytic"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "thyme"
   },
   {
@@ -3370,7 +3370,7 @@ window.PLANTS_DATA = [
       "Blood pressure regulating",
       "Blood pressure lowering"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "tree-peony"
   },
   {
@@ -3390,7 +3390,7 @@ window.PLANTS_DATA = [
       "Choleretic",
       "Anti-inflammatory (digestive/mucous membranes/skin)"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "turkey-rhubarb",
     "family": "Polygonaceae (Buckwheat family)"
   },
@@ -3427,7 +3427,7 @@ window.PLANTS_DATA = [
       "Antifungal",
       "Cholagogue"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "turmeric"
   },
   {
@@ -3444,7 +3444,7 @@ window.PLANTS_DATA = [
       "Astringent",
       "Antiseptic (urinary)"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "uva-ursi",
     "family": "Ericaceae (Heath family)"
   },
@@ -3490,7 +3490,7 @@ window.PLANTS_DATA = [
       "Choleretic",
       "Diaphoretic"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "vervain"
   },
   {
@@ -3511,7 +3511,7 @@ window.PLANTS_DATA = [
       "Galactagogue",
       "Estrogen regulating"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "vitex",
     "family": "Lamiaceae (Mint family)"
   },
@@ -3536,7 +3536,7 @@ window.PLANTS_DATA = [
       "Emmenagogue",
       "Estrogen regulating"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "white-peony"
   },
   {
@@ -3558,7 +3558,7 @@ window.PLANTS_DATA = [
       "Anti-inflammatory (musculoskeletal)",
       "Anti-inflammatory (female reproductive)"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "white-willow"
   },
   {
@@ -3577,7 +3577,7 @@ window.PLANTS_DATA = [
       "Expectorant",
       "Sedative"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "wild-cherry"
   },
   {
@@ -3602,7 +3602,7 @@ window.PLANTS_DATA = [
       "Analgesic (pain relief)",
       "Estrogen regulating"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "wild-yam"
   },
   {
@@ -3622,7 +3622,7 @@ window.PLANTS_DATA = [
       "Venotonic",
       "Analgesic"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "witch-hazel"
   },
   {
@@ -3634,7 +3634,7 @@ window.PLANTS_DATA = [
       "nervous"
     ],
     "properties": [],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "wood-betony",
     "family": "Lamiaceae (Mint family)"
   },
@@ -3651,7 +3651,7 @@ window.PLANTS_DATA = [
       "Bitter tonic",
       "Antiparasitic"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "wormwood"
   },
   {
@@ -3681,7 +3681,7 @@ window.PLANTS_DATA = [
       "Healing",
       "Emmenagogue"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "yarrow"
   },
   {
@@ -3697,7 +3697,7 @@ window.PLANTS_DATA = [
       "Choleretic",
       "Laxative"
     ],
-    "status": "in-progress",
+    "status": "enabled",
     "fileSlug": "yellow-dock",
     "family": "Polygonaceae (Buckwheat family)"
   }
