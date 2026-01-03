@@ -980,7 +980,7 @@ window.PLANTS_DATA = [
       "Blood pressure regulating",
       "Heart tonic"
     ],
-    "status": "disabled",
+    "status": "enabled",
     "fileSlug": "coleus"
   },
   {
@@ -2138,12 +2138,14 @@ window.PLANTS_DATA = [
       "Adrenal tonic",
       "Blood pressure raising",
       "Bronchial spasmolytic",
+      "Demulcent",
       "Emollient",
       "Vulnerary",
       "Expectorant",
       "Laxative",
       "Mucous membrane strengthening",
       "Mucous membrane tonic",
+      "Sialagogue",
       "Tonic",
       "Healing",
       "Mucolytic"
@@ -2240,44 +2242,24 @@ window.PLANTS_DATA = [
     "danishName": "Læge-Altea",
     "frenchName": "Guimauve",
     "systems": [
-      "respiratory",
-      "urinary"
-    ],
-    "properties": [
-      "Anti-inflammatory (respiratory)",
-      "Anti-inflammatory (digestive/mucous membranes/skin)",
-      "Anti-inflammatory (urinary)",
-      "Anti-ulcer",
-      "Emollient",
-      "Vulnerary"
-    ],
-    "status": "disabled",
-    "fileSlug": "marshmallow",
-    "family": "Malvaceae (Mallow family)"
-  },
-  {
-    "commonName": "Marshmallow",
-    "botanicalName": "Althaea officinalis",
-    "family": "Malvaceae (Mallow family)",
-    "danishName": "Læge-altea",
-    "frenchName": "Guimauve",
-    "systems": [
       "digestive",
       "respiratory",
       "urinary",
       "skin"
     ],
     "properties": [
-      "Anti-inflammatory (digestive/mucous membranes/skin)",
       "Anti-inflammatory (respiratory)",
+      "Anti-inflammatory (digestive/mucous membranes/skin)",
       "Anti-inflammatory (urinary)",
       "Anti-ulcer",
+      "Demulcent",
       "Emollient",
       "Vulnerary",
       "Healing"
     ],
     "status": "enabled",
-    "fileSlug": "marshmallow-root"
+    "fileSlug": "marshmallow",
+    "family": "Malvaceae (Mallow family)"
   },
   {
     "commonName": "Meadowsweet",
@@ -3258,7 +3240,7 @@ window.PLANTS_DATA = [
   },
   {
     "commonName": "Slippery Elm",
-    "botanicalName": "Ulmus fulva",
+    "botanicalName": "Ulmus rubra",
     "family": "Ulmaceae (Elm family)",
     "danishName": "Glat elm",
     "frenchName": "Orme rouge",
@@ -3279,7 +3261,7 @@ window.PLANTS_DATA = [
       "Weight reducing",
       "Healing"
     ],
-    "status": "disabled",
+    "status": "enabled",
     "fileSlug": "slippery-elm"
   },
   {
