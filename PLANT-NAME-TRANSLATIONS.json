@@ -1,0 +1,852 @@
+{
+  "Agrimonia eupatoria": {
+    "en": "Agrimony",
+    "da": "Almindelig agermåne",
+    "fr": "Aigremoine eupatoire"
+  },
+  "Aloe vera": {
+    "en": "Aloe Vera",
+    "da": "Aloe vera",
+    "fr": "Aloès"
+  },
+  "Albizia lebbeck": {
+    "en": "Albizia",
+    "da": "Albizia",
+    "fr": "Albizia"
+  },
+  "Andrographis paniculata": {
+    "en": "Andrographis",
+    "da": "Andrographis",
+    "fr": "Andrographis"
+  },
+  "Angelica archangelica": {
+    "en": "Angelica",
+    "da": "Kvan",
+    "fr": "Angélique officinale"
+  },
+  "Pimpinella anisum": {
+    "en": "Anise",
+    "da": "Anis",
+    "fr": "Anis vert"
+  },
+  "Arnica montana": {
+    "en": "Arnica",
+    "da": "Almindelig arnika",
+    "fr": "Arnica des montagnes"
+  },
+  "Cynara scolymus": {
+    "en": "Artichoke",
+    "da": "Artiskok",
+    "fr": "Artichaut"
+  },
+  "Asparagus racemosa": {
+    "en": "Ashwagandha",
+    "da": "Ashwagandha",
+    "fr": "Ashwagandha"
+  },
+  "Astragalus membranaceus": {
+    "en": "Astragalus",
+    "da": "Astragalus",
+    "fr": "Astragale"
+  },
+  "Bacopa monnieri": {
+    "en": "Bacopa",
+    "da": "Bacopa",
+    "fr": "Bacopa"
+  },
+  "Trillium erectum": {
+    "en": "Beth Root",
+    "da": "Treblad",
+    "fr": "Trille rouge"
+  },
+  "Vaccinium myrtillus": {
+    "en": "Bilberry",
+    "da": "Blåbær",
+    "fr": "Myrtille"
+  },
+  "Betula pendula": {
+    "en": "Birch",
+    "da": "Vortebirk",
+    "fr": "Bouleau"
+  },
+  "Actaea racemosa": {
+    "en": "Black Cohosh",
+    "da": "Sort sølvlys",
+    "fr": "Actée à grappes"
+  },
+  "Fucus vesiculosus": {
+    "en": "Bladderwrack",
+    "da": "Blæretang",
+    "fr": "Varech vésiculeux"
+  },
+  "Caulophyllum thalictroides": {
+    "en": "Blue Cohosh",
+    "da": "Blå cohosh",
+    "fr": "Cohosh bleu"
+  },
+  "Iris versicolor": {
+    "en": "Blue Flag",
+    "da": "Iris",
+    "fr": "Iris versicolore"
+  },
+  "Boswellia serrata": {
+    "en": "Boswellia",
+    "da": "Røgelsestræ",
+    "fr": "Boswellia"
+  },
+  "Agathosma betulina": {
+    "en": "Buchu",
+    "da": "Buchu",
+    "fr": "Buchu"
+  },
+  "Lycopus virginicus": {
+    "en": "Bugleweed",
+    "da": "Bugleweed",
+    "fr": "Bugleweed"
+  },
+  "Bupleurum falcatum": {
+    "en": "Bupleurum",
+    "da": "Bupleurum",
+    "fr": "Buplèvre"
+  },
+  "Arctium lappa": {
+    "en": "Burdock",
+    "da": "Burre",
+    "fr": "Bardane"
+  },
+  "Ruscus aculeatus": {
+    "en": "Butcher's Broom",
+    "da": "Musetorn",
+    "fr": "Fragon"
+  },
+  "Juglans cinerea": {
+    "en": "Butternut",
+    "da": "Grå valnød",
+    "fr": "Noyer cendré"
+  },
+  "Theobroma cacao": {
+    "en": "Cacao",
+    "da": "Kakao",
+    "fr": "Cacao"
+  },
+  "Acorus calamus": {
+    "en": "Calamus",
+    "da": "Kalmus",
+    "fr": "Acore odorant"
+  },
+  "Calendula officinalis": {
+    "en": "Calendula",
+    "da": "Have-morgenfrue",
+    "fr": "Souci officinal"
+  },
+  "Rhamnus purshiana": {
+    "en": "Cascara Sagrada",
+    "da": "Cascara",
+    "fr": "Cascara sagrada"
+  },
+  "Uncaria tomentosa": {
+    "en": "Cat's Claw",
+    "da": "Katteklo",
+    "fr": "Griffe de chat"
+  },
+  "Nepeta cataria": {
+    "en": "Catnip",
+    "da": "Katteurt",
+    "fr": "Cataire, Herbe aux chats"
+  },
+  "Capsicum minimum and related species": {
+    "en": "Cayenne",
+    "da": "Cayennepeber",
+    "fr": "Piment de Cayenne"
+  },
+  "Apium graveolens": {
+    "en": "Celery Seed",
+    "da": "Selleri",
+    "fr": "Céleri"
+  },
+  "Inonotus obliquus": {
+    "en": "Chaga",
+    "da": "Chaga",
+    "fr": "Chaga"
+  },
+  "Anthemis nobilis/Chamaemelum nobile": {
+    "en": "Roman Chamomile",
+    "da": "Romersk kamille",
+    "fr": "Camomille romaine"
+  },
+  "Chamomilla recutita": {
+    "en": "German Chamomile",
+    "da": "Kamille",
+    "fr": "Camomille"
+  },
+  "Larrea tridenta and related species": {
+    "en": "Chaparral",
+    "da": "Kreosotbusk",
+    "fr": "Larréa"
+  },
+  "Stellaria media": {
+    "en": "Chickweed",
+    "da": "Fuglegræs",
+    "fr": "Mouron des oiseaux"
+  },
+  "Scutellaria baicalensis": {
+    "en": "Chinese Skullcap",
+    "da": "Baikal-skjolddrager",
+    "fr": "Scutellaire du Baïkal"
+  },
+  "Cinnamomum zeylanicum": {
+    "en": "Cinnamon",
+    "da": "Kanel",
+    "fr": "Cannelle"
+  },
+  "Galium aparine": {
+    "en": "Cleavers",
+    "da": "Burre-snerre",
+    "fr": "Gaillet gratteron"
+  },
+  "Caryophyllus zeylanicum": {
+    "en": "Cloves",
+    "da": "Nellike",
+    "fr": "Clou de girofle"
+  },
+  "Codonopsis pilosula": {
+    "en": "Codonopsis",
+    "da": "Codonopsis",
+    "fr": "Codonopsis"
+  },
+  "Coleus forskohlii": {
+    "en": "Coleus",
+    "da": "Coleus",
+    "fr": "Coléus"
+  },
+  "Tussilago farfara": {
+    "en": "Coltsfoot",
+    "da": "Følfod",
+    "fr": "Tussilage"
+  },
+  "Symphytum officinale": {
+    "en": "Comfrey",
+    "da": "Kulsukker",
+    "fr": "Consoude"
+  },
+  "Ophiocordyceps militaris": {
+    "en": "Cordyceps",
+    "da": "Cordyceps",
+    "fr": "Cordyceps"
+  },
+  "Zea mays": {
+    "en": "Cornsilk",
+    "da": "Majssilke",
+    "fr": "Stigmates de maïs"
+  },
+  "Agropyron repens": {
+    "en": "Couch Grass",
+    "da": "Kvik",
+    "fr": "Chiendent"
+  },
+  "Viburnum opulus": {
+    "en": "Cramp Bark",
+    "da": "Kvalkved",
+    "fr": "Viorne obier"
+  },
+  "Vaccinium macrocarpon": {
+    "en": "Cranberry",
+    "da": "Tranebær",
+    "fr": "Canneberge"
+  },
+  "Crataeva nurvala": {
+    "en": "Crataeva",
+    "da": "Crataeva",
+    "fr": "Crataeva"
+  },
+  "Turnera diffusa": {
+    "en": "Damiana",
+    "da": "Damiana",
+    "fr": "Damiane"
+  },
+  "Taraxacum officinalis": {
+    "en": "Dandelion",
+    "da": "Mælkebøtte",
+    "fr": "Pissenlit"
+  },
+  "Harpagophytum procumbens": {
+    "en": "Devil's Claw",
+    "da": "Djævelsklo",
+    "fr": "Griffe du diable"
+  },
+  "Anethum graveolens": {
+    "en": "Dill",
+    "da": "Dild",
+    "fr": "Aneth"
+  },
+  "Angelica sinensis": {
+    "en": "Dong Quai",
+    "da": "Kinesisk kvan",
+    "fr": "Angélique chinoise"
+  },
+  "Echinacea angustifolia and Echinacea purpurea": {
+    "en": "Echinacea",
+    "da": "Purpursolhat",
+    "fr": "Échinacée"
+  },
+  "Sambucus nigra": {
+    "en": "Elderberry",
+    "da": "Hyld",
+    "fr": "Sureau noir"
+  },
+  "Inula helenium": {
+    "en": "Elecampane",
+    "da": "Alant",
+    "fr": "Aunée"
+  },
+  "Ephedra sinica": {
+    "en": "Ephedra",
+    "da": "Efedra",
+    "fr": "Éphédra"
+  },
+  "Euphorbia hirta": {
+    "en": "Euphorbia",
+    "da": "Euphorbia",
+    "fr": "Euphorbe"
+  },
+  "Euphrasia officinalis": {
+    "en": "Eyebright",
+    "da": "Øjentrøst",
+    "fr": "Euphraise"
+  },
+  "Chamaelirium luteum": {
+    "en": "False Unicorn Root",
+    "da": "Falsk enhjørningsrod",
+    "fr": "Chamælirium jaune"
+  },
+  "Foeniculum vulgare": {
+    "en": "Fennel",
+    "da": "Fennikel",
+    "fr": "Fenouil"
+  },
+  "Trigonella foenum-graecum": {
+    "en": "Fenugreek",
+    "da": "Bukkehorn",
+    "fr": "Fenugrec"
+  },
+  "Tanacetum parthenium": {
+    "en": "Feverfew",
+    "da": "Matrem",
+    "fr": "Grande camomille"
+  },
+  "Linum usitatissimum": {
+    "en": "Flax",
+    "da": "Hør",
+    "fr": "Lin"
+  },
+  "Allium sativum": {
+    "en": "Garlic",
+    "da": "Hvidløg",
+    "fr": "Ail"
+  },
+  "Gentiana lutea": {
+    "en": "Gentian",
+    "da": "Gul ensian",
+    "fr": "Gentiane jaune"
+  },
+  "Zingiber officinale": {
+    "en": "Ginger",
+    "da": "Ingefær",
+    "fr": "Gingembre"
+  },
+  "Ginkgo biloba": {
+    "en": "Ginkgo",
+    "da": "Tempeltræ",
+    "fr": "Ginkgo"
+  },
+  "Panax ginseng": {
+    "en": "Ginseng",
+    "da": "Ginseng",
+    "fr": "Ginseng"
+  },
+  "Galega officinalis": {
+    "en": "Goat's Rue",
+    "da": "Læge-stregbælg",
+    "fr": "Galéga"
+  },
+  "Pleurotus citrinopileatus": {
+    "en": "Golden Oyster Mushroom",
+    "da": "Gul østershat",
+    "fr": "Pleurote jaune"
+  },
+  "Solidago virgaurea": {
+    "en": "Goldenrod",
+    "da": "Gyldenris",
+    "fr": "Verge d'or"
+  },
+  "Hydrastis canadensis": {
+    "en": "Goldenseal",
+    "da": "Guldsegl",
+    "fr": "Hydraste du Canada"
+  },
+  "Centella asiatica, Hydrocotyle asiatica": {
+    "en": "Gotu Kola",
+    "da": "Asiatisk centella",
+    "fr": "Centella"
+  },
+  "Vitis vinifera": {
+    "en": "Grape Seed",
+    "da": "Vindrue",
+    "fr": "Vigne"
+  },
+  "Eupatorium purpureum": {
+    "en": "Gravel Root",
+    "da": "Sumphjortetrøst",
+    "fr": "Eupatoire pourpre"
+  },
+  "Camellia sinensis": {
+    "en": "Green Tea",
+    "da": "Grøn te",
+    "fr": "Thé vert"
+  },
+  "Grindelia camporum": {
+    "en": "Grindelia",
+    "da": "Grindelia",
+    "fr": "Grindélie"
+  },
+  "Guaiacum officinalis": {
+    "en": "Guaiacum",
+    "da": "Guajak",
+    "fr": "Gaïac"
+  },
+  "Crataegus arter": {
+    "en": "Hawthorn",
+    "da": "Hvidtjørn",
+    "fr": "Aubépine"
+  },
+  "Viola tricolor": {
+    "en": "Heartsease",
+    "da": "Vild stedmoder",
+    "fr": "Pensée sauvage"
+  },
+  "Humulus lupulus": {
+    "en": "Hops",
+    "da": "Humle",
+    "fr": "Houblon"
+  },
+  "Marrubium vulgare": {
+    "en": "Horehound",
+    "da": "Kransburre",
+    "fr": "Marrube blanc"
+  },
+  "Aesculus hippocastanum": {
+    "en": "Horse Chestnut",
+    "da": "Almindelig hestekastanje",
+    "fr": "Marronnier d'Inde"
+  },
+  "Armoracia rusticana": {
+    "en": "Horseradish",
+    "da": "Peberrod",
+    "fr": "Raifort"
+  },
+  "Equisetum arvense": {
+    "en": "Horsetail",
+    "da": "Ager-padderok",
+    "fr": "Prêle des champs"
+  },
+  "Hemidesmus indicus": {
+    "en": "Indian Sarsaparilla",
+    "da": "Indisk sarsaparil",
+    "fr": "Salsepareille indienne"
+  },
+  "Chondrus crispus": {
+    "en": "Irish Moss",
+    "da": "Karragentang",
+    "fr": "Mousse d'Irlande"
+  },
+  "Zizyphus jujuba": {
+    "en": "Jujube",
+    "da": "Jujube",
+    "fr": "Jujubier"
+  },
+  "Juniperus communis": {
+    "en": "Juniper Berries",
+    "da": "Enebær",
+    "fr": "Genévrier commun"
+  },
+  "Alchemilla vulgaris": {
+    "en": "Lady's Mantle",
+    "da": "Almindelig løvefod",
+    "fr": "Alchémille commune"
+  },
+  "Lavandula officinalis": {
+    "en": "Lavender",
+    "da": "Lavendel",
+    "fr": "Lavande"
+  },
+  "Melissa officinalis": {
+    "en": "Lemon Balm",
+    "da": "Hjertensfryd",
+    "fr": "Mélisse"
+  },
+  "Glycyrrhiza glabra": {
+    "en": "Licorice",
+    "da": "Lakrids",
+    "fr": "Réglisse"
+  },
+  "Ligustrum lucidum": {
+    "en": "Ligustrum",
+    "da": "Liguster",
+    "fr": "Troène luisant"
+  },
+  "Tilia arter": {
+    "en": "Linden",
+    "da": "Lind",
+    "fr": "Tilleul"
+  },
+  "Hericium erinaceus": {
+    "en": "Lion's Mane",
+    "da": "Pindsvineporesvamp",
+    "fr": "Hydne hérisson"
+  },
+  "Lobelia inflata": {
+    "en": "Lobelia",
+    "da": "Oppustet lobelia",
+    "fr": "Lobélie gonflée, Tabac indien"
+  },
+  "Althea officinalis": {
+    "en": "Marshmallow",
+    "da": "Læge-Altea",
+    "fr": "Guimauve"
+  },
+  "Filipendula ulmaria": {
+    "en": "Meadowsweet",
+    "da": "Mjødurt",
+    "fr": "Reine-des-prés"
+  },
+  "Silybum marianum": {
+    "en": "Milk Thistle",
+    "da": "Marietidsel",
+    "fr": "Chardon-Marie"
+  },
+  "Leonurus cardiaca": {
+    "en": "Motherwort",
+    "da": "Hjertespand",
+    "fr": "Agripaume"
+  },
+  "Artemisia vulgaris": {
+    "en": "Mugwort",
+    "da": "Grå bynke",
+    "fr": "Armoise commune"
+  },
+  "Verbascum thapsus": {
+    "en": "Mullein",
+    "da": "Kongelys",
+    "fr": "Molène"
+  },
+  "Commiphora mol-mol": {
+    "en": "Myrrh",
+    "da": "Myrra",
+    "fr": "Myrrhe"
+  },
+  "Urtica dioica": {
+    "en": "Nettles",
+    "da": "Brændenælde",
+    "fr": "Ortie"
+  },
+  "Avena sativa": {
+    "en": "Oat Straw",
+    "da": "Havre",
+    "fr": "Avoine"
+  },
+  "Olea europaea": {
+    "en": "Olive Leaf",
+    "da": "Oliventræ",
+    "fr": "Olivier"
+  },
+  "Origanum vulgare": {
+    "en": "Oregano",
+    "da": "Merian",
+    "fr": "Origan"
+  },
+  "Berberis aquifolium and related species": {
+    "en": "Oregon Grape",
+    "da": "Oregon-drue",
+    "fr": "Raisin de l'Oregon"
+  },
+  "Petroselinum crispum": {
+    "en": "Parsley Root",
+    "da": "Persille",
+    "fr": "Persil"
+  },
+  "Mitchella repens": {
+    "en": "Partridgeberry",
+    "da": "Mitchella",
+    "fr": "Mitchella rampant"
+  },
+  "Passiflora incarnata": {
+    "en": "Passionflower",
+    "da": "Passionsblomst",
+    "fr": "Passiflore"
+  },
+  "Tabebuia impetiginosa": {
+    "en": "Pau d'Arco",
+    "da": "Pau d'Arco",
+    "fr": "Pau d'Arco"
+  },
+  "Mentha pulegium": {
+    "en": "Pennyroyal",
+    "da": "Polejmynte",
+    "fr": "Menthe pouliot"
+  },
+  "Mentha x piperita": {
+    "en": "Peppermint",
+    "da": "Pebermynte",
+    "fr": "Menthe poivrée"
+  },
+  "Phyllanthus amarus": {
+    "en": "Phyllanthus",
+    "da": "Phyllanthus",
+    "fr": "Phyllanthus"
+  },
+  "Picrorrhiza kurroa": {
+    "en": "Picrorrhiza",
+    "da": "Picrorrhiza",
+    "fr": "Picrorrhiza"
+  },
+  "Pinus pinaster": {
+    "en": "Pine Bark Extract",
+    "da": "Skovfyr",
+    "fr": "Pin maritime"
+  },
+  "Chimaphila umbellata": {
+    "en": "Pipsissewa",
+    "da": "Skærmvintergrøn",
+    "fr": "Chimaphile à ombelles"
+  },
+  "Plantago species": {
+    "en": "Plantain",
+    "da": "Vejbred",
+    "fr": "Plantain"
+  },
+  "Asclepias tuberosa": {
+    "en": "Pleurisy Root",
+    "da": "Orangesilkeplante",
+    "fr": "Asclépiade tubéreuse"
+  },
+  "Zanthoxylum americanum": {
+    "en": "Prickly Ash",
+    "da": "Tandved",
+    "fr": "Clavalier d'Amérique"
+  },
+  "Propolis": {
+    "en": "Propolis",
+    "da": "Propolis",
+    "fr": "Propolis"
+  },
+  "Plantago psyllium": {
+    "en": "Psyllium",
+    "da": "Loppefrø",
+    "fr": "Psyllium"
+  },
+  "Cucurbita pepo": {
+    "en": "Pumpkin Seeds",
+    "da": "Græskarkerner",
+    "fr": "Graines de courge"
+  },
+  "Salix purpurea": {
+    "en": "Purple Willow",
+    "da": "Purpurpil",
+    "fr": "Saule pourpre"
+  },
+  "Rubus idaeus": {
+    "en": "Raspberry Leaf",
+    "da": "Hindbær",
+    "fr": "Framboisier"
+  },
+  "Trifolium pratense": {
+    "en": "Red Clover",
+    "da": "Rødkløver",
+    "fr": "Trèfle rouge"
+  },
+  "Rehmannia glutinosa": {
+    "en": "Rehmannia",
+    "da": "Rehmannia",
+    "fr": "Rehmannia"
+  },
+  "Ganoderma lucidum": {
+    "en": "Reishi Mushroom",
+    "da": "Reishi",
+    "fr": "Reishi"
+  },
+  "Rhodiola rosea": {
+    "en": "Rhodiola",
+    "da": "Rhodiola",
+    "fr": "Rhodiola"
+  },
+  "Rosmarinus officinalis": {
+    "en": "Rosemary",
+    "da": "Rosmarin",
+    "fr": "Romarin"
+  },
+  "Rosa canina": {
+    "en": "Rose Hips",
+    "da": "Hyben",
+    "fr": "Églantier"
+  },
+  "Salvia officinalis": {
+    "en": "Sage",
+    "da": "Læge-salvie",
+    "fr": "Sauge officinale"
+  },
+  "Smilax medica": {
+    "en": "Sarsaparilla",
+    "da": "Sarsaparil",
+    "fr": "Salsepareille"
+  },
+  "Sassafras albidum": {
+    "en": "Sassafras",
+    "da": "Sassafras",
+    "fr": "Sassafras"
+  },
+  "Serenoa repens": {
+    "en": "Saw Palmetto",
+    "da": "Dværgpalme",
+    "fr": "Palmier nain"
+  },
+  "Schisandra chinensis": {
+    "en": "Schisandra",
+    "da": "Schisandra",
+    "fr": "Schisandre de Chine"
+  },
+  "Cassia angustifolia": {
+    "en": "Senna",
+    "da": "Senna",
+    "fr": "Séné"
+  },
+  "Capsella bursa-pastoris": {
+    "en": "Shepherd's Purse",
+    "da": "Hyrdetaske",
+    "fr": "Bourse-à-pasteur"
+  },
+  "Lentinula edodes": {
+    "en": "Shiitake Mushroom",
+    "da": "Shiitake",
+    "fr": "Shiitake"
+  },
+  "Eleutherococcus senticosus": {
+    "en": "Siberian Ginseng",
+    "da": "Sibirisk ginseng",
+    "fr": "Ginseng de Sibérie"
+  },
+  "Scutellaria lateriflora": {
+    "en": "Skullcap",
+    "da": "Amerikansk skjolddrager",
+    "fr": "Scutellaire latériflore, Toque casquée"
+  },
+  "Ulmus rubra": {
+    "en": "Slippery Elm",
+    "da": "Glat elm",
+    "fr": "Orme rouge"
+  },
+  "Hypericum perforatum": {
+    "en": "St. John's Wort",
+    "da": "Prikbladet perikon",
+    "fr": "Millepertuis perforé"
+  },
+  "Viola odoratar": {
+    "en": "Sweet Violet",
+    "da": "Marts-viol",
+    "fr": "Violette odorante"
+  },
+  "Melaleuca alternafolia": {
+    "en": "Tea Tree",
+    "da": "Tetræ",
+    "fr": "Arbre à thé"
+  },
+  "Thuja officinalis": {
+    "en": "Thuja",
+    "da": "Thuja",
+    "fr": "Thuya"
+  },
+  "Thymus vulgaris": {
+    "en": "Thyme",
+    "da": "Timian",
+    "fr": "Thym"
+  },
+  "Paeonia suffructicosa": {
+    "en": "Tree Peony",
+    "da": "Træpæon",
+    "fr": "Pivoine arbustive"
+  },
+  "Rheum palmatum": {
+    "en": "Turkey Rhubarb",
+    "da": "Medicinsk rabarber",
+    "fr": "Rhubarbe de Chine"
+  },
+  "Curcuma longa": {
+    "en": "Turmeric",
+    "da": "Gurkemeje",
+    "fr": "Curcuma"
+  },
+  "Arctostaphylos uva-ursi": {
+    "en": "Uva Ursi",
+    "da": "Melbærris",
+    "fr": "Raisin d'ours"
+  },
+  "Valeriana officinalis": {
+    "en": "Valerian",
+    "da": "Baldrian, Læge-baldrian",
+    "fr": "Valériane officinale"
+  },
+  "Verbena officinalis": {
+    "en": "Vervain",
+    "da": "Læge-jernurt",
+    "fr": "Verveine"
+  },
+  "Vitex agnus castus": {
+    "en": "Vitex",
+    "da": "Kyskhedstræ",
+    "fr": "Gattilier"
+  },
+  "Paeonia lactiflora": {
+    "en": "White Peony",
+    "da": "Hvid pæon",
+    "fr": "Pivoine blanche"
+  },
+  "Salix alba": {
+    "en": "White Willow",
+    "da": "Hvid pil",
+    "fr": "Saule blanc"
+  },
+  "Prunus serotina": {
+    "en": "Wild Cherry",
+    "da": "Virginsk kirsebær",
+    "fr": "Cerisier tardif"
+  },
+  "Dioscorea villosa": {
+    "en": "Wild Yam",
+    "da": "Vild yams",
+    "fr": "Igname sauvage"
+  },
+  "Hamamelis virginiana": {
+    "en": "Witch Hazel",
+    "da": "Virginsk troldnød",
+    "fr": "Hamamélis de Virginie"
+  },
+  "Betonica officinalis": {
+    "en": "Wood Betony",
+    "da": "Læge-betonie",
+    "fr": "Bétoine officinale"
+  },
+  "Artemisia absinthium": {
+    "en": "Wormwood",
+    "da": "Malurt",
+    "fr": "Absinthe"
+  },
+  "Achillea millefolium": {
+    "en": "Yarrow",
+    "da": "Almindelig røllike",
+    "fr": "Achillée millefeuille"
+  },
+  "Rumex crispus and related species": {
+    "en": "Yellow Dock",
+    "da": "Kruset skræppe",
+    "fr": "Patience crépue"
+  }
+}

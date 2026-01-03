@@ -55,6 +55,8 @@
             'Analgesic (pain relief)': { da: 'Analgetika', fr: 'Analgésique' },
             'Anti-allergic': { da: 'Antiallergiske', fr: 'Anti-allergique' },
             'Antiallergic': { da: 'Antiallergiske', fr: 'Anti-allergique' },
+            'Anticancer': { da: 'Anticancer -forebyggende', fr: 'Anticancéreux' },
+            'Antacid': { da: 'Syredæmpende', fr: 'Antiacide' },
             'Antibacterial': { da: 'Antibakterielle', fr: 'Antibactérien' },
             'Anticoagulant': { da: 'Antikoagulerende', fr: 'Anticoagulant' },
             'Anticonvulsant (epilepsy)': { da: 'Krampeløsende (epilepsi)', fr: 'Anticonvulsivant (épilepsie)' },
