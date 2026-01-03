@@ -32,6 +32,8 @@ index-backup.html
 
 # PDF files with sensitive or source data
 properties.pdf
+egenskaber.pdf
+tests/Egenskaber*.pdf
 
 # Optional: Uncomment if you don't want to track these
 # clause.md
@@ -51,3 +53,8 @@ coverage/
 # Build outputs
 dist/
 build/
+
+# Working scripts and verification files
+add-missing-properties.cjs
+verify-and-fix-properties.cjs
+property-fix-report.json

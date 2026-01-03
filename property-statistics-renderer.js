@@ -291,7 +291,15 @@
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', function() {
             if (document.getElementById('property-table')) {
-                renderPropertyStatistics();
+                // Show loading state briefly
+                const tbody = document.querySelector('#property-table tbody');
+                if (tbody) {
+                    tbody.innerHTML = '<tr><td colspan="3" style="text-align: center; padding: 60px 20px;"><div class="loading-spinner" style="margin: 0 auto;"></div><p style="margin-top: 20px; color: var(--color-secondary); font-style: italic;">Loading properties...</p></td></tr>';
+                }
+
+                setTimeout(() => {
+                    renderPropertyStatistics();
+                }, 50);
             }
         });
     } else {

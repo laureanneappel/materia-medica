@@ -18,16 +18,16 @@
     const NAV_ITEMS = [
         { href: 'index.html', label: 'All Plants', id: 'all' },
         { href: 'property-statistics.html', label: 'Properties', id: 'properties' },
-        { href: 'nervous-system.html', label: 'Nervous System', id: 'nervous' },
-        { href: 'immune-system.html', label: 'Immune System', id: 'immune' },
-        { href: 'digestive-system.html', label: 'Digestive System', id: 'digestive' },
-        { href: 'respiratory-system.html', label: 'Respiratory System', id: 'respiratory' },
-        { href: 'urinary-system.html', label: 'Urinary System', id: 'urinary' },
-        { href: 'cardiovascular-system.html', label: 'Cardiovascular System', id: 'cardiovascular' },
-        { href: 'endocrine-system.html', label: 'Endocrine System', id: 'endocrine' },
-        { href: 'skin-system.html', label: 'Skin System', id: 'skin' },
-        { href: 'woman-reproductive-system.html', label: 'Woman Reproductive', id: 'woman-reproductive' },
-        { href: 'male-reproductive-system.html', label: 'Male Reproductive', id: 'male-reproductive' }
+        { href: 'system.html?system=nervous', label: 'Nervous System', id: 'nervous' },
+        { href: 'system.html?system=immune', label: 'Immune System', id: 'immune' },
+        { href: 'system.html?system=digestive', label: 'Digestive System', id: 'digestive' },
+        { href: 'system.html?system=respiratory', label: 'Respiratory System', id: 'respiratory' },
+        { href: 'system.html?system=urinary', label: 'Urinary System', id: 'urinary' },
+        { href: 'system.html?system=cardiovascular', label: 'Cardiovascular System', id: 'cardiovascular' },
+        { href: 'system.html?system=endocrine', label: 'Endocrine System', id: 'endocrine' },
+        { href: 'system.html?system=skin', label: 'Skin System', id: 'skin' },
+        { href: 'system.html?system=woman-reproductive', label: 'Woman Reproductive', id: 'woman-reproductive' },
+        { href: 'system.html?system=male-reproductive', label: 'Male Reproductive', id: 'male-reproductive' }
     ];
 
     /**
@@ -65,13 +65,20 @@
                 return 'all';
             }
 
+            // For system.html, check the URL parameter
+            if (filename === 'system.html') {
+                const urlParams = new URLSearchParams(window.location.search);
+                const system = urlParams.get('system');
+                return system || 'nervous';
+            }
+
             // Check for exact matches
             for (const item of NAV_ITEMS) {
                 if (!item || !item.href || !item.id) {
                     console.warn('[Navigation] Invalid nav item:', item);
                     continue;
                 }
-                if (filename === item.href) {
+                if (filename === item.href.split('?')[0]) {
                     return item.id;
                 }
             }
