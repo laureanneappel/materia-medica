@@ -55,6 +55,7 @@ window.PLANTS_DATA = [
     ],
     "properties": [
       "Anti-allergic",
+      "Antiallergic",
       "Immunosuppressive",
       "Cholesterol lowering"
     ],
@@ -107,6 +108,7 @@ window.PLANTS_DATA = [
       "Anti-inflammatory (general)",
       "Anti-inflammatory (musculoskeletal)",
       "Antiemetic",
+      "Antispasmodic",
       "Astringent",
       "Appetite stimulant",
       "Blood strengthening",
@@ -155,6 +157,7 @@ window.PLANTS_DATA = [
       "skin"
     ],
     "properties": [
+      "Analgesic",
       "Analgesic (pain relief)",
       "Anti-inflammatory (external)",
       "Antimicrobial",
@@ -206,6 +209,7 @@ window.PLANTS_DATA = [
       "Woman tonic",
       "Nerve tonic",
       "Sedative",
+      "Tonic",
       "Uterine tonic",
       "Aphrodisiac",
       "Antioxidant",
@@ -241,6 +245,7 @@ window.PLANTS_DATA = [
       "Immunomodulating",
       "Heart tonic",
       "Kidney tonic",
+      "Tonic",
       "Antioxidant",
       "Blood pressure lowering",
       "Interferon stimulating"
@@ -262,6 +267,7 @@ window.PLANTS_DATA = [
       "Adaptogen",
       "Nootropic",
       "Nerve tonic",
+      "Tonic",
       "Antioxidant",
       "Aldose reductase inhibitor",
       "Anticancer preventive",
@@ -307,6 +313,7 @@ window.PLANTS_DATA = [
       "Astringent",
       "Circulatory stimulant",
       "Venotonic",
+      "Urinary antiseptic",
       "Aldose reductase inhibitor",
       "Anticancer preventive",
       "Anti-inflammatory (general)",
@@ -432,6 +439,7 @@ window.PLANTS_DATA = [
       "digestive"
     ],
     "properties": [
+      "Analgesic",
       "Anti-inflammatory (general)",
       "Anti-inflammatory (musculoskeletal)",
       "Anti-inflammatory (digestive/mucous membranes/skin)",
@@ -858,6 +866,7 @@ window.PLANTS_DATA = [
       "Emollient",
       "Vulnerary",
       "Antipruritic",
+      "Antipruritic (external)",
       "Antacid",
       "Healing"
     ],
@@ -972,6 +981,7 @@ window.PLANTS_DATA = [
       "respiratory"
     ],
     "properties": [
+      "Antispasmodic",
       "Bronchial spasmolytic",
       "Vasodilator",
       "Blood pressure lowering",
@@ -1022,8 +1032,11 @@ window.PLANTS_DATA = [
     ],
     "properties": [
       "Adaptogen",
+      "Analgesic",
       "Immunomodulating",
       "Expectorant",
+      "Male tonic",
+      "Nerve tonic",
       "Tonic",
       "Aphrodisiac",
       "Aldose reductase inhibitor",
@@ -2080,6 +2093,7 @@ window.PLANTS_DATA = [
     "properties": [
       "Antidepressant",
       "Antipruritic",
+      "Antipruritic (external)",
       "Carminative",
       "Sedative",
       "Antispasmodic"
@@ -2380,6 +2394,7 @@ window.PLANTS_DATA = [
       "Antiseptic",
       "Astringent",
       "Anti-inflammatory (general)",
+      "Anti-inflammatory (external)",
       "Vulnerary",
       "Healing"
     ],
@@ -2406,6 +2421,7 @@ window.PLANTS_DATA = [
       "Hemostatic",
       "Blood strengthening",
       "Choleretic",
+      "Diuretic",
       "Uterine contracting",
       "Galactagogue",
       "Prostate growth inhibiting"
@@ -2595,15 +2611,18 @@ window.PLANTS_DATA = [
     ],
     "properties": [
       "Analgesic",
+      "Analgesic (pain relief)",
       "Antiemetic",
       "Antimicrobial",
       "Antioxidant",
+      "Antipruritic",
+      "Antipruritic (external)",
       "Sedative",
       "Carminative",
       "Cholagogue",
       "Choleretic",
       "Expectorant",
-      "Antipruritic",
+      "Mucolytic",
       "Antispasmodic",
       "Antifungal",
       "Diaphoretic",
@@ -2678,6 +2697,7 @@ window.PLANTS_DATA = [
       "Vasodilator",
       "Blood pressure regulating",
       "Bronchial spasmolytic",
+      "Expectorant",
       "Fibrinolytic",
       "Healing",
       "Cholesterol lowering",
@@ -2865,6 +2885,7 @@ window.PLANTS_DATA = [
       "endocrine"
     ],
     "properties": [
+      "Anhidrotic",
       "Anticancer preventive",
       "Antidepressant",
       "Sedative",
@@ -2922,6 +2943,7 @@ window.PLANTS_DATA = [
       "Anti-inflammatory (digestive/mucous membranes/skin)",
       "Antimicrobial",
       "Antioxidant",
+      "Antispasmodic",
       "Antiviral (internal)",
       "Blood pressure regulating",
       "Blood pressure lowering",
@@ -2961,6 +2983,7 @@ window.PLANTS_DATA = [
       "Cardioprotective",
       "Immunomodulating",
       "Nerve tonic",
+      "Tonic",
       "Aphrodisiac",
       "Metabolism raising",
       "Woman tonic",
@@ -3006,6 +3029,7 @@ window.PLANTS_DATA = [
       "digestive"
     ],
     "properties": [
+      "Anti-inflammatory (digestive/mucous membranes/skin)",
       "Astringent",
       "Hemostatic",
       "Expectorant"
@@ -3171,6 +3195,7 @@ window.PLANTS_DATA = [
       "Astringent",
       "Hemostatic",
       "Uterine contracting",
+      "Urinary antiseptic",
       "Antiseptic (urinary)",
       "Blood pressure regulating"
     ],
@@ -3251,6 +3276,7 @@ window.PLANTS_DATA = [
       "Anti-inflammatory (respiratory)",
       "Anti-inflammatory (digestive/mucous membranes/skin)",
       "Anti-ulcer",
+      "Demulcent",
       "Emollient",
       "Vulnerary",
       "Cholesterol lowering",
@@ -3361,6 +3387,7 @@ window.PLANTS_DATA = [
       "Anti-inflammatory (urinary)",
       "Antimicrobial",
       "Antioxidant",
+      "Antispasmodic",
       "Anti-ulcer",
       "Astringent",
       "Bitter tonic",
@@ -3610,6 +3637,7 @@ window.PLANTS_DATA = [
       "immune"
     ],
     "properties": [
+      "Analgesic",
       "Anti-inflammatory (general)",
       "Anti-inflammatory (female reproductive)",
       "Sedative",
@@ -3685,10 +3713,12 @@ window.PLANTS_DATA = [
     "properties": [
       "Analgesic",
       "Anti-inflammatory (general)",
+      "Antioxidant",
       "Astringent",
       "Bitter tonic",
       "Hemostatic",
       "Vasodilator",
+      "Vulnerary",
       "Choleretic",
       "Circulatory stimulant",
       "Antifungal",
