@@ -58,3 +58,5 @@ build/
 add-missing-properties.cjs
 verify-and-fix-properties.cjs
 property-fix-report.json
+verification-report.json
+fix-botanical-names.cjs
