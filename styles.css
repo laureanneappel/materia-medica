@@ -649,6 +649,19 @@ footer {
     font-style: italic;
 }
 
+footer .disclaimer {
+    font-size: 0.85em;
+    margin-top: 1em;
+    padding: 1em;
+    background: rgba(139, 115, 85, 0.05);
+    border-radius: 4px;
+    font-style: normal;
+    line-height: 1.5;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* Property Statistics Page Styles */
 .stats-summary {
     background: rgba(90, 111, 79, 0.08);
