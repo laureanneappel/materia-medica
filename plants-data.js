@@ -362,7 +362,6 @@ window.PLANTS_DATA = [
       "Antispasmodic",
       "Nerve tonic",
       "Antirheumatic",
-      "Anhidrotic",
       "Estrogen regulating"
     ],
     "status": "enabled",
@@ -380,7 +379,6 @@ window.PLANTS_DATA = [
     ],
     "properties": [
       "Metabolism raising",
-      "Thyroid regulating",
       "Weight reducing",
       "Emollient"
     ],
@@ -474,9 +472,7 @@ window.PLANTS_DATA = [
       "endocrine"
     ],
     "properties": [
-      "Antithyroid",
       "Sedative",
-      "Thyroid regulating",
       "Vasodilator"
     ],
     "status": "enabled",
@@ -569,8 +565,7 @@ window.PLANTS_DATA = [
       "Antidepressant",
       "Antioxidant",
       "Cardioprotective",
-      "Vasodilator",
-      "Anticancer preventive"
+      "Vasodilator"
     ],
     "status": "enabled",
     "fileSlug": "cacao"
@@ -753,7 +748,6 @@ window.PLANTS_DATA = [
       "Interferon stimulating",
       "Cholesterol lowering",
       "Hepatoprotective",
-      "Antiparasitic",
       "Antifungal"
     ],
     "status": "enabled",
@@ -858,9 +852,7 @@ window.PLANTS_DATA = [
       "Blood pressure regulating",
       "Emollient",
       "Vulnerary",
-      "Antipruritic",
       "Antipruritic (external)",
-      "Antacid",
       "Healing"
     ],
     "status": "enabled",
@@ -905,7 +897,6 @@ window.PLANTS_DATA = [
       "Astringent",
       "Blood sugar regulating",
       "Carminative",
-      "Antiparasitic",
       "Antifungal"
     ],
     "status": "enabled",
@@ -1673,7 +1664,6 @@ window.PLANTS_DATA = [
       "Heart tonic",
       "Hypnotic",
       "Nerve tonic",
-      "Antiparasitic",
       "Antifungal"
     ],
     "status": "enabled",
@@ -1902,7 +1892,6 @@ window.PLANTS_DATA = [
       "Antispasmodic",
       "Nerve tonic",
       "Analgesic",
-      "Antiperspirant",
       "Healing",
       "Anhidrotic"
     ],
@@ -2076,7 +2065,6 @@ window.PLANTS_DATA = [
     ],
     "properties": [
       "Antidepressant",
-      "Antipruritic",
       "Antipruritic (external)",
       "Carminative",
       "Sedative",
@@ -2274,7 +2262,6 @@ window.PLANTS_DATA = [
       "Anti-ulcer",
       "Astringent",
       "Urinary antiseptic",
-      "Antacid",
       "Antiseptic (urinary)",
       "Emollient"
     ],
@@ -2374,7 +2361,6 @@ window.PLANTS_DATA = [
     ],
     "properties": [
       "Antimicrobial",
-      "Antiseptic",
       "Astringent",
       "Anti-inflammatory (general)",
       "Anti-inflammatory (external)",
@@ -2555,10 +2541,8 @@ window.PLANTS_DATA = [
     "properties": [
       "Antibacterial",
       "Antifungal",
-      "Antiviral",
       "Blood purifier",
       "Lymphatic stimulant",
-      "Antiparasitic",
       "Immunomodulating"
     ],
     "status": "disabled",
@@ -2596,7 +2580,6 @@ window.PLANTS_DATA = [
       "Antiemetic",
       "Antimicrobial",
       "Antioxidant",
-      "Antipruritic",
       "Antipruritic (external)",
       "Sedative",
       "Carminative",
@@ -2809,7 +2792,6 @@ window.PLANTS_DATA = [
     ],
     "properties": [
       "Male tonic",
-      "Anti-inflammatory (prostate)",
       "Nutritive"
     ],
     "status": "disabled",
@@ -2865,7 +2847,6 @@ window.PLANTS_DATA = [
       "endocrine"
     ],
     "properties": [
-      "Anhidrotic",
       "Antidepressant",
       "Sedative",
       "Blood purifier",
@@ -3036,7 +3017,6 @@ window.PLANTS_DATA = [
       "Carminative",
       "Choleretic",
       "Vulnerary",
-      "Anhidrotic",
       "Mucostatic (lower respiratory)",
       "Mucostatic (upper respiratory)",
       "Antispasmodic",
@@ -3104,7 +3084,6 @@ window.PLANTS_DATA = [
       "urinary"
     ],
     "properties": [
-      "Anti-inflammatory (prostate)",
       "Antispasmodic",
       "Anti-inflammatory (urinary)",
       "Male tonic",
@@ -3260,7 +3239,6 @@ window.PLANTS_DATA = [
       "Laxative",
       "Mucous membrane strengthening",
       "Mucous membrane tonic",
-      "Antacid",
       "Weight reducing",
       "Healing"
     ],
