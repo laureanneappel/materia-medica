@@ -58,7 +58,6 @@
             'Anti-allergic': { da: 'Anti-allergisk', fr: 'Anti-allergique' },
             'Antiallergic': { da: 'Anti-allergisk', fr: 'Anti-allergique' },
             'Antibacterial': { da: 'Antibakteriel', fr: 'Antibactérien' },
-            'Anticancer preventive': { da: 'Forebyggende mod kræft', fr: 'Préventif anticancéreux' },
             'Anticoagulant': { da: 'Blodfortyndende', fr: 'Anticoagulant' },
             'Anticonvulsant (epilepsy)': { da: 'Krampeløsende (epilepsi)', fr: 'Anticonvulsivant (épilepsie)' },
             'Antidepressant': { da: 'Antidepressiv', fr: 'Antidépresseur' },

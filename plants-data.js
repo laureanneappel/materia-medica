@@ -158,7 +158,6 @@ window.PLANTS_DATA = [
     ],
     "properties": [
       "Analgesic",
-      "Analgesic (pain relief)",
       "Anti-inflammatory (external)",
       "Antimicrobial",
       "Healing",
@@ -238,7 +237,6 @@ window.PLANTS_DATA = [
       "Adaptogen",
       "Antiallergic",
       "Antibacterial",
-      "Anticancer preventive",
       "Blood pressure regulating",
       "Blood strengthening",
       "Diuretic",
@@ -270,7 +268,6 @@ window.PLANTS_DATA = [
       "Tonic",
       "Antioxidant",
       "Aldose reductase inhibitor",
-      "Anticancer preventive",
       "Antidepressant",
       "Anti-inflammatory (general)",
       "Anti-inflammatory (brain)",
@@ -315,7 +312,6 @@ window.PLANTS_DATA = [
       "Venotonic",
       "Urinary antiseptic",
       "Aldose reductase inhibitor",
-      "Anticancer preventive",
       "Anti-inflammatory (general)",
       "Anti-inflammatory (brain)",
       "Antiseptic (urinary)",
@@ -444,8 +440,7 @@ window.PLANTS_DATA = [
       "Anti-inflammatory (musculoskeletal)",
       "Anti-inflammatory (digestive/mucous membranes/skin)",
       "Antirheumatic",
-      "Anti-inflammatory (cardiovascular)",
-      "Analgesic (pain relief)"
+      "Anti-inflammatory (cardiovascular)"
     ],
     "status": "enabled",
     "fileSlug": "boswellia"
@@ -658,7 +653,6 @@ window.PLANTS_DATA = [
       "Antioxidant",
       "Antiviral (internal)",
       "Immunomodulating",
-      "Anticancer preventive",
       "Blood purifier",
       "Antifungal"
     ],
@@ -747,7 +741,6 @@ window.PLANTS_DATA = [
       "Aldose reductase inhibitor",
       "Antiallergic",
       "Antibacterial",
-      "Anticancer preventive",
       "Anti-inflammatory (general)",
       "Anti-inflammatory (liver)",
       "Anti-inflammatory (respiratory)",
@@ -828,7 +821,7 @@ window.PLANTS_DATA = [
       "Cholagogue",
       "Healing",
       "Hypnotic",
-      "Analgesic (pain relief)"
+      "Analgesic"
     ],
     "status": "disabled",
     "fileSlug": "chamomile-german",
@@ -1041,12 +1034,10 @@ window.PLANTS_DATA = [
       "Aphrodisiac",
       "Aldose reductase inhibitor",
       "Antibacterial",
-      "Anticancer preventive",
       "Anti-inflammatory (general)",
       "Anti-inflammatory (musculoskeletal)",
       "Blood sugar regulating",
       "Antispasmodic",
-      "Analgesic (pain relief)",
       "Weight reducing"
     ],
     "status": "enabled",
@@ -1496,7 +1487,6 @@ window.PLANTS_DATA = [
     ],
     "properties": [
       "Antibacterial",
-      "Anticancer preventive",
       "Anti-inflammatory (cardiovascular)",
       "Anti-inflammatory (external)",
       "Anticoagulant",
@@ -1545,7 +1535,6 @@ window.PLANTS_DATA = [
     ],
     "properties": [
       "Antibacterial",
-      "Anticancer preventive",
       "Antiemetic",
       "Anti-inflammatory (general)",
       "Anti-inflammatory (musculoskeletal)",
@@ -1586,7 +1575,6 @@ window.PLANTS_DATA = [
       "cardiovascular"
     ],
     "properties": [
-      "Anticancer preventive",
       "Antidepressant",
       "Anti-inflammatory (brain)",
       "Anti-inflammatory (cardiovascular)",
@@ -1670,7 +1658,6 @@ window.PLANTS_DATA = [
       "Immunomodulating",
       "Aldose reductase inhibitor",
       "Antibacterial",
-      "Anticancer preventive",
       "Antidepressant",
       "Anti-inflammatory (general)",
       "Anti-inflammatory (musculoskeletal)",
@@ -1769,7 +1756,6 @@ window.PLANTS_DATA = [
     ],
     "properties": [
       "Antiallergic",
-      "Anticancer preventive",
       "Anti-inflammatory (general)",
       "Antioxidant",
       "Vasodilator",
@@ -1809,7 +1795,6 @@ window.PLANTS_DATA = [
       "Antioxidant",
       "Cholesterol lowering",
       "Weight reducing",
-      "Anticancer preventive",
       "Anti-inflammatory (general)",
       "Anti-inflammatory (brain)",
       "Metabolism raising"
@@ -1894,7 +1879,6 @@ window.PLANTS_DATA = [
       "Anti-inflammatory (external)",
       "Blood purifier",
       "Expectorant",
-      "Anticancer preventive",
       "Anti-inflammatory (musculoskeletal)",
       "Laxative"
     ],
@@ -2225,7 +2209,6 @@ window.PLANTS_DATA = [
       "Adaptogen",
       "Aldose reductase inhibitor",
       "Antibacterial",
-      "Anticancer preventive",
       "Antidepressant",
       "Anti-inflammatory (general)",
       "Anti-inflammatory (brain)",
@@ -2571,7 +2554,6 @@ window.PLANTS_DATA = [
     ],
     "properties": [
       "Antibacterial",
-      "Anticancer preventive",
       "Antifungal",
       "Antiviral",
       "Blood purifier",
@@ -2611,7 +2593,6 @@ window.PLANTS_DATA = [
     ],
     "properties": [
       "Analgesic",
-      "Analgesic (pain relief)",
       "Antiemetic",
       "Antimicrobial",
       "Antioxidant",
@@ -2686,7 +2667,6 @@ window.PLANTS_DATA = [
       "Venotonic",
       "Aldose reductase inhibitor",
       "Antiallergic",
-      "Anticancer preventive",
       "Anti-inflammatory (brain)",
       "Anti-inflammatory (respiratory)",
       "Anti-inflammatory (digestive/mucous membranes/skin)",
@@ -2796,7 +2776,7 @@ window.PLANTS_DATA = [
       "Anti-inflammatory (external)",
       "Antiviral (external)",
       "Healing",
-      "Analgesic (pain relief)",
+      "Analgesic",
       "Antifungal"
     ],
     "status": "enabled",
@@ -2886,7 +2866,6 @@ window.PLANTS_DATA = [
     ],
     "properties": [
       "Anhidrotic",
-      "Anticancer preventive",
       "Antidepressant",
       "Sedative",
       "Blood purifier",
@@ -2936,7 +2915,6 @@ window.PLANTS_DATA = [
       "Aldose reductase inhibitor",
       "Antiallergic",
       "Antibacterial",
-      "Anticancer preventive",
       "Antidepressant",
       "Anti-inflammatory (general)",
       "Anti-inflammatory (respiratory)",
@@ -3213,7 +3191,6 @@ window.PLANTS_DATA = [
     ],
     "properties": [
       "Immunomodulating",
-      "Anticancer preventive",
       "Cholesterol lowering",
       "Antiviral"
     ],
@@ -3453,7 +3430,6 @@ window.PLANTS_DATA = [
       "endocrine"
     ],
     "properties": [
-      "Anticancer preventive",
       "Anti-inflammatory (general)",
       "Anti-inflammatory (musculoskeletal)",
       "Anti-inflammatory (brain)",
@@ -3645,7 +3621,6 @@ window.PLANTS_DATA = [
       "Antirheumatic",
       "Anti-inflammatory (digestive/mucous membranes/skin)",
       "Emmenagogue",
-      "Analgesic (pain relief)",
       "Estrogen regulating"
     ],
     "status": "enabled",
