@@ -436,6 +436,26 @@ header h1 {
     color: var(--color-in-progress-botanical);
 }
 
+/* Disabled plants - not in PDF */
+.plant-card.disabled {
+    background-color: #f5f5f5;
+    opacity: 0.5;
+    border-color: #d0d0d0;
+}
+
+.plant-card.disabled h3 a {
+    color: #999;
+}
+
+.plant-card.disabled .botanical-name {
+    color: #aaa;
+}
+
+.plant-card.disabled:hover {
+    transform: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
 .plant-card h3 {
     margin-bottom: var(--spacing-sm);
     color: var(--color-primary);
