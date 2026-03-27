@@ -42,109 +42,139 @@
         return propertyMap;
     }
 
+    // Danish translations derived from DANISH-TO-ENGLISH-PROPERTIES.json (inverted).
+    // DA values always reflect the exact term used in egenskaber.pdf.
+    const ENGLISH_TO_DANISH = {};
+    (function buildDanishMap() {
+        const danishToEnglish = window.DANISH_TO_ENGLISH_PROPERTIES;
+        if (!danishToEnglish) {
+            console.warn('[PropertyStats] DANISH_TO_ENGLISH_PROPERTIES not loaded — Danish labels will be empty');
+            return;
+        }
+        for (const [da, en] of Object.entries(danishToEnglish)) {
+            ENGLISH_TO_DANISH[en] = da;
+        }
+    })();
+
     /**
      * Get property translations
      */
     function getPropertyTranslations(property) {
-        const translations = {
-            // Existing translations from your original file
-            'Adaptogen': { da: 'Adaptogener', fr: 'Adaptogène' },
-            'Adrenal tonic': { da: 'Binyrebarktonic', fr: 'Tonique surrénalien' },
-            'Aldose reductase inhibitor': { da: 'Aldosereduktase Hæmmende+andre senskader', fr: 'Inhibiteur d\'aldose réductase' },
-            'Analgesic': { da: 'Analgetika', fr: 'Analgésique' },
-            'Analgesic (pain relief)': { da: 'Analgetika', fr: 'Analgésique' },
-            'Anti-allergic': { da: 'Antiallergiske', fr: 'Anti-allergique' },
-            'Antiallergic': { da: 'Antiallergiske', fr: 'Anti-allergique' },
-            'Anticancer': { da: 'Anticancer -forebyggende', fr: 'Anticancéreux' },
-            'Antacid': { da: 'Syredæmpende', fr: 'Antiacide' },
-            'Antibacterial': { da: 'Antibakterielle', fr: 'Antibactérien' },
-            'Anticoagulant': { da: 'Antikoagulerende', fr: 'Anticoagulant' },
-            'Anticonvulsant (epilepsy)': { da: 'Krampeløsende (epilepsi)', fr: 'Anticonvulsivant (épilepsie)' },
-            'Antidepressant': { da: 'Antidepressive', fr: 'Antidépresseur' },
-            'Antifungal': { da: 'Svampehæmmende', fr: 'Antifongique' },
-            'Antiemetic': { da: 'Antiemetika (kvalmestillende)', fr: 'Antiémétique' },
-            'Anti-inflammatory (brain)': { da: 'Antiinflammatoriske (hjerne)', fr: 'Anti-inflammatoire (cerveau)' },
-            'Anti-inflammatory (cardiovascular)': { da: 'Antiinflammatoriske (kredsløb)', fr: 'Anti-inflammatoire (cardiovasculaire)' },
-            'Anti-inflammatory (digestive/mucous membranes/skin)': { da: 'Antiinflammatoriske (mave/tarm +slimhinder/hud)', fr: 'Anti-inflammatoire (digestif/muqueuses/peau)' },
-            'Anti-inflammatory (external)': { da: 'Antiinflammatoriske (udvortes)', fr: 'Anti-inflammatoire (externe)' },
-            'Anti-inflammatory (female reproductive)': { da: 'Antiinflammatoriske (kvindelige kønsorganer)', fr: 'Anti-inflammatoire (reproducteur féminin)' },
-            'Anti-inflammatory (general)': { da: 'Antiinflammatoriske (generelt)', fr: 'Anti-inflammatoire (général)' },
-            'Anti-inflammatory (liver)': { da: 'Antiinflammatoriske (lever)', fr: 'Anti-inflammatoire (foie)' },
-            'Anti-inflammatory (musculoskeletal)': { da: 'Antiinflammatoriske (bevægapparatet)', fr: 'Anti-inflammatoire (musculo-squelettique)' },
-            'Anti-inflammatory (respiratory)': { da: 'Antiinflammatoriske (luftveje)', fr: 'Anti-inflammatoire (respiratoire)' },
-            'Anti-inflammatory (urinary)': { da: 'Antiinflammatoriske (urinveje)', fr: 'Anti-inflammatoire (urinaire)' },
-            'Antilithic': { da: 'Antilitiske (modvirker stendannelse- forebyggende)', fr: 'Antilithique' },
-            'Antimicrobial': { da: 'Antimikrobiske', fr: 'Antimicrobien' },
-            'Antioxidant': { da: 'Antioxidante', fr: 'Antioxydant' },
-            'Antipruritic (external)': { da: 'Kløestillende (udvortes)', fr: 'Antipruritique (externe)' },
-            'Antirheumatic': { da: 'Antireumatiske', fr: 'Antirhumatismal' },
-            'Antiseptic (urinary)': { da: 'Antiseptiske i urinvejene', fr: 'Antiseptique (urinaire)' },
-            'Antispasmodic': { da: 'Krampeløsnende', fr: 'Antispasmodique' },
-            'Anti-ulcer': { da: 'Anti-ulcer (peptisk)', fr: 'Anti-ulcéreux' },
-            'Antiviral (external)': { da: 'Antivirale (udvortes)', fr: 'Antiviral (externe)' },
-            'Antiviral (internal)': { da: 'Antivirale (indvortes)', fr: 'Antiviral (interne)' },
-            'Aphrodisiac': { da: 'Afrodisiakum', fr: 'Aphrodisiaque' },
-            'Appetite stimulant': { da: 'Appetitstimulerende', fr: 'Stimulant de l\'appétit' },
-            'Astringent': { da: 'Astringerende', fr: 'Astringent' },
-            'Bitter tonic': { da: 'Bitter tonics', fr: 'Tonique amer' },
-            'Blood pressure lowering': { da: 'Blodtrykssænkende', fr: 'Hypotenseur' },
-            'Blood pressure regulating': { da: 'Blodtryksregulerende', fr: 'Régulateur de tension artérielle' },
-            'Blood purifier': { da: 'Blodrensende', fr: 'Purificateur de sang' },
-            'Blood strengthening': { da: 'Blodstyrkende', fr: 'Fortifiant sanguin' },
-            'Blood sugar regulating': { da: 'Blodsukkerregulerende', fr: 'Régulateur de glycémie' },
-            'Bronchial spasmolytic': { da: 'Bronkie spasmolytiske (krampeløsnende)', fr: 'Spasmolytique bronchique' },
-            'Cardioprotective': { da: 'Hjertebeskyttende', fr: 'Cardioprotecteur' },
-            'Carminative': { da: 'Carminative', fr: 'Carminatif' },
-            'Cholagogue': { da: 'Galdedrivende', fr: 'Cholagogue' },
-            'Choleretic': { da: 'Galdestimulerende', fr: 'Cholérétique' },
-            'Cholesterol lowering': { da: 'Kolesterolnedsættende', fr: 'Hypocholestérolémiant' },
-            'Circulatory stimulant': { da: 'Kredsløbsstimulerende', fr: 'Stimulant circulatoire' },
-            'Connective tissue strengthening': { da: 'Bindevævsstyrkende', fr: 'Renforçant du tissu conjonctif' },
-            'Demulcent': { da: 'Emollierende', fr: 'Émollient' },
-            'Diaphoretic': { da: 'Sveddrivende', fr: 'Diaphorétique' },
-            'Diuretic': { da: 'Vanddrivende', fr: 'Diurétique' },
-            'Emmenagogue': { da: 'Menstruationsregulerende', fr: 'Emménagogue' },
-            'Emollient': { da: 'Emollierende', fr: 'Émollient' },
-            'Estrogen regulating': { da: 'Østrogenregulerende', fr: 'Régulateur d\'œstrogène' },
-            'Expectorant': { da: 'Hostemidler (ekspektorente)', fr: 'Expectorant' },
-            'Febrifuge': { da: 'Sveddrivende', fr: 'Fébrifuge' },
-            'Fibrinolytic': { da: 'Fibrinmodvirkende (protein medvirkende i blodets størkningsproces)', fr: 'Fibrinolytique' },
-            'Galactagogue': { da: 'Mælkedrivende (oxytoksin stimulerende)', fr: 'Galactagogue' },
-            'Galactofuge': { da: 'Mælkehæmmende', fr: 'Galactofuge' },
-            'Healing': { da: 'Helende', fr: 'Cicatrisant' },
-            'Heart tonic': { da: 'Hjertetonics', fr: 'Tonique cardiaque' },
-            'Hemostatic': { da: 'Blodstillende', fr: 'Hémostatique' },
-            'Hepatoprotective': { da: 'Leverbeskyttende', fr: 'Hépatoprotecteur' },
-            'Immunomodulating': { da: 'Immunregulerende', fr: 'Immunomodulateur' },
-            'Immunosuppressive': { da: 'Immunhæmmende', fr: 'Immunosuppresseur' },
-            'Interferon stimulating': { da: 'Interferon fremmende', fr: 'Stimulant d\'interféron' },
-            'Kidney tonic': { da: 'Nyretonic', fr: 'Tonique rénal' },
-            'Laxative': { da: 'Laxative', fr: 'Laxatif' },
-            'Liver regenerating': { da: 'Levercellehelende', fr: 'Régénérant hépatique' },
-            'Male tonic': { da: 'Mandetonics', fr: 'Tonique masculin' },
-            'Metabolism raising': { da: 'Basalstofskiftet (hæves)', fr: 'Stimulant du métabolisme' },
-            'Mucolytic': { da: 'Slimdrivende', fr: 'Mucolytique' },
-            'Mucostatic (lower respiratory)': { da: 'Slimhæmmende (nedre luftveje)', fr: 'Mucostatique (voies respiratoires inférieures)' },
-            'Mucostatic (upper respiratory)': { da: 'Slimhæmmende (øvre luftveje)', fr: 'Mucostatique (voies respiratoires supérieures)' },
-            'Mucous membrane strengthening': { da: 'Slimhindestyrkende', fr: 'Renforçant des muqueuses' },
-            'Mucous membrane tonic': { da: 'Slimhindetonic', fr: 'Tonique des muqueuses' },
-            'Nerve tonic': { da: 'Nervetonic', fr: 'Tonique nerveux' },
-            'Nootropic': { da: 'Nootropiske (hjerneforstærkere)', fr: 'Nootropique' },
-            'Prostate growth inhibiting': { da: 'Prostata vækst-hæmmende', fr: 'Inhibiteur de croissance de la prostate' },
-            'Sedative': { da: 'Beroligende', fr: 'Sédatif' },
-            'Sialagogue': { da: 'Spytdrivende', fr: 'Sialagogue' },
-            'Tonic': { da: 'Tonics', fr: 'Tonique' },
-            'Urinary antiseptic': { da: 'Antiseptiske i urinvejene', fr: 'Antiseptique urinaire' },
-            'Uterine contracting': { da: 'Livmodersammentrækkende', fr: 'Contractant utérin' },
-            'Uterine tonic': { da: 'Livmodertonics', fr: 'Tonique utérin' },
-            'Vasodilator': { da: 'Blodkarudvidende', fr: 'Vasodilatateur' },
-            'Venotonic': { da: 'Venestyrkende', fr: 'Veinotonique' },
-            'Vulnerary': { da: 'Helende', fr: 'Vulnéraire' },
-            'Weight reducing': { da: 'Vægtreducerende', fr: 'Amaigrissant' },
-            'Woman tonic': { da: 'Kvindetonics', fr: 'Tonique féminin' }
+        const frTranslations = {
+            'Adaptogen': 'Adaptogène',
+            'Adrenal tonic': 'Tonique surrénalien',
+            'Aldose reductase inhibitor': 'Inhibiteur d\'aldose réductase',
+            'Analgesic': 'Analgésique',
+            'Analgesic (pain relief)': 'Analgésique',
+            'Anti-allergic': 'Anti-allergique',
+            'Antiallergic': 'Anti-allergique',
+            'Antacid': 'Antiacide',
+            'Antibacterial': 'Antibactérien',
+            'Anticancer': 'Anticancéreux',
+            'Anticoagulant': 'Anticoagulant',
+            'Anticonvulsant (epilepsy)': 'Anticonvulsivant (épilepsie)',
+            'Antidepressant': 'Antidépresseur',
+            'Antiemetic': 'Antiémétique',
+            'Antifungal': 'Antifongique',
+            'Anti-inflammatory': 'Anti-inflammatoire',
+            'Anti-inflammatory (brain)': 'Anti-inflammatoire (cerveau)',
+            'Anti-inflammatory (cardiovascular)': 'Anti-inflammatoire (cardiovasculaire)',
+            'Anti-inflammatory (digestive/mucous membranes/skin)': 'Anti-inflammatoire (digestif/muqueuses/peau)',
+            'Anti-inflammatory (external)': 'Anti-inflammatoire (externe)',
+            'Anti-inflammatory (female reproductive)': 'Anti-inflammatoire (reproducteur féminin)',
+            'Anti-inflammatory (general)': 'Anti-inflammatoire (général)',
+            'Anti-inflammatory (liver)': 'Anti-inflammatoire (foie)',
+            'Anti-inflammatory (musculoskeletal)': 'Anti-inflammatoire (musculo-squelettique)',
+            'Anti-inflammatory (respiratory)': 'Anti-inflammatoire (respiratoire)',
+            'Anti-inflammatory (urinary)': 'Anti-inflammatoire (urinaire)',
+            'Antilithic': 'Antilithique',
+            'Antimicrobial': 'Antimicrobien',
+            'Antioxidant': 'Antioxydant',
+            'Antiparasitic': 'Antiparasitaire',
+            'Antiperspirant': 'Antiperspirant',
+            'Antipruritic (external)': 'Antipruritique (externe)',
+            'Antirheumatic': 'Antirhumatismal',
+            'Antiarrhythmic': 'Antiarythmique',
+            'Antiseptic (urinary)': 'Antiseptique (urinaire)',
+            'Antispasmodic': 'Antispasmodique',
+            'Anti-ulcer': 'Anti-ulcéreux',
+            'Antiviral': 'Antiviral',
+            'Antiviral (external)': 'Antiviral (externe)',
+            'Antiviral (internal)': 'Antiviral (interne)',
+            'Aphrodisiac': 'Aphrodisiaque',
+            'Appetite stimulant': 'Stimulant de l\'appétit',
+            'Astringent': 'Astringent',
+            'Bitter tonic': 'Tonique amer',
+            'Bladder tonic': 'Tonique vésical',
+            'Blood pressure lowering': 'Hypotenseur',
+            'Blood pressure raising': 'Hypertenseur',
+            'Blood pressure regulating': 'Régulateur de tension artérielle',
+            'Blood purifier': 'Purificateur de sang',
+            'Blood strengthening': 'Fortifiant sanguin',
+            'Blood sugar regulating': 'Régulateur de glycémie',
+            'Bronchial spasmolytic': 'Spasmolytique bronchique',
+            'Cardioprotective': 'Cardioprotecteur',
+            'Carminative': 'Carminatif',
+            'Cholagogue': 'Cholagogue',
+            'Choleretic': 'Cholérétique',
+            'Cholesterol lowering': 'Hypocholestérolémiant',
+            'Circulatory stimulant': 'Stimulant circulatoire',
+            'Connective tissue strengthening': 'Renforçant du tissu conjonctif',
+            'Demulcent': 'Émollient',
+            'Diaphoretic': 'Diaphorétique',
+            'Diuretic': 'Diurétique',
+            'Emmenagogue': 'Emménagogue',
+            'Emollient': 'Émollient',
+            'Estrogen regulating': 'Régulateur d\'œstrogène',
+            'Expectorant': 'Expectorant',
+            'Febrifuge': 'Fébrifuge',
+            'Fibrinolytic': 'Fibrinolytique',
+            'Galactagogue': 'Galactagogue',
+            'Galactofuge': 'Galactofuge',
+            'Healing': 'Cicatrisant',
+            'Heart tonic': 'Tonique cardiaque',
+            'Hemostatic': 'Hémostatique',
+            'Hepatoprotective': 'Hépatoprotecteur',
+            'Hypnotic': 'Hypnotique',
+            'Immunomodulating': 'Immunomodulateur',
+            'Immunosuppressive': 'Immunosuppresseur',
+            'Interferon stimulating': 'Stimulant d\'interféron',
+            'Kidney tonic': 'Tonique rénal',
+            'Laxative': 'Laxatif',
+            'Liver regenerating': 'Régénérant hépatique',
+            'Lymphatic stimulant': 'Stimulant lymphatique',
+            'Male tonic': 'Tonique masculin',
+            'Metabolism raising': 'Stimulant du métabolisme',
+            'Mucolytic': 'Mucolytique',
+            'Mucostatic (lower respiratory)': 'Mucostatique (voies respiratoires inférieures)',
+            'Mucostatic (upper respiratory)': 'Mucostatique (voies respiratoires supérieures)',
+            'Mucous membrane strengthening': 'Renforçant des muqueuses',
+            'Mucous membrane tonic': 'Tonique des muqueuses',
+            'Nerve tonic': 'Tonique nerveux',
+            'Nootropic': 'Nootropique',
+            'Nutritive': 'Nutritif',
+            'Progesterone effect': 'Effet progestéronique',
+            'Prolactin inhibiting': 'Inhibiteur de prolactine',
+            'Prostate growth inhibiting': 'Inhibiteur de croissance de la prostate',
+            'Sedative': 'Sédatif',
+            'Sialagogue': 'Sialagogue',
+            'Tonic': 'Tonique',
+            'Urinary antiseptic': 'Antiseptique urinaire',
+            'Uterine contracting': 'Contractant utérin',
+            'Uterine relaxant': 'Relaxant utérin',
+            'Uterine tonic': 'Tonique utérin',
+            'Vasodilator': 'Vasodilatateur',
+            'Venotonic': 'Veinotonique',
+            'Vulnerary': 'Vulnéraire',
+            'Warming': 'Réchauffant',
+            'Weight reducing': 'Amaigrissant',
+            'Woman tonic': 'Tonique féminin'
         };
 
-        return translations[property] || { da: '', fr: '' };
+        return {
+            da: ENGLISH_TO_DANISH[property] || '',
+            fr: frTranslations[property] || ''
+        };
     }
 
     /**
@@ -184,9 +214,12 @@
         const propName = escapeHtml(property);
         const count = plants.length;
 
-        let html = `<tr>`;
+        let html = `<tr class="property-row" data-expanded="false" role="button" tabindex="0" aria-expanded="false">`;
         html += `<td class="property-name">`;
-        html += `<div class="prop-main">${propName}</div>`;
+        html += `<div class="prop-main">`;
+        html += `<span class="accordion-arrow" aria-hidden="true">▶</span>`;
+        html += `${propName}`;
+        html += `</div>`;
 
         if (translations.da || translations.fr) {
             html += `<div class="prop-translations">`;
@@ -201,7 +234,8 @@
 
         html += `</td>`;
         html += `<td class="plant-count">${count}</td>`;
-        html += `<td class="plant-list">`;
+        html += `<td class="plant-list-cell">`;
+        html += `<div class="accordion-content">`;
 
         // Sort plants alphabetically
         plants.sort((a, b) => a.commonName.localeCompare(b.commonName));
@@ -209,9 +243,39 @@
             html += renderPlantEntry(plant);
         });
 
+        html += `</div>`;
         html += `</td>`;
         html += `</tr>`;
         return html;
+    }
+
+    /**
+     * Set up accordion click handlers
+     */
+    function setupAccordion() {
+        const tbody = document.querySelector('#property-table tbody');
+        if (!tbody) return;
+
+        tbody.addEventListener('click', function(e) {
+            const row = e.target.closest('.property-row');
+            if (!row) return;
+            toggleRow(row);
+        });
+
+        tbody.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                const row = e.target.closest('.property-row');
+                if (!row) return;
+                e.preventDefault();
+                toggleRow(row);
+            }
+        });
+    }
+
+    function toggleRow(row) {
+        const expanded = row.getAttribute('data-expanded') === 'true';
+        row.setAttribute('data-expanded', String(!expanded));
+        row.setAttribute('aria-expanded', String(!expanded));
     }
 
     /**
@@ -272,6 +336,7 @@
             });
 
             tbody.innerHTML = html;
+            setupAccordion();
 
             console.log('[PropertyStats] Rendered', sortedProperties.length, 'properties');
         } catch (error) {
