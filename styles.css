@@ -728,9 +728,75 @@ footer .disclaimer {
     background: rgba(90, 111, 79, 0.05);
 }
 
+.property-row {
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+
+.property-row:hover {
+    background: rgba(90, 111, 79, 0.07);
+}
+
+.property-row[data-expanded="true"] {
+    background: rgba(90, 111, 79, 0.06);
+    border-left: 3px solid var(--color-primary);
+}
+
+.accordion-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    border-radius: 50%;
+    background: rgba(90, 111, 79, 0.12);
+    font-size: 0.55em;
+    transition: transform 0.2s ease, background 0.2s ease;
+    color: var(--color-primary);
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+
+.property-row[data-expanded="true"] .accordion-arrow {
+    transform: rotate(90deg);
+    background: var(--color-primary);
+    color: white;
+}
+
+
+.accordion-content {
+    display: none;
+}
+
+.property-row[data-expanded="true"] .accordion-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    gap: 6px;
+    padding-top: 4px;
+}
+
+.property-row[data-expanded="true"] .plant-entry {
+    margin-bottom: 0;
+    padding: 6px 10px;
+    border-bottom: none;
+    background: var(--color-card-bg);
+    border: 1px solid rgba(139, 115, 85, 0.2);
+    border-radius: 4px;
+}
+
+.property-row[data-expanded="true"] .plant-entry:last-child {
+    padding: 6px 10px;
+}
+
 .property-name {
-    min-width: 250px;
-    max-width: 300px;
+    width: 20%;
+    min-width: 180px;
+}
+
+.plant-list-cell {
+    vertical-align: top;
+    width: auto;
 }
 
 .prop-main {
@@ -756,7 +822,8 @@ footer .disclaimer {
     text-align: center;
     font-weight: 600;
     color: var(--color-primary);
-    min-width: 80px;
+    width: 60px;
+    min-width: 60px;
     font-size: 1.2em;
 }
 
