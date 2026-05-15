@@ -48,12 +48,13 @@ If the user asks to add/modify/remove properties:
 ## Translation Files
 
 ### Property Translations
-File: `property-statistics-renderer.js` and `DANISH-TO-ENGLISH-PROPERTIES.json`
+Files: `i18n.js` (PROPERTY_TRANSLATIONS) and `DANISH-TO-ENGLISH-PROPERTIES.json`
 
 - English property names must match plants-data.js exactly
 - Danish translations must match egenskaber.pdf terminology
 - French translations are supplementary
-- Danish → English mapping in DANISH-TO-ENGLISH-PROPERTIES.json
+- Danish → English mapping in DANISH-TO-ENGLISH-PROPERTIES.json (canonical source)
+- Inverted English → Danish/French maps live in i18n.js PROPERTY_TRANSLATIONS
 
 ### Plant Name Translations
 File: `PLANT-NAME-TRANSLATIONS.json`

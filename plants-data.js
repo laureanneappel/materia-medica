@@ -14,6 +14,19 @@ window.PLANTS_DATA = [
     "fileSlug": "agrimony"
   },
   {
+    "commonName": "Albizia",
+    "botanicalName": "Albizia lebbeck",
+    "family": "Fabaceae (Legume family)",
+    "danishName": "Albizia",
+    "frenchName": "Albizia",
+    "properties": [
+      "Cholesterol lowering",
+      "Immunosuppressive"
+    ],
+    "status": "enabled",
+    "fileSlug": "albizia"
+  },
+  {
     "commonName": "Aloe Vera",
     "botanicalName": "Aloe vera",
     "family": "Asphodelaceae (Aloe family)",
@@ -31,19 +44,6 @@ window.PLANTS_DATA = [
     ],
     "status": "enabled",
     "fileSlug": "aloe-vera"
-  },
-  {
-    "commonName": "Albizia",
-    "botanicalName": "Albizia lebbeck",
-    "family": "Fabaceae (Legume family)",
-    "danishName": "Albizia",
-    "frenchName": "Albizia",
-    "properties": [
-      "Cholesterol lowering",
-      "Immunosuppressive"
-    ],
-    "status": "enabled",
-    "fileSlug": "albizia"
   },
   {
     "commonName": "Andrographis",
@@ -547,29 +547,6 @@ window.PLANTS_DATA = [
     "fileSlug": "chaga"
   },
   {
-    "commonName": "German Chamomile",
-    "botanicalName": "Chamomilla recutita",
-    "danishName": "Kamille",
-    "frenchName": "Camomille",
-    "properties": [
-      "Analgesic",
-      "Anti-inflammatory (digestive/mucous membranes/skin)",
-      "Anti-inflammatory (external)",
-      "Anti-inflammatory (general)",
-      "Anti-ulcer",
-      "Antirheumatic",
-      "Antispasmodic",
-      "Bitter tonic",
-      "Carminative",
-      "Cholagogue",
-      "Healing",
-      "Sedative"
-    ],
-    "status": "enabled",
-    "fileSlug": "chamomile-german",
-    "family": "Asteraceae (Daisy family)"
-  },
-  {
     "commonName": "Chickweed",
     "botanicalName": "Stellaria media",
     "family": "Caryophyllaceae (Pink family)",
@@ -1040,6 +1017,29 @@ window.PLANTS_DATA = [
     "status": "enabled",
     "fileSlug": "gentian",
     "family": "Gentianaceae (Gentian family)"
+  },
+  {
+    "commonName": "German Chamomile",
+    "botanicalName": "Chamomilla recutita",
+    "danishName": "Kamille",
+    "frenchName": "Camomille",
+    "properties": [
+      "Analgesic",
+      "Anti-inflammatory (digestive/mucous membranes/skin)",
+      "Anti-inflammatory (external)",
+      "Anti-inflammatory (general)",
+      "Anti-ulcer",
+      "Antirheumatic",
+      "Antispasmodic",
+      "Bitter tonic",
+      "Carminative",
+      "Cholagogue",
+      "Healing",
+      "Sedative"
+    ],
+    "status": "enabled",
+    "fileSlug": "chamomile-german",
+    "family": "Asteraceae (Daisy family)"
   },
   {
     "commonName": "Ginger",
@@ -1901,16 +1901,6 @@ window.PLANTS_DATA = [
     "fileSlug": "propolis"
   },
   {
-    "commonName": "Purple Willow",
-    "botanicalName": "Salix purpurea",
-    "family": "Salicaceae (Willow family)",
-    "danishName": "Purpurpil",
-    "frenchName": "Saule pourpre",
-    "properties": [],
-    "status": "enabled",
-    "fileSlug": "purple-willow"
-  },
-  {
     "commonName": "Raspberry Leaf",
     "botanicalName": "Rubus idaeus",
     "family": "Rosaceae (Rose family)",
@@ -2013,6 +2003,21 @@ window.PLANTS_DATA = [
     "fileSlug": "rhodiola"
   },
   {
+    "commonName": "Rose Hips",
+    "botanicalName": "Rosa canina",
+    "family": "Rosaceae (Rose family)",
+    "danishName": "Hyben",
+    "frenchName": "Églantier",
+    "properties": [
+      "Anti-inflammatory (digestive/mucous membranes/skin)",
+      "Astringent",
+      "Hemostatic",
+      "Expectorant"
+    ],
+    "status": "enabled",
+    "fileSlug": "rose-hips"
+  },
+  {
     "commonName": "Rosemary",
     "botanicalName": "Rosmarinus officinalis",
     "family": "Lamiaceae (Mint family)",
@@ -2032,21 +2037,6 @@ window.PLANTS_DATA = [
     ],
     "status": "enabled",
     "fileSlug": "rosemary"
-  },
-  {
-    "commonName": "Rose Hips",
-    "botanicalName": "Rosa canina",
-    "family": "Rosaceae (Rose family)",
-    "danishName": "Hyben",
-    "frenchName": "Églantier",
-    "properties": [
-      "Anti-inflammatory (digestive/mucous membranes/skin)",
-      "Astringent",
-      "Hemostatic",
-      "Expectorant"
-    ],
-    "status": "enabled",
-    "fileSlug": "rose-hips"
   },
   {
     "commonName": "Sage",
@@ -2134,6 +2124,18 @@ window.PLANTS_DATA = [
     ],
     "status": "enabled",
     "fileSlug": "schisandra"
+  },
+  {
+    "commonName": "Senna",
+    "botanicalName": "Cassia angustifolia",
+    "family": "Fabaceae (Legume family)",
+    "danishName": "Senna",
+    "frenchName": "Séné",
+    "properties": [
+      "Laxative"
+    ],
+    "status": "enabled",
+    "fileSlug": "senna"
   },
   {
     "commonName": "Shepherd's Purse",

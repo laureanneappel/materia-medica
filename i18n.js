@@ -22,7 +22,6 @@
     const TRANSLATIONS = {
         en: {
             'site.title': 'Materia Medica',
-            'site.tagline': 'Medicinal Plants',
 
             'nav.all': 'All Plants',
             'nav.properties': 'Properties',
@@ -55,7 +54,6 @@
         },
         da: {
             'site.title': 'Materia Medica',
-            'site.tagline': 'Lægeplanter',
 
             'nav.all': 'Alle planter',
             'nav.properties': 'Egenskaber',
@@ -88,7 +86,6 @@
         },
         fr: {
             'site.title': 'Materia Medica',
-            'site.tagline': 'Plantes médicinales',
 
             'nav.all': 'Toutes les plantes',
             'nav.properties': 'Propriétés',
