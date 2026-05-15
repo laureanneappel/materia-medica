@@ -42,203 +42,60 @@
         return propertyMap;
     }
 
-    // Danish translations derived from DANISH-TO-ENGLISH-PROPERTIES.json (inverted).
-    // DA values always reflect the exact term used in egenskaber.pdf.
-    const ENGLISH_TO_DANISH = {};
-    (function buildDanishMap() {
-        const danishToEnglish = window.DANISH_TO_ENGLISH_PROPERTIES;
-        if (!danishToEnglish) {
-            console.warn('[PropertyStats] DANISH_TO_ENGLISH_PROPERTIES not loaded — Danish labels will be empty');
-            return;
-        }
-        for (const [da, en] of Object.entries(danishToEnglish)) {
-            ENGLISH_TO_DANISH[en] = da;
-        }
-    })();
-
-    /**
-     * Get property translations
-     */
-    function getPropertyTranslations(property) {
-        const frTranslations = {
-            'Adaptogen': 'Adaptogène',
-            'Adrenal tonic': 'Tonique surrénalien',
-            'Aldose reductase inhibitor': 'Inhibiteur d\'aldose réductase',
-            'Analgesic': 'Analgésique',
-            'Analgesic (pain relief)': 'Analgésique',
-            'Anti-allergic': 'Anti-allergique',
-            'Antiallergic': 'Anti-allergique',
-            'Antacid': 'Antiacide',
-            'Antibacterial': 'Antibactérien',
-            'Anticancer': 'Anticancéreux',
-            'Anticoagulant': 'Anticoagulant',
-            'Anticonvulsant (epilepsy)': 'Anticonvulsivant (épilepsie)',
-            'Antidepressant': 'Antidépresseur',
-            'Antiemetic': 'Antiémétique',
-            'Antifungal': 'Antifongique',
-            'Anti-inflammatory': 'Anti-inflammatoire',
-            'Anti-inflammatory (brain)': 'Anti-inflammatoire (cerveau)',
-            'Anti-inflammatory (cardiovascular)': 'Anti-inflammatoire (cardiovasculaire)',
-            'Anti-inflammatory (digestive/mucous membranes/skin)': 'Anti-inflammatoire (digestif/muqueuses/peau)',
-            'Anti-inflammatory (external)': 'Anti-inflammatoire (externe)',
-            'Anti-inflammatory (female reproductive)': 'Anti-inflammatoire (reproducteur féminin)',
-            'Anti-inflammatory (general)': 'Anti-inflammatoire (général)',
-            'Anti-inflammatory (liver)': 'Anti-inflammatoire (foie)',
-            'Anti-inflammatory (musculoskeletal)': 'Anti-inflammatoire (musculo-squelettique)',
-            'Anti-inflammatory (respiratory)': 'Anti-inflammatoire (respiratoire)',
-            'Anti-inflammatory (urinary)': 'Anti-inflammatoire (urinaire)',
-            'Antilithic': 'Antilithique',
-            'Antimicrobial': 'Antimicrobien',
-            'Antioxidant': 'Antioxydant',
-            'Antiparasitic': 'Antiparasitaire',
-            'Antiperspirant': 'Antiperspirant',
-            'Antipruritic (external)': 'Antipruritique (externe)',
-            'Antirheumatic': 'Antirhumatismal',
-            'Antiarrhythmic': 'Antiarythmique',
-            'Antiseptic (urinary)': 'Antiseptique (urinaire)',
-            'Antispasmodic': 'Antispasmodique',
-            'Anti-ulcer': 'Anti-ulcéreux',
-            'Antiviral': 'Antiviral',
-            'Antiviral (external)': 'Antiviral (externe)',
-            'Antiviral (internal)': 'Antiviral (interne)',
-            'Aphrodisiac': 'Aphrodisiaque',
-            'Appetite stimulant': 'Stimulant de l\'appétit',
-            'Astringent': 'Astringent',
-            'Bitter tonic': 'Tonique amer',
-            'Bladder tonic': 'Tonique vésical',
-            'Blood pressure lowering': 'Hypotenseur',
-            'Blood pressure raising': 'Hypertenseur',
-            'Blood pressure regulating': 'Régulateur de tension artérielle',
-            'Blood purifier': 'Purificateur de sang',
-            'Blood strengthening': 'Fortifiant sanguin',
-            'Blood sugar regulating': 'Régulateur de glycémie',
-            'Bronchial spasmolytic': 'Spasmolytique bronchique',
-            'Cardioprotective': 'Cardioprotecteur',
-            'Carminative': 'Carminatif',
-            'Cholagogue': 'Cholagogue',
-            'Choleretic': 'Cholérétique',
-            'Cholesterol lowering': 'Hypocholestérolémiant',
-            'Circulatory stimulant': 'Stimulant circulatoire',
-            'Connective tissue strengthening': 'Renforçant du tissu conjonctif',
-            'Demulcent': 'Émollient',
-            'Diaphoretic': 'Diaphorétique',
-            'Diuretic': 'Diurétique',
-            'Emmenagogue': 'Emménagogue',
-            'Emollient': 'Émollient',
-            'Estrogen regulating': 'Régulateur d\'œstrogène',
-            'Expectorant': 'Expectorant',
-            'Febrifuge': 'Fébrifuge',
-            'Fibrinolytic': 'Fibrinolytique',
-            'Galactagogue': 'Galactagogue',
-            'Galactofuge': 'Galactofuge',
-            'Healing': 'Cicatrisant',
-            'Heart tonic': 'Tonique cardiaque',
-            'Hemostatic': 'Hémostatique',
-            'Hepatoprotective': 'Hépatoprotecteur',
-            'Hypnotic': 'Hypnotique',
-            'Immunomodulating': 'Immunomodulateur',
-            'Immunosuppressive': 'Immunosuppresseur',
-            'Interferon stimulating': 'Stimulant d\'interféron',
-            'Kidney tonic': 'Tonique rénal',
-            'Laxative': 'Laxatif',
-            'Liver regenerating': 'Régénérant hépatique',
-            'Lymphatic stimulant': 'Stimulant lymphatique',
-            'Male tonic': 'Tonique masculin',
-            'Metabolism raising': 'Stimulant du métabolisme',
-            'Mucolytic': 'Mucolytique',
-            'Mucostatic (lower respiratory)': 'Mucostatique (voies respiratoires inférieures)',
-            'Mucostatic (upper respiratory)': 'Mucostatique (voies respiratoires supérieures)',
-            'Mucous membrane strengthening': 'Renforçant des muqueuses',
-            'Mucous membrane tonic': 'Tonique des muqueuses',
-            'Nerve tonic': 'Tonique nerveux',
-            'Nootropic': 'Nootropique',
-            'Nutritive': 'Nutritif',
-            'Progesterone effect': 'Effet progestéronique',
-            'Prolactin inhibiting': 'Inhibiteur de prolactine',
-            'Prostate growth inhibiting': 'Inhibiteur de croissance de la prostate',
-            'Sedative': 'Sédatif',
-            'Sialagogue': 'Sialagogue',
-            'Tonic': 'Tonique',
-            'Urinary antiseptic': 'Antiseptique urinaire',
-            'Uterine contracting': 'Contractant utérin',
-            'Uterine relaxant': 'Relaxant utérin',
-            'Uterine tonic': 'Tonique utérin',
-            'Vasodilator': 'Vasodilatateur',
-            'Venotonic': 'Veinotonique',
-            'Vulnerary': 'Vulnéraire',
-            'Warming': 'Réchauffant',
-            'Weight reducing': 'Amaigrissant',
-            'Woman tonic': 'Tonique féminin'
-        };
-
-        return {
-            da: ENGLISH_TO_DANISH[property] || '',
-            fr: frTranslations[property] || ''
-        };
+    function activeLang() {
+        return (window.I18n && window.I18n.getLang) ? window.I18n.getLang() : 'en';
     }
 
     /**
-     * Render plant entry for property table
+     * Plant's display name in the active language, falling back to English commonName.
+     */
+    function plantDisplayName(plant) {
+        const lang = activeLang();
+        const byLang = {
+            en: plant.commonName,
+            da: plant.danishName,
+            fr: plant.frenchName,
+        };
+        return (byLang[lang] && byLang[lang].trim()) || plant.commonName;
+    }
+
+    /**
+     * Render plant entry for property table — shows the name in the active language,
+     * with the Latin name underneath.
      */
     function renderPlantEntry(plant) {
-        const commonName = escapeHtml(plant.commonName);
+        const displayName = escapeHtml(plantDisplayName(plant));
         const botanicalName = escapeHtml(plant.botanicalName);
-        const fileSlug = escapeHtml(plant.fileSlug);
-        const danishName = plant.danishName ? escapeHtml(plant.danishName) : '';
-        const frenchName = plant.frenchName ? escapeHtml(plant.frenchName) : '';
+        const slug = plant.fileSlug;
+        const href = escapeHtml(window.I18n ? window.I18n.withLang('plants/' + slug + '.html') : 'plants/' + slug + '.html');
 
-        let html = `<div class="plant-entry">`;
-        html += `<div class="plant-main"><a href="plants/${fileSlug}.html">${commonName}</a></div>`;
-        html += `<div class="plant-botanical"><em>${botanicalName}</em></div>`;
-
-        if (danishName || frenchName) {
-            html += `<div class="plant-translations">`;
-            if (danishName) {
-                html += `<span class="plant-trans"><span class="lang-label">DA:</span> ${danishName}</span>`;
-            }
-            if (frenchName) {
-                html += `<span class="plant-trans"><span class="lang-label">FR:</span> ${frenchName}</span>`;
-            }
-            html += `</div>`;
-        }
-
-        html += `</div>`;
-        return html;
+        return `<div class="plant-entry">
+            <div class="plant-main"><a href="${href}">${displayName}</a></div>
+            <div class="plant-botanical"><em>${botanicalName}</em></div>
+        </div>`;
     }
 
     /**
-     * Render property row
+     * Render property row — displays the property name in the active language only.
      */
     function renderPropertyRow(property, plants) {
-        const translations = getPropertyTranslations(property);
-        const propName = escapeHtml(property);
+        const I18n = window.I18n;
+        const displayProp = escapeHtml(I18n ? I18n.tProperty(property) : property);
         const count = plants.length;
 
-        let html = `<tr class="property-row" data-expanded="false" role="button" tabindex="0" aria-expanded="false">`;
+        let html = `<tr class="property-row" data-expanded="true" role="button" tabindex="0" aria-expanded="true">`;
         html += `<td class="property-name">`;
         html += `<div class="prop-main">`;
         html += `<span class="accordion-arrow" aria-hidden="true">▶</span>`;
-        html += `${propName}`;
+        html += `${displayProp}`;
         html += `</div>`;
-
-        if (translations.da || translations.fr) {
-            html += `<div class="prop-translations">`;
-            if (translations.da) {
-                html += `<span class="prop-trans"><span class="lang-label">DA:</span> ${escapeHtml(translations.da)}</span>`;
-            }
-            if (translations.fr) {
-                html += `<span class="prop-trans"><span class="lang-label">FR:</span> ${escapeHtml(translations.fr)}</span>`;
-            }
-            html += `</div>`;
-        }
-
         html += `</td>`;
         html += `<td class="plant-count">${count}</td>`;
         html += `<td class="plant-list-cell">`;
         html += `<div class="accordion-content">`;
 
-        // Sort plants alphabetically
-        plants.sort((a, b) => a.commonName.localeCompare(b.commonName));
+        // Sort plants alphabetically by their display name in the active language
+        plants.sort((a, b) => plantDisplayName(a).localeCompare(plantDisplayName(b)));
         plants.forEach(plant => {
             html += renderPlantEntry(plant);
         });
@@ -283,20 +140,24 @@
      */
     function renderStatsSummary(propertyMap, totalPlants, plantsWithProperties) {
         const uniqueProperties = propertyMap.size;
+        const I18n = window.I18n;
+        const labelUnique = escapeHtml(I18n ? I18n.t('props.stats.unique') : 'Unique Properties');
+        const labelWith = escapeHtml(I18n ? I18n.t('props.stats.withProps') : 'Plants with Properties');
+        const labelTotal = escapeHtml(I18n ? I18n.t('props.stats.total') : 'Total Plants');
 
         return `
             <div class="stats-summary">
                 <div class="stat-box">
                     <div class="stat-number">${uniqueProperties}</div>
-                    <div class="stat-label">Unique Properties</div>
+                    <div class="stat-label">${labelUnique}</div>
                 </div>
                 <div class="stat-box">
                     <div class="stat-number">${plantsWithProperties}</div>
-                    <div class="stat-label">Plants with Properties</div>
+                    <div class="stat-label">${labelWith}</div>
                 </div>
                 <div class="stat-box">
                     <div class="stat-number">${totalPlants}</div>
-                    <div class="stat-label">Total Plants</div>
+                    <div class="stat-label">${labelTotal}</div>
                 </div>
             </div>`;
     }
@@ -326,8 +187,13 @@
                 return;
             }
 
-            // Sort properties alphabetically
-            const sortedProperties = Array.from(propertyMap.keys()).sort();
+            // Sort properties alphabetically by their translated label
+            const I18n = window.I18n;
+            const sortedProperties = Array.from(propertyMap.keys()).sort((a, b) => {
+                const la = I18n ? I18n.tProperty(a) : a;
+                const lb = I18n ? I18n.tProperty(b) : b;
+                return la.localeCompare(lb);
+            });
 
             let html = '';
             sortedProperties.forEach(property => {
@@ -356,7 +222,8 @@
                 // Show loading state briefly
                 const tbody = document.querySelector('#property-table tbody');
                 if (tbody) {
-                    tbody.innerHTML = '<tr><td colspan="3" style="text-align: center; padding: 60px 20px;"><div class="loading-spinner" style="margin: 0 auto;"></div><p style="margin-top: 20px; color: var(--color-secondary); font-style: italic;">Loading properties...</p></td></tr>';
+                    const loadingMsg = window.I18n ? window.I18n.t('props.loading') : 'Loading properties...';
+                    tbody.innerHTML = `<tr><td colspan="3" style="text-align: center; padding: 60px 20px;"><div class="loading-spinner" style="margin: 0 auto;"></div><p style="margin-top: 20px; color: var(--color-secondary); font-style: italic;">${escapeHtml(loadingMsg)}</p></td></tr>`;
                 }
 
                 setTimeout(() => {

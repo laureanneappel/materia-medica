@@ -24,6 +24,7 @@
         <link rel="icon" type="image/svg+xml" href="favicon.svg">
         <link rel="stylesheet" href="styles.css">
         <script src="utils.js"></script>
+        <script src="i18n.js"></script>
         <script src="page-transition.js"></script>
         <script src="navigation.js" defer></script>
         <script src="footer.js" defer></script>
@@ -65,33 +66,7 @@
           "mainEntity": {
             "@type": "ItemList",
             "name": "Medicinal Plants Collection",
-            "description": "Database of medicinal plants organized by body systems",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Nervous System Plants",
-                "url": "nervous-system.html"
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Immune System Plants",
-                "url": "immune-system.html"
-              },
-              {
-                "@type": "ListItem",
-                "position": 3,
-                "name": "Digestive System Plants",
-                "url": "digestive-system.html"
-              },
-              {
-                "@type": "ListItem",
-                "position": 4,
-                "name": "Respiratory System Plants",
-                "url": "respiratory-system.html"
-              }
-            ]
+            "description": "Database of medicinal plants"
           }
         }
         </script>
@@ -101,7 +76,7 @@
         <a href="#main-content" class="skip-link">Skip to main content</a>
         <div class="container">
             <header>
-                <h1>Materia Medica</h1>
+                <h1 data-i18n="site.title">Materia Medica</h1>
             </header>
 
             <div id="nav-placeholder"></div>
@@ -116,28 +91,30 @@
                                 type="text"
                                 id="search-input"
                                 placeholder="Search by plant name..."
+                                data-i18n-placeholder="search.placeholder"
                                 aria-label="Search plants by name"
+                                data-i18n-aria-label="search.aria"
                             />
                         </div>
 
                         <div class="filter-box">
-                            <label for="property-filter">Filter by property:</label>
+                            <label for="property-filter" data-i18n="filter.property.label">Filter by property:</label>
                             <select id="property-filter" aria-label="Filter by medicinal property">
-                                <option value="">Select a property...</option>
+                                <option value="" data-i18n="filter.property.placeholder">Select a property...</option>
                             </select>
                         </div>
 
                         <div class="filter-box">
-                            <label for="family-filter">Filter by family:</label>
+                            <label for="family-filter" data-i18n="filter.family.label">Filter by family:</label>
                             <select id="family-filter" aria-label="Filter by botanical family">
-                                <option value="">Select a family...</option>
+                                <option value="" data-i18n="filter.family.placeholder">Select a family...</option>
                             </select>
                         </div>
                     </div>
 
                     <div id="active-filters"></div>
 
-                    <div id="results-count" class="results-count">Showing all plants</div>
+                    <div id="results-count" class="results-count" data-i18n="results.all">Showing all plants</div>
                 </div>
 
                 <div class="plant-list" id="plant-list-container">

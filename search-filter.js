@@ -68,7 +68,7 @@
 
         // Validate data structure
         const invalidPlants = allPlants.filter(plant =>
-            !plant.commonName || !plant.botanicalName || !plant.systems
+            !plant.commonName || !plant.botanicalName
         );
 
         if (invalidPlants.length > 0) {
@@ -163,20 +163,23 @@
             return;
         }
 
+        const I18n = window.I18n;
         const filterTags = currentFilters.properties.map(prop => {
             const escapedProp = escapeHtml(prop);
+            const label = escapeHtml(I18n ? I18n.tProperty(prop) : prop);
             return `
                 <span class="filter-tag">
-                    ${escapedProp}
-                    <button class="remove-filter" data-property="${escapedProp}" aria-label="Remove ${escapedProp} filter">×</button>
+                    ${label}
+                    <button class="remove-filter" data-property="${escapedProp}" aria-label="Remove ${label} filter">×</button>
                 </span>
             `;
         }).join('');
 
+        const clearAllLabel = escapeHtml(I18n ? I18n.t('filter.clearAll') : 'Clear All');
         container.innerHTML = `
             <div class="active-filters-wrapper">
                 ${filterTags}
-                <button class="clear-all-filters" id="clear-filters-btn">Clear All</button>
+                <button class="clear-all-filters" id="clear-filters-btn">${clearAllLabel}</button>
             </div>
         `;
 
@@ -281,7 +284,9 @@
         if (!container) return;
 
         if (plants.length === 0) {
-            container.innerHTML = '<p class="no-results">No plants found matching your criteria.</p>';
+            const I18n = window.I18n;
+            const msg = escapeHtml(I18n ? I18n.t('results.empty') : 'No plants found matching your criteria.');
+            container.innerHTML = `<p class="no-results">${msg}</p>`;
             return;
         }
 
@@ -318,10 +323,15 @@
         if (!countElement) return;
 
         const total = allPlants.length;
+        const I18n = window.I18n;
         if (count === total) {
-            countElement.textContent = `Showing all ${total} plants`;
+            countElement.textContent = I18n
+                ? I18n.format(I18n.t('results.allCount'), { count: total })
+                : `Showing all ${total} plants`;
         } else {
-            countElement.textContent = `Showing ${count} of ${total} plants`;
+            countElement.textContent = I18n
+                ? I18n.format(I18n.t('results.partial'), { count, total })
+                : `Showing ${count} of ${total} plants`;
         }
     }
 
@@ -331,6 +341,8 @@
     function populatePropertyDropdown() {
         const select = document.getElementById('property-filter');
         if (!select) return;
+
+        const I18n = window.I18n;
 
         // Get all unique properties from plants with validation
         const allProperties = new Set();
@@ -344,16 +356,19 @@
             }
         });
 
-        // Sort properties alphabetically
-        const sortedProperties = Array.from(allProperties).sort();
+        // Pair each English property with its translated label, then sort by the label
+        const pairs = Array.from(allProperties).map(prop => ({
+            value: prop,
+            label: I18n ? I18n.tProperty(prop) : prop,
+        }));
+        pairs.sort((a, b) => a.label.localeCompare(b.label));
 
-        // Create options with sanitization
-        const options = sortedProperties.map(prop => {
-            const escaped = escapeHtml(prop);
-            return `<option value="${escaped}">${escaped}</option>`;
-        }).join('');
+        const options = pairs.map(({ value, label }) =>
+            `<option value="${escapeHtml(value)}">${escapeHtml(label)}</option>`
+        ).join('');
 
-        select.innerHTML = `<option value="">Select a property...</option>${options}`;
+        const placeholder = escapeHtml(I18n ? I18n.t('filter.property.placeholder') : 'Select a property...');
+        select.innerHTML = `<option value="">${placeholder}</option>${options}`;
     }
 
     /**
@@ -362,6 +377,8 @@
     function populateFamilyDropdown() {
         const select = document.getElementById('family-filter');
         if (!select) return;
+
+        const I18n = window.I18n;
 
         // Get all unique families from plants with validation
         const allFamilies = new Set();
@@ -374,16 +391,18 @@
             }
         });
 
-        // Sort families alphabetically
-        const sortedFamilies = Array.from(allFamilies).sort();
+        const pairs = Array.from(allFamilies).map(family => ({
+            value: family,
+            label: I18n ? I18n.tFamily(family) : family,
+        }));
+        pairs.sort((a, b) => a.label.localeCompare(b.label));
 
-        // Create options with sanitization
-        const options = sortedFamilies.map(family => {
-            const escaped = escapeHtml(family);
-            return `<option value="${escaped}">${escaped}</option>`;
-        }).join('');
+        const options = pairs.map(({ value, label }) =>
+            `<option value="${escapeHtml(value)}">${escapeHtml(label)}</option>`
+        ).join('');
 
-        select.innerHTML = `<option value="">Select a family...</option>${options}`;
+        const placeholder = escapeHtml(I18n ? I18n.t('filter.family.placeholder') : 'Select a family...');
+        select.innerHTML = `<option value="">${placeholder}</option>${options}`;
     }
 
     // Expose public API

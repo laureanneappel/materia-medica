@@ -5,9 +5,6 @@ window.PLANTS_DATA = [
     "family": "Rosaceae (Rose family)",
     "danishName": "Almindelig agermåne",
     "frenchName": "Aigremoine eupatoire",
-    "systems": [
-      "digestive"
-    ],
     "properties": [
       "Astringent",
       "Choleretic",
@@ -22,10 +19,6 @@ window.PLANTS_DATA = [
     "family": "Asphodelaceae (Aloe family)",
     "danishName": "Aloe vera",
     "frenchName": "Aloès",
-    "systems": [
-      "digestive",
-      "immune"
-    ],
     "properties": [
       "Anti-inflammatory (digestive/mucous membranes/skin)",
       "Anti-inflammatory (external)",
@@ -45,10 +38,6 @@ window.PLANTS_DATA = [
     "family": "Fabaceae (Legume family)",
     "danishName": "Albizia",
     "frenchName": "Albizia",
-    "systems": [
-      "immune",
-      "respiratory"
-    ],
     "properties": [
       "Cholesterol lowering",
       "Immunosuppressive"
@@ -62,11 +51,6 @@ window.PLANTS_DATA = [
     "family": "Acanthaceae (Acanthus family)",
     "danishName": "Andrographis",
     "frenchName": "Andrographis",
-    "systems": [
-      "immune",
-      "digestive",
-      "respiratory"
-    ],
     "properties": [
       "Anti-inflammatory (general)",
       "Anti-inflammatory (liver)",
@@ -90,11 +74,6 @@ window.PLANTS_DATA = [
     "botanicalName": "Angelica archangelica",
     "danishName": "Kvan",
     "frenchName": "Angélique officinale",
-    "systems": [
-      "woman-reproductive",
-      "digestive",
-      "nervous"
-    ],
     "properties": [
       "Anti-inflammatory (general)",
       "Anti-inflammatory (musculoskeletal)",
@@ -123,10 +102,6 @@ window.PLANTS_DATA = [
     "family": "Apiaceae (Carrot family)",
     "danishName": "Anis",
     "frenchName": "Anis vert",
-    "systems": [
-      "digestive",
-      "respiratory"
-    ],
     "properties": [
       "Carminative"
     ],
@@ -139,10 +114,6 @@ window.PLANTS_DATA = [
     "family": "Asteraceae (Daisy family)",
     "danishName": "Almindelig arnika",
     "frenchName": "Arnica des montagnes",
-    "systems": [
-      "cardiovascular",
-      "skin"
-    ],
     "properties": [
       "Analgesic",
       "Anti-inflammatory (general)",
@@ -158,9 +129,6 @@ window.PLANTS_DATA = [
     "family": "Asteraceae (Daisy family)",
     "danishName": "Artiskok",
     "frenchName": "Artichaut",
-    "systems": [
-      "digestive"
-    ],
     "properties": [
       "Antiemetic",
       "Anti-inflammatory (liver)",
@@ -183,11 +151,6 @@ window.PLANTS_DATA = [
     "family": "Asparagaceae (Asparagus family)",
     "danishName": "Ashwagandha",
     "frenchName": "Ashwagandha",
-    "systems": [
-      "nervous",
-      "woman-reproductive",
-      "endocrine"
-    ],
     "properties": [
       "Adaptogen",
       "Antioxidant",
@@ -211,11 +174,6 @@ window.PLANTS_DATA = [
     "family": "Fabaceae (Legume family)",
     "danishName": "Astragalus",
     "frenchName": "Astragale",
-    "systems": [
-      "immune",
-      "cardiovascular",
-      "endocrine"
-    ],
     "properties": [
       "Adaptogen",
       "Anticancer",
@@ -238,10 +196,6 @@ window.PLANTS_DATA = [
     "family": "Plantaginaceae (Plantain family)",
     "danishName": "Bacopa",
     "frenchName": "Bacopa",
-    "systems": [
-      "nervous",
-      "endocrine"
-    ],
     "properties": [
       "Adaptogen",
       "Anticancer",
@@ -265,10 +219,6 @@ window.PLANTS_DATA = [
     "family": "Melanthiaceae (False hellebore family)",
     "danishName": "Treblad",
     "frenchName": "Trille rouge",
-    "systems": [
-      "woman-reproductive",
-      "endocrine"
-    ],
     "properties": [
       "Astringent",
       "Hemostatic",
@@ -283,10 +233,6 @@ window.PLANTS_DATA = [
     "family": "Ericaceae (Heath family)",
     "danishName": "Blåbær",
     "frenchName": "Myrtille",
-    "systems": [
-      "cardiovascular",
-      "digestive"
-    ],
     "properties": [
       "Aldose reductase inhibitor",
       "Anti-inflammatory (brain)",
@@ -310,10 +256,6 @@ window.PLANTS_DATA = [
     "family": "Betulaceae (Birch family)",
     "danishName": "Vortebirk",
     "frenchName": "Bouleau",
-    "systems": [
-      "urinary",
-      "skin"
-    ],
     "properties": [
       "Anti-inflammatory (urinary)",
       "Diuretic",
@@ -329,10 +271,6 @@ window.PLANTS_DATA = [
     "botanicalName": "Actaea racemosa",
     "danishName": "Sort sølvlys",
     "frenchName": "Actée à grappes",
-    "systems": [
-      "woman-reproductive",
-      "endocrine"
-    ],
     "properties": [
       "Anti-inflammatory (female reproductive)",
       "Anti-inflammatory (musculoskeletal)",
@@ -352,9 +290,6 @@ window.PLANTS_DATA = [
     "family": "Fucaceae (Brown algae)",
     "danishName": "Blæretang",
     "frenchName": "Varech vésiculeux",
-    "systems": [
-      "endocrine"
-    ],
     "properties": [
       "Demulcent",
       "Weight reducing"
@@ -363,31 +298,11 @@ window.PLANTS_DATA = [
     "fileSlug": "bladderwrack"
   },
   {
-    "commonName": "Blue Cohosh",
-    "botanicalName": "Caulophyllum thalictroides",
-    "danishName": "Blå cohosh",
-    "frenchName": "Cohosh bleu",
-    "systems": [
-      "woman-reproductive"
-    ],
-    "properties": [
-      "Uterine tonic",
-      "Antispasmodic",
-      "Emmenagogue"
-    ],
-    "status": "disabled",
-    "fileSlug": "blue-cohosh",
-    "family": "Berberidaceae (Barberry family)"
-  },
-  {
     "commonName": "Blue Flag",
     "botanicalName": "Iris versicolor",
     "family": "Iridaceae (Iris family)",
     "danishName": "Iris",
     "frenchName": "Iris versicolore",
-    "systems": [
-      "digestive"
-    ],
     "properties": [
       "Blood purifier",
       "Choleretic",
@@ -405,10 +320,6 @@ window.PLANTS_DATA = [
     "family": "Burseraceae (Frankincense family)",
     "danishName": "Røgelsestræ",
     "frenchName": "Boswellia",
-    "systems": [
-      "immune",
-      "digestive"
-    ],
     "properties": [
       "Analgesic",
       "Anti-inflammatory (cardiovascular)",
@@ -423,9 +334,6 @@ window.PLANTS_DATA = [
     "family": "Rutaceae (Rue family)",
     "danishName": "Buchu",
     "frenchName": "Buchu",
-    "systems": [
-      "urinary"
-    ],
     "properties": [
       "Antiseptic (urinary)",
       "Diuretic",
@@ -440,10 +348,6 @@ window.PLANTS_DATA = [
     "family": "Lamiaceae (Mint family)",
     "danishName": "Bugleweed",
     "frenchName": "Bugleweed",
-    "systems": [
-      "cardiovascular",
-      "endocrine"
-    ],
     "properties": [
       "Vasodilator"
     ],
@@ -456,10 +360,6 @@ window.PLANTS_DATA = [
     "family": "Apiaceae (Carrot family)",
     "danishName": "Bupleurum",
     "frenchName": "Buplèvre",
-    "systems": [
-      "digestive",
-      "immune"
-    ],
     "properties": [
       "Anti-inflammatory (general)",
       "Anti-ulcer",
@@ -475,9 +375,6 @@ window.PLANTS_DATA = [
     "family": "Asteraceae (Daisy family)",
     "danishName": "Burre",
     "frenchName": "Bardane",
-    "systems": [
-      "digestive"
-    ],
     "properties": [
       "Blood purifier",
       "Laxative",
@@ -492,9 +389,6 @@ window.PLANTS_DATA = [
     "family": "Asparagaceae (Asparagus family)",
     "danishName": "Musetorn",
     "frenchName": "Fragon",
-    "systems": [
-      "cardiovascular"
-    ],
     "properties": [
       "Anti-inflammatory (cardiovascular)",
       "Laxative",
@@ -509,9 +403,6 @@ window.PLANTS_DATA = [
     "family": "Juglandaceae (Walnut family)",
     "danishName": "Grå valnød",
     "frenchName": "Noyer cendré",
-    "systems": [
-      "digestive"
-    ],
     "properties": [
       "Laxative"
     ],
@@ -524,10 +415,6 @@ window.PLANTS_DATA = [
     "family": "Malvaceae (Mallow family)",
     "danishName": "Kakao",
     "frenchName": "Cacao",
-    "systems": [
-      "nervous",
-      "cardiovascular"
-    ],
     "properties": [
       "Anticancer"
     ],
@@ -535,32 +422,11 @@ window.PLANTS_DATA = [
     "fileSlug": "cacao"
   },
   {
-    "commonName": "Calamus",
-    "botanicalName": "Acorus calamus",
-    "family": "Acoraceae (Calamus family)",
-    "danishName": "Kalmus",
-    "frenchName": "Acore odorant",
-    "systems": [
-      "digestive"
-    ],
-    "properties": [
-      "Bitter tonic",
-      "Appetite stimulant"
-    ],
-    "status": "disabled",
-    "fileSlug": "calamus"
-  },
-  {
     "commonName": "Calendula",
     "botanicalName": "Calendula officinalis",
     "family": "Asteraceae (Daisy family)",
     "danishName": "Have-morgenfrue",
     "frenchName": "Souci officinal",
-    "systems": [
-      "digestive",
-      "immune",
-      "skin"
-    ],
     "properties": [
       "Anti-inflammatory (digestive/mucous membranes/skin)",
       "Anti-inflammatory (external)",
@@ -584,9 +450,6 @@ window.PLANTS_DATA = [
     "family": "Rhamnaceae (Buckthorn family)",
     "danishName": "Cascara",
     "frenchName": "Cascara sagrada",
-    "systems": [
-      "digestive"
-    ],
     "properties": [
       "Laxative"
     ],
@@ -599,10 +462,6 @@ window.PLANTS_DATA = [
     "family": "Rubiaceae (Coffee family)",
     "danishName": "Katteklo",
     "frenchName": "Griffe de chat",
-    "systems": [
-      "immune",
-      "digestive"
-    ],
     "properties": [
       "Anti-inflammatory (general)",
       "Anticancer",
@@ -616,27 +475,11 @@ window.PLANTS_DATA = [
     "fileSlug": "cats-claw"
   },
   {
-    "commonName": "Catnip",
-    "botanicalName": "Nepeta cataria",
-    "family": "Lamiaceae (Mint family)",
-    "danishName": "Katteurt",
-    "frenchName": "Cataire, Herbe aux chats",
-    "systems": [
-      "nervous"
-    ],
-    "properties": [],
-    "status": "disabled",
-    "fileSlug": "catnip"
-  },
-  {
     "commonName": "Cayenne",
     "botanicalName": "Capsicum minimum and related species",
     "family": "Solanaceae (Nightshade family)",
     "danishName": "Cayennepeber",
     "frenchName": "Piment de Cayenne",
-    "systems": [
-      "cardiovascular"
-    ],
     "properties": [
       "Analgesic",
       "Antibacterial",
@@ -660,10 +503,6 @@ window.PLANTS_DATA = [
     "family": "Apiaceae (Carrot family)",
     "danishName": "Selleri",
     "frenchName": "Céleri",
-    "systems": [
-      "urinary",
-      "digestive"
-    ],
     "properties": [
       "Anti-inflammatory (general)",
       "Anti-inflammatory (musculoskeletal)",
@@ -681,10 +520,6 @@ window.PLANTS_DATA = [
     "family": "Hymenochaetaceae (Mushroom)",
     "danishName": "Chaga",
     "frenchName": "Chaga",
-    "systems": [
-      "immune",
-      "endocrine"
-    ],
     "properties": [
       "Adaptogen",
       "Aldose reductase inhibitor",
@@ -712,26 +547,10 @@ window.PLANTS_DATA = [
     "fileSlug": "chaga"
   },
   {
-    "commonName": "Roman Chamomile",
-    "botanicalName": "Anthemis nobilis/Chamaemelum nobile",
-    "family": "Asteraceae (Daisy family)",
-    "danishName": "Romersk kamille",
-    "frenchName": "Camomille romaine",
-    "systems": [],
-    "properties": [],
-    "status": "disabled",
-    "fileSlug": "chamomile"
-  },
-  {
     "commonName": "German Chamomile",
     "botanicalName": "Chamomilla recutita",
     "danishName": "Kamille",
     "frenchName": "Camomille",
-    "systems": [
-      "digestive",
-      "nervous",
-      "skin"
-    ],
     "properties": [
       "Analgesic",
       "Anti-inflammatory (digestive/mucous membranes/skin)",
@@ -751,28 +570,11 @@ window.PLANTS_DATA = [
     "family": "Asteraceae (Daisy family)"
   },
   {
-    "commonName": "Chaparral",
-    "botanicalName": "Larrea tridenta and related species",
-    "family": "Zygophyllaceae (Caltrop family)",
-    "danishName": "Kreosotbusk",
-    "frenchName": "Larréa",
-    "systems": [
-      "digestive",
-      "skin"
-    ],
-    "properties": [],
-    "status": "disabled",
-    "fileSlug": "chaparral"
-  },
-  {
     "commonName": "Chickweed",
     "botanicalName": "Stellaria media",
     "family": "Caryophyllaceae (Pink family)",
     "danishName": "Fuglegræs",
     "frenchName": "Mouron des oiseaux",
-    "systems": [
-      "urinary"
-    ],
     "properties": [
       "Antacid",
       "Anti-inflammatory (digestive/mucous membranes/skin)",
@@ -792,10 +594,6 @@ window.PLANTS_DATA = [
     "family": "Lamiaceae (Mint family)",
     "danishName": "Baikal-skjolddrager",
     "frenchName": "Scutellaire du Baïkal",
-    "systems": [
-      "immune",
-      "cardiovascular"
-    ],
     "properties": [
       "Antiviral (internal)",
       "Blood pressure regulating"
@@ -809,11 +607,6 @@ window.PLANTS_DATA = [
     "family": "Lauraceae (Laurel family)",
     "danishName": "Kanel",
     "frenchName": "Cannelle",
-    "systems": [
-      "cardiovascular",
-      "skin",
-      "endocrine"
-    ],
     "properties": [
       "Aldose reductase inhibitor",
       "Anti-ulcer",
@@ -836,9 +629,6 @@ window.PLANTS_DATA = [
     "family": "Rubiaceae (Coffee family)",
     "danishName": "Burre-snerre",
     "frenchName": "Gaillet gratteron",
-    "systems": [
-      "urinary"
-    ],
     "properties": [
       "Blood purifier",
       "Laxative",
@@ -848,29 +638,11 @@ window.PLANTS_DATA = [
     "fileSlug": "cleavers"
   },
   {
-    "commonName": "Cloves",
-    "botanicalName": "Caryophyllus zeylanicum",
-    "family": "Myrtaceae (Myrtle family)",
-    "danishName": "Nellike",
-    "frenchName": "Clou de girofle",
-    "systems": [
-      "cardiovascular"
-    ],
-    "properties": [],
-    "status": "disabled",
-    "fileSlug": "cloves"
-  },
-  {
     "commonName": "Codonopsis",
     "botanicalName": "Codonopsis pilosula",
     "family": "Campanulaceae (Bellflower family)",
     "danishName": "Codonopsis",
     "frenchName": "Codonopsis",
-    "systems": [
-      "immune",
-      "digestive",
-      "endocrine"
-    ],
     "properties": [
       "Adaptogen",
       "Blood strengthening",
@@ -886,10 +658,6 @@ window.PLANTS_DATA = [
     "family": "Lamiaceae (Mint family)",
     "danishName": "Coleus",
     "frenchName": "Coléus",
-    "systems": [
-      "cardiovascular",
-      "respiratory"
-    ],
     "properties": [
       "Antispasmodic",
       "Appetite stimulant",
@@ -904,42 +672,11 @@ window.PLANTS_DATA = [
     "fileSlug": "coleus"
   },
   {
-    "commonName": "Coltsfoot",
-    "botanicalName": "Tussilago farfara",
-    "family": "Asteraceae (Daisy family)",
-    "danishName": "Følfod",
-    "frenchName": "Tussilage",
-    "systems": [
-      "respiratory"
-    ],
-    "properties": [],
-    "status": "disabled",
-    "fileSlug": "coltsfoot"
-  },
-  {
-    "commonName": "Comfrey",
-    "botanicalName": "Symphytum officinale",
-    "family": "Boraginaceae (Borage family)",
-    "danishName": "Kulsukker",
-    "frenchName": "Consoude",
-    "systems": [
-      "respiratory"
-    ],
-    "properties": [],
-    "status": "disabled",
-    "fileSlug": "comfrey"
-  },
-  {
     "commonName": "Cordyceps",
     "botanicalName": "Ophiocordyceps militaris",
     "family": "Ophiocordycipitaceae (Mushroom)",
     "danishName": "Cordyceps",
     "frenchName": "Cordyceps",
-    "systems": [
-      "immune",
-      "respiratory",
-      "endocrine"
-    ],
     "properties": [
       "Adaptogen",
       "Aldose reductase inhibitor",
@@ -965,9 +702,6 @@ window.PLANTS_DATA = [
     "family": "Poaceae (Grass family)",
     "danishName": "Majssilke",
     "frenchName": "Stigmates de maïs",
-    "systems": [
-      "urinary"
-    ],
     "properties": [
       "Anti-inflammatory (urinary)",
       "Demulcent"
@@ -981,9 +715,6 @@ window.PLANTS_DATA = [
     "family": "Poaceae (Grass family)",
     "danishName": "Kvik",
     "frenchName": "Chiendent",
-    "systems": [
-      "urinary"
-    ],
     "properties": [
       "Anti-inflammatory (urinary)",
       "Antilithic",
@@ -999,9 +730,6 @@ window.PLANTS_DATA = [
     "family": "Adoxaceae (Moschatel family)",
     "danishName": "Kvalkved",
     "frenchName": "Viorne obier",
-    "systems": [
-      "woman-reproductive"
-    ],
     "properties": [
       "Antispasmodic",
       "Astringent",
@@ -1023,9 +751,6 @@ window.PLANTS_DATA = [
     "family": "Ericaceae (Heath family)",
     "danishName": "Tranebær",
     "frenchName": "Canneberge",
-    "systems": [
-      "urinary"
-    ],
     "properties": [
       "Anti-inflammatory (urinary)",
       "Antiseptic (urinary)"
@@ -1039,9 +764,6 @@ window.PLANTS_DATA = [
     "family": "Capparaceae (Caper family)",
     "danishName": "Crataeva",
     "frenchName": "Crataeva",
-    "systems": [
-      "urinary"
-    ],
     "properties": [
       "Antilithic",
       "Bladder tonic"
@@ -1055,10 +777,6 @@ window.PLANTS_DATA = [
     "family": "Passifloraceae (Passion flower family)",
     "danishName": "Damiana",
     "frenchName": "Damiane",
-    "systems": [
-      "male-reproductive",
-      "nervous"
-    ],
     "properties": [
       "Antilithic",
       "Aphrodisiac",
@@ -1076,10 +794,6 @@ window.PLANTS_DATA = [
     "family": "Asteraceae (Daisy family)",
     "danishName": "Mælkebøtte",
     "frenchName": "Pissenlit",
-    "systems": [
-      "digestive",
-      "urinary"
-    ],
     "properties": [
       "Anti-inflammatory (general)",
       "Anti-inflammatory (musculoskeletal)",
@@ -1100,10 +814,6 @@ window.PLANTS_DATA = [
     "family": "Pedaliaceae (Sesame family)",
     "danishName": "Djævelsklo",
     "frenchName": "Griffe du diable",
-    "systems": [
-      "digestive",
-      "immune"
-    ],
     "properties": [
       "Analgesic",
       "Anti-inflammatory (cardiovascular)",
@@ -1118,32 +828,11 @@ window.PLANTS_DATA = [
     "fileSlug": "devils-claw"
   },
   {
-    "commonName": "Dill",
-    "botanicalName": "Anethum graveolens",
-    "family": "Apiaceae (Carrot family)",
-    "danishName": "Dild",
-    "frenchName": "Aneth",
-    "systems": [
-      "digestive"
-    ],
-    "properties": [
-      "Carminative",
-      "Antispasmodic",
-      "Bitter tonic"
-    ],
-    "status": "disabled",
-    "fileSlug": "dill"
-  },
-  {
     "commonName": "Dong Quai",
     "botanicalName": "Angelica sinensis",
     "family": "Apiaceae (Carrot family)",
     "danishName": "Kinesisk kvan",
     "frenchName": "Angélique chinoise",
-    "systems": [
-      "woman-reproductive",
-      "cardiovascular"
-    ],
     "properties": [
       "Anti-inflammatory (general)",
       "Anti-inflammatory (female reproductive)",
@@ -1166,10 +855,6 @@ window.PLANTS_DATA = [
     "family": "Asteraceae (Daisy family)",
     "danishName": "Purpursolhat",
     "frenchName": "Échinacée",
-    "systems": [
-      "immune",
-      "digestive"
-    ],
     "properties": [
       "Anti-inflammatory (digestive/mucous membranes/skin)",
       "Anti-inflammatory (external)",
@@ -1196,10 +881,6 @@ window.PLANTS_DATA = [
     "family": "Adoxaceae (Moschatel family)",
     "danishName": "Hyld",
     "frenchName": "Sureau noir",
-    "systems": [
-      "immune",
-      "respiratory"
-    ],
     "properties": [
       "Diaphoretic"
     ],
@@ -1212,10 +893,6 @@ window.PLANTS_DATA = [
     "family": "Asteraceae (Daisy family)",
     "danishName": "Alant",
     "frenchName": "Aunée",
-    "systems": [
-      "respiratory",
-      "skin"
-    ],
     "properties": [
       "Antibacterial",
       "Antispasmodic",
@@ -1229,28 +906,11 @@ window.PLANTS_DATA = [
     "fileSlug": "elecampane"
   },
   {
-    "commonName": "Ephedra",
-    "botanicalName": "Ephedra sinica",
-    "family": "Ephedraceae (Ephedra family)",
-    "danishName": "Efedra",
-    "frenchName": "Éphédra",
-    "systems": [
-      "respiratory",
-      "cardiovascular"
-    ],
-    "properties": [],
-    "status": "disabled",
-    "fileSlug": "ephedra"
-  },
-  {
     "commonName": "Euphorbia",
     "botanicalName": "Euphorbia hirta",
     "family": "Euphorbiaceae (Spurge family)",
     "danishName": "Euphorbia",
     "frenchName": "Euphorbe",
-    "systems": [
-      "respiratory"
-    ],
     "properties": [
       "Antiparasitic",
       "Bronchial spasmolytic"
@@ -1264,9 +924,6 @@ window.PLANTS_DATA = [
     "family": "Orobanchaceae (Broomrape family)",
     "danishName": "Øjentrøst",
     "frenchName": "Euphraise",
-    "systems": [
-      "immune"
-    ],
     "properties": [
       "Anti-inflammatory (general)",
       "Astringent",
@@ -1283,9 +940,6 @@ window.PLANTS_DATA = [
     "family": "Melanthiaceae (False hellebore family)",
     "danishName": "Falsk enhjørningsrod",
     "frenchName": "Chamælirium jaune",
-    "systems": [
-      "woman-reproductive"
-    ],
     "properties": [
       "Woman tonic",
       "Uterine tonic",
@@ -1301,10 +955,6 @@ window.PLANTS_DATA = [
     "family": "Apiaceae (Carrot family)",
     "danishName": "Fennikel",
     "frenchName": "Fenouil",
-    "systems": [
-      "digestive",
-      "respiratory"
-    ],
     "properties": [
       "Antifungal",
       "Antimicrobial",
@@ -1324,11 +974,6 @@ window.PLANTS_DATA = [
     "family": "Fabaceae (Legume family)",
     "danishName": "Bukkehorn",
     "frenchName": "Fenugrec",
-    "systems": [
-      "digestive",
-      "woman-reproductive",
-      "endocrine"
-    ],
     "properties": [
       "Anti-inflammatory (general)",
       "Appetite stimulant",
@@ -1347,10 +992,6 @@ window.PLANTS_DATA = [
     "family": "Asteraceae (Daisy family)",
     "danishName": "Matrem",
     "frenchName": "Grande camomille",
-    "systems": [
-      "nervous",
-      "cardiovascular"
-    ],
     "properties": [
       "Analgesic",
       "Anti-inflammatory (general)",
@@ -1362,28 +1003,10 @@ window.PLANTS_DATA = [
     "fileSlug": "feverfew"
   },
   {
-    "commonName": "Flax",
-    "botanicalName": "Linum usitatissimum",
-    "family": "Linaceae (Flax family)",
-    "danishName": "Hør",
-    "frenchName": "Lin",
-    "systems": [
-      "respiratory"
-    ],
-    "properties": [],
-    "status": "disabled",
-    "fileSlug": "flax"
-  },
-  {
     "commonName": "Garlic",
     "botanicalName": "Allium sativum",
     "danishName": "Hvidløg",
     "frenchName": "Ail",
-    "systems": [
-      "cardiovascular",
-      "immune",
-      "digestive"
-    ],
     "properties": [
       "Anti-inflammatory (cardiovascular)",
       "Anti-inflammatory (external)",
@@ -1409,9 +1032,6 @@ window.PLANTS_DATA = [
     "botanicalName": "Gentiana lutea",
     "danishName": "Gul ensian",
     "frenchName": "Gentiane jaune",
-    "systems": [
-      "digestive"
-    ],
     "properties": [
       "Bitter tonic",
       "Choleretic",
@@ -1427,10 +1047,6 @@ window.PLANTS_DATA = [
     "family": "Zingiberaceae (Ginger family)",
     "danishName": "Ingefær",
     "frenchName": "Gingembre",
-    "systems": [
-      "cardiovascular",
-      "woman-reproductive"
-    ],
     "properties": [
       "Anticancer",
       "Antibacterial",
@@ -1469,9 +1085,6 @@ window.PLANTS_DATA = [
     "family": "Ginkgoaceae (Ginkgo family)",
     "danishName": "Tempeltræ",
     "frenchName": "Ginkgo",
-    "systems": [
-      "cardiovascular"
-    ],
     "properties": [
       "Anticancer",
       "Antidepressant",
@@ -1493,13 +1106,6 @@ window.PLANTS_DATA = [
     "family": "Araliaceae (Ginseng family)",
     "danishName": "Ginseng",
     "frenchName": "Ginseng",
-    "systems": [
-      "cardiovascular",
-      "woman-reproductive",
-      "male-reproductive",
-      "immune",
-      "endocrine"
-    ],
     "properties": [
       "Adaptogen",
       "Adrenal tonic",
@@ -1529,11 +1135,6 @@ window.PLANTS_DATA = [
     "family": "Fabaceae (Legume family)",
     "danishName": "Læge-stregbælg",
     "frenchName": "Galéga",
-    "systems": [
-      "digestive",
-      "woman-reproductive",
-      "endocrine"
-    ],
     "properties": [
       "Blood sugar regulating",
       "Galactagogue"
@@ -1547,9 +1148,6 @@ window.PLANTS_DATA = [
     "family": "Pleurotaceae (Mushroom)",
     "danishName": "Gul østershat",
     "frenchName": "Pleurote jaune",
-    "systems": [
-      "immune"
-    ],
     "properties": [
       "Aldose reductase inhibitor",
       "Anti-inflammatory (brain)",
@@ -1583,10 +1181,6 @@ window.PLANTS_DATA = [
     "family": "Asteraceae (Daisy family)",
     "danishName": "Gyldenris",
     "frenchName": "Verge d'or",
-    "systems": [
-      "urinary",
-      "respiratory"
-    ],
     "properties": [
       "Anti-inflammatory (general)",
       "Anti-inflammatory (respiratory)",
@@ -1603,28 +1197,11 @@ window.PLANTS_DATA = [
     "fileSlug": "goldenrod"
   },
   {
-    "commonName": "Goldenseal",
-    "botanicalName": "Hydrastis canadensis",
-    "family": "Ranunculaceae (Buttercup family)",
-    "danishName": "Guldsegl",
-    "frenchName": "Hydraste du Canada",
-    "systems": [
-      "digestive"
-    ],
-    "properties": [],
-    "status": "disabled",
-    "fileSlug": "goldenseal"
-  },
-  {
     "commonName": "Gotu Kola",
     "botanicalName": "Centella asiatica, Hydrocotyle asiatica",
     "family": "Apiaceae (Carrot family)",
     "danishName": "Asiatisk centella",
     "frenchName": "Centella",
-    "systems": [
-      "cardiovascular",
-      "endocrine"
-    ],
     "properties": [
       "Adaptogen",
       "Anti-inflammatory (external)",
@@ -1646,9 +1223,6 @@ window.PLANTS_DATA = [
     "family": "Vitaceae (Grape family)",
     "danishName": "Vindrue",
     "frenchName": "Vigne",
-    "systems": [
-      "cardiovascular"
-    ],
     "properties": [
       "Anti-inflammatory (general)",
       "Anticancer",
@@ -1664,10 +1238,6 @@ window.PLANTS_DATA = [
     "botanicalName": "Eupatorium purpureum",
     "danishName": "Sumphjortetrøst",
     "frenchName": "Eupatoire pourpre",
-    "systems": [
-      "urinary",
-      "skin"
-    ],
     "properties": [
       "Antilithic"
     ],
@@ -1681,10 +1251,6 @@ window.PLANTS_DATA = [
     "family": "Theaceae (Tea family)",
     "danishName": "Grøn te",
     "frenchName": "Thé vert",
-    "systems": [
-      "cardiovascular",
-      "immune"
-    ],
     "properties": [
       "Anti-inflammatory (brain)",
       "Anti-inflammatory (general)",
@@ -1702,9 +1268,6 @@ window.PLANTS_DATA = [
     "family": "Asteraceae (Daisy family)",
     "danishName": "Grindelia",
     "frenchName": "Grindélie",
-    "systems": [
-      "respiratory"
-    ],
     "properties": [
       "Antispasmodic",
       "Bronchial spasmolytic",
@@ -1719,9 +1282,6 @@ window.PLANTS_DATA = [
     "family": "Zygophyllaceae (Caltrop family)",
     "danishName": "Guajak",
     "frenchName": "Gaïac",
-    "systems": [
-      "immune"
-    ],
     "properties": [
       "Anti-inflammatory (musculoskeletal)"
     ],
@@ -1734,9 +1294,6 @@ window.PLANTS_DATA = [
     "family": "Rosaceae (Rose family)",
     "danishName": "Hvidtjørn",
     "frenchName": "Aubépine",
-    "systems": [
-      "cardiovascular"
-    ],
     "properties": [
       "Antiarrhythmic",
       "Antioxidant",
@@ -1760,10 +1317,6 @@ window.PLANTS_DATA = [
     "family": "Violaceae (Violet family)",
     "danishName": "Vild stedmoder",
     "frenchName": "Pensée sauvage",
-    "systems": [
-      "skin",
-      "respiratory"
-    ],
     "properties": [
       "Anti-inflammatory (musculoskeletal)",
       "Anticancer",
@@ -1779,9 +1332,6 @@ window.PLANTS_DATA = [
     "family": "Cannabaceae (Hemp family)",
     "danishName": "Humle",
     "frenchName": "Houblon",
-    "systems": [
-      "nervous"
-    ],
     "properties": [
       "Analgesic",
       "Antispasmodic",
@@ -1799,10 +1349,6 @@ window.PLANTS_DATA = [
     "family": "Lamiaceae (Mint family)",
     "danishName": "Kransburre",
     "frenchName": "Marrube blanc",
-    "systems": [
-      "digestive",
-      "respiratory"
-    ],
     "properties": [
       "Antispasmodic",
       "Bitter tonic",
@@ -1813,44 +1359,11 @@ window.PLANTS_DATA = [
     "fileSlug": "horehound"
   },
   {
-    "commonName": "Horse Chestnut",
-    "botanicalName": "Aesculus hippocastanum",
-    "family": "Sapindaceae (Soapberry family)",
-    "danishName": "Almindelig hestekastanje",
-    "frenchName": "Marronnier d'Inde",
-    "systems": [
-      "cardiovascular"
-    ],
-    "properties": [
-      "Anti-inflammatory",
-      "Venotonic"
-    ],
-    "status": "disabled",
-    "fileSlug": "horse-chestnut"
-  },
-  {
-    "commonName": "Horseradish",
-    "botanicalName": "Armoracia rusticana",
-    "danishName": "Peberrod",
-    "frenchName": "Raifort",
-    "systems": [
-      "cardiovascular"
-    ],
-    "properties": [],
-    "status": "disabled",
-    "fileSlug": "horseradish",
-    "family": "Brassicaceae (Mustard family)"
-  },
-  {
     "commonName": "Horsetail",
     "botanicalName": "Equisetum arvense",
     "family": "Equisetaceae (Horsetail family)",
     "danishName": "Ager-padderok",
     "frenchName": "Prêle des champs",
-    "systems": [
-      "urinary",
-      "skin"
-    ],
     "properties": [
       "Astringent",
       "Diuretic",
@@ -1865,10 +1378,6 @@ window.PLANTS_DATA = [
     "family": "Apocynaceae (Dogbane family)",
     "danishName": "Indisk sarsaparil",
     "frenchName": "Salsepareille indienne",
-    "systems": [
-      "digestive",
-      "skin"
-    ],
     "properties": [
       "Anti-inflammatory (musculoskeletal)",
       "Blood purifier",
@@ -1878,28 +1387,11 @@ window.PLANTS_DATA = [
     "fileSlug": "indian-sarsaparilla"
   },
   {
-    "commonName": "Irish Moss",
-    "botanicalName": "Chondrus crispus",
-    "danishName": "Karragentang",
-    "frenchName": "Mousse d'Irlande",
-    "systems": [
-      "respiratory"
-    ],
-    "properties": [],
-    "status": "disabled",
-    "fileSlug": "irish-moss",
-    "family": "Gigartinaceae (Red algae family)"
-  },
-  {
     "commonName": "Jujube",
     "botanicalName": "Zizyphus jujuba",
     "family": "Rhamnaceae (Buckthorn family)",
     "danishName": "Jujube",
     "frenchName": "Jujubier",
-    "systems": [
-      "nervous",
-      "digestive"
-    ],
     "properties": [
       "Blood pressure lowering",
       "Blood pressure regulating"
@@ -1908,28 +1400,11 @@ window.PLANTS_DATA = [
     "fileSlug": "jujube"
   },
   {
-    "commonName": "Juniper Berries",
-    "botanicalName": "Juniperus communis",
-    "danishName": "Enebær",
-    "frenchName": "Genévrier commun",
-    "systems": [
-      "urinary"
-    ],
-    "properties": [],
-    "status": "disabled",
-    "fileSlug": "juniper-berries",
-    "family": "Cupressaceae (Cypress family)"
-  },
-  {
     "commonName": "Lady's Mantle",
     "botanicalName": "Alchemilla vulgaris",
     "family": "Rosaceae (Rose family)",
     "danishName": "Almindelig løvefod",
     "frenchName": "Alchémille commune",
-    "systems": [
-      "woman-reproductive",
-      "endocrine"
-    ],
     "properties": [
       "Astringent",
       "Woman tonic",
@@ -1946,10 +1421,6 @@ window.PLANTS_DATA = [
     "botanicalName": "Lavandula officinalis",
     "danishName": "Lavendel",
     "frenchName": "Lavande",
-    "systems": [
-      "nervous",
-      "skin"
-    ],
     "properties": [
       "Antidepressant",
       "Antipruritic (external)",
@@ -1967,11 +1438,6 @@ window.PLANTS_DATA = [
     "family": "Lamiaceae (Mint family)",
     "danishName": "Hjertensfryd",
     "frenchName": "Mélisse",
-    "systems": [
-      "nervous",
-      "digestive",
-      "skin"
-    ],
     "properties": [
       "Antispasmodic",
       "Antiviral (external)",
@@ -1988,12 +1454,6 @@ window.PLANTS_DATA = [
     "family": "Fabaceae (Legume family)",
     "danishName": "Lakrids",
     "frenchName": "Réglisse",
-    "systems": [
-      "respiratory",
-      "woman-reproductive",
-      "male-reproductive",
-      "endocrine"
-    ],
     "properties": [
       "Adrenal tonic",
       "Aldose reductase inhibitor",
@@ -2022,33 +1482,11 @@ window.PLANTS_DATA = [
     "fileSlug": "licorice"
   },
   {
-    "commonName": "Ligustrum",
-    "botanicalName": "Ligustrum lucidum",
-    "family": "Oleaceae (Olive family)",
-    "danishName": "Liguster",
-    "frenchName": "Troène luisant",
-    "systems": [
-      "immune"
-    ],
-    "properties": [
-      "Immunomodulating",
-      "Tonic",
-      "Hepatoprotective",
-      "Kidney tonic"
-    ],
-    "status": "disabled",
-    "fileSlug": "ligustrum"
-  },
-  {
     "commonName": "Linden",
     "botanicalName": "Tilia arter",
     "family": "Malvaceae (Mallow family)",
     "danishName": "Lind",
     "frenchName": "Tilleul",
-    "systems": [
-      "nervous",
-      "cardiovascular"
-    ],
     "properties": [
       "Antiarrhythmic",
       "Antispasmodic",
@@ -2065,11 +1503,6 @@ window.PLANTS_DATA = [
     "family": "Hericiaceae (Mushroom)",
     "danishName": "Pindsvineporesvamp",
     "frenchName": "Hydne hérisson",
-    "systems": [
-      "nervous",
-      "immune",
-      "digestive"
-    ],
     "properties": [
       "Anticancer",
       "Nootropic",
@@ -2088,31 +1521,10 @@ window.PLANTS_DATA = [
     "fileSlug": "lions-mane"
   },
   {
-    "commonName": "Lobelia",
-    "botanicalName": "Lobelia inflata",
-    "family": "Campanulaceae (Bellflower family)",
-    "danishName": "Oppustet lobelia",
-    "frenchName": "Lobélie gonflée, Tabac indien",
-    "systems": [
-      "nervous",
-      "respiratory",
-      "skin"
-    ],
-    "properties": [],
-    "status": "disabled",
-    "fileSlug": "lobelia"
-  },
-  {
     "commonName": "Marshmallow",
     "botanicalName": "Althea officinalis",
     "danishName": "Læge-Altea",
     "frenchName": "Guimauve",
-    "systems": [
-      "digestive",
-      "respiratory",
-      "urinary",
-      "skin"
-    ],
     "properties": [
       "Anti-inflammatory (digestive/mucous membranes/skin)",
       "Anti-inflammatory (respiratory)",
@@ -2131,10 +1543,6 @@ window.PLANTS_DATA = [
     "family": "Rosaceae (Rose family)",
     "danishName": "Mjødurt",
     "frenchName": "Reine-des-prés",
-    "systems": [
-      "digestive",
-      "urinary"
-    ],
     "properties": [
       "Antacid",
       "Anti-inflammatory (digestive/mucous membranes/skin)",
@@ -2153,9 +1561,6 @@ window.PLANTS_DATA = [
     "family": "Asteraceae (Daisy family)",
     "danishName": "Marietidsel",
     "frenchName": "Chardon-Marie",
-    "systems": [
-      "digestive"
-    ],
     "properties": [
       "Anti-inflammatory (liver)",
       "Antioxidant",
@@ -2174,11 +1579,6 @@ window.PLANTS_DATA = [
     "family": "Lamiaceae (Mint family)",
     "danishName": "Hjertespand",
     "frenchName": "Agripaume",
-    "systems": [
-      "woman-reproductive",
-      "cardiovascular",
-      "nervous"
-    ],
     "properties": [
       "Antiarrhythmic",
       "Blood pressure lowering",
@@ -2195,9 +1595,6 @@ window.PLANTS_DATA = [
     "family": "Asteraceae (Daisy family)",
     "danishName": "Grå bynke",
     "frenchName": "Armoise commune",
-    "systems": [
-      "digestive"
-    ],
     "properties": [
       "Cholagogue"
     ],
@@ -2210,10 +1607,6 @@ window.PLANTS_DATA = [
     "family": "Scrophulariaceae (Figwort family)",
     "danishName": "Kongelys",
     "frenchName": "Molène",
-    "systems": [
-      "respiratory",
-      "skin"
-    ],
     "properties": [
       "Healing",
       "Mucolytic",
@@ -2228,11 +1621,6 @@ window.PLANTS_DATA = [
     "family": "Burseraceae (Frankincense family)",
     "danishName": "Myrra",
     "frenchName": "Myrrhe",
-    "systems": [
-      "immune",
-      "digestive",
-      "skin"
-    ],
     "properties": [
       "Anti-inflammatory (general)",
       "Healing"
@@ -2246,11 +1634,6 @@ window.PLANTS_DATA = [
     "family": "Urticaceae (Nettle family)",
     "danishName": "Brændenælde",
     "frenchName": "Ortie",
-    "systems": [
-      "digestive",
-      "woman-reproductive",
-      "male-reproductive"
-    ],
     "properties": [
       "Anti-inflammatory (external)",
       "Antiallergic",
@@ -2271,10 +1654,6 @@ window.PLANTS_DATA = [
     "family": "Poaceae (Grass family)",
     "danishName": "Havre",
     "frenchName": "Avoine",
-    "systems": [
-      "nervous",
-      "cardiovascular"
-    ],
     "properties": [
       "Antidepressant",
       "Nerve tonic",
@@ -2290,10 +1669,6 @@ window.PLANTS_DATA = [
     "family": "Oleaceae (Olive family)",
     "danishName": "Oliventræ",
     "frenchName": "Olivier",
-    "systems": [
-      "cardiovascular",
-      "immune"
-    ],
     "properties": [
       "Antimicrobial",
       "Antioxidant",
@@ -2309,11 +1684,6 @@ window.PLANTS_DATA = [
     "family": "Lamiaceae (Mint family)",
     "danishName": "Merian",
     "frenchName": "Origan",
-    "systems": [
-      "digestive",
-      "respiratory",
-      "immune"
-    ],
     "properties": [
       "Antibacterial",
       "Antimicrobial"
@@ -2326,9 +1696,6 @@ window.PLANTS_DATA = [
     "botanicalName": "Berberis aquifolium and related species",
     "danishName": "Oregon-drue",
     "frenchName": "Raisin de l'Oregon",
-    "systems": [
-      "digestive"
-    ],
     "properties": [
       "Anti-inflammatory (digestive/mucous membranes/skin)",
       "Anti-inflammatory (respiratory)",
@@ -2343,27 +1710,11 @@ window.PLANTS_DATA = [
     "family": "Berberidaceae (Barberry family)"
   },
   {
-    "commonName": "Parsley Root",
-    "botanicalName": "Petroselinum crispum",
-    "danishName": "Persille",
-    "frenchName": "Persil",
-    "systems": [
-      "urinary"
-    ],
-    "properties": [],
-    "status": "disabled",
-    "fileSlug": "parsley-root",
-    "family": "Apiaceae (Carrot family)"
-  },
-  {
     "commonName": "Partridgeberry",
     "botanicalName": "Mitchella repens",
     "family": "Rubiaceae (Coffee family)",
     "danishName": "Mitchella",
     "frenchName": "Mitchella rampant",
-    "systems": [
-      "woman-reproductive"
-    ],
     "properties": [
       "Astringent",
       "Uterine contracting",
@@ -2378,9 +1729,6 @@ window.PLANTS_DATA = [
     "family": "Passifloraceae (Passion flower family)",
     "danishName": "Passionsblomst",
     "frenchName": "Passiflore",
-    "systems": [
-      "nervous"
-    ],
     "properties": [
       "Analgesic",
       "Antispasmodic",
@@ -2397,9 +1745,6 @@ window.PLANTS_DATA = [
     "botanicalName": "Tabebuia impetiginosa",
     "danishName": "Pau d'Arco",
     "frenchName": "Pau d'Arco",
-    "systems": [
-      "immune"
-    ],
     "properties": [
       "Antibacterial",
       "Anticancer",
@@ -2414,31 +1759,11 @@ window.PLANTS_DATA = [
     "family": "Bignoniaceae (Trumpet vine family)"
   },
   {
-    "commonName": "Pennyroyal",
-    "botanicalName": "Mentha pulegium",
-    "danishName": "Polejmynte",
-    "frenchName": "Menthe pouliot",
-    "systems": [
-      "woman-reproductive"
-    ],
-    "properties": [
-      "Emmenagogue",
-      "Antispasmodic",
-      "Carminative"
-    ],
-    "status": "disabled",
-    "fileSlug": "pennyroyal",
-    "family": "Lamiaceae (Mint family)"
-  },
-  {
     "commonName": "Peppermint",
     "botanicalName": "Mentha x piperita",
     "family": "Lamiaceae (Mint family)",
     "danishName": "Pebermynte",
     "frenchName": "Menthe poivrée",
-    "systems": [
-      "cardiovascular"
-    ],
     "properties": [
       "Analgesic",
       "Anti-inflammatory (digestive/mucous membranes/skin)",
@@ -2463,10 +1788,6 @@ window.PLANTS_DATA = [
     "family": "Phyllanthaceae (Phyllanthus family)",
     "danishName": "Phyllanthus",
     "frenchName": "Phyllanthus",
-    "systems": [
-      "digestive",
-      "urinary"
-    ],
     "properties": [
       "Antiviral (internal)"
     ],
@@ -2479,10 +1800,6 @@ window.PLANTS_DATA = [
     "family": "Plantaginaceae (Plantain family)",
     "danishName": "Picrorrhiza",
     "frenchName": "Picrorrhiza",
-    "systems": [
-      "digestive",
-      "immune"
-    ],
     "properties": [
       "Immunomodulating"
     ],
@@ -2495,10 +1812,6 @@ window.PLANTS_DATA = [
     "family": "Pinaceae (Pine family)",
     "danishName": "Skovfyr",
     "frenchName": "Pin maritime",
-    "systems": [
-      "cardiovascular",
-      "immune"
-    ],
     "properties": [
       "Anticancer",
       "Anti-inflammatory (general)",
@@ -2528,27 +1841,10 @@ window.PLANTS_DATA = [
     "fileSlug": "pine-bark"
   },
   {
-    "commonName": "Pipsissewa",
-    "botanicalName": "Chimaphila umbellata",
-    "danishName": "Skærmvintergrøn",
-    "frenchName": "Chimaphile à ombelles",
-    "systems": [
-      "urinary"
-    ],
-    "properties": [],
-    "status": "disabled",
-    "fileSlug": "pipsissewa",
-    "family": "Ericaceae (Heath family)"
-  },
-  {
     "commonName": "Plantain",
     "botanicalName": "Plantago species",
     "danishName": "Vejbred",
     "frenchName": "Plantain",
-    "systems": [
-      "immune",
-      "digestive"
-    ],
     "properties": [
       "Astringent",
       "Demulcent",
@@ -2566,10 +1862,6 @@ window.PLANTS_DATA = [
     "botanicalName": "Asclepias tuberosa",
     "danishName": "Orangesilkeplante",
     "frenchName": "Asclépiade tubéreuse",
-    "systems": [
-      "respiratory",
-      "skin"
-    ],
     "properties": [
       "Bronchial spasmolytic"
     ],
@@ -2582,9 +1874,6 @@ window.PLANTS_DATA = [
     "botanicalName": "Zanthoxylum americanum",
     "danishName": "Tandved",
     "frenchName": "Clavalier d'Amérique",
-    "systems": [
-      "cardiovascular"
-    ],
     "properties": [
       "Antirheumatic",
       "Analgesic"
@@ -2599,10 +1888,6 @@ window.PLANTS_DATA = [
     "family": "Apidae (Bee product)",
     "danishName": "Propolis",
     "frenchName": "Propolis",
-    "systems": [
-      "immune",
-      "skin"
-    ],
     "properties": [
       "Analgesic",
       "Anti-inflammatory (external)",
@@ -2616,46 +1901,13 @@ window.PLANTS_DATA = [
     "fileSlug": "propolis"
   },
   {
-    "commonName": "Psyllium",
-    "botanicalName": "Plantago psyllium",
-    "danishName": "Loppefrø",
-    "frenchName": "Psyllium",
-    "systems": [
-      "respiratory"
-    ],
-    "properties": [],
-    "status": "disabled",
-    "fileSlug": "psyllium",
-    "family": "Plantaginaceae (Plantain family)"
-  },
-  {
-    "commonName": "Pumpkin Seeds",
-    "botanicalName": "Cucurbita pepo",
-    "family": "Cucurbitaceae (Gourd family)",
-    "danishName": "Græskarkerner",
-    "frenchName": "Graines de courge",
-    "systems": [
-      "male-reproductive",
-      "urinary"
-    ],
-    "properties": [
-      "Male tonic",
-      "Nutritive"
-    ],
-    "status": "disabled",
-    "fileSlug": "pumpkin-seeds"
-  },
-  {
     "commonName": "Purple Willow",
     "botanicalName": "Salix purpurea",
     "family": "Salicaceae (Willow family)",
     "danishName": "Purpurpil",
     "frenchName": "Saule pourpre",
-    "systems": [
-      "cardiovascular"
-    ],
     "properties": [],
-    "status": "disabled",
+    "status": "enabled",
     "fileSlug": "purple-willow"
   },
   {
@@ -2664,9 +1916,6 @@ window.PLANTS_DATA = [
     "family": "Rosaceae (Rose family)",
     "danishName": "Hindbær",
     "frenchName": "Framboisier",
-    "systems": [
-      "woman-reproductive"
-    ],
     "properties": [
       "Anti-inflammatory (female reproductive)",
       "Astringent",
@@ -2682,11 +1931,6 @@ window.PLANTS_DATA = [
     "family": "Fabaceae (Legume family)",
     "danishName": "Rødkløver",
     "frenchName": "Trèfle rouge",
-    "systems": [
-      "woman-reproductive",
-      "digestive",
-      "endocrine"
-    ],
     "properties": [
       "Anti-inflammatory (female reproductive)",
       "Anticancer",
@@ -2706,10 +1950,6 @@ window.PLANTS_DATA = [
     "family": "Orobanchaceae (Broomrape family)",
     "danishName": "Rehmannia",
     "frenchName": "Rehmannia",
-    "systems": [
-      "woman-reproductive",
-      "endocrine"
-    ],
     "properties": [
       "Adaptogen",
       "Adrenal tonic",
@@ -2725,12 +1965,6 @@ window.PLANTS_DATA = [
     "family": "Ganodermataceae (Mushroom)",
     "danishName": "Reishi",
     "frenchName": "Reishi",
-    "systems": [
-      "immune",
-      "respiratory",
-      "nervous",
-      "endocrine"
-    ],
     "properties": [
       "Adaptogen",
       "Aldose reductase inhibitor",
@@ -2766,12 +2000,6 @@ window.PLANTS_DATA = [
     "family": "Crassulaceae (Stonecrop family)",
     "danishName": "Rhodiola",
     "frenchName": "Rhodiola",
-    "systems": [
-      "nervous",
-      "immune",
-      "cardiovascular",
-      "endocrine"
-    ],
     "properties": [
       "Adaptogen",
       "Antidepressant",
@@ -2790,11 +2018,6 @@ window.PLANTS_DATA = [
     "family": "Lamiaceae (Mint family)",
     "danishName": "Rosmarin",
     "frenchName": "Romarin",
-    "systems": [
-      "nervous",
-      "digestive",
-      "cardiovascular"
-    ],
     "properties": [
       "Antibacterial",
       "Antioxidant",
@@ -2816,10 +2039,6 @@ window.PLANTS_DATA = [
     "family": "Rosaceae (Rose family)",
     "danishName": "Hyben",
     "frenchName": "Églantier",
-    "systems": [
-      "immune",
-      "digestive"
-    ],
     "properties": [
       "Anti-inflammatory (digestive/mucous membranes/skin)",
       "Astringent",
@@ -2835,11 +2054,6 @@ window.PLANTS_DATA = [
     "family": "Lamiaceae (Mint family)",
     "danishName": "Læge-salvie",
     "frenchName": "Sauge officinale",
-    "systems": [
-      "digestive",
-      "respiratory",
-      "endocrine"
-    ],
     "properties": [
       "Anti-inflammatory (respiratory)",
       "Antiarrhythmic",
@@ -2870,9 +2084,6 @@ window.PLANTS_DATA = [
     "botanicalName": "Smilax medica",
     "danishName": "Sarsaparil",
     "frenchName": "Salsepareille",
-    "systems": [
-      "male-reproductive"
-    ],
     "properties": [
       "Anti-inflammatory (general)",
       "Anti-inflammatory (musculoskeletal)",
@@ -2886,32 +2097,11 @@ window.PLANTS_DATA = [
     "family": "Smilacaceae (Greenbrier family)"
   },
   {
-    "commonName": "Sassafras",
-    "botanicalName": "Sassafras albidum",
-    "family": "Lauraceae (Laurel family)",
-    "danishName": "Sassafras",
-    "frenchName": "Sassafras",
-    "systems": [
-      "digestive",
-      "male-reproductive"
-    ],
-    "properties": [
-      "Blood purifier",
-      "Diaphoretic"
-    ],
-    "status": "disabled",
-    "fileSlug": "sassafras"
-  },
-  {
     "commonName": "Saw Palmetto",
     "botanicalName": "Serenoa repens",
     "family": "Arecaceae (Palm family)",
     "danishName": "Dværgpalme",
     "frenchName": "Palmier nain",
-    "systems": [
-      "male-reproductive",
-      "urinary"
-    ],
     "properties": [
       "Anti-inflammatory (general)",
       "Anti-inflammatory (urinary)",
@@ -2928,12 +2118,6 @@ window.PLANTS_DATA = [
     "family": "Schisandraceae (Schisandra family)",
     "danishName": "Schisandra",
     "frenchName": "Schisandre de Chine",
-    "systems": [
-      "immune",
-      "nervous",
-      "respiratory",
-      "endocrine"
-    ],
     "properties": [
       "Adaptogen",
       "Anti-inflammatory (liver)",
@@ -2952,29 +2136,11 @@ window.PLANTS_DATA = [
     "fileSlug": "schisandra"
   },
   {
-    "commonName": "Senna",
-    "botanicalName": "Cassia angustifolia",
-    "danishName": "Senna",
-    "frenchName": "Séné",
-    "systems": [
-      "digestive"
-    ],
-    "properties": [
-      "Laxative"
-    ],
-    "status": "enabled",
-    "fileSlug": "senna",
-    "family": "Fabaceae (Legume family)"
-  },
-  {
     "commonName": "Shepherd's Purse",
     "botanicalName": "Capsella bursa-pastoris",
     "family": "Brassicaceae (Mustard family)",
     "danishName": "Hyrdetaske",
     "frenchName": "Bourse-à-pasteur",
-    "systems": [
-      "woman-reproductive"
-    ],
     "properties": [
       "Antiseptic (urinary)",
       "Blood pressure regulating",
@@ -2984,34 +2150,11 @@ window.PLANTS_DATA = [
     "fileSlug": "shepherds-purse"
   },
   {
-    "commonName": "Shiitake Mushroom",
-    "botanicalName": "Lentinula edodes",
-    "family": "Marasmiaceae (Mushroom)",
-    "danishName": "Shiitake",
-    "frenchName": "Shiitake",
-    "systems": [
-      "immune"
-    ],
-    "properties": [
-      "Immunomodulating",
-      "Cholesterol lowering",
-      "Antiviral"
-    ],
-    "status": "disabled",
-    "fileSlug": "shiitake"
-  },
-  {
     "commonName": "Siberian Ginseng",
     "botanicalName": "Eleutherococcus senticosus",
     "family": "Araliaceae (Ginseng family)",
     "danishName": "Sibirisk ginseng",
     "frenchName": "Ginseng de Sibérie",
-    "systems": [
-      "male-reproductive",
-      "nervous",
-      "immune",
-      "endocrine"
-    ],
     "properties": [
       "Adaptogen",
       "Adrenal tonic",
@@ -3031,9 +2174,6 @@ window.PLANTS_DATA = [
     "family": "Lamiaceae (Mint family)",
     "danishName": "Amerikansk skjolddrager",
     "frenchName": "Scutellaire latériflore, Toque casquée",
-    "systems": [
-      "nervous"
-    ],
     "properties": [
       "Sedative",
       "Antispasmodic",
@@ -3048,9 +2188,6 @@ window.PLANTS_DATA = [
     "family": "Ulmaceae (Elm family)",
     "danishName": "Glat elm",
     "frenchName": "Orme rouge",
-    "systems": [
-      "respiratory"
-    ],
     "properties": [
       "Antacid",
       "Anti-inflammatory (digestive/mucous membranes/skin)",
@@ -3073,10 +2210,6 @@ window.PLANTS_DATA = [
     "family": "Hypericaceae (St. John's Wort family)",
     "danishName": "Prikbladet perikon",
     "frenchName": "Millepertuis perforé",
-    "systems": [
-      "nervous",
-      "skin"
-    ],
     "properties": [
       "Analgesic",
       "Anti-inflammatory (external)",
@@ -3096,10 +2229,6 @@ window.PLANTS_DATA = [
     "family": "Violaceae (Violet family)",
     "danishName": "Marts-viol",
     "frenchName": "Violette odorante",
-    "systems": [
-      "respiratory",
-      "skin"
-    ],
     "properties": [
       "Blood purifier"
     ],
@@ -3111,9 +2240,6 @@ window.PLANTS_DATA = [
     "botanicalName": "Melaleuca alternafolia",
     "danishName": "Tetræ",
     "frenchName": "Arbre à thé",
-    "systems": [
-      "immune"
-    ],
     "properties": [
       "Antibacterial",
       "Antimicrobial",
@@ -3129,10 +2255,6 @@ window.PLANTS_DATA = [
     "family": "Cupressaceae (Cypress family)",
     "danishName": "Thuja",
     "frenchName": "Thuya",
-    "systems": [
-      "immune",
-      "respiratory"
-    ],
     "properties": [
       "Antiviral (external)"
     ],
@@ -3145,11 +2267,6 @@ window.PLANTS_DATA = [
     "family": "Lamiaceae (Mint family)",
     "danishName": "Timian",
     "frenchName": "Thym",
-    "systems": [
-      "respiratory",
-      "digestive",
-      "immune"
-    ],
     "properties": [
       "Antiallergic",
       "Antibacterial",
@@ -3175,10 +2292,6 @@ window.PLANTS_DATA = [
     "family": "Paeoniaceae (Peony family)",
     "danishName": "Træpæon",
     "frenchName": "Pivoine arbustive",
-    "systems": [
-      "woman-reproductive",
-      "immune"
-    ],
     "properties": [
       "Blood pressure lowering",
       "Blood pressure regulating"
@@ -3191,9 +2304,6 @@ window.PLANTS_DATA = [
     "botanicalName": "Rheum palmatum",
     "danishName": "Medicinsk rabarber",
     "frenchName": "Rhubarbe de Chine",
-    "systems": [
-      "digestive"
-    ],
     "properties": [
       "Anti-inflammatory (digestive/mucous membranes/skin)",
       "Astringent",
@@ -3211,13 +2321,6 @@ window.PLANTS_DATA = [
     "family": "Zingiberaceae (Ginger family)",
     "danishName": "Gurkemeje",
     "frenchName": "Curcuma",
-    "systems": [
-      "digestive",
-      "cardiovascular",
-      "immune",
-      "skin",
-      "endocrine"
-    ],
     "properties": [
       "Analgesic",
       "Anti-inflammatory (brain)",
@@ -3245,10 +2348,6 @@ window.PLANTS_DATA = [
     "botanicalName": "Arctostaphylos uva-ursi",
     "danishName": "Melbærris",
     "frenchName": "Raisin d'ours",
-    "systems": [
-      "urinary",
-      "skin"
-    ],
     "properties": [
       "Antiseptic (urinary)",
       "Astringent"
@@ -3263,9 +2362,6 @@ window.PLANTS_DATA = [
     "family": "Caprifoliaceae (Honeysuckle family)",
     "danishName": "Baldrian, Læge-baldrian",
     "frenchName": "Valériane officinale",
-    "systems": [
-      "nervous"
-    ],
     "properties": [
       "Analgesic",
       "Anticonvulsant (epilepsy)",
@@ -3284,10 +2380,6 @@ window.PLANTS_DATA = [
     "family": "Verbenaceae (Verbena family)",
     "danishName": "Læge-jernurt",
     "frenchName": "Verveine",
-    "systems": [
-      "nervous",
-      "digestive"
-    ],
     "properties": [
       "Antidepressant",
       "Astringent",
@@ -3303,10 +2395,6 @@ window.PLANTS_DATA = [
     "botanicalName": "Vitex agnus castus",
     "danishName": "Kyskhedstræ",
     "frenchName": "Gattilier",
-    "systems": [
-      "woman-reproductive",
-      "endocrine"
-    ],
     "properties": [
       "Emmenagogue",
       "Estrogen regulating",
@@ -3326,10 +2414,6 @@ window.PLANTS_DATA = [
     "family": "Paeoniaceae (Peony family)",
     "danishName": "Hvid pæon",
     "frenchName": "Pivoine blanche",
-    "systems": [
-      "woman-reproductive",
-      "immune"
-    ],
     "properties": [
       "Anti-inflammatory (female reproductive)",
       "Anti-inflammatory (general)",
@@ -3348,10 +2432,6 @@ window.PLANTS_DATA = [
     "family": "Salicaceae (Willow family)",
     "danishName": "Hvid pil",
     "frenchName": "Saule blanc",
-    "systems": [
-      "cardiovascular",
-      "digestive"
-    ],
     "properties": [
       "Analgesic",
       "Anti-inflammatory (female reproductive)",
@@ -3367,9 +2447,6 @@ window.PLANTS_DATA = [
     "family": "Rosaceae (Rose family)",
     "danishName": "Virginsk kirsebær",
     "frenchName": "Cerisier tardif",
-    "systems": [
-      "respiratory"
-    ],
     "properties": [
       "Astringent",
       "Bronchial spasmolytic",
@@ -3384,11 +2461,6 @@ window.PLANTS_DATA = [
     "family": "Dioscoreaceae (Yam family)",
     "danishName": "Vild yams",
     "frenchName": "Igname sauvage",
-    "systems": [
-      "woman-reproductive",
-      "male-reproductive",
-      "immune"
-    ],
     "properties": [
       "Analgesic",
       "Anti-inflammatory (general)",
@@ -3409,10 +2481,6 @@ window.PLANTS_DATA = [
     "family": "Hamamelidaceae (Witch-hazel family)",
     "danishName": "Virginsk troldnød",
     "frenchName": "Hamamélis de Virginie",
-    "systems": [
-      "cardiovascular",
-      "digestive"
-    ],
     "properties": [
       "Anti-inflammatory (digestive/mucous membranes/skin)",
       "Astringent",
@@ -3424,27 +2492,11 @@ window.PLANTS_DATA = [
     "fileSlug": "witch-hazel"
   },
   {
-    "commonName": "Wood Betony",
-    "botanicalName": "Betonica officinalis",
-    "danishName": "Læge-betonie",
-    "frenchName": "Bétoine officinale",
-    "systems": [
-      "nervous"
-    ],
-    "properties": [],
-    "status": "disabled",
-    "fileSlug": "wood-betony",
-    "family": "Lamiaceae (Mint family)"
-  },
-  {
     "commonName": "Wormwood",
     "botanicalName": "Artemisia absinthium",
     "family": "Asteraceae (Daisy family)",
     "danishName": "Malurt",
     "frenchName": "Absinthe",
-    "systems": [
-      "digestive"
-    ],
     "properties": [
       "Antiparasitic",
       "Bitter tonic"
@@ -3458,10 +2510,6 @@ window.PLANTS_DATA = [
     "family": "Asteraceae (Daisy family)",
     "danishName": "Almindelig røllike",
     "frenchName": "Achillée millefeuille",
-    "systems": [
-      "digestive",
-      "cardiovascular"
-    ],
     "properties": [
       "Anti-inflammatory (general)",
       "Antifungal",
@@ -3484,9 +2532,6 @@ window.PLANTS_DATA = [
     "botanicalName": "Rumex crispus and related species",
     "danishName": "Kruset skræppe",
     "frenchName": "Patience crépue",
-    "systems": [
-      "digestive"
-    ],
     "properties": [
       "Blood purifier",
       "Choleretic",
@@ -3499,6 +2544,6 @@ window.PLANTS_DATA = [
 ];
 
 // Export for use in other modules
-if (typeof module !== 'undefined' && module.exports) {
-  module.exports = PLANTS_DATA;
+if (typeof module !== "undefined" && module.exports) {
+  module.exports = window.PLANTS_DATA;
 }

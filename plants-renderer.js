@@ -15,20 +15,6 @@
         console.error('[PlantsRenderer] utils.js not loaded! Plant rendering may not work correctly.');
     }
 
-    // System configuration
-    const SYSTEM_CONFIG = {
-        nervous: { label: 'Nervous System', class: 'nervous' },
-        immune: { label: 'Immune System', class: 'immune' },
-        digestive: { label: 'Digestive System', class: 'digestive' },
-        respiratory: { label: 'Respiratory System', class: 'respiratory' },
-        urinary: { label: 'Urinary System', class: 'urinary' },
-        cardiovascular: { label: 'Cardiovascular System', class: 'cardiovascular' },
-        endocrine: { label: 'Endocrine System', class: 'endocrine' },
-        skin: { label: 'Skin System', class: 'skin' },
-        'woman-reproductive': { label: 'Woman Reproductive System', class: 'woman-reproductive' },
-        'male-reproductive': { label: 'Male Reproductive System', class: 'male-reproductive' }
-    };
-
     /**
      * Validate plant object structure
      */
@@ -37,7 +23,6 @@
         if (!plant.commonName || typeof plant.commonName !== 'string') return false;
         if (!plant.botanicalName || typeof plant.botanicalName !== 'string') return false;
         if (!plant.fileSlug || typeof plant.fileSlug !== 'string') return false;
-        if (!Array.isArray(plant.systems)) return false;
         return true;
     }
 
@@ -60,64 +45,24 @@
     }
 
     /**
-     * Create common names HTML (Danish and French)
+     * Common name in the active language. Falls back to the English common name
+     * when the translation for the active language is missing.
      */
     function createCommonNamesHTML(plant) {
         try {
-            if (!plant || (!plant.danishName && !plant.frenchName)) {
-                return '';
-            }
+            if (!plant) return '';
 
-            const parts = [];
-            if (plant.danishName && typeof plant.danishName === 'string') {
-                parts.push(`<span class="lang-label">DA:</span>${escapeHtml(plant.danishName.trim())}`);
-            }
-            if (plant.frenchName && typeof plant.frenchName === 'string') {
-                parts.push(`<span class="lang-label">FR:</span>${escapeHtml(plant.frenchName.trim())}`);
-            }
-
-            return parts.length > 0 ? `<p class="common-names">${parts.join(' · ')}</p>` : '';
+            const activeLang = (window.I18n && window.I18n.getLang) ? window.I18n.getLang() : 'en';
+            const byLang = {
+                en: plant.commonName,
+                da: plant.danishName,
+                fr: plant.frenchName,
+            };
+            const raw = byLang[activeLang] || plant.commonName;
+            if (typeof raw !== 'string' || raw.trim().length === 0) return '';
+            return `<p class="common-names">${escapeHtml(raw.trim())}</p>`;
         } catch (error) {
             console.error('[PlantsRenderer] Error in createCommonNamesHTML:', error);
-            return '';
-        }
-    }
-
-    /**
-     * Create system badges HTML
-     */
-    function createSystemBadgesHTML(plant, useDiv = false) {
-        try {
-            if (!plant || !Array.isArray(plant.systems)) {
-                console.warn('[PlantsRenderer] Invalid plant systems:', plant);
-                return '';
-            }
-
-            const badges = plant.systems
-                .map(systemId => {
-                    if (typeof systemId !== 'string') {
-                        console.warn('[PlantsRenderer] Invalid system ID type:', typeof systemId);
-                        return '';
-                    }
-                    const system = SYSTEM_CONFIG[systemId];
-                    if (!system) {
-                        console.warn('[PlantsRenderer] Unknown system ID:', systemId);
-                        return '';
-                    }
-                    // escapeHtml for system.class and system.label (defense in depth)
-                    return `<span class="system-badge ${escapeHtml(system.class)}">${escapeHtml(system.label)}</span>`;
-                })
-                .filter(Boolean)
-                .join(' ');
-
-            if (!badges) return '';
-
-            if (useDiv) {
-                return `<div class="system-badges">${badges}</div>`;
-            }
-            return `<p>${badges}</p>`;
-        } catch (error) {
-            console.error('[PlantsRenderer] Error in createSystemBadgesHTML:', error);
             return '';
         }
     }
@@ -134,51 +79,22 @@
             }
 
             const basePath = options.basePath || getBasePath();
-            const useDiv = options.useDivForBadges || false;
 
             const commonNames = createCommonNamesHTML(plant);
-            const systemBadges = createSystemBadgesHTML(plant, useDiv);
 
             // Escape all dynamic content
             const status = plant.status ? escapeHtml(plant.status) : '';
-            const fileSlug = escapeHtml(plant.fileSlug);
-            const commonName = escapeHtml(plant.commonName);
             const botanicalName = escapeHtml(plant.botanicalName);
 
+            const href = escapeHtml(window.I18n ? window.I18n.withLang(basePath + plant.fileSlug + '.html') : basePath + plant.fileSlug + '.html');
             return `
             <div class="plant-card ${status}">
-                <h3><a href="${basePath}${fileSlug}.html">${commonName}</a></h3>
-                <p class="botanical-name">${botanicalName}</p>
+                <h3 class="card-latin"><a href="${href}"><em>${botanicalName}</em></a></h3>
                 ${commonNames}
-                ${systemBadges}
             </div>`;
         } catch (error) {
             console.error('[PlantsRenderer] Error in createPlantCardHTML:', error);
             return '';
-        }
-    }
-
-    /**
-     * Filter plants by system
-     */
-    function filterPlantsBySystem(plants, systemId) {
-        try {
-            if (!Array.isArray(plants)) {
-                console.error('[PlantsRenderer] plants is not an array:', typeof plants);
-                return [];
-            }
-            if (!systemId) return plants;
-
-            return plants.filter(plant => {
-                if (!plant || !Array.isArray(plant.systems)) {
-                    console.warn('[PlantsRenderer] Invalid plant in filterPlantsBySystem:', plant);
-                    return false;
-                }
-                return plant.systems.includes(systemId);
-            });
-        } catch (error) {
-            console.error('[PlantsRenderer] Error in filterPlantsBySystem:', error);
-            return [];
         }
     }
 
@@ -235,11 +151,8 @@
 
             const plants = window.PLANTS_DATA;
 
-            // Filter by system if specified
-            let filteredPlants = filterPlantsBySystem(plants, options.system);
-
             // Sort alphabetically
-            filteredPlants = sortPlants(filteredPlants);
+            let filteredPlants = sortPlants(plants);
 
             // Validate filtered plants
             const validPlants = filteredPlants.filter(plant => isValidPlant(plant));
@@ -279,34 +192,19 @@
     }
 
     /**
-     * Render plant cards for a specific system page
-     */
-    function renderSystemPage(systemId) {
-        renderPlantCards('plant-list-container', {
-            system: systemId,
-            basePath: 'plants/',
-            useDivForBadges: false
-        });
-    }
-
-    /**
      * Render all plants for the index page
      */
     function renderIndexPage() {
         renderPlantCards('plant-list-container', {
-            system: null,
             basePath: 'plants/',
-            useDivForBadges: false
         });
     }
 
     // Expose public API
     window.PlantsRenderer = {
         renderPlantCards,
-        renderSystemPage,
         renderIndexPage,
         createPlantCardHTML,
-        SYSTEM_CONFIG
     };
 
 })();

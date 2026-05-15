@@ -305,16 +305,6 @@ body {
 
 /* bg1 botanical illustration positioned at top right corner */
 body:has(main .plant-list)::after,
-body.nervous-system-page::after,
-body.immune-system-page::after,
-body.woman-reproductive-system-page::after,
-body.skin-system-page::after,
-body.male-reproductive-system-page::after,
-body.digestive-system-page::after,
-body.respiratory-system-page::after,
-body.urinary-system-page::after,
-body.cardiovascular-system-page::after,
-body.endocrine-system-page::after,
 body:has(.plant-detail)::after {
     content: '';
     position: fixed;
@@ -334,16 +324,6 @@ body:has(.plant-detail)::after {
 
 /* bg2 botanical illustration positioned at bottom left corner */
 body:has(main .plant-list)::before,
-body.nervous-system-page::before,
-body.immune-system-page::before,
-body.woman-reproductive-system-page::before,
-body.skin-system-page::before,
-body.male-reproductive-system-page::before,
-body.digestive-system-page::before,
-body.respiratory-system-page::before,
-body.urinary-system-page::before,
-body.cardiovascular-system-page::before,
-body.endocrine-system-page::before,
 body:has(.plant-detail)::before {
     content: '';
     position: fixed;
@@ -364,16 +344,6 @@ body:has(.plant-detail)::before {
 
 /* Ensure content appears above background effects */
 body:has(main .plant-list) .container,
-body.nervous-system-page .container,
-body.immune-system-page .container,
-body.woman-reproductive-system-page .container,
-body.skin-system-page .container,
-body.male-reproductive-system-page .container,
-body.digestive-system-page .container,
-body.respiratory-system-page .container,
-body.urinary-system-page .container,
-body.cardiovascular-system-page .container,
-body.endocrine-system-page .container,
 body:has(.plant-detail) .container {
     position: relative;
     z-index: 1;
@@ -490,17 +460,11 @@ header h1 {
 }
 
 .common-names {
-    font-size: 0.85em;
-    color: #666;
-    margin-top: 5px;
+    font-size: 1.05em;
+    color: var(--color-text);
+    margin-top: 4px;
     margin-bottom: 10px;
     line-height: 1.4;
-}
-
-.common-names .lang-label {
-    font-weight: 600;
-    color: #888;
-    margin-right: 0;
 }
 
 /* Plant Detail Page Styles */
@@ -604,31 +568,43 @@ header h1 {
     border-bottom: 2px solid #5a6f4f;
 }
 
-/* System Badge Styles */
-.system-badge {
-    display: block;
-    font-size: 0.9em;
-    color: var(--color-secondary);
-    font-style: italic;
+/* Language Picker — fixed to the top-right of the page */
+.lang-picker {
+    position: fixed;
+    top: 16px;
+    right: 20px;
+    z-index: 50;
+    display: inline-flex;
+    gap: 4px;
+    align-items: center;
+    background: var(--color-background);
+    padding: 4px 6px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
-.system-badge::before {
-    content: "• ";
+.lang-picker button {
+    font-family: var(--font-family-serif);
+    font-size: 0.85em;
+    padding: 4px 10px;
+    background: transparent;
+    border: 1px solid var(--color-secondary);
     color: var(--color-secondary);
+    cursor: pointer;
+    border-radius: 3px;
+    letter-spacing: 0.05em;
+    transition: background-color 0.15s, color 0.15s;
 }
 
-.system-badge.nervous,
-.system-badge.immune,
-.system-badge.digestive,
-.system-badge.respiratory,
-.system-badge.urinary,
-.system-badge.cardiovascular,
-.system-badge.endocrine,
-.system-badge.skin,
-.system-badge.woman-reproductive,
-.system-badge.male-reproductive {
-    background-color: transparent;
-    color: var(--color-secondary);
+.lang-picker button:hover {
+    background-color: var(--color-secondary);
+    color: white;
+}
+
+.lang-picker button.active {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: white;
 }
 
 /* Visually hidden text for screen readers */
@@ -790,8 +766,8 @@ footer .disclaimer {
 }
 
 .property-name {
-    width: 20%;
-    min-width: 180px;
+    width: 22%;
+    min-width: 240px;
 }
 
 .plant-list-cell {
@@ -804,6 +780,10 @@ footer .disclaimer {
     font-size: 1em;
     color: var(--color-text);
     margin-bottom: 6px;
+    /* Long Danish compound words (e.g. "Livmodersammentrækkende") may need to
+       break mid-word to keep the column tidy. */
+    overflow-wrap: anywhere;
+    hyphens: auto;
 }
 
 .prop-translations {
@@ -910,16 +890,6 @@ footer .disclaimer {
 @media (max-width: 1349px) {
     /* Hide only bg2 (bottom left) background images on mobile devices - keep bg1 (top right) visible */
     body:has(main .plant-list)::before,
-    body.nervous-system-page::before,
-    body.immune-system-page::before,
-    body.woman-reproductive-system-page::before,
-    body.skin-system-page::before,
-    body.male-reproductive-system-page::before,
-    body.digestive-system-page::before,
-    body.respiratory-system-page::before,
-    body.urinary-system-page::before,
-    body.cardiovascular-system-page::before,
-    body.endocrine-system-page::before,
     body:has(.plant-detail)::before {
         display: none !important;
     }
@@ -936,7 +906,7 @@ footer .disclaimer {
 
     .property-name {
         min-width: 150px;
-        max-width: 180px;
+        max-width: 220px;
     }
 
     .prop-main {
@@ -1187,32 +1157,12 @@ footer .disclaimer {
 
     /* Adjust background image positioning on large screens - bg1 on right */
     body:has(main .plant-list)::after,
-    body.nervous-system-page::after,
-    body.immune-system-page::after,
-    body.woman-reproductive-system-page::after,
-    body.skin-system-page::after,
-    body.male-reproductive-system-page::after,
-    body.digestive-system-page::after,
-    body.respiratory-system-page::after,
-    body.urinary-system-page::after,
-    body.cardiovascular-system-page::after,
-    body.endocrine-system-page::after,
     body:has(.plant-detail)::after {
         right: calc((100vw - 1400px) / 2 - 250px);
     }
 
     /* Adjust background image positioning on large screens - bg2 on left */
     body:has(main .plant-list)::before,
-    body.nervous-system-page::before,
-    body.immune-system-page::before,
-    body.woman-reproductive-system-page::before,
-    body.skin-system-page::before,
-    body.male-reproductive-system-page::before,
-    body.digestive-system-page::before,
-    body.respiratory-system-page::before,
-    body.urinary-system-page::before,
-    body.cardiovascular-system-page::before,
-    body.endocrine-system-page::before,
     body:has(.plant-detail)::before {
         left: calc((100vw - 1400px) / 2 - 250px);
     }
@@ -1222,32 +1172,12 @@ footer .disclaimer {
 @media (min-width: 1920px) {
     /* Keep background image from going too far right on very large screens - bg1 */
     body:has(main .plant-list)::after,
-    body.nervous-system-page::after,
-    body.immune-system-page::after,
-    body.woman-reproductive-system-page::after,
-    body.skin-system-page::after,
-    body.male-reproductive-system-page::after,
-    body.digestive-system-page::after,
-    body.respiratory-system-page::after,
-    body.urinary-system-page::after,
-    body.cardiovascular-system-page::after,
-    body.endocrine-system-page::after,
     body:has(.plant-detail)::after {
         right: calc((100vw - 1400px) / 2 - 200px);
     }
 
     /* Keep background image from going too far left on very large screens - bg2 */
     body:has(main .plant-list)::before,
-    body.nervous-system-page::before,
-    body.immune-system-page::before,
-    body.woman-reproductive-system-page::before,
-    body.skin-system-page::before,
-    body.male-reproductive-system-page::before,
-    body.digestive-system-page::before,
-    body.respiratory-system-page::before,
-    body.urinary-system-page::before,
-    body.cardiovascular-system-page::before,
-    body.endocrine-system-page::before,
     body:has(.plant-detail)::before {
         left: calc((100vw - 1400px) / 2 - 200px);
     }

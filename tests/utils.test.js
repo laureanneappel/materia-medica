@@ -115,13 +115,12 @@ describe('Utils.isValidArray', () => {
     expect(Utils.isValidArray({})).toBe(false);
   });
 
-  it('should validate plant systems array', () => {
-    // Real-world test case
-    const validSystems = ['nervous', 'immune'];
-    const emptySystems = [];
+  it('should validate plant properties array', () => {
+    const validProperties = ['Sedative', 'Antispasmodic'];
+    const emptyProperties = [];
 
-    expect(Utils.isValidArray(validSystems)).toBe(true);
-    expect(Utils.isValidArray(emptySystems)).toBe(false);
+    expect(Utils.isValidArray(validProperties)).toBe(true);
+    expect(Utils.isValidArray(emptyProperties)).toBe(false);
   });
 });
 

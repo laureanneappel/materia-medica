@@ -9,11 +9,11 @@
         <link rel="icon" type="image/svg+xml" href="favicon.svg">
         <link rel="stylesheet" href="styles.css">
         <script src="utils.js"></script>
+    <script src="i18n.js"></script>
         <script src="page-transition.js"></script>
         <script src="navigation.js" defer></script>
         <script src="footer.js" defer></script>
         <script src="plants-data.js"></script>
-        <script src="danish-to-english-properties.js"></script>
         <script src="property-statistics-renderer.js"></script>
         <script>
             document.addEventListener('DOMContentLoaded', function() {
@@ -55,7 +55,7 @@
         <a href="#main-content" class="skip-link">Skip to main content</a>
         <div class="container">
             <header>
-                <h1>Medicinal Property Statistics</h1>
+                <h1 data-i18n="props.pageTitle">Medicinal Property Statistics</h1>
             </header>
 
             <div id="nav-placeholder"></div>
@@ -64,24 +64,25 @@
                 <div class="stats-summary">
                     <div class="stat-box">
                         <div class="stat-number">...</div>
-                        <div class="stat-label">Unique Properties</div>
+                        <div class="stat-label" data-i18n="props.stats.unique">Unique Properties</div>
                     </div>
                     <div class="stat-box">
                         <div class="stat-number">...</div>
-                        <div class="stat-label">Plants with Properties</div>
+                        <div class="stat-label" data-i18n="props.stats.withProps">Plants with Properties</div>
                     </div>
                     <div class="stat-box">
                         <div class="stat-number">...</div>
-                        <div class="stat-label">Total Plants</div>
+                        <div class="stat-label" data-i18n="props.stats.total">Total Plants</div>
                     </div>
                 </div>
 
                 <div class="search-box-stats">
                     <label for="property-search" class="visually-hidden">Search properties or plants</label>
-                    <input 
-                        type="text" 
-                        id="property-search" 
-                        placeholder="Search in any language: English, Dansk, Français..."
+                    <input
+                        type="text"
+                        id="property-search"
+                        placeholder="Search properties or plants..."
+                        data-i18n-placeholder="props.search.placeholder"
                         aria-label="Search properties or plants"
                     />
                     <div id="search-results-announcement" class="visually-hidden" role="status" aria-live="polite" aria-atomic="true"></div>
@@ -90,9 +91,9 @@
                 <table class="property-table" id="property-table">
                     <thead>
                         <tr>
-                            <th>Property / Egenskab / Propriété</th>
-                            <th>Count</th>
-                            <th>Plants / Planter / Plantes</th>
+                            <th data-i18n="props.table.property">Property</th>
+                            <th data-i18n="props.table.count">Count</th>
+                            <th data-i18n="props.table.plants">Plants</th>
                         </tr>
                     </thead>
                     <tbody>

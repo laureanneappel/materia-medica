@@ -15,20 +15,16 @@
     }
 
     // Navigation structure - single source of truth
+    // `i18nKey` is used to look up the translated label via window.I18n.t().
+    // `label` is kept as the English fallback if i18n.js failed to load.
     const NAV_ITEMS = [
-        { href: 'index.html', label: 'All Plants', id: 'all' },
-        { href: 'property-statistics.html', label: 'Properties', id: 'properties' },
-        { href: 'system.html?system=nervous', label: 'Nervous System', id: 'nervous' },
-        { href: 'system.html?system=immune', label: 'Immune System', id: 'immune' },
-        { href: 'system.html?system=digestive', label: 'Digestive System', id: 'digestive' },
-        { href: 'system.html?system=respiratory', label: 'Respiratory System', id: 'respiratory' },
-        { href: 'system.html?system=urinary', label: 'Urinary System', id: 'urinary' },
-        { href: 'system.html?system=cardiovascular', label: 'Cardiovascular System', id: 'cardiovascular' },
-        { href: 'system.html?system=endocrine', label: 'Endocrine System', id: 'endocrine' },
-        { href: 'system.html?system=skin', label: 'Skin System', id: 'skin' },
-        { href: 'system.html?system=woman-reproductive', label: 'Woman Reproductive', id: 'woman-reproductive' },
-        { href: 'system.html?system=male-reproductive', label: 'Male Reproductive', id: 'male-reproductive' }
+        { href: 'index.html', label: 'All Plants', i18nKey: 'nav.all', id: 'all' },
+        { href: 'property-statistics.html', label: 'Properties', i18nKey: 'nav.properties', id: 'properties' },
     ];
+
+    const I18n = window.I18n;
+    const translate = (key, fallback) => (I18n ? I18n.t(key) : fallback);
+    const withLang = (url) => (I18n ? I18n.withLang(url) : url);
 
     /**
      * Determine the base path for navigation links
@@ -63,13 +59,6 @@
             if (!filename) {
                 console.warn('[Navigation] Could not extract filename from path:', path);
                 return 'all';
-            }
-
-            // For system.html, check the URL parameter
-            if (filename === 'system.html') {
-                const urlParams = new URLSearchParams(window.location.search);
-                const system = urlParams.get('system');
-                return system || 'nervous';
             }
 
             // Check for exact matches
@@ -113,8 +102,8 @@
                     console.warn('[Navigation] Skipping invalid nav item:', item);
                     return '';
                 }
-                const href = escapeHtml(basePath + item.href);
-                const label = escapeHtml(item.label);
+                const href = escapeHtml(withLang(basePath + item.href));
+                const label = escapeHtml(translate(item.i18nKey, item.label));
                 const activeClass = activeId === item.id ? ' class="active"' : '';
                 return `<a href="${href}"${activeClass}>${label}</a>`;
             }).filter(Boolean).join('\n                ');
