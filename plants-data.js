@@ -49,7 +49,9 @@ window.PLANTS_DATA = [
       "Mucous membrane strengthening"
     ],
     "status": "enabled",
-    "fileSlug": "aloe-vera"
+    "fileSlug": "aloe-vera",
+    "image": "images/plants/aloe-vera.jpg",
+    "imageCredit": "Redouté, Plantarum historia succulentarum (1802) · public domain"
   },
   {
     "commonName": "Andrographis",
@@ -316,7 +318,9 @@ window.PLANTS_DATA = [
     ],
     "status": "enabled",
     "fileSlug": "black-cohosh",
-    "family": "Ranunculaceae (Buttercup family)"
+    "family": "Ranunculaceae (Buttercup family)",
+    "image": "images/plants/black-cohosh.jpg",
+    "imageCredit": "Millspaugh, American Medicinal Plants (1887) · public domain"
   },
   {
     "commonName": "Black Haw",
@@ -366,7 +370,9 @@ window.PLANTS_DATA = [
       "Weight reducing"
     ],
     "status": "enabled",
-    "fileSlug": "bladderwrack"
+    "fileSlug": "bladderwrack",
+    "image": "images/plants/bladderwrack.jpg",
+    "imageCredit": "Flora Danica (1761–1883) · public domain"
   },
   {
     "commonName": "Blue Flag",
@@ -383,7 +389,9 @@ window.PLANTS_DATA = [
       "Weight reducing"
     ],
     "status": "enabled",
-    "fileSlug": "blue-flag"
+    "fileSlug": "blue-flag",
+    "image": "images/plants/blue-flag.jpg",
+    "imageCredit": "Millspaugh, American Medicinal Plants (1887) · public domain"
   },
   {
     "commonName": "Boswellia",
@@ -455,7 +463,9 @@ window.PLANTS_DATA = [
       "Lymphatic stimulant"
     ],
     "status": "enabled",
-    "fileSlug": "burdock"
+    "fileSlug": "burdock",
+    "image": "images/plants/burdock.jpg",
+    "imageCredit": "Medical Botany (1832) · public domain"
   },
   {
     "commonName": "Butcher's Broom",
@@ -483,7 +493,9 @@ window.PLANTS_DATA = [
       "Laxative"
     ],
     "status": "enabled",
-    "fileSlug": "butternut"
+    "fileSlug": "butternut",
+    "image": "images/plants/butternut.jpg",
+    "imageCredit": "Bigelow, American Medical Botany (1818) · public domain"
   },
   {
     "commonName": "Cacao",
@@ -1002,7 +1014,9 @@ window.PLANTS_DATA = [
       "Vasodilator"
     ],
     "status": "enabled",
-    "fileSlug": "echinacea"
+    "fileSlug": "echinacea",
+    "image": "images/plants/echinacea.jpg",
+    "imageCredit": "Curtis's Botanical Magazine (1787) · public domain"
   },
   {
     "commonName": "Elderberry",
@@ -1304,7 +1318,9 @@ window.PLANTS_DATA = [
       "Venotonic"
     ],
     "status": "enabled",
-    "fileSlug": "ginkgo"
+    "fileSlug": "ginkgo",
+    "image": "images/plants/ginkgo.jpg",
+    "imageCredit": "Siebold & Zuccarini, Flora Japonica (1870) · public domain"
   },
   {
     "commonName": "Ginseng",
@@ -2229,7 +2245,9 @@ window.PLANTS_DATA = [
     ],
     "status": "enabled",
     "fileSlug": "pleurisy",
-    "family": "Apocynaceae (Dogbane family)"
+    "family": "Apocynaceae (Dogbane family)",
+    "image": "images/plants/pleurisy.jpg",
+    "imageCredit": "Barton, Vegetable Materia Medica of the United States (1825) · public domain"
   },
   {
     "commonName": "Prickly Ash",
@@ -2543,7 +2561,9 @@ window.PLANTS_DATA = [
       "Laxative"
     ],
     "status": "enabled",
-    "fileSlug": "senna"
+    "fileSlug": "senna",
+    "image": "images/plants/senna.jpg",
+    "imageCredit": "Köhler's Medizinal-Pflanzen (1890) · public domain"
   },
   {
     "commonName": "Shatavari",
@@ -2639,7 +2659,9 @@ window.PLANTS_DATA = [
       "Weight reducing"
     ],
     "status": "enabled",
-    "fileSlug": "slippery-elm"
+    "fileSlug": "slippery-elm",
+    "image": "images/plants/slippery-elm.jpg",
+    "imageCredit": "Michaux, North American Sylva (1819) · public domain"
   },
   {
     "commonName": "St. John's Wort",
@@ -2781,7 +2803,9 @@ window.PLANTS_DATA = [
     ],
     "status": "enabled",
     "fileSlug": "turkey-rhubarb",
-    "family": "Polygonaceae (Buckwheat family)"
+    "family": "Polygonaceae (Buckwheat family)",
+    "image": "images/plants/turkey-rhubarb.jpg",
+    "imageCredit": "Flora medica (1831) · public domain"
   },
   {
     "commonName": "Turmeric",
@@ -2884,7 +2908,9 @@ window.PLANTS_DATA = [
     ],
     "status": "enabled",
     "fileSlug": "vitex",
-    "family": "Lamiaceae (Mint family)"
+    "family": "Lamiaceae (Mint family)",
+    "image": "images/plants/vitex.jpg",
+    "imageCredit": "Duhamel, Traité des arbres et arbustes (1801) · public domain"
   },
   {
     "commonName": "White Peony",
@@ -2933,7 +2959,9 @@ window.PLANTS_DATA = [
       "Expectorant"
     ],
     "status": "enabled",
-    "fileSlug": "wild-cherry"
+    "fileSlug": "wild-cherry",
+    "image": "images/plants/wild-cherry.jpg",
+    "imageCredit": "Carson, Illustrations of Medical Botany (1847) · public domain"
   },
   {
     "commonName": "Wild Yam",
