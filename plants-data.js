@@ -815,7 +815,9 @@ window.PLANTS_DATA = [
       "Vasodilator"
     ],
     "status": "enabled",
-    "fileSlug": "coleus"
+    "fileSlug": "coleus",
+    "image": "images/plants/coleus.jpg",
+    "imageCredit": "Wight, Icones Plantarum Indiae Orientalis (1850): Coleus barbatus, plate 1432 · public domain"
   },
   {
     "commonName": "Cordyceps",
@@ -944,7 +946,9 @@ window.PLANTS_DATA = [
       "Tonic"
     ],
     "status": "enabled",
-    "fileSlug": "damiana"
+    "fileSlug": "damiana",
+    "image": "images/plants/damiana.jpg",
+    "imageCredit": "Martius, Flora Brasiliensis (1883): Turnera diffusa, plate 44 · public domain"
   },
   {
     "commonName": "Dandelion",
@@ -2217,7 +2221,9 @@ window.PLANTS_DATA = [
     ],
     "status": "enabled",
     "fileSlug": "pau-darco",
-    "family": "Bignoniaceae (Trumpet vine family)"
+    "family": "Bignoniaceae (Trumpet vine family)",
+    "image": "images/plants/pau-darco.jpg",
+    "imageCredit": "Martius, Flora Brasiliensis (1897): Tecoma impetiginosa, plate 113 · public domain"
   },
   {
     "commonName": "Peppermint",
