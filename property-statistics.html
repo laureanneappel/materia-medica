@@ -5,102 +5,49 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Complete multilingual index of medicinal properties with plant counts and listings in English, Danish, and French">
-        <title>Property Statistics - Materia Medica</title>
+        <title data-i18n-title="props.pageTitle">Medicinal Properties - Materia Medica</title>
         <link rel="icon" type="image/svg+xml" href="favicon.svg">
         <link rel="stylesheet" href="styles.css">
         <script src="utils.js"></script>
-    <script src="i18n.js"></script>
+        <script src="i18n.js"></script>
         <script src="navigation.js" defer></script>
         <script src="footer.js" defer></script>
         <script src="plants-data.js"></script>
         <script src="property-statistics-renderer.js"></script>
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const searchInput = document.getElementById('property-search');
-                const table = document.getElementById('property-table');
-                const rows = table.getElementsByTagName('tr');
-                const announcement = document.getElementById('search-results-announcement');
-                
-                let searchDebounce;
-                searchInput.addEventListener('input', function() {
-                    clearTimeout(searchDebounce);
-                    searchDebounce = setTimeout(() => {
-                        const filter = this.value.toLowerCase();
-                        let visibleCount = 0;
-                        
-                        for (let i = 1; i < rows.length; i++) {
-                            const rowText = rows[i].textContent.toLowerCase();
-                            if (rowText.includes(filter)) {
-                                rows[i].style.display = '';
-                                rows[i].removeAttribute('aria-hidden');
-                                visibleCount++;
-                            } else {
-                                rows[i].style.display = 'none';
-                                rows[i].setAttribute('aria-hidden', 'true');
-                            }
-                        }
-                        
-                        // Announce results to screen readers
-                        if (announcement) {
-                            announcement.textContent = window.I18n
-                                ? window.I18n.format(window.I18n.t(visibleCount === 1 ? 'props.search.one' : 'props.search.many'), { count: visibleCount })
-                                : visibleCount + ' results found';
-                        }
-                    }, 300);
-                });
-            });
-        </script>
     </head>
 
     <body>
         <a href="#main-content" class="skip-link" data-i18n="a11y.skip">Skip to main content</a>
         <div class="container">
             <header>
-                <h1 data-i18n="props.pageTitle">Medicinal Property Statistics</h1>
+                <h1 data-i18n="props.pageTitle">Medicinal Properties</h1>
             </header>
 
             <div id="nav-placeholder"></div>
 
             <main id="main-content">
-                <div class="stats-summary">
-                    <div class="stat-box">
-                        <div class="stat-number">...</div>
-                        <div class="stat-label" data-i18n="props.stats.unique">Unique Properties</div>
+                <div class="prop-stats" id="prop-stats"></div>
+
+                <div class="prop-toolbar">
+                    <div class="search-box-stats">
+                        <label for="property-search" class="visually-hidden" data-i18n="props.search.label">Search properties or plants</label>
+                        <input type="search" id="property-search" placeholder="Search properties or plants..."
+                            data-i18n-placeholder="props.search.placeholder" autocomplete="off" />
                     </div>
-                    <div class="stat-box">
-                        <div class="stat-number">...</div>
-                        <div class="stat-label" data-i18n="props.stats.withProps">Plants with Properties</div>
-                    </div>
-                    <div class="stat-box">
-                        <div class="stat-number">...</div>
-                        <div class="stat-label" data-i18n="props.stats.total">Total Plants</div>
+                    <div class="prop-controls">
+                        <div class="segmented" role="group" data-i18n-aria-label="props.sort.label" aria-label="Sort">
+                            <button type="button" data-sort="name" data-i18n="props.sort.name">A–Z</button>
+                            <button type="button" data-sort="count" data-i18n="props.sort.count">Most plants</button>
+                        </div>
+                        <button type="button" class="link-button" id="toggle-all">Expand all</button>
                     </div>
                 </div>
 
-                <div class="search-box-stats">
-                    <label for="property-search" class="visually-hidden" data-i18n="props.search.label">Search properties or plants</label>
-                    <input
-                        type="text"
-                        id="property-search"
-                        placeholder="Search properties or plants..."
-                        data-i18n-placeholder="props.search.placeholder"
-                        aria-label="Search properties or plants"
-                    />
-                    <div id="search-results-announcement" class="visually-hidden" role="status" aria-live="polite" aria-atomic="true"></div>
-                </div>
+                <nav class="az-bar" id="az-bar" aria-label="A–Z"></nav>
 
-                <table class="property-table" id="property-table">
-                    <thead>
-                        <tr>
-                            <th data-i18n="props.table.property">Property</th>
-                            <th data-i18n="props.table.count">Count</th>
-                            <th data-i18n="props.table.plants">Plants</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Property rows will be dynamically generated -->
-                    </tbody>
-                </table>
+                <div class="prop-list" id="property-list"></div>
+                <p class="prop-empty" id="prop-empty" hidden data-i18n="props.noResults">No properties or plants match your search.</p>
+                <div id="search-results-announcement" class="visually-hidden" role="status" aria-live="polite" aria-atomic="true"></div>
             </main>
 
             <div id="footer-placeholder"></div>
