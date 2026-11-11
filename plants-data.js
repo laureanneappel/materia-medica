@@ -273,7 +273,9 @@ window.PLANTS_DATA = [
       "Weight reducing"
     ],
     "status": "enabled",
-    "fileSlug": "bilberry"
+    "fileSlug": "bilberry",
+    "image": "images/plants/bilberry.jpg",
+    "imageCredit": "Flora Danica (1761–1883) · public domain"
   },
   {
     "commonName": "Birch",
@@ -348,7 +350,9 @@ window.PLANTS_DATA = [
       "Nootropic"
     ],
     "status": "enabled",
-    "fileSlug": "blackcurrant"
+    "fileSlug": "blackcurrant",
+    "image": "images/plants/blackcurrant.jpg",
+    "imageCredit": "Flora Danica (1761–1883) · public domain"
   },
   {
     "commonName": "Bladderwrack",
@@ -818,7 +822,9 @@ window.PLANTS_DATA = [
       "Diuretic"
     ],
     "status": "enabled",
-    "fileSlug": "couch-grass"
+    "fileSlug": "couch-grass",
+    "image": "images/plants/couch-grass.jpg",
+    "imageCredit": "Flora Danica (1761–1883) · public domain"
   },
   {
     "commonName": "Cramp Bark",
@@ -1631,7 +1637,9 @@ window.PLANTS_DATA = [
       "Hemostatic"
     ],
     "status": "enabled",
-    "fileSlug": "horsetail"
+    "fileSlug": "horsetail",
+    "image": "images/plants/horsetail.jpg",
+    "imageCredit": "Flora Danica (1761–1883) · public domain"
   },
   {
     "commonName": "Indian Barberry",
@@ -1916,7 +1924,9 @@ window.PLANTS_DATA = [
       "Mucostatic (lower respiratory)"
     ],
     "status": "enabled",
-    "fileSlug": "mullein"
+    "fileSlug": "mullein",
+    "image": "images/plants/mullein.jpg",
+    "imageCredit": "Flora Danica (1761–1883) · public domain"
   },
   {
     "commonName": "Myrrh",
@@ -2378,7 +2388,9 @@ window.PLANTS_DATA = [
       "Woman tonic"
     ],
     "status": "enabled",
-    "fileSlug": "rhodiola"
+    "fileSlug": "rhodiola",
+    "image": "images/plants/rhodiola.jpg",
+    "imageCredit": "Flora Danica (1761–1883) · public domain"
   },
   {
     "commonName": "Rose Hips",
@@ -2566,7 +2578,9 @@ window.PLANTS_DATA = [
       "Hemostatic"
     ],
     "status": "enabled",
-    "fileSlug": "shepherds-purse"
+    "fileSlug": "shepherds-purse",
+    "image": "images/plants/shepherds-purse.jpg",
+    "imageCredit": "Flora Danica (1761–1883) · public domain"
   },
   {
     "commonName": "Siberian Ginseng",
@@ -2679,7 +2693,9 @@ window.PLANTS_DATA = [
       "Blood purifier"
     ],
     "status": "enabled",
-    "fileSlug": "sweet-violet"
+    "fileSlug": "sweet-violet",
+    "image": "images/plants/sweet-violet.jpg",
+    "imageCredit": "Flora Danica (1761–1883) · public domain"
   },
   {
     "commonName": "Tea Tree",
@@ -3008,7 +3024,9 @@ window.PLANTS_DATA = [
     ],
     "status": "enabled",
     "fileSlug": "yellow-dock",
-    "family": "Polygonaceae (Buckwheat family)"
+    "family": "Polygonaceae (Buckwheat family)",
+    "image": "images/plants/yellow-dock.jpg",
+    "imageCredit": "Flora Danica (1761–1883) · public domain"
   }
 ];
 
