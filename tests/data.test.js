@@ -14,7 +14,7 @@ const read = (file) => readFileSync(join(root, file), 'utf-8');
 const dataSource = read('plants-data.js');
 const plants = JSON.parse(dataSource.slice(dataSource.indexOf('['), dataSource.indexOf('\n];') + 2));
 const i18n = read('i18n.js');
-const pages = readdirSync(join(root, 'plants')).filter(f => f.endsWith('.html')).map(f => f.slice(0, -5));
+const contentFiles = readdirSync(join(root, 'content')).filter(f => f.endsWith('.html'));
 
 const sectionOf = (name) => {
     const start = i18n.indexOf(`const ${name} = {`);
@@ -48,9 +48,9 @@ describe('plants-data.js', () => {
         expect(new Set(slugs).size).toBe(slugs.length);
     });
 
-    it('every plant has a page, and every page belongs to a plant', () => {
-        const slugs = plants.map(p => p.fileSlug).sort();
-        expect(pages.sort()).toEqual(slugs);
+    it('every text file in content/ belongs to a plant', () => {
+        const slugs = new Set(plants.map(p => p.fileSlug));
+        expect(contentFiles.filter(f => !slugs.has(f.slice(0, -5)))).toEqual([]);
     });
 });
 
@@ -79,23 +79,30 @@ describe('translations in i18n.js', () => {
     });
 });
 
-describe('plant pages', () => {
-    it('every page loads the data and the page script, and has the translation hooks', () => {
-        for (const slug of pages) {
-            const html = read(`plants/${slug}.html`);
-            for (const needle of ['../plants-data.js', '../plant-page.js', '../i18n.js', 'data-plant="name"',
-                                  'data-plant="properties"', 'data-plant="family"', 'footer-placeholder']) {
-                expect(html.includes(needle), `${slug}.html: ${needle}`).toBe(true);
-            }
+describe('plant page and written text', () => {
+    it('plant.html loads the data and scripts and has every spot the page script fills', () => {
+        const html = read('plant.html');
+        for (const needle of ['plants-data.js', 'plant-page.js', 'i18n.js', 'footer-placeholder',
+                              'data-plant="name"', 'data-plant="botanical"', 'data-plant="properties"', 'data-plant="family"',
+                              'data-plant="name-en"', 'data-plant="name-da"', 'data-plant="name-fr"']) {
+            expect(html.includes(needle), needle).toBe(true);
+        }
+    });
+
+    it('text files only use sections that exist on the plant page', () => {
+        const spots = new Set([...read('plant.html').matchAll(/data-content="([^"]+)"/g)].map(m => m[1]));
+        for (const file of contentFiles) {
+            const sections = [...read(`content/${file}`).matchAll(/<section data-section="([^"]+)"/g)].map(m => m[1]);
+            expect(sections.filter(x => !spots.has(x)), file).toEqual([]);
         }
     });
 
     it('text written in several languages has all three versions', () => {
-        for (const slug of pages) {
-            const html = read(`plants/${slug}.html`);
-            const count = (lang) => (html.match(new RegExp(`data-lang="${lang}"`, 'g')) || []).length;
-            expect(count('da'), `${slug}.html: Danish paragraphs`).toBe(count('en'));
-            expect(count('fr'), `${slug}.html: French paragraphs`).toBe(count('en'));
+        for (const file of contentFiles) {
+            const text = read(`content/${file}`);
+            const count = (lang) => (text.match(new RegExp(`data-lang="${lang}"`, 'g')) || []).length;
+            expect(count('da'), `${file}: Danish paragraphs`).toBe(count('en'));
+            expect(count('fr'), `${file}: French paragraphs`).toBe(count('en'));
         }
     });
 });

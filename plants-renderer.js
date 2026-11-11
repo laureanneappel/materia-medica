@@ -27,24 +27,6 @@
     }
 
     /**
-     * Determine the base path for plant links
-     * Returns 'plants/' for root pages, '' for plant pages
-     */
-    function getBasePath() {
-        try {
-            const path = window.location.pathname;
-            if (typeof path !== 'string') {
-                console.error('[PlantsRenderer] Invalid pathname type:', typeof path);
-                return 'plants/';
-            }
-            return path.includes('/plants/') ? '' : 'plants/';
-        } catch (error) {
-            console.error('[PlantsRenderer] Error in getBasePath:', error);
-            return 'plants/';
-        }
-    }
-
-    /**
      * Common name in the active language. Falls back to the English common name
      * when the translation for the active language is missing.
      */
@@ -78,15 +60,14 @@
                 return '';
             }
 
-            const basePath = options.basePath || getBasePath();
-
             const commonNames = createCommonNamesHTML(plant);
 
             // Escape all dynamic content
             const status = plant.status ? escapeHtml(plant.status) : '';
             const botanicalName = escapeHtml(plant.botanicalName);
 
-            const href = escapeHtml(window.I18n ? window.I18n.withLang(basePath + plant.fileSlug + '.html') : basePath + plant.fileSlug + '.html');
+            const url = window.Utils.plantUrl(plant.fileSlug);
+            const href = escapeHtml(window.I18n ? window.I18n.withLang(url) : url);
             return `
             <div class="plant-card ${status}">
                 <h3 class="card-latin"><a href="${href}"><em>${botanicalName}</em></a></h3>
@@ -195,9 +176,7 @@
      * Render all plants for the index page
      */
     function renderIndexPage() {
-        renderPlantCards('plant-list-container', {
-            basePath: 'plants/',
-        });
+        renderPlantCards('plant-list-container');
     }
 
     // Expose public API

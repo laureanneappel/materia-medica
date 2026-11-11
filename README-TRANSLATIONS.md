@@ -12,13 +12,13 @@ The site is in Danish (default), English and French. The chosen language is kept
 | Property names | `i18n.js` → `PROPERTY_TRANSLATIONS` (Danish = exact PDF heading) |
 | Plant families | `i18n.js` → `FAMILY_TRANSLATIONS` (Latin name + Danish/French description) |
 | Plant names | `plants-data.js` → `commonName`, `danishName`, `frenchName` |
-| Text written on a plant page | In the page itself, one paragraph per language (below) |
+| Text written about a plant | `content/<fileSlug>.html`, one paragraph per language (below) |
 
 `plants-data.js` stores properties and families in English; they are translated when shown.
 
-### Writing text on plant pages
+### Writing about a plant
 
-Headings, labels, names, properties and family switch language automatically. For text you write yourself, put one paragraph per language; only the active one is shown:
+Headings, labels, names, properties and family switch language automatically. Text you write goes in `content/<fileSlug>.html` (see the main [README](README.md#writing-about-a-plant)), with one paragraph per language; only the active one is shown:
 
 ```html
 <p data-lang="en"><strong>Sunlight:</strong> Prefers partial shade.</p>
@@ -26,7 +26,7 @@ Headings, labels, names, properties and family switch language automatically. Fo
 <p data-lang="fr"><strong>Ensoleillement :</strong> Préfère la mi-ombre.</p>
 ```
 
-Plant names are edited in `plants-data.js` only; the pages read them from there.
+Plant names are edited in `plants-data.js` only; the plant page reads them from there.
 
 ## PDF sync
 
@@ -37,16 +37,16 @@ python3 tools/sync-from-pdf.py --check   # show differences, write nothing
 python3 tools/sync-from-pdf.py           # apply them
 ```
 
-It updates the properties in `plants-data.js` and on the plant pages, and regenerates `PDF-PROPERTIES-TO-PLANTS.json`, `PDF-MASTER-PLANT-LIST.txt` and `PLANT-NAME-TRANSLATIONS.json`.
+It updates the properties in `plants-data.js`, and regenerates `PDF-PROPERTIES-TO-PLANTS.json`, `PDF-MASTER-PLANT-LIST.txt` and `PLANT-NAME-TRANSLATIONS.json`.
 
 It stops without changing anything, and says what to do, when:
 - the PDF has a heading it doesn't know
 - the PDF has a plant name it doesn't know
 - a plant on the site is no longer in the PDF
 - a property, family or label has no Danish or French translation in `i18n.js`
-- a plant is missing a name, a family or its page, or two plants share a name
-- a page in `plants/` has no plant (for example an iCloud copy like `hops 2.html`)
-- text written in several languages on a page is missing a version
+- a plant is missing a name or a family, or two plants share a name
+- a file in `content/` has no plant (for example an iCloud copy like `hops 2.html`), or uses an unknown section
+- text written in several languages is missing a version
 
 ### When the PDF changes
 
@@ -54,8 +54,8 @@ It stops without changing anything, and says what to do, when:
 2. Run `python3 tools/sync-from-pdf.py --check`
 3. **New heading?** Add it to `DANISH-TO-ENGLISH-PROPERTIES.json`, and its Danish and French labels to `PROPERTY_TRANSLATIONS` in `i18n.js`
 4. **New spelling of a known plant?** Add it to `PDF-NAME-CORRECTIONS.json`
-5. **New plant?** Add it to `plants-data.js` and create its page in `plants/`
-6. **Plant removed?** Remove it from `plants-data.js` and delete its page
+5. **New plant?** Add it to `plants-data.js` (its page appears automatically)
+6. **Plant removed?** Remove it from `plants-data.js`, and its `content/` file if it has one
 7. Run `python3 tools/sync-from-pdf.py`
 
 ## Lookup files

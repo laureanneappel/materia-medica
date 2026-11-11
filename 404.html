@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Materia Medica</title>
+        <link rel="icon" type="image/svg+xml" href="/materia-medica/favicon.svg">
+        <script>
+            // GitHub Pages shows this page for any missing address.
+            // Old plant addresses (plants/<name>.html) now live at plant.html?p=<name>.
+            (function () {
+                var path = window.location.pathname;
+                var match = path.match(/^(.*\/)plants\/([^\/]+)\.html$/);
+                if (!match) return;  // any other missing address: show the link below
+                var target = match[1] + 'plant.html?p=' + encodeURIComponent(decodeURIComponent(match[2]));
+                var lang = new URLSearchParams(window.location.search).get('lang');
+                if (lang) target += (target.indexOf('?') >= 0 ? '&' : '?') + 'lang=' + encodeURIComponent(lang);
+                window.location.replace(target);
+            })();
+        </script>
+    </head>
+
+    <body>
+        <p>Page not found · Siden blev ikke fundet · Page introuvable</p>
+        <p><a href="/materia-medica/">Materia Medica</a></p>
+    </body>
+
+</html>

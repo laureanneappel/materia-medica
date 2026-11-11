@@ -90,8 +90,18 @@
         };
     }
 
+    /**
+     * Link to a plant's page
+     * @param {string} slug - The plant's fileSlug
+     * @returns {string} - e.g. "plant.html?p=hawthorn"
+     */
+    function plantUrl(slug) {
+        return 'plant.html?p=' + encodeURIComponent(slug);
+    }
+
     // Expose public API
     window.Utils = {
+        plantUrl,
         escapeHtml,
         logError,
         logWarn,

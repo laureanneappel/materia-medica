@@ -17,7 +17,8 @@ What it updates:
   - PDF-MASTER-PLANT-LIST.txt       every plant named in the PDF
   - plants-data.js                  properties + status of each plant
   - PLANT-NAME-TRANSLATIONS.json    Latin -> en/da/fr names (regenerated from plants-data.js)
-  - plants/*.html                   "Botanical Name" and "Properties" sections
+
+It also checks plants-data.js, i18n.js and the written text in content/*.html.
 
 Lookup tables you maintain by hand:
   - DANISH-TO-ENGLISH-PROPERTIES.json   every PDF heading -> English property name
@@ -28,7 +29,6 @@ If the PDF contains a heading or plant the tables don't know, the script stops a
 lists it, without writing anything.
 """
 import glob
-import html
 import json
 import os
 import re
@@ -141,7 +141,7 @@ def i18n_block(source, const, lang):
 
 
 def data_problems(plants, pdf_properties):
-    """Checks on plants-data.js, i18n.js and plants/*.html (the same checks as tests/data.test.js)."""
+    """Checks on plants-data.js, i18n.js and content/*.html (the same checks as tests/data.test.js)."""
     problems = []
 
     # Plants: required fields, no duplicates
@@ -154,24 +154,21 @@ def data_problems(plants, pdf_properties):
         for v in sorted(set(x for x in values if values.count(x) > 1)):
             problems.append('Two plants in plants-data.js have the same %s: "%s"' % (field, v))
 
-    # Pages: one per plant, with the translation hooks
+    # Written text: content/<fileSlug>.html, optional, one per plant
     slugs = {p['fileSlug'] for p in plants}
-    pages = {os.path.basename(f)[:-5] for f in glob.glob(path('plants', '*.html'))}
-    for s in sorted(slugs - pages):
-        problems.append('plants/%s.html is missing' % s)
-    for s in sorted(pages - slugs):
-        problems.append('plants/%s.html has no plant in plants-data.js (an iCloud copy, or a removed plant?)' % s)
-    hooks = ('../plants-data.js', '../plant-page.js', '../i18n.js', 'data-plant="name"',
-             'data-plant="properties"', 'data-plant="family"', 'footer-placeholder')
-    for s in sorted(slugs & pages):
-        page = open(path('plants', s + '.html'), encoding='utf-8').read()
-        missing = [h for h in hooks if h not in page]
-        if missing:
-            problems.append('plants/%s.html is missing %s' % (s, ', '.join(missing)))
-        counts = {lang: page.count('data-lang="%s"' % lang) for lang in ('en', 'da', 'fr')}
+    sections = {'habitat', 'constituents', 'uses', 'side-effects', 'parts-used', 'forms', 'taste', 'effect', 'references'}
+    for f in sorted(glob.glob(path('content', '*.html'))):
+        name = os.path.basename(f)
+        if name[:-5] not in slugs:
+            problems.append('content/%s has no plant in plants-data.js (an iCloud copy, or a removed plant?)' % name)
+            continue
+        text = open(f, encoding='utf-8').read()
+        for section in sorted(set(re.findall(r'<section data-section="([^"]*)"', text)) - sections):
+            problems.append('content/%s: unknown section "%s" (use one of: %s)' % (name, section, ', '.join(sorted(sections))))
+        counts = {lang: text.count('data-lang="%s"' % lang) for lang in ('en', 'da', 'fr')}
         if len(set(counts.values())) > 1:
-            problems.append('plants/%s.html: text written in several languages is incomplete '
-                            '(English %d, Danish %d, French %d paragraphs)' % (s, counts['en'], counts['da'], counts['fr']))
+            problems.append('content/%s: text written in several languages is incomplete '
+                            '(English %d, Danish %d, French %d paragraphs)' % (name, counts['en'], counts['da'], counts['fr']))
 
     # Translations in i18n.js
     i18n = open(path('i18n.js'), encoding='utf-8').read()
@@ -238,8 +235,8 @@ def main():
     for name, props in sorted(expected.items()):
         if not props:
             p = by_latin[name]
-            problems.append('"%s" (%s) is no longer in the PDF. Remove it from plants-data.js and delete '
-                            'plants/%s.html (check the page for your own text first).' % (name, p['commonName'], p['fileSlug']))
+            problems.append('"%s" (%s) is no longer in the PDF. Remove it from plants-data.js, and delete '
+                            'content/%s.html if it exists (check it for text you want to keep first).' % (name, p['commonName'], p['fileSlug']))
 
     problems += data_problems(plants, set(da_to_en.values()))
 
@@ -282,23 +279,6 @@ def main():
         f.write('Generated: %s by tools/sync-from-pdf.py\n\n' % date.today().isoformat())
         for i, n in enumerate(in_pdf, 1):
             f.write('%d. %s\n' % (i, n))
-
-    # Plant pages
-    pages = 0
-    for p in plants:
-        page = path('plants', p['fileSlug'] + '.html')
-        if not os.path.exists(page):
-            print('  ! no page for', p['botanicalName'], '->', page)
-            continue
-        src = open(page, encoding='utf-8').read()
-        out = re.sub(r'(<h2[^>]*>Botanical Name</h2>\s*<p><em>).*?(</em></p>)',
-                     lambda m: m.group(1) + html.escape(p['botanicalName'], quote=False) + m.group(2), src, count=1, flags=re.S)
-        out = re.sub(r'(<h2[^>]*>Properties</h2>\s*<p[^>]*>).*?(</p>)',
-                     lambda m: m.group(1) + html.escape(', '.join(p['properties']), quote=False) + m.group(2), out, count=1, flags=re.S)
-        if out != src:
-            open(page, 'w', encoding='utf-8').write(out)
-            pages += 1
-    print('Updated %d plant pages.' % pages)
 
 
 if __name__ == '__main__':

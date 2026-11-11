@@ -22,13 +22,14 @@ The site is in **Danish** (default), **English** and **French**; the EN / DA / F
 
 - Property names in Danish are the exact headings from the PDF.
 - Plant names, labels, families and the footer are translated.
-- Text written on a plant page is written once per language (see [README-TRANSLATIONS.md](README-TRANSLATIONS.md)).
+- Text written about a plant is written once per language (see [Writing about a plant](#writing-about-a-plant)).
 
 ## Pages
 
 - **index.html** - all plants, with search by name and filters by property and family
 - **property-statistics.html** - every property with its plants
-- **plants/*.html** - one page per plant
+- **plant.html** - the page for every plant (`plant.html?p=hawthorn`); it builds itself from the data
+- **404.html** - sends old plant addresses (`plants/hawthorn.html`) to the new page
 
 ## Files
 
@@ -36,7 +37,8 @@ The site is in **Danish** (default), **English** and **French**; the EN / DA / F
 |---|---|
 | `plants-data.js` | All plants: names, family, properties. Edit names and families here. |
 | `i18n.js` | Translations: labels, property names, families |
-| `plant-page.js` | Fills plant pages with the name, properties and family in the chosen language |
+| `plant.html`, `plant-page.js` | The plant page: names, properties and family from the data, written text from `content/` |
+| `content/<fileSlug>.html` | Text written about a plant (habitat, constituents, side effects…), in three languages |
 | `plants-renderer.js`, `search-filter.js` | Plant list, search and filters on the main page |
 | `property-statistics-renderer.js` | The properties page |
 | `navigation.js`, `footer.js`, `utils.js` | Menu, footer, shared helpers |
@@ -78,8 +80,26 @@ Nothing needs installing: it uses the Python and Swift that come with the macOS 
 }
 ```
 
-2. Copy an existing page in `plants/` (for example `agrimony.html`) to `plants/<fileSlug>.html` and change the names in it.
-3. Run the sync tool; it fills in the properties.
+2. Run the sync tool; it fills in the properties.
+
+The plant gets its page automatically (`plant.html?p=<fileSlug>`).
+
+## Writing about a plant
+
+Each plant's written text lives in its own file, `content/<fileSlug>.html` (for example `content/hawthorn.html`). Plants without a file show `[Add … here]` placeholders.
+
+The file has one `<section>` per part of the page, and one paragraph per language; the page shows the chosen language:
+
+```html
+<section data-section="habitat">
+    <h3 data-i18n="plant.habitat">Habitat</h3>
+    <p data-lang="en"><strong>Sunlight:</strong> Prefers partial shade.</p>
+    <p data-lang="da"><strong>Lys:</strong> Foretrækker halvskygge.</p>
+    <p data-lang="fr"><strong>Ensoleillement :</strong> Préfère la mi-ombre.</p>
+</section>
+```
+
+Sections: `habitat`, `constituents`, `uses`, `side-effects`, `parts-used`, `forms`, `taste`, `effect`, `references`. Leave out the ones you haven't written yet. The layout of every plant page is in `plant.html`; change it once and all plants follow.
 
 ## Viewing locally
 

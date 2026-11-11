@@ -300,7 +300,7 @@
         // Use PlantsRenderer to create cards if available
         if (window.PlantsRenderer && window.PlantsRenderer.createPlantCardHTML) {
             const html = sorted.map(plant =>
-                window.PlantsRenderer.createPlantCardHTML(plant, { basePath: 'plants/' })
+                window.PlantsRenderer.createPlantCardHTML(plant)
             ).filter(Boolean).join('\n');
             container.innerHTML = html;
         } else {
@@ -309,7 +309,7 @@
             const html = sorted.map(plant => {
                 return `
                     <div class="plant-card ${escapeHtml(plant.status || '')}">
-                        <h3><a href="plants/${escapeHtml(plant.fileSlug)}.html">${escapeHtml(plant.commonName)}</a></h3>
+                        <h3><a href="${escapeHtml(window.Utils.plantUrl(plant.fileSlug))}">${escapeHtml(plant.commonName)}</a></h3>
                         <p class="botanical-name">${escapeHtml(plant.botanicalName)}</p>
                     </div>`;
             }).join('\n');

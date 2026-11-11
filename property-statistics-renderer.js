@@ -67,7 +67,8 @@
         const displayName = escapeHtml(plantDisplayName(plant));
         const botanicalName = escapeHtml(plant.botanicalName);
         const slug = plant.fileSlug;
-        const href = escapeHtml(window.I18n ? window.I18n.withLang('plants/' + slug + '.html') : 'plants/' + slug + '.html');
+        const url = window.Utils.plantUrl(slug);
+        const href = escapeHtml(window.I18n ? window.I18n.withLang(url) : url);
 
         return `<div class="plant-entry">
             <div class="plant-main"><a href="${href}">${displayName}</a></div>

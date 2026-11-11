@@ -19,11 +19,11 @@ npm test             # re-run automatically when files change
 ### Plant data and translations (`data.test.js`)
 - Every plant has English, Danish and French names, a family and at least one property
 - No duplicate botanical names or page names
-- Every plant has a page in `plants/`, and every page belongs to a plant
+- Every text file in `content/` belongs to a plant, and only uses sections that exist on the plant page
 - Every property and every family has a Danish and French translation in `i18n.js`
 - Every label exists in all three languages
-- Every plant page loads the data and translation scripts and has the translation hooks
-- Text written in several languages on a page has all three versions
+- `plant.html` loads the data and scripts and has every spot the page script fills
+- Text written in several languages has all three versions
 
 ### Plant validation (`plant-validation.test.js`)
 - Required fields (commonName, botanicalName, fileSlug) and their types
@@ -37,7 +37,7 @@ npm test             # re-run automatically when files change
 
 ## Current results
 
-3 test files, 43 tests, all passing.
+3 test files, 44 tests, all passing.
 
 ## Test framework
 

@@ -24,7 +24,9 @@ const NAV_ITEMS = [
 
 ## Plant pages
 
-Plant pages (`plants/*.html`) have no menu; they use the **← Back to Plant List** link at the top, which `i18n.js` translates and keeps in the chosen language.
+The plant page (`plant.html?p=<fileSlug>`) has no menu; it uses the **← Back to Plant List** link at the top, which `i18n.js` translates and keeps in the chosen language.
+
+Links to plants are built in one place, `Utils.plantUrl()` in `utils.js`. Old addresses (`plants/<name>.html`) are sent to the new page by `404.html` on GitHub Pages.
 
 ## Language buttons
 
@@ -32,4 +34,4 @@ The EN / DA / FR buttons are added to every page by `i18n.js`.
 
 ## Footer
 
-`footer.js` replaces `<div id="footer-placeholder"></div>` with the footer and medical disclaimer, translated through `i18n.js`. It's on every page, including plant pages.
+`footer.js` replaces `<div id="footer-placeholder"></div>` with the footer and medical disclaimer, translated through `i18n.js`. It's on every page, including the plant page.
