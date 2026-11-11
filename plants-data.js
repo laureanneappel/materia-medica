@@ -13,7 +13,7 @@ window.PLANTS_DATA = [
     "status": "enabled",
     "fileSlug": "agrimony",
     "image": "images/plants/agrimony.jpg",
-    "imageCredit": "Thomé, Flora von Deutschland (1885) · public domain"
+    "imageCredit": "Flora Danica (1761–1883) · public domain"
   },
   {
     "commonName": "Albizia",
@@ -220,7 +220,7 @@ window.PLANTS_DATA = [
     "status": "enabled",
     "fileSlug": "barberry",
     "image": "images/plants/barberry.jpg",
-    "imageCredit": "Thomé, Flora von Deutschland (1885) · public domain"
+    "imageCredit": "Flora Danica (1761–1883) · public domain"
   },
   {
     "commonName": "Barberry species",
@@ -295,7 +295,7 @@ window.PLANTS_DATA = [
     "status": "enabled",
     "fileSlug": "birch",
     "image": "images/plants/birch.jpg",
-    "imageCredit": "Thomé, Flora von Deutschland (1885) · public domain"
+    "imageCredit": "Flora Danica (1761–1883) · public domain"
   },
   {
     "commonName": "Black Cohosh",
@@ -615,7 +615,7 @@ window.PLANTS_DATA = [
     "status": "enabled",
     "fileSlug": "celery-seed",
     "image": "images/plants/celery-seed.jpg",
-    "imageCredit": "Thomé, Flora von Deutschland (1885) · public domain"
+    "imageCredit": "Flora Danica (1761–1883) · public domain"
   },
   {
     "commonName": "Chaga",
@@ -732,7 +732,7 @@ window.PLANTS_DATA = [
     "status": "enabled",
     "fileSlug": "cleavers",
     "image": "images/plants/cleavers.jpg",
-    "imageCredit": "Thomé, Flora von Deutschland (1885) · public domain"
+    "imageCredit": "Flora Danica (1761–1883) · public domain"
   },
   {
     "commonName": "Codonopsis",
@@ -844,7 +844,7 @@ window.PLANTS_DATA = [
     "status": "enabled",
     "fileSlug": "cramp-bark",
     "image": "images/plants/cramp-bark.jpg",
-    "imageCredit": "Thomé, Flora von Deutschland (1885) · public domain"
+    "imageCredit": "Flora Danica (1761–1883) · public domain"
   },
   {
     "commonName": "Cranberry",
@@ -1070,7 +1070,7 @@ window.PLANTS_DATA = [
     "status": "enabled",
     "fileSlug": "eyebright",
     "image": "images/plants/eyebright.jpg",
-    "imageCredit": "Thomé, Flora von Deutschland (1885): Euphrasia rostkoviana · public domain"
+    "imageCredit": "Flora Danica (1761–1883): Euphrasia · public domain"
   },
   {
     "commonName": "False Unicorn Root",
@@ -1182,7 +1182,9 @@ window.PLANTS_DATA = [
     ],
     "status": "enabled",
     "fileSlug": "garlic",
-    "family": "Amaryllidaceae (Amaryllis family)"
+    "family": "Amaryllidaceae (Amaryllis family)",
+    "image": "images/plants/garlic.jpg",
+    "imageCredit": "Bentley & Trimen, Medicinal Plants (1880) · public domain"
   },
   {
     "commonName": "Gentian",
@@ -1400,7 +1402,7 @@ window.PLANTS_DATA = [
     "status": "enabled",
     "fileSlug": "goldenrod",
     "image": "images/plants/goldenrod.jpg",
-    "imageCredit": "Thomé, Flora von Deutschland (1885) · public domain"
+    "imageCredit": "Flora Danica (1761–1883) · public domain"
   },
   {
     "commonName": "Gotu Kola",
@@ -1538,7 +1540,7 @@ window.PLANTS_DATA = [
     "status": "enabled",
     "fileSlug": "hawthorn",
     "image": "images/plants/hawthorn.jpg",
-    "imageCredit": "Thomé, Flora von Deutschland (1885): Crataegus laevigata · public domain"
+    "imageCredit": "Flora Danica (1761–1883): Crataegus laevigata · public domain"
   },
   {
     "commonName": "Heartsease",
@@ -1700,7 +1702,7 @@ window.PLANTS_DATA = [
     "status": "enabled",
     "fileSlug": "ladys-mantle",
     "image": "images/plants/ladys-mantle.jpg",
-    "imageCredit": "Thomé, Flora von Deutschland (1885) · public domain"
+    "imageCredit": "Flora Danica (1761–1883) · public domain"
   },
   {
     "commonName": "Lavender",
@@ -1858,7 +1860,7 @@ window.PLANTS_DATA = [
     "status": "enabled",
     "fileSlug": "meadowsweet",
     "image": "images/plants/meadowsweet.jpg",
-    "imageCredit": "Thomé, Flora von Deutschland (1885) · public domain"
+    "imageCredit": "Flora Danica (1761–1883) · public domain"
   },
   {
     "commonName": "Milk Thistle",
@@ -1896,7 +1898,7 @@ window.PLANTS_DATA = [
     "status": "enabled",
     "fileSlug": "motherwort",
     "image": "images/plants/motherwort.jpg",
-    "imageCredit": "Thomé, Flora von Deutschland (1885) · public domain"
+    "imageCredit": "Flora Danica (1761–1883) · public domain"
   },
   {
     "commonName": "Mugwort",
@@ -1965,7 +1967,7 @@ window.PLANTS_DATA = [
     "status": "enabled",
     "fileSlug": "nettle-species",
     "image": "images/plants/nettle-species.jpg",
-    "imageCredit": "Thomé, Flora von Deutschland (1885): Urtica dioica · public domain"
+    "imageCredit": "Flora Danica (1761–1883): Urtica dioica · public domain"
   },
   {
     "commonName": "Nettles",
@@ -1983,7 +1985,7 @@ window.PLANTS_DATA = [
     "status": "enabled",
     "fileSlug": "nettles",
     "image": "images/plants/nettles.jpg",
-    "imageCredit": "Thomé, Flora von Deutschland (1885) · public domain"
+    "imageCredit": "Flora Danica (1761–1883) · public domain"
   },
   {
     "commonName": "Notoginseng",
@@ -2056,7 +2058,7 @@ window.PLANTS_DATA = [
     "status": "enabled",
     "fileSlug": "oregano",
     "image": "images/plants/oregano.jpg",
-    "imageCredit": "Thomé, Flora von Deutschland (1885) · public domain"
+    "imageCredit": "Flora Danica (1761–1883) · public domain"
   },
   {
     "commonName": "Oregon Grape",
@@ -2215,7 +2217,7 @@ window.PLANTS_DATA = [
     "fileSlug": "plantain",
     "family": "Plantaginaceae (Plantain family)",
     "image": "images/plants/plantain.jpg",
-    "imageCredit": "Thomé, Flora von Deutschland (1885): Plantago major · public domain"
+    "imageCredit": "Flora Danica (1761–1883): Plantago major · public domain"
   },
   {
     "commonName": "Pleurisy Root",
@@ -2316,7 +2318,7 @@ window.PLANTS_DATA = [
     "status": "enabled",
     "fileSlug": "red-clover",
     "image": "images/plants/red-clover.jpg",
-    "imageCredit": "Thomé, Flora von Deutschland (1885) · public domain"
+    "imageCredit": "Flora Danica (1761–1883) · public domain"
   },
   {
     "commonName": "Rehmannia",
@@ -2413,7 +2415,7 @@ window.PLANTS_DATA = [
     "status": "enabled",
     "fileSlug": "rose-hips",
     "image": "images/plants/rose-hips.jpg",
-    "imageCredit": "Thomé, Flora von Deutschland (1885) · public domain"
+    "imageCredit": "Flora Danica (1761–1883) · public domain"
   },
   {
     "commonName": "Rosemary",
@@ -2865,7 +2867,7 @@ window.PLANTS_DATA = [
     "status": "enabled",
     "fileSlug": "vervain",
     "image": "images/plants/vervain.jpg",
-    "imageCredit": "Thomé, Flora von Deutschland (1885) · public domain"
+    "imageCredit": "Flora Danica (1761–1883) · public domain"
   },
   {
     "commonName": "Vitex",
@@ -2917,7 +2919,7 @@ window.PLANTS_DATA = [
     "status": "enabled",
     "fileSlug": "white-willow",
     "image": "images/plants/white-willow.jpg",
-    "imageCredit": "Thomé, Flora von Deutschland (1885): Salix alba · public domain"
+    "imageCredit": "Flora Danica (1761–1883): Salix alba · public domain"
   },
   {
     "commonName": "Wild Cherry",
