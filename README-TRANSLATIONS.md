@@ -1,118 +1,24 @@
-# Translation Reference Files
+# Translations and PDF Sync
 
-This document describes the translation reference files used in the MateriaMedica project.
+How the site's three languages work, and how the database is kept in line with the reference PDF (**Egenskaber, redigeret 21.9.26**).
 
-## Overview
+## Languages
 
-All translation files use **Latin botanical names as the primary reference** (source of truth) and map to other languages.
+The site is in Danish (default), English and French. The chosen language is kept in the URL (`?lang=da`) and remembered by the browser.
 
-## Files
+| What | Where it is translated |
+|---|---|
+| Labels, headings, buttons, footer | `i18n.js` → `TRANSLATIONS` |
+| Property names | `i18n.js` → `PROPERTY_TRANSLATIONS` (Danish = exact PDF heading) |
+| Plant families | `i18n.js` → `FAMILY_TRANSLATIONS` (Latin name + Danish/French description) |
+| Plant names | `plants-data.js` → `commonName`, `danishName`, `frenchName` |
+| Text written on a plant page | In the page itself, one paragraph per language (below) |
 
-### 1. PLANT-NAME-TRANSLATIONS.json
-**Purpose**: Plant name translations
-**Structure**: Latin botanical name → { en, da, fr }
-**Count**: 170 plants (all plants in database)
+`plants-data.js` stores properties and families in English; they are translated when shown.
 
-```json
-{
-  "Allium sativum": {
-    "en": "Garlic",
-    "da": "Hvidløg",
-    "fr": "Ail"
-  }
-}
-```
+### Writing text on plant pages
 
-**Usage**:
-- Display plant names in different languages
-- Reference for all plant name translations
-- Latin name is always the key (source of truth)
-
-### 2. DANISH-TO-ENGLISH-PROPERTIES.json
-**Purpose**: Property name translations from Danish (PDF) to English (database)
-**Structure**: Danish property name → English property name
-**Count**: 100+ property translations
-
-```json
-{
-  "Adaptogener": "Adaptogen",
-  "Anticancer -forebyggende": "Anticancer",
-  "Galdedrivende": "Cholagogue"
-}
-```
-
-**Usage**:
-- Translate PDF Danish properties to database English properties
-- Source: Egenskaber PDF (Danish)
-- Target: plants-data.js (English)
-
-### 3. PDF-NAME-CORRECTIONS.json
-**Purpose**: Correct PDF typos in Latin botanical names
-**Structure**: PDF typo → Correct database botanical name
-**Count**: 85+ corrections
-
-```json
-{
-  "Allium sativus": "Allium sativum",
-  "Tabebuia avellanedae": "Tabebuia impetiginosa",
-  "Oreganum vulgare": "Origanum vulgare"
-}
-```
-
-**Usage**:
-- Automatic correction of PDF typos
-- Maps incorrect PDF Latin names to correct database names
-- Used by verification and fix scripts
-
-### 4. PDF-PROPERTIES-TO-PLANTS.json
-**Purpose**: Complete extraction of PDF data
-**Structure**: Danish property name → [Latin plant names]
-**Count**: 100 properties
-
-```json
-{
-  "Adaptogener": [
-    "Asparagus racemosa",
-    "Astragalus membranaceus",
-    "Bacopa monnieri"
-  ],
-  "Anticancer -forebyggende": [
-    "Allium sativum",
-    "Curcuma longa",
-    "Ginkgo biloba"
-  ]
-}
-```
-
-**Usage**:
-- Generated from the Egenskaber PDF by tools/sync-from-pdf.py
-
-## Sync Tool
-
-`tools/sync-from-pdf.py` reads the reference PDF (`Egenskaber*.pdf` in the project folder, kept out of git) and makes the database match it. It needs only the Python and Swift that come with the macOS developer tools.
-
-```bash
-python3 tools/sync-from-pdf.py --check   # show differences, write nothing
-python3 tools/sync-from-pdf.py           # apply them
-```
-
-It updates `plants-data.js` (properties and status), `PDF-PROPERTIES-TO-PLANTS.json`, `PDF-MASTER-PLANT-LIST.txt`, `PLANT-NAME-TRANSLATIONS.json` and the Botanical Name / Properties sections of `plants/*.html`.
-
-If the PDF has a heading or plant name it doesn't know, it stops without writing anything and says what to add.
-
-## Workflow
-
-1. **PDF is edited** → save it in the project folder as `Egenskaber….pdf`
-2. **Check** → `python3 tools/sync-from-pdf.py --check`
-3. **New heading?** → add it to `DANISH-TO-ENGLISH-PROPERTIES.json` and its Danish/French labels to `i18n.js`
-4. **New spelling of a known plant?** → add it to `PDF-NAME-CORRECTIONS.json`
-5. **New plant?** → add it to `plants-data.js` and create its page in `plants/`
-6. **Apply** → `python3 tools/sync-from-pdf.py`
-
-## Writing Text on Plant Pages
-
-Headings, labels, names, properties and family switch language automatically.
-For text you write yourself, put one paragraph per language; only the active one is shown:
+Headings, labels, names, properties and family switch language automatically. For text you write yourself, put one paragraph per language; only the active one is shown:
 
 ```html
 <p data-lang="en"><strong>Sunlight:</strong> Prefers partial shade.</p>
@@ -120,16 +26,68 @@ For text you write yourself, put one paragraph per language; only the active one
 <p data-lang="fr"><strong>Ensoleillement :</strong> Préfère la mi-ombre.</p>
 ```
 
-Plant names (English, Danish, French) are edited in `plants-data.js` only; the pages read them from there.
+Plant names are edited in `plants-data.js` only; the pages read them from there.
 
-## Language Priorities
+## PDF sync
 
-1. **Latin** - Primary reference (botanical names)
-2. **Danish** - Source for property names (Egenskaber PDF)
-3. **English** - Database language (plants-data.js)
-4. **French** - Supplementary translations
+`tools/sync-from-pdf.py` reads the PDF (`Egenskaber*.pdf` in the project folder, kept out of git) and makes the database match it. It needs only the Python and Swift that come with the macOS developer tools.
 
-## Key Principle
+```bash
+python3 tools/sync-from-pdf.py --check   # show differences, write nothing
+python3 tools/sync-from-pdf.py           # apply them
+```
 
-> **Latin botanical names are always the source of truth for plant identification.**
-> All other names (English, Danish, French) are translations that reference the Latin name.
+It updates the properties in `plants-data.js` and on the plant pages, and regenerates `PDF-PROPERTIES-TO-PLANTS.json`, `PDF-MASTER-PLANT-LIST.txt` and `PLANT-NAME-TRANSLATIONS.json`.
+
+It stops without changing anything, and says what to do, when:
+- the PDF has a heading it doesn't know
+- the PDF has a plant name it doesn't know
+- a plant on the site is no longer in the PDF
+- a property has no Danish or French label in `i18n.js`
+
+### When the PDF changes
+
+1. Save the new PDF in the project folder (name starting with `Egenskaber`)
+2. Run `python3 tools/sync-from-pdf.py --check`
+3. **New heading?** Add it to `DANISH-TO-ENGLISH-PROPERTIES.json`, and its Danish and French labels to `PROPERTY_TRANSLATIONS` in `i18n.js`
+4. **New spelling of a known plant?** Add it to `PDF-NAME-CORRECTIONS.json`
+5. **New plant?** Add it to `plants-data.js` and create its page in `plants/`
+6. **Plant removed?** Remove it from `plants-data.js` and delete its page
+7. Run `python3 tools/sync-from-pdf.py`
+
+## Lookup files
+
+### DANISH-TO-ENGLISH-PROPERTIES.json (edit by hand)
+Every PDF heading → the English property name used in `plants-data.js`. 100 headings.
+
+```json
+{
+  "Adaptogener": "Adaptogen",
+  "Analgetika": "Analgesic",
+  "Smertestillende": "Pain relieving"
+}
+```
+
+### PDF-NAME-CORRECTIONS.json (edit by hand)
+Spelling variants and typos in the PDF → the botanical name used on the site. Only for the **same** plant; a different species always gets its own entry.
+
+```json
+{
+  "Pimpnella anisum": "Pimpinella anisum",
+  "Urtica arter": "Urtica spp.",
+  "Stellaria ulmaria": "Filipendula ulmaria"
+}
+```
+
+Qualifiers in the PDF such as `(udvortes)`, `(mild)`, `, folia` or `- overgangsalder` are removed automatically.
+
+### Generated by the sync tool (don't edit)
+- **PDF-PROPERTIES-TO-PLANTS.json** - each PDF heading → its plants
+- **PDF-MASTER-PLANT-LIST.txt** - every plant named in the PDF (157)
+- **PLANT-NAME-TRANSLATIONS.json** - botanical name → English, Danish and French names (157)
+
+## Key principles
+
+- The PDF decides properties, plants and botanical names.
+- Botanical names identify plants; English, Danish and French names are translations.
+- Danish property names are the PDF's headings exactly.

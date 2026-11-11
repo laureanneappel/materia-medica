@@ -1,75 +1,43 @@
-# Materia Medica Tests
+# Tests
 
-This directory contains unit tests for critical security and validation functions.
+Unit tests for the plant data, the translations and the shared helpers. Agreement with the reference PDF is checked separately by `python3 tools/sync-from-pdf.py --check`.
 
-## Test Coverage
+## Running the tests
 
-### Security Tests (`utils.test.js`)
-- **XSS Prevention**: Tests for HTML escaping to prevent cross-site scripting attacks
-- **Input Validation**: Tests for string and array validation utilities
-- **Safe Property Access**: Tests for safe object property retrieval
-- **Logging Utilities**: Tests for error and warning logging
-- **Debouncing**: Tests for function debouncing utility
-
-### Plant Validation Tests (`plant-validation.test.js`)
-- **Plant Object Structure**: Validates required fields (commonName, botanicalName, fileSlug, systems)
-- **Data Type Validation**: Ensures fields have correct types
-- **XSS in Plant Names**: Tests sanitization of plant names with malicious content
-- **System Configuration**: Validates body system IDs
-
-## Running Tests
+The tests need [Node.js](https://nodejs.org/). Once it's installed, from the project folder:
 
 ```bash
-# Run tests in watch mode (default)
-npm test
-
-# Run tests once and exit
-npm run test:run
-
-# Run tests with UI
-npm run test:ui
-
-# Run tests with coverage report
-npm run test:coverage
+npm install          # first time only
+npm run test:run     # run all tests once
+npm test             # re-run automatically when files change
 ```
 
-## Test Results
+## What is tested
 
-Current test statistics:
-- **Total Tests**: 44
-- **Test Files**: 2
-- **Pass Rate**: 100%
-- **Coverage**: Core security and validation functions
+### Plant data and translations (`data.test.js`)
+- Every plant has English, Danish and French names, a family and at least one property
+- No duplicate botanical names or page names
+- Every plant has a page in `plants/`, and every page belongs to a plant
+- Every property and every family has a Danish and French translation in `i18n.js`
+- Every label exists in all three languages
+- Every plant page loads the data and translation scripts and has the translation hooks
+- Text written in several languages on a page has all three versions
 
-## What's NOT Tested
+### Plant validation (`plant-validation.test.js`)
+- Required fields (commonName, botanicalName, fileSlug) and their types
+- Plant names with special characters or HTML are escaped safely
 
-This is intentionally a minimal test suite focused on critical functions:
-- ❌ DOM manipulation (manual testing is sufficient)
-- ❌ Navigation rendering
-- ❌ Search/filter UI logic
-- ❌ Plant card rendering
-- ❌ Static data file (plants-data.js)
+### Shared helpers (`utils.test.js`)
+- HTML escaping (protection against injected HTML/scripts)
+- String and array validation
+- Debouncing
+- Error and warning logging
 
-## Why These Tests?
+## Current results
 
-These tests focus on the most critical aspects:
+3 test files, 43 tests, all passing.
 
-1. **Security**: XSS prevention is critical - any bug here could compromise the site
-2. **Data Integrity**: Invalid plant data could crash the application
-3. **Utility Functions**: Shared utilities are used everywhere - bugs multiply
-4. **Regression Prevention**: Tests catch breaking changes during refactoring
+## Test framework
 
-## Adding More Tests
-
-To add tests for new features:
-
-1. Create a new file: `tests/feature-name.test.js`
-2. Import from vitest: `import { describe, it, expect } from 'vitest';`
-3. Write tests using the same patterns
-4. Run `npm test` to verify
-
-## Test Framework
-
-- **Framework**: [Vitest](https://vitest.dev/) - Fast, modern test runner
-- **Environment**: jsdom - Simulates browser DOM for testing
-- **Globals**: Enabled - No need to import `describe`, `it`, `expect`
+- [Vitest](https://vitest.dev/) with jsdom (a simulated browser)
+- `tests/setup.js` loads `utils.js` before the tests run

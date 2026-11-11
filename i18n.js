@@ -9,7 +9,7 @@
 
     const SUPPORTED = ['en', 'da', 'fr'];
     // Default UI language when the user has no preference set. Danish matches the
-    // source PDF (egenskaber.pdf).
+    // reference PDF (Egenskaber).
     const DEFAULT_LANG = 'da';
     // Language that plant data (properties, families, commonName) is stored in.
     // This is separate from DEFAULT_LANG so that switching the default UI language

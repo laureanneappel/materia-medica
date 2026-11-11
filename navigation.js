@@ -94,7 +94,7 @@
 
             if (!Array.isArray(NAV_ITEMS) || NAV_ITEMS.length === 0) {
                 console.error('[Navigation] Invalid NAV_ITEMS configuration');
-                return '<nav class="system-nav" aria-label="Body systems navigation"><p>Navigation unavailable</p></nav>';
+                return '<nav class="system-nav" aria-label="Main navigation"><p>Navigation unavailable</p></nav>';
             }
 
             const navHtml = NAV_ITEMS.map(item => {
@@ -113,7 +113,7 @@
             </nav>`;
         } catch (error) {
             console.error('[Navigation] Error in createNavigation:', error);
-            return '<nav class="system-nav" aria-label="Body systems navigation"><p>Navigation error</p></nav>';
+            return '<nav class="system-nav" aria-label="Main navigation"><p>Navigation error</p></nav>';
         }
     }
 

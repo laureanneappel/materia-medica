@@ -124,45 +124,6 @@ describe('Utils.isValidArray', () => {
   });
 });
 
-describe('Utils.safeGet', () => {
-  it('should return property value if it exists', () => {
-    const obj = { name: 'Valerian', family: 'Valerianaceae' };
-    expect(Utils.safeGet(obj, 'name')).toBe('Valerian');
-    expect(Utils.safeGet(obj, 'family')).toBe('Valerianaceae');
-  });
-
-  it('should return default value if property does not exist', () => {
-    const obj = { name: 'Valerian' };
-    expect(Utils.safeGet(obj, 'missing', 'default')).toBe('default');
-  });
-
-  it('should return empty string as default if not specified', () => {
-    const obj = { name: 'Valerian' };
-    expect(Utils.safeGet(obj, 'missing')).toBe('');
-  });
-
-  it('should handle null and undefined objects', () => {
-    expect(Utils.safeGet(null, 'key', 'default')).toBe('default');
-    expect(Utils.safeGet(undefined, 'key', 'default')).toBe('default');
-  });
-
-  it('should handle non-object types', () => {
-    expect(Utils.safeGet('string', 'key', 'default')).toBe('default');
-    expect(Utils.safeGet(123, 'key', 'default')).toBe('default');
-  });
-
-  it('should access plant properties safely', () => {
-    // Real-world test case
-    const plant = {
-      commonName: 'Valerian',
-      botanicalName: 'Valeriana officinalis'
-    };
-
-    expect(Utils.safeGet(plant, 'commonName')).toBe('Valerian');
-    expect(Utils.safeGet(plant, 'danishName', 'Not available')).toBe('Not available');
-  });
-});
-
 describe('Utils.debounce', () => {
   it('should debounce function calls', async () => {
     const mockFn = vi.fn();
