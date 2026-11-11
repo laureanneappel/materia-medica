@@ -4,7 +4,8 @@
  *   shown in the chosen language.
  * - Written text comes from content/<fileSlug>.html, if that file exists.
  *   Each <section data-section="..."> in it fills the matching
- *   [data-content="..."] spot; spots without text show their placeholder.
+ *   [data-content="..."] spot. Spots without text are hidden, except that on
+ *   your own computer the ones with a placeholder show an [Add ... here] reminder.
  * Fixed labels and headings are translated by i18n.js (data-i18n attributes).
  */
 (function () {
@@ -58,16 +59,19 @@
             return a;
         };
 
+        // Properties as tags
         const props = document.querySelector('[data-plant="properties"]');
         if (props) {
             const list = (plant.properties || [])
                 .map(p => ({ value: p, label: I18n.tProperty(p) }))
                 .sort((a, b) => a.label.localeCompare(b.label, lang));
             props.textContent = '';
+            setText('[data-plant="property-count"]', list.length ? '(' + list.length + ')' : '');
             if (!list.length) props.textContent = I18n.t('plant.noProperties');
-            list.forEach((p, i) => {
-                if (i) props.append(', ');
-                props.append(listLink('property', p.value, p.label));
+            list.forEach(p => {
+                const tag = listLink('property', p.value, p.label);
+                tag.className = 'tag';
+                props.append(tag);
             });
         }
 
@@ -76,6 +80,45 @@
             family.textContent = '';
             family.append(listLink('family', plant.family.split(' (')[0], I18n.tFamily(plant.family)));
         }
+
+        renderSimilar(I18n, plant, lang);
+    }
+
+    // The plants that share the most properties with this one
+    const SIMILAR_COUNT = 6;
+    const SIMILAR_MIN_SHARED = 2;
+
+    function renderSimilar(I18n, plant, lang) {
+        const list = document.querySelector('[data-plant="similar"]');
+        const section = document.querySelector('[data-similar-section]');
+        if (!list || !section) return;
+
+        const own = new Set(plant.properties || []);
+        const nameOf = p => ({ en: p.commonName, da: p.danishName, fr: p.frenchName })[lang] || p.commonName;
+        const similar = (window.PLANTS_DATA || [])
+            .filter(p => p.fileSlug !== plant.fileSlug)
+            .map(p => ({ plant: p, shared: (p.properties || []).filter(x => own.has(x)).length }))
+            .filter(x => x.shared >= SIMILAR_MIN_SHARED)
+            .sort((a, b) => (b.shared - a.shared) || nameOf(a.plant).localeCompare(nameOf(b.plant), lang))
+            .slice(0, SIMILAR_COUNT);
+
+        list.textContent = '';
+        similar.forEach(({ plant: p, shared }) => {
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.href = I18n.withLang(window.Utils.plantUrl(p.fileSlug));
+            a.className = 'similar-name';
+            a.textContent = nameOf(p);
+            const latin = document.createElement('em');
+            latin.className = 'similar-latin';
+            latin.textContent = p.botanicalName;
+            const count = document.createElement('span');
+            count.className = 'similar-count';
+            count.textContent = I18n.format(I18n.t('plant.similar.shared'), { count: shared });
+            li.append(a, latin, count);
+            list.append(li);
+        });
+        section.hidden = similar.length === 0;
     }
 
     // Viewing the site on your own computer (not the published site)
@@ -90,9 +133,8 @@
         const local = isLocal();
         document.querySelectorAll('[data-content]').forEach(spot => {
             if (spot.childElementCount) return;
-            if (local) {
-                const key = spot.getAttribute('data-placeholder');
-                if (!key) return;
+            const key = spot.getAttribute('data-placeholder');
+            if (local && key) {
                 const p = document.createElement('p');
                 p.className = 'placeholder';
                 p.textContent = I18n.t(key);
@@ -104,7 +146,6 @@
             if (heading && heading.tagName === 'H3') heading.hidden = true;
         });
 
-        if (local) return;
         // Hide a whole section when nothing in it is left to show
         document.querySelectorAll('.plant-detail .section').forEach(section => {
             const visible = [...section.children].some(el => el.tagName !== 'H2' && !el.hidden);
@@ -146,6 +187,14 @@
         renderData(I18n, plant);
         await renderContent(I18n, slug);
         handleEmptySpots(I18n);
+
+        // Nothing written yet (published site): show the facts in a single column
+        const text = document.querySelector('.plant-text');
+        const detail = document.querySelector('.plant-detail');
+        if (text && detail) {
+            const hasText = [...text.querySelectorAll(':scope > .section')].some(s => !s.hidden);
+            detail.classList.toggle('facts-only', !hasText);
+        }
     }
 
     if (document.readyState === 'loading') {

@@ -28,7 +28,7 @@ The site is in **Danish** (default), **English** and **French**; the EN / DA / F
 
 - **index.html** - all plants, with search by name and filters by property and family
 - **property-statistics.html** - every property with the number of plants that have it: click to see the plants, sort A–Z or by number of plants, search properties and plants. Properties with subtypes (e.g. Antiinflammatoriske) are grouped
-- **plant.html** - the page for every plant (`plant.html?p=hawthorn`); it builds itself from the data. Its properties and family link to the plant list filtered on them (`index.html?property=Astringent`, `index.html?family=Rosaceae`)
+- **plant.html** - the page for every plant (`plant.html?p=hawthorn`); it builds itself from the data. The properties come first, as tags in a band under the plant name. Below: facts on the left (family, names, and the 6 plants sharing the most properties) and written text on the right. Properties and family link to the plant list filtered on them (`index.html?property=Astringent`, `index.html?family=Rosaceae`)
 - **404.html** - sends old plant addresses (`plants/hawthorn.html`) to the new page
 
 ## Files
@@ -99,7 +99,7 @@ The file has one `<section>` per part of the page, and one paragraph per languag
 </section>
 ```
 
-Sections: `habitat`, `constituents`, `uses`, `side-effects`, `parts-used`, `forms`, `taste`, `effect`, `references`. Leave out the ones you haven't written yet. The layout of every plant page is in `plant.html`; change it once and all plants follow.
+Sections: `habitat`, `constituents`, `parts-used`, `side-effects`, `uses`, `taste`, `effect`, `references`. `side-effects` and `uses` only appear on plants that have them; `taste`, `effect` and `references` are hidden for now. Leave out the ones you haven't written yet. The layout of every plant page is in `plant.html`; change it once and all plants follow.
 
 ## Viewing locally
 

@@ -871,21 +871,6 @@ footer .disclaimer {
     font-style: italic;
 }
 
-/* Plant page: properties and family link to the filtered plant list */
-.plant-detail [data-plant="properties"] a,
-.plant-detail [data-plant="family"] a {
-    color: inherit;
-    text-decoration: underline;
-    text-decoration-color: rgba(90, 111, 79, 0.35);
-    text-underline-offset: 3px;
-}
-
-.plant-detail [data-plant="properties"] a:hover,
-.plant-detail [data-plant="family"] a:hover {
-    color: #5a6f4f;
-    text-decoration-color: currentColor;
-}
-
 /* ---------- Properties page ---------- */
 
 .prop-stats {
@@ -1155,5 +1140,200 @@ footer .disclaimer {
 @media (max-width: 600px) {
     .lang-picker {
         position: absolute;
+    }
+}
+
+/* ---------- Plant page ---------- */
+
+.plant-header {
+    margin-bottom: 28px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid rgba(139, 115, 85, 0.35);
+}
+
+.plant-detail .plant-header h1 {
+    margin-bottom: 2px;
+    line-height: 1.15;
+}
+
+.plant-latin {
+    font-size: 1.2em;
+    color: var(--color-secondary);
+}
+
+/* Two columns: facts left, written text right */
+.plant-layout {
+    display: grid;
+    grid-template-columns: minmax(240px, 320px) minmax(0, 1fr);
+    gap: 40px;
+    align-items: start;
+}
+
+.plant-detail.facts-only .plant-layout {
+    grid-template-columns: minmax(0, 1fr);
+}
+
+.plant-detail.facts-only .plant-text {
+    display: none;
+}
+
+.plant-facts .section {
+    margin-bottom: 26px;
+}
+
+.plant-facts .section h2 {
+    font-size: 1.15em;
+}
+
+.plant-text .section:first-child h2 {
+    margin-top: 0;
+}
+
+/* Properties band under the plant name */
+.plant-properties {
+    margin: 0 0 32px;
+    padding: 20px 24px 22px;
+    background: rgba(var(--color-primary-rgb), 0.06);
+    border: 1px solid rgba(var(--color-primary-rgb), 0.18);
+    border-radius: 8px;
+}
+
+.plant-properties h2 {
+    margin: 0 0 12px;
+    font-size: 1.25em;
+    font-weight: normal;
+    color: var(--color-primary);
+}
+
+.property-count {
+    font-size: 0.8em;
+    color: var(--color-secondary);
+}
+
+.plant-properties .tag-list {
+    gap: 8px;
+}
+
+.plant-properties .tag {
+    padding: 5px 14px;
+    font-size: 1.02em;
+    background: var(--color-card-bg);
+}
+
+/* Properties as tags */
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.tag-list .tag {
+    display: inline-block;
+    padding: 3px 11px;
+    font-size: 0.92em;
+    border-radius: 999px;
+    background: rgba(var(--color-primary-rgb), 0.1);
+    border: 1px solid rgba(var(--color-primary-rgb), 0.25);
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.tag-list .tag:hover,
+.tag-list .tag:focus-visible {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: #fff;
+}
+
+.plant-detail [data-plant="family"] a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: rgba(var(--color-primary-rgb), 0.35);
+    text-underline-offset: 3px;
+}
+
+.plant-detail [data-plant="family"] a:hover {
+    color: var(--color-primary);
+}
+
+/* Names in three languages */
+.plant-names {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 4px 12px;
+}
+
+.plant-names dt {
+    font-weight: bold;
+}
+
+/* Plants with similar properties */
+.similar-list {
+    list-style: none;
+}
+
+.similar-list li {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 10px;
+    padding: 7px 0;
+    border-bottom: 1px solid rgba(139, 115, 85, 0.18);
+}
+
+.similar-list li:last-child {
+    border-bottom: 0;
+}
+
+.similar-name {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.similar-name:hover {
+    text-decoration: underline;
+}
+
+.similar-latin {
+    grid-column: 1;
+    font-size: 0.85em;
+    color: var(--color-secondary);
+}
+
+.similar-count {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    align-self: center;
+    font-size: 0.8em;
+    color: var(--color-secondary);
+    white-space: nowrap;
+}
+
+/* Facts only (nothing written yet): spread the facts over two columns on wide screens */
+@media (min-width: 900px) {
+    .plant-detail.facts-only .plant-facts {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 48px;
+    }
+
+    .plant-detail.facts-only .plant-facts [data-similar-section] {
+        grid-column: 1 / -1;
+    }
+
+    .plant-detail.facts-only .similar-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 48px;
+    }
+
+    .plant-detail.facts-only .similar-list li:nth-last-child(2):nth-child(odd) {
+        border-bottom: 0;
+    }
+}
+
+@media (max-width: 899px) {
+    .plant-layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0;
     }
 }
