@@ -1354,12 +1354,12 @@ footer .disclaimer {
     opacity: 0.85;
     /* Fade out evenly towards all four edges */
     -webkit-mask-image:
-        linear-gradient(to right, transparent, #000 14%, #000 86%, transparent),
-        linear-gradient(to bottom, transparent, #000 10%, #000 88%, transparent);
+        linear-gradient(to right, transparent, #000 8%, #000 92%, transparent),
+        linear-gradient(to bottom, transparent, #000 7%, #000 92%, transparent);
     -webkit-mask-composite: source-in;
     mask-image:
-        linear-gradient(to right, transparent, #000 14%, #000 86%, transparent),
-        linear-gradient(to bottom, transparent, #000 10%, #000 88%, transparent);
+        linear-gradient(to right, transparent, #000 8%, #000 92%, transparent),
+        linear-gradient(to bottom, transparent, #000 7%, #000 92%, transparent);
     mask-composite: intersect;
 }
 
