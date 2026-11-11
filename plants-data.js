@@ -419,7 +419,9 @@ window.PLANTS_DATA = [
       "Pain relieving"
     ],
     "status": "enabled",
-    "fileSlug": "boswellia"
+    "fileSlug": "boswellia",
+    "image": "images/plants/boswellia.jpg",
+    "imageCredit": "American Cyclopaedia (1891), engraving · public domain"
   },
   {
     "commonName": "Buchu",
@@ -1012,7 +1014,9 @@ window.PLANTS_DATA = [
       "Emmenagogue"
     ],
     "status": "enabled",
-    "fileSlug": "dong-quai"
+    "fileSlug": "dong-quai",
+    "image": "images/plants/dong-quai.jpg",
+    "imageCredit": "Chinese materia medica (1911) · public domain"
   },
   {
     "commonName": "Echinacea",
@@ -1376,7 +1380,9 @@ window.PLANTS_DATA = [
       "Woman tonic"
     ],
     "status": "enabled",
-    "fileSlug": "ginseng"
+    "fileSlug": "ginseng",
+    "image": "images/plants/ginseng.jpg",
+    "imageCredit": "Chinese illustration of ginseng root, engraving (1851) · public domain"
   },
   {
     "commonName": "Goat's Rue",
@@ -1707,7 +1713,9 @@ window.PLANTS_DATA = [
       "Choleretic"
     ],
     "status": "enabled",
-    "fileSlug": "indian-barberry"
+    "fileSlug": "indian-barberry",
+    "image": "images/plants/indian-barberry.jpg",
+    "imageCredit": "Kirtikar & Basu, Indian Medicinal Plants (1918) · public domain"
   },
   {
     "commonName": "Indian Sarsaparilla",
@@ -2255,7 +2263,9 @@ window.PLANTS_DATA = [
       "Venotonic"
     ],
     "status": "enabled",
-    "fileSlug": "pine-bark"
+    "fileSlug": "pine-bark",
+    "image": "images/plants/pine-bark.jpg",
+    "imageCredit": "Step, Wayside and Woodland Blossoms (1895) · public domain"
   },
   {
     "commonName": "Plantain",
@@ -2574,7 +2584,9 @@ window.PLANTS_DATA = [
       "Prostate growth inhibiting"
     ],
     "status": "enabled",
-    "fileSlug": "saw-palmetto"
+    "fileSlug": "saw-palmetto",
+    "image": "images/plants/saw-palmetto.jpg",
+    "imageCredit": "Lounsberry, Southern Wild Flowers and Trees (1901) · public domain"
   },
   {
     "commonName": "Schisandra",
