@@ -1,3 +1,65 @@
+/* Site font: Libre Baskerville, served from fonts/ (SIL Open Font License, see fonts/OFL.txt) */
+@font-face {
+    font-family: 'Libre Baskerville';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url('fonts/libre-baskerville-400-italic-latin-ext.woff2') format('woff2');
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+   
+}
+
+@font-face {
+    font-family: 'Libre Baskerville';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url('fonts/libre-baskerville-400-italic-latin.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+   
+}
+
+@font-face {
+    font-family: 'Libre Baskerville';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('fonts/libre-baskerville-400-normal-latin-ext.woff2') format('woff2');
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+   
+}
+
+@font-face {
+    font-family: 'Libre Baskerville';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('fonts/libre-baskerville-400-normal-latin.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+   
+}
+
+@font-face {
+    font-family: 'Libre Baskerville';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('fonts/libre-baskerville-700-normal-latin-ext.woff2') format('woff2');
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+   
+}
+
+@font-face {
+    font-family: 'Libre Baskerville';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('fonts/libre-baskerville-700-normal-latin.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+   
+}
+
+
 /* CSS Custom Properties */
 :root {
     /* Color Palette */
@@ -21,7 +83,8 @@
     --spacing-lg: 40px;
 
     /* Fonts */
-    --font-family-serif: 'Georgia', 'Garamond', serif;
+    --font-family-serif: 'Libre Baskerville', 'Georgia', serif;
+    --font-family-display: 'Libre Baskerville', 'Georgia', serif;
 }
 
 /* General Styles */
@@ -1595,5 +1658,68 @@ footer .disclaimer {
         display: inline-block;
         margin: 0 10px;
         padding: 6px 2px;
+    }
+}
+
+/* ---------- Typography: Libre Baskerville everywhere ---------- */
+body {
+    font-size: 0.95em;
+}
+
+body,
+input,
+select,
+button,
+.lang-picker button {
+    font-family: var(--font-family-serif);
+}
+
+header h1,
+.system-nav a,
+.plant-detail h1,
+.plant-latin,
+.plant-detail h2,
+.plant-list .plant-card h3,
+.prop-stat-number {
+    font-family: var(--font-family-display);
+    font-weight: 400;
+}
+
+header h1 {
+    font-size: 2.8em;
+}
+
+.system-nav a {
+    font-size: 1.05em;
+}
+
+.plant-detail .plant-header h1 {
+    font-size: 2.3em;
+}
+
+.plant-detail h2,
+.plant-text .section h2 {
+    font-size: 1.06em;
+}
+
+.plant-properties h2 {
+    font-size: 1.15em;
+}
+
+.plant-list .plant-card h3 {
+    font-size: 1.15em;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    .plant-detail .plant-header h1 {
+        font-size: 1.8em;
+    }
+
+    .plant-list .plant-card h3 {
+        font-size: 1.05em;
     }
 }

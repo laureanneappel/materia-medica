@@ -43,6 +43,7 @@ The site is in **Danish** (default), **English** and **French**; the EN / DA / F
 | `property-statistics-renderer.js` | The properties page |
 | `navigation.js`, `footer.js`, `utils.js` | Menu, footer, shared helpers |
 | `styles.css` | All styling |
+| `fonts/` | The site font, Libre Baskerville (SIL Open Font License, `fonts/OFL.txt`), served from the site itself |
 | `tools/sync-from-pdf.py` | Updates the database from the PDF |
 | `DANISH-TO-ENGLISH-PROPERTIES.json` | PDF heading -> English property name |
 | `PDF-NAME-CORRECTIONS.json` | Spelling variants and typos in the PDF -> name used on the site |
