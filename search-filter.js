@@ -292,10 +292,10 @@
             return;
         }
 
-        // Sort alphabetically
-        const sorted = [...plants].sort((a, b) =>
-            a.commonName.localeCompare(b.commonName)
-        );
+        // Sort by botanical name, the card title
+        const sorted = window.PlantsRenderer && window.PlantsRenderer.sortPlants
+            ? window.PlantsRenderer.sortPlants(plants)
+            : [...plants].sort((a, b) => a.botanicalName.localeCompare(b.botanicalName));
 
         // Use PlantsRenderer to create cards if available
         if (window.PlantsRenderer && window.PlantsRenderer.createPlantCardHTML) {
@@ -407,9 +407,40 @@
         select.innerHTML = `<option value="">${placeholder}</option>${options}`;
     }
 
+    /**
+     * Apply filters given in the address, e.g. index.html?property=Astringent or ?family=Rosaceae
+     * (used by the links on the plant page). Call after the dropdowns are filled.
+     */
+    function applyFiltersFromUrl() {
+        let params;
+        try {
+            params = new URLSearchParams(window.location.search);
+        } catch (e) {
+            return;
+        }
+        const known = new Set(allPlants.flatMap(p => p.properties || []));
+        params.getAll('property').forEach(prop => {
+            if (known.has(prop) && !currentFilters.properties.includes(prop)) currentFilters.properties.push(prop);
+        });
+        const family = params.get('family');
+        if (family) {
+            const match = allPlants.find(p => p.family && (p.family === family || p.family.split(' (')[0] === family));
+            if (match) {
+                currentFilters.family = match.family;
+                const select = document.getElementById('family-filter');
+                if (select) select.value = match.family;
+            }
+        }
+        if (currentFilters.properties.length || currentFilters.family) {
+            updateActiveFiltersDisplay();
+            applyFilters();
+        }
+    }
+
     // Expose public API
     window.SearchFilter = {
         init,
+        applyFiltersFromUrl,
         clearAllFilters,
         populatePropertyDropdown,
         populateFamilyDropdown

@@ -1209,3 +1209,18 @@ footer .disclaimer {
     color: var(--color-secondary);
     font-style: italic;
 }
+
+/* Plant page: properties and family link to the filtered plant list */
+.plant-detail [data-plant="properties"] a,
+.plant-detail [data-plant="family"] a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: rgba(90, 111, 79, 0.35);
+    text-underline-offset: 3px;
+}
+
+.plant-detail [data-plant="properties"] a:hover,
+.plant-detail [data-plant="family"] a:hover {
+    color: #5a6f4f;
+    text-decoration-color: currentColor;
+}

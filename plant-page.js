@@ -50,25 +50,65 @@
         setText('[data-plant="name-da"]', plant.danishName);
         setText('[data-plant="name-fr"]', plant.frenchName);
 
+        // Properties and family link to the plant list, filtered to plants that share them
+        const listLink = (param, value, label) => {
+            const a = document.createElement('a');
+            a.href = I18n.withLang('index.html?' + param + '=' + encodeURIComponent(value));
+            a.textContent = label;
+            return a;
+        };
+
         const props = document.querySelector('[data-plant="properties"]');
         if (props) {
-            const list = (plant.properties || []).map(I18n.tProperty)
-                .sort((a, b) => a.localeCompare(b, lang));
-            props.textContent = list.length ? list.join(', ') : I18n.t('plant.noProperties');
+            const list = (plant.properties || [])
+                .map(p => ({ value: p, label: I18n.tProperty(p) }))
+                .sort((a, b) => a.label.localeCompare(b.label, lang));
+            props.textContent = '';
+            if (!list.length) props.textContent = I18n.t('plant.noProperties');
+            list.forEach((p, i) => {
+                if (i) props.append(', ');
+                props.append(listLink('property', p.value, p.label));
+            });
         }
 
-        if (plant.family) setText('[data-plant="family"]', I18n.tFamily(plant.family));
+        const family = document.querySelector('[data-plant="family"]');
+        if (family && plant.family) {
+            family.textContent = '';
+            family.append(listLink('family', plant.family.split(' (')[0], I18n.tFamily(plant.family)));
+        }
     }
 
-    function showPlaceholders(I18n) {
+    // Viewing the site on your own computer (not the published site)
+    function isLocal() {
+        const host = window.location.hostname;
+        return window.location.protocol === 'file:' || host === 'localhost' || host === '127.0.0.1' || host === '';
+    }
+
+    // Parts without written text: on your own computer they show an [Add ... here]
+    // reminder; on the published site they are hidden, with their heading.
+    function handleEmptySpots(I18n) {
+        const local = isLocal();
         document.querySelectorAll('[data-content]').forEach(spot => {
             if (spot.childElementCount) return;
-            const key = spot.getAttribute('data-placeholder');
-            if (!key) return;
-            const p = document.createElement('p');
-            p.className = 'placeholder';
-            p.textContent = I18n.t(key);
-            spot.appendChild(p);
+            if (local) {
+                const key = spot.getAttribute('data-placeholder');
+                if (!key) return;
+                const p = document.createElement('p');
+                p.className = 'placeholder';
+                p.textContent = I18n.t(key);
+                spot.appendChild(p);
+                return;
+            }
+            spot.hidden = true;
+            const heading = spot.previousElementSibling;
+            if (heading && heading.tagName === 'H3') heading.hidden = true;
+        });
+
+        if (local) return;
+        // Hide a whole section when nothing in it is left to show
+        document.querySelectorAll('.plant-detail .section').forEach(section => {
+            const visible = [...section.children].some(el => el.tagName !== 'H2' && !el.hidden);
+            if (!visible) section.hidden = true;
         });
     }
 
@@ -105,7 +145,7 @@
         }
         renderData(I18n, plant);
         await renderContent(I18n, slug);
-        showPlaceholders(I18n);
+        handleEmptySpots(I18n);
     }
 
     if (document.readyState === 'loading') {

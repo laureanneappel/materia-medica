@@ -28,7 +28,7 @@ The site is in **Danish** (default), **English** and **French**; the EN / DA / F
 
 - **index.html** - all plants, with search by name and filters by property and family
 - **property-statistics.html** - every property with its plants
-- **plant.html** - the page for every plant (`plant.html?p=hawthorn`); it builds itself from the data
+- **plant.html** - the page for every plant (`plant.html?p=hawthorn`); it builds itself from the data. Its properties and family link to the plant list filtered on them (`index.html?property=Astringent`, `index.html?family=Rosaceae`)
 - **404.html** - sends old plant addresses (`plants/hawthorn.html`) to the new page
 
 ## Files
@@ -86,7 +86,7 @@ The plant gets its page automatically (`plant.html?p=<fileSlug>`).
 
 ## Writing about a plant
 
-Each plant's written text lives in its own file, `content/<fileSlug>.html` (for example `content/hawthorn.html`). Plants without a file show `[Add … here]` placeholders.
+Each plant's written text lives in its own file, `content/<fileSlug>.html` (for example `content/hawthorn.html`). Parts without text are hidden on the published site; when you view the site on your own computer they show an `[Add … here]` reminder instead.
 
 The file has one `<section>` per part of the page, and one paragraph per language; the page shows the chosen language:
 

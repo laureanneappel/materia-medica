@@ -89,11 +89,9 @@
                 return [];
             }
 
-            return [...plants].sort((a, b) => {
-                const nameA = a?.commonName || '';
-                const nameB = b?.commonName || '';
-                return nameA.localeCompare(nameB);
-            });
+            // Cards are titled with the botanical name, so sort by it
+            return [...plants].sort((a, b) =>
+                (a?.botanicalName || '').localeCompare(b?.botanicalName || ''));
         } catch (error) {
             console.error('[PlantsRenderer] Error in sortPlants:', error);
             return plants;
@@ -183,6 +181,7 @@
     window.PlantsRenderer = {
         renderPlantCards,
         renderIndexPage,
+        sortPlants,
         createPlantCardHTML,
     };
 
