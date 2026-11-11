@@ -1,6 +1,8 @@
 # Tests
 
-Unit tests for the plant data, the translations and the shared helpers. Agreement with the reference PDF is checked separately by `python3 tools/sync-from-pdf.py --check`.
+Unit tests for the plant data, the translations and the shared helpers.
+
+You don't need these to check the site: `python3 tools/sync-from-pdf.py --check` runs the same data and translation checks (plus the PDF check) without Node.js.
 
 ## Running the tests
 

@@ -132,6 +132,65 @@ def parse(lines, headings):
     return result, unknown
 
 
+def i18n_block(source, const, lang):
+    """Text of one language block, e.g. PROPERTY_TRANSLATIONS -> da, in i18n.js."""
+    start = source.index('const %s = {' % const)
+    section = source[start:source.index('\n    };', start)]
+    b = section.index('\n        %s: {' % lang)
+    return section[b:section.index('\n        },', b)]
+
+
+def data_problems(plants, pdf_properties):
+    """Checks on plants-data.js, i18n.js and plants/*.html (the same checks as tests/data.test.js)."""
+    problems = []
+
+    # Plants: required fields, no duplicates
+    for p in plants:
+        for field in ('commonName', 'botanicalName', 'danishName', 'frenchName', 'family', 'fileSlug'):
+            if not str(p.get(field) or '').strip():
+                problems.append('%s has no %s in plants-data.js' % (p.get('botanicalName') or p.get('fileSlug'), field))
+    for field in ('botanicalName', 'fileSlug'):
+        values = [p.get(field) for p in plants]
+        for v in sorted(set(x for x in values if values.count(x) > 1)):
+            problems.append('Two plants in plants-data.js have the same %s: "%s"' % (field, v))
+
+    # Pages: one per plant, with the translation hooks
+    slugs = {p['fileSlug'] for p in plants}
+    pages = {os.path.basename(f)[:-5] for f in glob.glob(path('plants', '*.html'))}
+    for s in sorted(slugs - pages):
+        problems.append('plants/%s.html is missing' % s)
+    for s in sorted(pages - slugs):
+        problems.append('plants/%s.html has no plant in plants-data.js (an iCloud copy, or a removed plant?)' % s)
+    hooks = ('../plants-data.js', '../plant-page.js', '../i18n.js', 'data-plant="name"',
+             'data-plant="properties"', 'data-plant="family"', 'footer-placeholder')
+    for s in sorted(slugs & pages):
+        page = open(path('plants', s + '.html'), encoding='utf-8').read()
+        missing = [h for h in hooks if h not in page]
+        if missing:
+            problems.append('plants/%s.html is missing %s' % (s, ', '.join(missing)))
+        counts = {lang: page.count('data-lang="%s"' % lang) for lang in ('en', 'da', 'fr')}
+        if len(set(counts.values())) > 1:
+            problems.append('plants/%s.html: text written in several languages is incomplete '
+                            '(English %d, Danish %d, French %d paragraphs)' % (s, counts['en'], counts['da'], counts['fr']))
+
+    # Translations in i18n.js
+    i18n = open(path('i18n.js'), encoding='utf-8').read()
+    keys = lambda block, quote: set(re.findall(r'^\s+%s(.+?)%s:' % (quote, quote), block, re.M))
+    properties = pdf_properties | {x for p in plants for x in p.get('properties') or []}
+    families = {p['family'].split(' (')[0] for p in plants if p.get('family')}
+    labels = {lang: keys(i18n_block(i18n, 'TRANSLATIONS', lang), "'") for lang in ('en', 'da', 'fr')}
+    for lang, name in (('da', 'Danish'), ('fr', 'French')):
+        known = keys(i18n_block(i18n, 'PROPERTY_TRANSLATIONS', lang), '"')
+        for x in sorted(properties - known):
+            problems.append('Property "%s" has no %s label in i18n.js' % (x, name))
+        known = keys(i18n_block(i18n, 'FAMILY_TRANSLATIONS', lang), '"')
+        for x in sorted(families - known):
+            problems.append('Family "%s" has no %s description in i18n.js' % (x, name))
+        for x in sorted(labels['en'] - labels[lang]):
+            problems.append('Label "%s" has no %s text in i18n.js' % (x, name))
+    return problems
+
+
 def main():
     args = [a for a in sys.argv[1:] if not a.startswith('--')]
     check_only = '--check' in sys.argv
@@ -182,11 +241,7 @@ def main():
             problems.append('"%s" (%s) is no longer in the PDF. Remove it from plants-data.js and delete '
                             'plants/%s.html (check the page for your own text first).' % (name, p['commonName'], p['fileSlug']))
 
-    # Every English property must be translated in i18n.js
-    i18n = open(path('i18n.js'), encoding='utf-8').read()
-    for en in sorted(set(da_to_en.values())):
-        if i18n.count('"%s":' % en) < 2:
-            problems.append('Property "%s" is missing a Danish or French label in i18n.js' % en)
+    problems += data_problems(plants, set(da_to_en.values()))
 
     if problems:
         print('\nSTOPPED - nothing was written:')

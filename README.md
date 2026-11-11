@@ -55,7 +55,9 @@ python3 tools/sync-from-pdf.py --check   # show what would change
 python3 tools/sync-from-pdf.py           # apply it
 ```
 
-If the PDF has a heading or plant the site doesn't know yet, or a plant has been removed from it, the tool stops without changing anything and says what to do. Details in [README-TRANSLATIONS.md](README-TRANSLATIONS.md) and [PROPERTIES-REFERENCE.md](PROPERTIES-REFERENCE.md).
+The tool also checks the whole site: every plant has its names, family and page, everything is translated, and there are no stray pages. If anything is wrong, it stops without changing anything and says what to do.
+
+Run `python3 tools/sync-from-pdf.py --check` any time you've edited something by hand. Details in [README-TRANSLATIONS.md](README-TRANSLATIONS.md) and [PROPERTIES-REFERENCE.md](PROPERTIES-REFERENCE.md).
 
 Nothing needs installing: it uses the Python and Swift that come with the macOS developer tools.
 

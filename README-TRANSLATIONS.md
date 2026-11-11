@@ -43,7 +43,10 @@ It stops without changing anything, and says what to do, when:
 - the PDF has a heading it doesn't know
 - the PDF has a plant name it doesn't know
 - a plant on the site is no longer in the PDF
-- a property has no Danish or French label in `i18n.js`
+- a property, family or label has no Danish or French translation in `i18n.js`
+- a plant is missing a name, a family or its page, or two plants share a name
+- a page in `plants/` has no plant (for example an iCloud copy like `hops 2.html`)
+- text written in several languages on a page is missing a version
 
 ### When the PDF changes
 
