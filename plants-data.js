@@ -240,7 +240,9 @@ window.PLANTS_DATA = [
       "Cholagogue"
     ],
     "status": "enabled",
-    "fileSlug": "barberry-species"
+    "fileSlug": "barberry-species",
+    "image": "images/plants/barberry-species.jpg",
+    "imageCredit": "Flora Danica (1761–1883): Berberis vulgaris · public domain"
   },
   {
     "commonName": "Beth Root",
@@ -673,7 +675,9 @@ window.PLANTS_DATA = [
       "Interferon stimulating"
     ],
     "status": "enabled",
-    "fileSlug": "chaga"
+    "fileSlug": "chaga",
+    "image": "images/plants/chaga.jpg",
+    "imageCredit": "Sturm, Deutschlands Flora: Polyporus obliquus · public domain"
   },
   {
     "commonName": "Chickweed",
@@ -691,7 +695,9 @@ window.PLANTS_DATA = [
       "Healing"
     ],
     "status": "enabled",
-    "fileSlug": "chickweed"
+    "fileSlug": "chickweed",
+    "image": "images/plants/chickweed.jpg",
+    "imageCredit": "Flora Batava: Alsine media · public domain"
   },
   {
     "commonName": "Chinese Skullcap",
@@ -740,7 +746,9 @@ window.PLANTS_DATA = [
       "Antimicrobial"
     ],
     "status": "enabled",
-    "fileSlug": "cinnamon-species"
+    "fileSlug": "cinnamon-species",
+    "image": "images/plants/cinnamon-species.jpg",
+    "imageCredit": "Köhler's Medizinal-Pflanzen (1887): Cinnamomum verum · public domain"
   },
   {
     "commonName": "Cleavers",
@@ -816,7 +824,9 @@ window.PLANTS_DATA = [
       "Weight reducing"
     ],
     "status": "enabled",
-    "fileSlug": "cordyceps"
+    "fileSlug": "cordyceps",
+    "image": "images/plants/cordyceps.jpg",
+    "imageCredit": "Flora Batava · public domain"
   },
   {
     "commonName": "Cornsilk",
@@ -1493,7 +1503,9 @@ window.PLANTS_DATA = [
       "Bitter tonic"
     ],
     "status": "enabled",
-    "fileSlug": "grapefruit"
+    "fileSlug": "grapefruit",
+    "image": "images/plants/grapefruit.jpg",
+    "imageCredit": "Cornelis Markée, watercolour (18th century) · public domain"
   },
   {
     "commonName": "Gravel Root",
@@ -1861,7 +1873,9 @@ window.PLANTS_DATA = [
       "Blood sugar regulating"
     ],
     "status": "enabled",
-    "fileSlug": "lions-mane"
+    "fileSlug": "lions-mane",
+    "image": "images/plants/lions-mane.jpg",
+    "imageCredit": "Cordier, Les Champignons de la France: Hydnum erinaceus · public domain"
   },
   {
     "commonName": "Marshmallow",
@@ -2147,7 +2161,9 @@ window.PLANTS_DATA = [
       "Sedative"
     ],
     "status": "enabled",
-    "fileSlug": "passionflower"
+    "fileSlug": "passionflower",
+    "image": "images/plants/passionflower.jpg",
+    "imageCredit": "Hans Simon Holtzbecker, Gottorfer Codex (c. 1650) · public domain"
   },
   {
     "commonName": "Pau d'Arco",
@@ -2782,7 +2798,9 @@ window.PLANTS_DATA = [
       "Antiviral (external)"
     ],
     "status": "enabled",
-    "fileSlug": "thuja"
+    "fileSlug": "thuja",
+    "image": "images/plants/thuja.jpg",
+    "imageCredit": "Michaux, North American Sylva (1819) · public domain"
   },
   {
     "commonName": "Thyme",
@@ -3021,7 +3039,9 @@ window.PLANTS_DATA = [
       "Sedative"
     ],
     "status": "enabled",
-    "fileSlug": "wild-yam"
+    "fileSlug": "wild-yam",
+    "image": "images/plants/wild-yam.jpg",
+    "imageCredit": "Millspaugh, American Medicinal Plants (1887) · public domain"
   },
   {
     "commonName": "Witch Hazel",
