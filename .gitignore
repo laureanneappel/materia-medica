@@ -61,3 +61,6 @@ verify-and-fix-properties.cjs
 property-fix-report.json
 verification-report.json
 fix-botanical-names.cjs
+
+# iCloud sync duplicates ("file 2.html")
+* 2.*
