@@ -77,7 +77,9 @@ window.PLANTS_DATA = [
       "Liver regenerating"
     ],
     "status": "enabled",
-    "fileSlug": "andrographis"
+    "fileSlug": "andrographis",
+    "image": "images/plants/andrographis.jpg",
+    "imageCredit": "Kirtikar & Basu, Indian Medicinal Plants (1918), plate 722 · public domain"
   },
   {
     "commonName": "Angelica",
@@ -435,7 +437,9 @@ window.PLANTS_DATA = [
       "Sedative"
     ],
     "status": "enabled",
-    "fileSlug": "buchu"
+    "fileSlug": "buchu",
+    "image": "images/plants/buchu.jpg",
+    "imageCredit": "Köhler's Medizinal-Pflanzen (1887) · public domain"
   },
   {
     "commonName": "Bugleweed",
@@ -582,7 +586,9 @@ window.PLANTS_DATA = [
       "Antiparasitic"
     ],
     "status": "enabled",
-    "fileSlug": "cassia-cinnamon"
+    "fileSlug": "cassia-cinnamon",
+    "image": "images/plants/cassia-cinnamon.jpg",
+    "imageCredit": "Köhler's Medizinal-Pflanzen (1887) · public domain"
   },
   {
     "commonName": "Cat's Claw",
@@ -600,7 +606,9 @@ window.PLANTS_DATA = [
       "Immunomodulating"
     ],
     "status": "enabled",
-    "fileSlug": "cats-claw"
+    "fileSlug": "cats-claw",
+    "image": "images/plants/cats-claw.jpg",
+    "imageCredit": "Karsten, Florae Columbiae (1866): Uncaria guianensis & U. tomentosa · public domain"
   },
   {
     "commonName": "Cayenne",
@@ -714,7 +722,9 @@ window.PLANTS_DATA = [
       "Immunosuppressive"
     ],
     "status": "enabled",
-    "fileSlug": "chinese-skullcap"
+    "fileSlug": "chinese-skullcap",
+    "image": "images/plants/chinese-skullcap.jpg",
+    "imageCredit": "Scutellaria macrantha, hand-coloured lithograph (19th century) · public domain"
   },
   {
     "commonName": "Cinnamon",
@@ -828,7 +838,7 @@ window.PLANTS_DATA = [
     "status": "enabled",
     "fileSlug": "cordyceps",
     "image": "images/plants/cordyceps.jpg",
-    "imageCredit": "Flora Batava · public domain"
+    "imageCredit": "Sowerby, Coloured Figures of English Fungi (1797–1809) · public domain"
   },
   {
     "commonName": "Cornsilk",
@@ -911,7 +921,9 @@ window.PLANTS_DATA = [
       "Bladder tonic"
     ],
     "status": "enabled",
-    "fileSlug": "crataeva"
+    "fileSlug": "crataeva",
+    "image": "images/plants/crataeva.jpg",
+    "imageCredit": "Kirtikar & Basu, Indian Medicinal Plants (1918): Crataeva religiosa, plate 71 · public domain"
   },
   {
     "commonName": "Damiana",
@@ -992,7 +1004,9 @@ window.PLANTS_DATA = [
       "Vasodilator"
     ],
     "status": "enabled",
-    "fileSlug": "devils-claw"
+    "fileSlug": "devils-claw",
+    "image": "images/plants/devils-claw.jpg",
+    "imageCredit": "Delessert, Icones selectae plantarum (1846) · public domain"
   },
   {
     "commonName": "Dong Quai",
@@ -1475,7 +1489,9 @@ window.PLANTS_DATA = [
       "Vasodilator"
     ],
     "status": "enabled",
-    "fileSlug": "gotu-kola"
+    "fileSlug": "gotu-kola",
+    "image": "images/plants/gotu-kola.jpg",
+    "imageCredit": "Kirtikar & Basu, Indian Medicinal Plants (1918): Hydrocotyle asiatica, plate 476 · public domain"
   },
   {
     "commonName": "Grape Seed",
@@ -1729,7 +1745,9 @@ window.PLANTS_DATA = [
       "Immunosuppressive"
     ],
     "status": "enabled",
-    "fileSlug": "indian-sarsaparilla"
+    "fileSlug": "indian-sarsaparilla",
+    "image": "images/plants/indian-sarsaparilla.jpg",
+    "imageCredit": "Kirtikar & Basu, Indian Medicinal Plants (1918), plate 618 · public domain"
   },
   {
     "commonName": "Jujube",
@@ -2230,7 +2248,9 @@ window.PLANTS_DATA = [
       "Antiviral (internal)"
     ],
     "status": "enabled",
-    "fileSlug": "phyllanthus"
+    "fileSlug": "phyllanthus",
+    "image": "images/plants/phyllanthus.jpg",
+    "imageCredit": "Kirtikar & Basu, Indian Medicinal Plants (1918): Phyllanthus niruri, plate 861 · public domain"
   },
   {
     "commonName": "Pine Bark Extract",
@@ -2314,7 +2334,9 @@ window.PLANTS_DATA = [
     ],
     "status": "enabled",
     "fileSlug": "prickly-ash",
-    "family": "Rutaceae (Rue family)"
+    "family": "Rutaceae (Rue family)",
+    "image": "images/plants/prickly-ash.jpg",
+    "imageCredit": "Britton & Brown, Illustrated Flora (1913) · public domain"
   },
   {
     "commonName": "Propolis",
@@ -2345,7 +2367,9 @@ window.PLANTS_DATA = [
       "Bronchial spasmolytic"
     ],
     "status": "enabled",
-    "fileSlug": "pushkarmool"
+    "fileSlug": "pushkarmool",
+    "image": "images/plants/pushkarmool.jpg",
+    "imageCredit": "Kirtikar & Basu, Indian Medicinal Plants (1918), plate 527 · public domain"
   },
   {
     "commonName": "Raspberry Leaf",
@@ -2444,7 +2468,7 @@ window.PLANTS_DATA = [
     "status": "enabled",
     "fileSlug": "reishi",
     "image": "images/plants/reishi.jpg",
-    "imageCredit": "Flora Danica (1761–1883) · public domain"
+    "imageCredit": "Flora Batava: Polyporus lucidus · public domain"
   },
   {
     "commonName": "Rhodiola",
@@ -2648,7 +2672,9 @@ window.PLANTS_DATA = [
       "Woman tonic"
     ],
     "status": "enabled",
-    "fileSlug": "shatavari"
+    "fileSlug": "shatavari",
+    "image": "images/plants/shatavari.jpg",
+    "imageCredit": "Kirtikar & Basu, Indian Medicinal Plants (1918), plate 968 · public domain"
   },
   {
     "commonName": "Shepherd's Purse",
@@ -2769,7 +2795,9 @@ window.PLANTS_DATA = [
       "Nootropic"
     ],
     "status": "enabled",
-    "fileSlug": "strawberry"
+    "fileSlug": "strawberry",
+    "image": "images/plants/strawberry.jpg",
+    "imageCredit": "Kreeger, USDA Pomological Watercolor Collection (1909) · public domain"
   },
   {
     "commonName": "Sweet Violet",
