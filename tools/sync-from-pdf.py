@@ -158,6 +158,10 @@ def data_problems(plants, pdf_properties):
     for p in plants:
         if p.get('image') and not os.path.exists(path(p['image'])):
             problems.append('%s: image "%s" does not exist' % (p['botanicalName'], p['image']))
+        if p.get('image') and os.path.exists(path(p['image'])):
+            thumb = p['image'].replace('images/plants/', 'images/plants/thumbs/')
+            if not os.path.exists(path(thumb)):
+                problems.append('%s: no small version of the plate for the main page. Run: python3 tools/make-thumbs.py' % p['botanicalName'])
         if p.get('image') and not p.get('imageCredit'):
             problems.append('%s: image has no imageCredit (where it comes from)' % p['botanicalName'])
 

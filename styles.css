@@ -669,44 +669,6 @@ footer .disclaimer {
         display: none !important;
     }
 
-    /* Stack search and filter vertically on mobile and small tablets */
-    .search-filter-row {
-        flex-direction: column !important;
-        gap: 12px !important;
-        align-items: stretch !important;
-    }
-
-    .search-box {
-        width: 100% !important;
-    }
-
-    .search-box input {
-        font-size: 16px !important; /* Prevents zoom on iOS */
-        padding: 14px !important;
-        width: 100% !important;
-        box-sizing: border-box !important;
-    }
-
-    .filter-box {
-        width: 100% !important;
-        flex-direction: column !important;
-        align-items: stretch !important;
-        gap: 8px !important;
-    }
-
-    .filter-box label {
-        font-size: 0.9em !important;
-        text-align: left !important;
-    }
-
-    .filter-box select {
-        width: 100% !important;
-        min-width: unset !important;
-        font-size: 16px !important; /* Prevents zoom on iOS */
-        padding: 14px 40px 14px 14px !important;
-        box-sizing: border-box !important;
-    }
-
     /* Make filter tags more compact on mobile */
     .filter-tag {
         font-size: 0.85em !important;
@@ -743,13 +705,6 @@ footer .disclaimer {
         font-size: 1.5em;
     }
 
-    .system-nav a {
-        display: block;
-        margin: 8px 0;
-        padding: 12px;
-        border-radius: 4px;
-        background-color: rgba(245, 241, 232, 0.5);
-    }
 
     /* Fix text justification on mobile */
     .section p {
@@ -1408,5 +1363,237 @@ footer .disclaimer {
 
     .plant-meta {
         padding: 0 4px 20px;
+    }
+}
+
+/* ---------- Plant cards on the main page ---------- */
+
+.plant-list .plant-card {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(251, 249, 244, 0.92);
+    border: 1px solid rgba(139, 115, 85, 0.28);
+    border-radius: 6px;
+    box-shadow: 0 1px 2px rgba(58, 58, 58, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.plant-list .plant-card:hover,
+.plant-list .plant-card:focus-within {
+    transform: translateY(-3px);
+    border-color: rgba(var(--color-primary-rgb), 0.45);
+    box-shadow: 0 8px 20px rgba(58, 58, 58, 0.10);
+}
+
+/* The plate, blended into the card like a print */
+.card-plate {
+    height: 210px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 14px 0;
+}
+
+.card-plate img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+    opacity: 0.9;
+    transition: opacity 0.2s ease;
+    -webkit-mask-image:
+        linear-gradient(to right, transparent, #000 8%, #000 92%, transparent),
+        linear-gradient(to bottom, transparent, #000 7%, #000 92%, transparent);
+    -webkit-mask-composite: source-in;
+    mask-image:
+        linear-gradient(to right, transparent, #000 8%, #000 92%, transparent),
+        linear-gradient(to bottom, transparent, #000 7%, #000 92%, transparent);
+    mask-composite: intersect;
+}
+
+.plant-list .plant-card:hover .card-plate img {
+    opacity: 1;
+}
+
+.card-initial {
+    font-size: 5em;
+    font-style: italic;
+    line-height: 1;
+    color: rgba(var(--color-primary-rgb), 0.15);
+}
+
+.card-text {
+    padding: 12px 18px 16px;
+    text-align: center;
+}
+
+.plant-list .plant-card h3 {
+    margin: 0 0 4px;
+    font-size: 1.25em;
+    line-height: 1.25;
+}
+
+/* The whole card is clickable (the link stretches over it) */
+.plant-list .plant-card h3 a {
+    text-decoration: none;
+}
+
+.plant-list .plant-card h3 a::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+}
+
+.plant-list .plant-card h3 a:focus-visible {
+    outline: none;
+}
+
+.plant-list .plant-card:focus-within {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+.plant-list .plant-card .common-names {
+    margin: 0;
+    font-size: 0.95em;
+    color: var(--color-secondary);
+}
+
+.plant-list {
+    gap: 22px;
+}
+
+/* Phone: compact horizontal cards, small plate on the left */
+@media (max-width: 600px) {
+    .plant-list {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .plant-list .plant-card {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .card-plate {
+        flex: 0 0 84px;
+        height: 96px;
+        padding: 6px;
+    }
+
+    .card-initial {
+        font-size: 3em;
+    }
+
+    .card-text {
+        padding: 10px 14px 10px 4px;
+        text-align: left;
+    }
+
+    .plant-list .plant-card h3 {
+        font-size: 1.1em;
+    }
+}
+
+/* ---------- Search bar on the main page: one row ---------- */
+
+.search-filter-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: 12px;
+    align-items: stretch;
+}
+
+.search-filter-row .filter-box {
+    display: block;
+    min-width: 0;
+}
+
+.search-box input,
+.filter-box input,
+.filter-box select {
+    width: 100%;
+    min-width: 0;
+    height: 46px;
+    padding: 0 14px;
+    font-size: 1em;
+    font-family: var(--font-family-serif);
+    color: var(--color-text);
+    background-color: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(139, 115, 85, 0.35);
+    border-radius: 6px;
+    box-shadow: none;
+    box-sizing: border-box;
+}
+
+.filter-box select {
+    padding-right: 38px;
+    background-color: rgba(255, 255, 255, 0.92);
+}
+
+.search-box input:focus,
+.filter-box input:focus,
+.filter-box select:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(var(--color-primary-rgb), 0.12);
+}
+
+.filter-box select:hover {
+    box-shadow: none;
+}
+
+.results-count {
+    margin-top: 10px;
+}
+
+@media (max-width: 899px) {
+    .search-filter-row {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .search-filter-row .search-box {
+        grid-column: 1 / -1;
+    }
+
+    /* 16px stops iPhones from zooming into the field */
+    .search-box input,
+    .filter-box input,
+    .filter-box select {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-filter-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ---------- Phone: header, menu and language buttons ---------- */
+@media (max-width: 600px) {
+    /* Leave room for the language buttons above the title */
+    header {
+        padding-top: 52px;
+    }
+
+    .lang-picker {
+        top: 12px;
+        right: 12px;
+    }
+
+    /* Menu on one line */
+    .system-nav {
+        margin-bottom: 24px;
+        padding-top: 10px;
+        padding-bottom: 12px;
+    }
+
+    .system-nav a {
+        display: inline-block;
+        margin: 0 10px;
+        padding: 6px 2px;
     }
 }

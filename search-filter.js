@@ -106,12 +106,18 @@
         const propertySelect = document.getElementById('property-filter');
         if (!propertySelect) return;
 
-        propertySelect.addEventListener('change', function(e) {
-            const selectedProperty = e.target.value;
-            if (selectedProperty && !currentFilters.properties.includes(selectedProperty)) {
-                addPropertyFilter(selectedProperty);
-                e.target.value = ''; // Reset select
-            }
+        // The field shows translated labels; propertyByLabel maps them back to the stored names
+        const pick = function(e) {
+            const typed = e.target.value.trim().toLowerCase();
+            const selectedProperty = propertyByLabel.get(typed);
+            if (!selectedProperty) return;
+            if (!currentFilters.properties.includes(selectedProperty)) addPropertyFilter(selectedProperty);
+            e.target.value = '';
+        };
+        propertySelect.addEventListener('change', pick);
+        propertySelect.addEventListener('input', function(e) {
+            // Choosing a suggestion fills in the exact label: apply it right away
+            if (propertyByLabel.has(e.target.value.trim().toLowerCase())) pick(e);
         });
     }
 
@@ -340,6 +346,9 @@
     /**
      * Populate property dropdown with all available properties (with validation and sanitization)
      */
+    // Translated property label (lower case) -> property name in plants-data.js
+    let propertyByLabel = new Map();
+
     function populatePropertyDropdown() {
         const select = document.getElementById('property-filter');
         if (!select) return;
@@ -365,12 +374,11 @@
         }));
         pairs.sort((a, b) => a.label.localeCompare(b.label));
 
-        const options = pairs.map(({ value, label }) =>
-            `<option value="${escapeHtml(value)}">${escapeHtml(label)}</option>`
-        ).join('');
-
-        const placeholder = escapeHtml(I18n ? I18n.t('filter.property.placeholder') : 'Select a property...');
-        select.innerHTML = `<option value="">${placeholder}</option>${options}`;
+        propertyByLabel = new Map(pairs.map(({ value, label }) => [label.toLowerCase(), value]));
+        const list = document.getElementById('property-options');
+        if (list) {
+            list.innerHTML = pairs.map(({ label }) => `<option value="${escapeHtml(label)}"></option>`).join('');
+        }
     }
 
     /**

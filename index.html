@@ -91,14 +91,15 @@
                         </div>
 
                         <div class="filter-box">
-                            <label for="property-filter" data-i18n="filter.property.label">Filter by property:</label>
-                            <select id="property-filter" aria-label="Filter by medicinal property">
-                                <option value="" data-i18n="filter.property.placeholder">Select a property...</option>
-                            </select>
+                            <label for="property-filter" class="visually-hidden" data-i18n="filter.property.label">Filter by property:</label>
+                            <!-- Type to find a property; matching properties are suggested from the list -->
+                            <input type="text" id="property-filter" list="property-options" autocomplete="off"
+                                placeholder="Select a property..." data-i18n-placeholder="filter.property.placeholder" />
+                            <datalist id="property-options"></datalist>
                         </div>
 
                         <div class="filter-box">
-                            <label for="family-filter" data-i18n="filter.family.label">Filter by family:</label>
+                            <label for="family-filter" class="visually-hidden" data-i18n="filter.family.label">Filter by family:</label>
                             <select id="family-filter" aria-label="Filter by botanical family">
                                 <option value="" data-i18n="filter.family.placeholder">Select a family...</option>
                             </select>

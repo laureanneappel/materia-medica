@@ -68,10 +68,20 @@
 
             const url = window.Utils.plantUrl(plant.fileSlug);
             const href = escapeHtml(window.I18n ? window.I18n.withLang(url) : url);
+
+            // Small version of the botanical plate (images/plants/thumbs/), loaded when scrolled into view;
+            // plants without a plate get a quiet initial instead
+            const plate = plant.image && typeof plant.image === 'string'
+                ? `<img src="${escapeHtml(plant.image.replace('images/plants/', 'images/plants/thumbs/'))}" alt="" loading="lazy" decoding="async">`
+                : `<span class="card-initial" aria-hidden="true">${escapeHtml(plant.botanicalName.charAt(0))}</span>`;
+
             return `
             <div class="plant-card ${status}">
-                <h3 class="card-latin"><a href="${href}"><em>${botanicalName}</em></a></h3>
-                ${commonNames}
+                <div class="card-plate">${plate}</div>
+                <div class="card-text">
+                    <h3 class="card-latin"><a href="${href}"><em>${botanicalName}</em></a></h3>
+                    ${commonNames}
+                </div>
             </div>`;
         } catch (error) {
             console.error('[PlantsRenderer] Error in createPlantCardHTML:', error);
