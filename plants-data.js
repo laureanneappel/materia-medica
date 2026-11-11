@@ -25,7 +25,9 @@ window.PLANTS_DATA = [
       "Immunosuppressive"
     ],
     "status": "enabled",
-    "fileSlug": "albizia"
+    "fileSlug": "albizia",
+    "image": "images/plants/albizia.jpg",
+    "imageCredit": "Blanco, Flora de Filipinas (1880) · public domain"
   },
   {
     "commonName": "Aloe Vera",
@@ -161,7 +163,9 @@ window.PLANTS_DATA = [
       "Liver regenerating"
     ],
     "status": "enabled",
-    "fileSlug": "artichoke"
+    "fileSlug": "artichoke",
+    "image": "images/plants/artichoke.jpg",
+    "imageCredit": "Bonelli & Sabbati, Hortus Romanus (1772–1793) · public domain"
   },
   {
     "commonName": "Astragalus",
@@ -207,7 +211,9 @@ window.PLANTS_DATA = [
       "Tonic"
     ],
     "status": "enabled",
-    "fileSlug": "bacopa"
+    "fileSlug": "bacopa",
+    "image": "images/plants/bacopa.jpg",
+    "imageCredit": "Blanco, Flora de Filipinas (1880) · public domain"
   },
   {
     "commonName": "Barberry",
@@ -248,7 +254,9 @@ window.PLANTS_DATA = [
       "Estrogen regulating"
     ],
     "status": "enabled",
-    "fileSlug": "beth-root"
+    "fileSlug": "beth-root",
+    "image": "images/plants/beth-root.jpg",
+    "imageCredit": "Millspaugh, American Medicinal Plants (1887) · public domain"
   },
   {
     "commonName": "Bilberry",
@@ -336,7 +344,9 @@ window.PLANTS_DATA = [
       "Uterine tonic"
     ],
     "status": "enabled",
-    "fileSlug": "black-haw"
+    "fileSlug": "black-haw",
+    "image": "images/plants/black-haw.jpg",
+    "imageCredit": "Duhamel, Traité des arbres et arbustes, Redouté · public domain"
   },
   {
     "commonName": "Blackcurrant",
@@ -434,7 +444,9 @@ window.PLANTS_DATA = [
       "Vasodilator"
     ],
     "status": "enabled",
-    "fileSlug": "bugleweed"
+    "fileSlug": "bugleweed",
+    "image": "images/plants/bugleweed.jpg",
+    "imageCredit": "Millspaugh, American Medicinal Plants (1887) · public domain"
   },
   {
     "commonName": "Bupleurum",
@@ -449,7 +461,9 @@ window.PLANTS_DATA = [
       "Kidney tonic"
     ],
     "status": "enabled",
-    "fileSlug": "bupleurum"
+    "fileSlug": "bupleurum",
+    "image": "images/plants/bupleurum.jpg",
+    "imageCredit": "Sowerby, English Botany · public domain"
   },
   {
     "commonName": "Burdock",
@@ -870,7 +884,9 @@ window.PLANTS_DATA = [
       "Bladder tonic"
     ],
     "status": "enabled",
-    "fileSlug": "cranberry"
+    "fileSlug": "cranberry",
+    "image": "images/plants/cranberry.jpg",
+    "imageCredit": "Kops, Flora Batava (1872) · public domain"
   },
   {
     "commonName": "Crataeva",
@@ -1066,7 +1082,9 @@ window.PLANTS_DATA = [
       "Bronchial spasmolytic"
     ],
     "status": "enabled",
-    "fileSlug": "euphorbia"
+    "fileSlug": "euphorbia",
+    "image": "images/plants/euphorbia.jpg",
+    "imageCredit": "Descourtilz, Flore médicale des Antilles (1827) · public domain"
   },
   {
     "commonName": "Eyebright",
@@ -1099,7 +1117,9 @@ window.PLANTS_DATA = [
       "Estrogen regulating"
     ],
     "status": "enabled",
-    "fileSlug": "false-unicorn-root"
+    "fileSlug": "false-unicorn-root",
+    "image": "images/plants/false-unicorn-root.jpg",
+    "imageCredit": "Millspaugh, American Medicinal Plants (1887) · public domain"
   },
   {
     "commonName": "Fennel",
@@ -1485,7 +1505,9 @@ window.PLANTS_DATA = [
     ],
     "status": "enabled",
     "fileSlug": "gravel-root",
-    "family": "Asteraceae (Daisy family)"
+    "family": "Asteraceae (Daisy family)",
+    "image": "images/plants/gravel-root.jpg",
+    "imageCredit": "Millspaugh, American Medicinal Plants (1887) · public domain"
   },
   {
     "commonName": "Green Tea",
@@ -1699,7 +1721,9 @@ window.PLANTS_DATA = [
       "Blood pressure regulating"
     ],
     "status": "enabled",
-    "fileSlug": "jujube"
+    "fileSlug": "jujube",
+    "image": "images/plants/jujube.jpg",
+    "imageCredit": "Duhamel, Traité des arbres et arbustes, Redouté · public domain"
   },
   {
     "commonName": "Lady's Mantle",
@@ -2087,7 +2111,9 @@ window.PLANTS_DATA = [
     ],
     "status": "enabled",
     "fileSlug": "oregon-grape",
-    "family": "Berberidaceae (Barberry family)"
+    "family": "Berberidaceae (Barberry family)",
+    "image": "images/plants/oregon-grape.jpg",
+    "imageCredit": "Edwards's Botanical Register (1831) · public domain"
   },
   {
     "commonName": "Partridgeberry",
@@ -2101,7 +2127,9 @@ window.PLANTS_DATA = [
       "Uterine relaxant"
     ],
     "status": "enabled",
-    "fileSlug": "partridgeberry"
+    "fileSlug": "partridgeberry",
+    "image": "images/plants/partridgeberry.jpg",
+    "imageCredit": "Millspaugh, American Medicinal Plants (1887) · public domain"
   },
   {
     "commonName": "Passionflower",
@@ -2351,7 +2379,9 @@ window.PLANTS_DATA = [
       "Interferon stimulating"
     ],
     "status": "enabled",
-    "fileSlug": "rehmannia"
+    "fileSlug": "rehmannia",
+    "image": "images/plants/rehmannia.jpg",
+    "imageCredit": "S. A. Drake (19th century) · public domain"
   },
   {
     "commonName": "Reishi Mushroom",
@@ -2386,7 +2416,9 @@ window.PLANTS_DATA = [
       "Vasodilator"
     ],
     "status": "enabled",
-    "fileSlug": "reishi"
+    "fileSlug": "reishi",
+    "image": "images/plants/reishi.jpg",
+    "imageCredit": "Flora Danica (1761–1883) · public domain"
   },
   {
     "commonName": "Rhodiola",
@@ -2549,7 +2581,9 @@ window.PLANTS_DATA = [
       "Uterine contracting"
     ],
     "status": "enabled",
-    "fileSlug": "schisandra"
+    "fileSlug": "schisandra",
+    "image": "images/plants/schisandra.jpg",
+    "imageCredit": "Flore des serres et des jardins de l'Europe · public domain"
   },
   {
     "commonName": "Senna",
@@ -2637,7 +2671,9 @@ window.PLANTS_DATA = [
       "Nerve tonic"
     ],
     "status": "enabled",
-    "fileSlug": "skullcap"
+    "fileSlug": "skullcap",
+    "image": "images/plants/skullcap.jpg",
+    "imageCredit": "Millspaugh, American Medicinal Plants (1887) · public domain"
   },
   {
     "commonName": "Slippery Elm",
@@ -2787,7 +2823,9 @@ window.PLANTS_DATA = [
       "Blood pressure regulating"
     ],
     "status": "enabled",
-    "fileSlug": "tree-peony"
+    "fileSlug": "tree-peony",
+    "image": "images/plants/tree-peony.jpg",
+    "imageCredit": "Witte, Flora (1868) · public domain"
   },
   {
     "commonName": "Turkey Rhubarb",
@@ -2928,7 +2966,9 @@ window.PLANTS_DATA = [
       "Woman tonic"
     ],
     "status": "enabled",
-    "fileSlug": "white-peony"
+    "fileSlug": "white-peony",
+    "image": "images/plants/white-peony.jpg",
+    "imageCredit": "Curtis's Botanical Magazine (1815) · public domain"
   },
   {
     "commonName": "White Willow",
