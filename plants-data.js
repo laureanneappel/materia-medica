@@ -189,7 +189,9 @@ window.PLANTS_DATA = [
       "Tonic"
     ],
     "status": "enabled",
-    "fileSlug": "astragalus"
+    "fileSlug": "astragalus",
+    "image": "images/plants/astragalus.jpg",
+    "imageCredit": "Wu Qijun, Zhiwu Mingshi Tukao (1848): 黃耆 · public domain"
   },
   {
     "commonName": "Bacopa",
@@ -793,7 +795,9 @@ window.PLANTS_DATA = [
       "Immunomodulating"
     ],
     "status": "enabled",
-    "fileSlug": "codonopsis"
+    "fileSlug": "codonopsis",
+    "image": "images/plants/codonopsis.jpg",
+    "imageCredit": "Wu Qijun, Zhiwu Mingshi Tukao (1848): 黨參 · public domain"
   },
   {
     "commonName": "Coleus",
@@ -983,7 +987,9 @@ window.PLANTS_DATA = [
       "Vasodilator"
     ],
     "status": "enabled",
-    "fileSlug": "danshen"
+    "fileSlug": "danshen",
+    "image": "images/plants/danshen.jpg",
+    "imageCredit": "Wu Qijun, Zhiwu Mingshi Tukao (1848): 丹參 · public domain"
   },
   {
     "commonName": "Devil's Claw",
@@ -1574,7 +1580,9 @@ window.PLANTS_DATA = [
       "Mucolytic"
     ],
     "status": "enabled",
-    "fileSlug": "grindelia"
+    "fileSlug": "grindelia",
+    "image": "images/plants/grindelia.jpg",
+    "imageCredit": "Curtis's Botanical Magazine (1815): Grindelia squarrosa · public domain"
   },
   {
     "commonName": "Guaiacum",
@@ -2080,7 +2088,9 @@ window.PLANTS_DATA = [
       "Hemostatic"
     ],
     "status": "enabled",
-    "fileSlug": "notoginseng"
+    "fileSlug": "notoginseng",
+    "image": "images/plants/notoginseng.jpg",
+    "imageCredit": "Wu Qijun, Zhiwu Mingshi Tukao (1848): 三七 · public domain"
   },
   {
     "commonName": "Oat Straw",
@@ -2354,7 +2364,9 @@ window.PLANTS_DATA = [
       "Pain relieving"
     ],
     "status": "enabled",
-    "fileSlug": "propolis"
+    "fileSlug": "propolis",
+    "image": "images/plants/propolis.jpg",
+    "imageCredit": "John Levett, The Ordering of Bees (1634) · public domain"
   },
   {
     "commonName": "Pushkarmool",
