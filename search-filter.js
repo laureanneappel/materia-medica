@@ -48,19 +48,19 @@
         // Store all plants data with validation
         if (typeof window.PLANTS_DATA === 'undefined') {
             console.error('[SearchFilter] PLANTS_DATA not loaded');
-            showError('Plant database failed to load. Please refresh the page.');
+            showError((window.I18n ? window.I18n.t('error.loadFailed') : 'Failed to load plant data. Please refresh the page.'));
             return;
         }
 
         if (!Array.isArray(window.PLANTS_DATA)) {
             console.error('[SearchFilter] PLANTS_DATA is not an array');
-            showError('Plant database is corrupted. Please contact support.');
+            showError((window.I18n ? window.I18n.t('error.corrupted') : 'Plant data could not be read.'));
             return;
         }
 
         if (window.PLANTS_DATA.length === 0) {
             console.warn('[SearchFilter] PLANTS_DATA is empty');
-            showInfo('No plants available in the database.');
+            showInfo((window.I18n ? window.I18n.t('info.noPlants') : 'No plants found.'));
             return;
         }
 
@@ -166,11 +166,13 @@
         const I18n = window.I18n;
         const filterTags = currentFilters.properties.map(prop => {
             const escapedProp = escapeHtml(prop);
-            const label = escapeHtml(I18n ? I18n.tProperty(prop) : prop);
+            const name = I18n ? I18n.tProperty(prop) : prop;
+            const label = escapeHtml(name);
+            const removeLabel = escapeHtml(I18n ? I18n.format(I18n.t('filter.remove'), { label: name }) : 'Remove ' + name + ' filter');
             return `
                 <span class="filter-tag">
                     ${label}
-                    <button class="remove-filter" data-property="${escapedProp}" aria-label="Remove ${label} filter">×</button>
+                    <button class="remove-filter" data-property="${escapedProp}" aria-label="${removeLabel}">×</button>
                 </span>
             `;
         }).join('');

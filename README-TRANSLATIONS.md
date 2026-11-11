@@ -43,7 +43,7 @@ All translation files use **Latin botanical names as the primary reference** (so
 
 **Usage**:
 - Translate PDF Danish properties to database English properties
-- Source: egenskaber.pdf (Danish)
+- Source: Egenskaber PDF (Danish)
 - Target: plants-data.js (English)
 
 ### 3. PDF-NAME-CORRECTIONS.json
@@ -85,48 +85,47 @@ All translation files use **Latin botanical names as the primary reference** (so
 ```
 
 **Usage**:
-- Source of truth extracted from egenskaber.pdf
-- Used by verification script to check database accuracy
-- Used by fix script to correct mismatches
+- Generated from the Egenskaber PDF by tools/sync-from-pdf.py
 
-## Verification & Fix Scripts
+## Sync Tool
 
-### verify-against-pdf.cjs
-Verifies that plants-data.js matches egenskaber.pdf 100%
+`tools/sync-from-pdf.py` reads the reference PDF (`Egenskaber*.pdf` in the project folder, kept out of git) and makes the database match it. It needs only the Python and Swift that come with the macOS developer tools.
 
 ```bash
-node verify-against-pdf.cjs
+python3 tools/sync-from-pdf.py --check   # show differences, write nothing
+python3 tools/sync-from-pdf.py           # apply them
 ```
 
-Output:
-- ✅ Plant status verification (enabled/disabled)
-- ✅ Property accuracy verification
-- 📋 Detailed report saved to verification-report.json
+It updates `plants-data.js` (properties and status), `PDF-PROPERTIES-TO-PLANTS.json`, `PDF-MASTER-PLANT-LIST.txt`, `PLANT-NAME-TRANSLATIONS.json` and the Botanical Name / Properties sections of `plants/*.html`.
 
-### fix-from-pdf.cjs
-Automatically fixes database to match PDF
-
-```bash
-node fix-from-pdf.cjs
-```
-
-Actions:
-- Disables plants not in PDF
-- Enables plants from PDF
-- Adds missing properties
-- Removes incorrect properties
+If the PDF has a heading or plant name it doesn't know, it stops without writing anything and says what to add.
 
 ## Workflow
 
-1. **PDF is modified** → Update reference files
-2. **Run verification** → `node verify-against-pdf.cjs`
-3. **If mismatches found** → `node fix-from-pdf.cjs`
-4. **Confirm 100% match** → Verification shows ✅
+1. **PDF is edited** → save it in the project folder as `Egenskaber….pdf`
+2. **Check** → `python3 tools/sync-from-pdf.py --check`
+3. **New heading?** → add it to `DANISH-TO-ENGLISH-PROPERTIES.json` and its Danish/French labels to `i18n.js`
+4. **New spelling of a known plant?** → add it to `PDF-NAME-CORRECTIONS.json`
+5. **New plant?** → add it to `plants-data.js` and create its page in `plants/`
+6. **Apply** → `python3 tools/sync-from-pdf.py`
+
+## Writing Text on Plant Pages
+
+Headings, labels, names, properties and family switch language automatically.
+For text you write yourself, put one paragraph per language; only the active one is shown:
+
+```html
+<p data-lang="en"><strong>Sunlight:</strong> Prefers partial shade.</p>
+<p data-lang="da"><strong>Lys:</strong> Foretrækker halvskygge.</p>
+<p data-lang="fr"><strong>Ensoleillement :</strong> Préfère la mi-ombre.</p>
+```
+
+Plant names (English, Danish, French) are edited in `plants-data.js` only; the pages read them from there.
 
 ## Language Priorities
 
 1. **Latin** - Primary reference (botanical names)
-2. **Danish** - Source for property names (egenskaber.pdf)
+2. **Danish** - Source for property names (Egenskaber PDF)
 3. **English** - Database language (plants-data.js)
 4. **French** - Supplementary translations
 

@@ -10,7 +10,6 @@
         <link rel="stylesheet" href="styles.css">
         <script src="utils.js"></script>
     <script src="i18n.js"></script>
-        <script src="page-transition.js"></script>
         <script src="navigation.js" defer></script>
         <script src="footer.js" defer></script>
         <script src="plants-data.js"></script>
@@ -43,7 +42,9 @@
                         
                         // Announce results to screen readers
                         if (announcement) {
-                            announcement.textContent = visibleCount + ' ' + (visibleCount === 1 ? 'result' : 'results') + ' found';
+                            announcement.textContent = window.I18n
+                                ? window.I18n.format(window.I18n.t(visibleCount === 1 ? 'props.search.one' : 'props.search.many'), { count: visibleCount })
+                                : visibleCount + ' results found';
                         }
                     }, 300);
                 });
@@ -52,7 +53,7 @@
     </head>
 
     <body>
-        <a href="#main-content" class="skip-link">Skip to main content</a>
+        <a href="#main-content" class="skip-link" data-i18n="a11y.skip">Skip to main content</a>
         <div class="container">
             <header>
                 <h1 data-i18n="props.pageTitle">Medicinal Property Statistics</h1>
@@ -77,7 +78,7 @@
                 </div>
 
                 <div class="search-box-stats">
-                    <label for="property-search" class="visually-hidden">Search properties or plants</label>
+                    <label for="property-search" class="visually-hidden" data-i18n="props.search.label">Search properties or plants</label>
                     <input
                         type="text"
                         id="property-search"

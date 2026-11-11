@@ -139,13 +139,13 @@
             // Get plants data from global variable (loaded from plants-data.js)
             if (typeof window.PLANTS_DATA === 'undefined') {
                 console.error('[PlantsRenderer] PLANTS_DATA not loaded. Make sure plants-data.js is included before plants-renderer.js');
-                container.innerHTML = '<p class="error" role="alert">Failed to load plant data. Please refresh the page.</p>';
+                container.innerHTML = '<p class="error" role="alert">' + escapeHtml((window.I18n ? window.I18n.t('error.loadFailed') : 'Failed to load plant data. Please refresh the page.')) + '</p>';
                 return;
             }
 
             if (!Array.isArray(window.PLANTS_DATA)) {
                 console.error('[PlantsRenderer] PLANTS_DATA is not an array:', typeof window.PLANTS_DATA);
-                container.innerHTML = '<p class="error" role="alert">Plant data is corrupted. Please contact support.</p>';
+                container.innerHTML = '<p class="error" role="alert">' + escapeHtml((window.I18n ? window.I18n.t('error.corrupted') : 'Plant data could not be read.')) + '</p>';
                 return;
             }
 
@@ -161,7 +161,7 @@
             }
 
             if (validPlants.length === 0) {
-                container.innerHTML = '<p class="info" role="status">No plants found for this category.</p>';
+                container.innerHTML = '<p class="info" role="status">' + escapeHtml((window.I18n ? window.I18n.t('info.noPlants') : 'No plants found.')) + '</p>';
                 return;
             }
 
@@ -186,7 +186,7 @@
             console.error('[PlantsRenderer] Error rendering plant cards:', error);
             const container = document.getElementById(containerId);
             if (container) {
-                container.innerHTML = '<p class="error" role="alert">Failed to load plant data. Please refresh the page.</p>';
+                container.innerHTML = '<p class="error" role="alert">' + escapeHtml((window.I18n ? window.I18n.t('error.loadFailed') : 'Failed to load plant data. Please refresh the page.')) + '</p>';
             }
         }
     }

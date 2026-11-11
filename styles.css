@@ -484,6 +484,13 @@ header h1 {
     font-weight: normal;
 }
 
+/* Text written in several languages: show only the active language */
+html:not([lang="en"]) .plant-detail [data-lang="en"],
+html:not([lang="da"]) .plant-detail [data-lang="da"],
+html:not([lang="fr"]) .plant-detail [data-lang="fr"] {
+    display: none;
+}
+
 .section {
     margin-bottom: 30px;
 }

@@ -9,8 +9,9 @@
         <link rel="stylesheet" href="../styles.css">
         <script src="../utils.js"></script>
         <script src="../i18n.js"></script>
-        <script src="../page-transition.js"></script>
-        <script src="../navigation.js" defer></script>
+        <script src="../plants-data.js"></script>
+        <script src="../plant-page.js" defer></script>
+        <script src="../footer.js" defer></script>
     </head>
 
     <body>
@@ -18,71 +19,89 @@
             <a href="../index.html" class="back-link">← Back to Plant List</a>
 
             <div class="plant-detail">
-                <h1>German Chamomile</h1>
+                <h1 data-plant="name">German Chamomile</h1>
 
                 <div class="section">
-                    <h2>Botanical Name</h2>
+                    <h2 data-i18n="plant.botanicalName">Botanical Name</h2>
                     <p><em>Matricaria chamomilla</em></p>
                 </div>
                 <div class="section">
-                    <h2>Common Names</h2>
-                    <p><strong>English:</strong> Chamomile</p>
-                    <p><strong>Danish:</strong> Kamille</p>
-                    <p><strong>French:</strong> Camomille</p>
+                    <h2 data-i18n="plant.commonNames">Common Names</h2>
+                    <p><strong data-i18n="plant.english">English:</strong> <span data-plant="name-en">German Chamomile</span></p>
+                    <p><strong data-i18n="plant.danish">Danish:</strong> <span data-plant="name-da">Kamille</span></p>
+                    <p><strong data-i18n="plant.french">French:</strong> <span data-plant="name-fr">Camomille</span></p>
                 </div>
 
                 <div class="section clear">
-                    <h2>Habitat and Growing Conditions</h2>
+                    <h2 data-i18n="plant.habitatGrowing">Habitat and Growing Conditions</h2>
 
-                    <h3>Habitat</h3>
-                    <p><strong>Natural habitat:</strong> Prefers sunny locations on roadsides, wastelands, and fields. It is a weed species that grows well in various climates across Europe, Asia, and North America.</p>
-                    <p><strong>Soil preference:</strong> Thrives in sandy or loamy, well-drained soils but can tolerate poor conditions and moderately saline soils.</p>
-                    <p><strong>Sunlight:</strong> Full sun is ideal, but it can tolerate some light shade.</p>
+                    <h3 data-i18n="plant.habitat">Habitat</h3>
+                    <p data-lang="en"><strong>Natural habitat:</strong> Prefers sunny locations on roadsides, wastelands, and fields. It is a weed species that grows well in various climates across Europe, Asia, and North America.</p>
+                    <p data-lang="da"><strong>Naturligt voksested:</strong> Foretrækker solrige steder i vejkanter, på affaldspladser og marker. Den er en ukrudtsart, der trives i mange klimaer i Europa, Asien og Nordamerika.</p>
+                    <p data-lang="fr"><strong>Habitat naturel :</strong> Préfère les endroits ensoleillés en bord de route, les friches et les champs. C'est une adventice qui pousse bien sous divers climats en Europe, en Asie et en Amérique du Nord.</p>
+                    <p data-lang="en"><strong>Soil preference:</strong> Thrives in sandy or loamy, well-drained soils but can tolerate poor conditions and moderately saline soils.</p>
+                    <p data-lang="da"><strong>Jordbund:</strong> Trives i sandet eller muldet, veldrænet jord, men tåler næringsfattig og moderat saltholdig jord.</p>
+                    <p data-lang="fr"><strong>Sol préféré :</strong> Se plaît dans les sols sableux ou limoneux bien drainés, mais tolère les sols pauvres et modérément salins.</p>
+                    <p data-lang="en"><strong>Sunlight:</strong> Full sun is ideal, but it can tolerate some light shade.</p>
+                    <p data-lang="da"><strong>Lys:</strong> Fuld sol er ideelt, men den tåler let skygge.</p>
+                    <p data-lang="fr"><strong>Ensoleillement :</strong> Le plein soleil est idéal, mais elle tolère une légère ombre.</p>
 
-                    <h3>Growing Conditions</h3>
-                    <p><strong>Temperature:</strong> Prefers daytime temperatures of 19-25°C but can tolerate a wider range. Young plants are susceptible to damage from frost (0°C), while mature plants can survive dormancy down to about -5°C.</p>
-                    <p><strong>Soil pH:</strong> Best in a pH range of 5.5-6.5, but tolerates 5.0-7.0.</p>
-                    <p><strong>Watering:</strong> Water regularly to keep the soil moist, especially since the roots are shallow. Avoid waterlogging.</p>
-                    <p><strong>Fertilizer:</strong> Does not require much fertilizer, as it grows well in poor soils. Over-fertilizing can reduce oil yield.</p>
-                    <p><strong>Maintenance:</strong> Prune or deadhead regularly to encourage new growth and more flowers. After the first harvest, trim the stems to promote new development.</p>
+                    <h3 data-i18n="plant.growing">Growing Conditions</h3>
+                    <p data-lang="en"><strong>Temperature:</strong> Prefers daytime temperatures of 19-25°C but can tolerate a wider range. Young plants are susceptible to damage from frost (0°C), while mature plants can survive dormancy down to about -5°C.</p>
+                    <p data-lang="da"><strong>Temperatur:</strong> Foretrækker dagtemperaturer på 19-25 °C, men tåler et bredere spænd. Unge planter tager skade af frost (0 °C), mens udvoksede planter kan overleve i hvile ned til ca. -5 °C.</p>
+                    <p data-lang="fr"><strong>Température :</strong> Préfère des températures diurnes de 19-25 °C mais tolère une plage plus large. Les jeunes plants sont sensibles au gel (0 °C), tandis que les plantes adultes peuvent survivre en dormance jusqu'à environ -5 °C.</p>
+                    <p data-lang="en"><strong>Soil pH:</strong> Best in a pH range of 5.5-6.5, but tolerates 5.0-7.0.</p>
+                    <p data-lang="da"><strong>Jordens pH:</strong> Bedst ved pH 5,5-6,5, men tåler 5,0-7,0.</p>
+                    <p data-lang="fr"><strong>pH du sol :</strong> Idéal entre pH 5,5 et 6,5, mais tolère 5,0-7,0.</p>
+                    <p data-lang="en"><strong>Watering:</strong> Water regularly to keep the soil moist, especially since the roots are shallow. Avoid waterlogging.</p>
+                    <p data-lang="da"><strong>Vanding:</strong> Vand regelmæssigt, så jorden holdes fugtig, især fordi rødderne er overfladiske. Undgå vandmætning.</p>
+                    <p data-lang="fr"><strong>Arrosage :</strong> Arroser régulièrement pour garder le sol humide, d'autant que les racines sont superficielles. Éviter l'excès d'eau.</p>
+                    <p data-lang="en"><strong>Fertilizer:</strong> Does not require much fertilizer, as it grows well in poor soils. Over-fertilizing can reduce oil yield.</p>
+                    <p data-lang="da"><strong>Gødning:</strong> Behøver ikke meget gødning, da den trives i næringsfattig jord. For meget gødning kan nedsætte olieudbyttet.</p>
+                    <p data-lang="fr"><strong>Engrais :</strong> N'a pas besoin de beaucoup d'engrais, car elle pousse bien en sol pauvre. Un excès d'engrais peut réduire le rendement en huile.</p>
+                    <p data-lang="en"><strong>Maintenance:</strong> Prune or deadhead regularly to encourage new growth and more flowers. After the first harvest, trim the stems to promote new development.</p>
+                    <p data-lang="da"><strong>Pleje:</strong> Beskær eller fjern visne blomster jævnligt for at fremme ny vækst og flere blomster. Klip stænglerne ned efter første høst for at fremme nye skud.</p>
+                    <p data-lang="fr"><strong>Entretien :</strong> Tailler ou supprimer régulièrement les fleurs fanées pour favoriser une nouvelle croissance et plus de fleurs. Après la première récolte, rabattre les tiges pour stimuler de nouvelles pousses.</p>
                 </div>
 
                 <div class="section clear">
-                    <h2>Active Constituents</h2>
-                    <p class="placeholder">[Add active constituents/ingredients here]</p>
+                    <h2 data-i18n="plant.constituents">Active Constituents</h2>
+                    <p data-i18n="plant.ph.constituents" class="placeholder">[Add active constituents/ingredients here]</p>
                 </div>
 
                 <div class="section clear">
-                    <h2>Properties</h2>
-                    <p>Antiallergic, Anti-inflammatory (general), Anti-inflammatory (digestive), Anti-inflammatory (topical), Anti-ulcer, Antirheumatic, Antioxidant, Bitter tonic, Carminative, Choleretic, Vulnerary, Antispasmodic, Sedative, Antifungal, Immunomodulating</p>
-                    <h3>Side Effects</h3>
-                    <p class="placeholder">[Add side effects/adverse effects here]</p>
+                    <h2 data-i18n="plant.properties">Properties</h2>
+                    <p data-plant="properties">Anti-inflammatory (digestive/mucous membranes/skin), Anti-inflammatory (general), Anti-ulcer, Antiallergic, Antibacterial, Antifungal, Antioxidant, Antirheumatic, Antispasmodic, Bitter tonic, Bronchial spasmolytic, Carminative, Cholagogue, Demulcent, Healing, Hypnotic, Immunomodulating, Mucous membrane strengthening, Mucous membrane tonic, Pain relieving, Sedative, Woman tonic</p>
+                    <h3 data-i18n="plant.sideEffects">Side Effects</h3>
+                    <p data-i18n="plant.ph.sideEffects" class="placeholder">[Add side effects/adverse effects here]</p>
                 </div>
 
                 <div class="section clear">
-                    <h2>Pertinent Information</h2>
-                    <h3>Family</h3>
-                    <p>Asteraceae (Daisy family)</p>
-                    <h3>Parts Used</h3>
-                    <p class="placeholder">[Add parts used here]</p>
-                    <h3>Forms Used and Doses</h3>
-                    <p class="placeholder">[Add forms used and doses here]</p>
+                    <h2 data-i18n="plant.pertinent">Pertinent Information</h2>
+                    <h3 data-i18n="plant.family">Family</h3>
+                    <p data-plant="family">Asteraceae (Daisy family)</p>
+                    <h3 data-i18n="plant.partsUsed">Parts Used</h3>
+                    <p data-i18n="plant.ph.parts" class="placeholder">[Add parts used here]</p>
+                    <h3 data-i18n="plant.forms">Forms Used and Doses</h3>
+                    <p data-i18n="plant.ph.forms" class="placeholder">[Add forms used and doses here]</p>
                 </div>
 
-                <div class="section clear">
-                    <h2>Personal Experience</h2>
-                    <h3>Taste</h3>
-                    <p class="placeholder">[Add your personal notes on taste here]</p>
+                <div class="section clear" hidden>
+                    <h2 data-i18n="plant.personal">Personal Experience</h2>
+                    <h3 data-i18n="plant.taste">Taste</h3>
+                    <p data-i18n="plant.ph.taste" class="placeholder">[Add your personal notes on taste here]</p>
 
-                    <h3>Effect</h3>
-                    <p class="placeholder">[Add your personal notes on effects here]</p>
+                    <h3 data-i18n="plant.effect">Effect</h3>
+                    <p data-i18n="plant.ph.effect" class="placeholder">[Add your personal notes on effects here]</p>
                 </div>
 
-                <div class="section clear">
-                    <h2>References</h2>
-                    <p class="placeholder">[Add reference books, authors, and page numbers here]</p>
+                <div class="section clear" hidden>
+                    <h2 data-i18n="plant.references">References</h2>
+                    <p data-i18n="plant.ph.references" class="placeholder">[Add reference books, authors, and page numbers here]</p>
                 </div>
             </div>
+
+            <div id="footer-placeholder"></div>
         </div>
     </body>
 

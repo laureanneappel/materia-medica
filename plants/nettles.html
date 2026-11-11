@@ -9,8 +9,9 @@
         <link rel="stylesheet" href="../styles.css">
         <script src="../utils.js"></script>
         <script src="../i18n.js"></script>
-        <script src="../page-transition.js"></script>
-        <script src="../navigation.js" defer></script>
+        <script src="../plants-data.js"></script>
+        <script src="../plant-page.js" defer></script>
+        <script src="../footer.js" defer></script>
     </head>
 
     <body>
@@ -18,79 +19,119 @@
             <a href="../index.html" class="back-link">← Back to Plant List</a>
 
             <div class="plant-detail">
-                <h1>Nettles</h1>
+                <h1 data-plant="name">Nettles</h1>
 
                 <div class="section">
-                    <h2>Botanical Name</h2>
+                    <h2 data-i18n="plant.botanicalName">Botanical Name</h2>
                     <p><em>Urtica dioica</em></p>
                 </div>
                 <div class="section">
-                    <h2>Common Names</h2>
-                    <p><strong>English:</strong> Nettles</p>
-                    <p><strong>Danish:</strong> Brændenælde</p>
-                    <p><strong>French:</strong> Ortie</p>
+                    <h2 data-i18n="plant.commonNames">Common Names</h2>
+                    <p><strong data-i18n="plant.english">English:</strong> <span data-plant="name-en">Nettles</span></p>
+                    <p><strong data-i18n="plant.danish">Danish:</strong> <span data-plant="name-da">Brændenælde</span></p>
+                    <p><strong data-i18n="plant.french">French:</strong> <span data-plant="name-fr">Ortie</span></p>
                 </div>
 
                 <div class="section clear">
-                    <h2>Habitat and Growing Conditions</h2>
+                    <h2 data-i18n="plant.habitatGrowing">Habitat and Growing Conditions</h2>
 
-                    <h3>Habitat</h3>
-                    <p><strong>Natural habitat:</strong> Found abundantly in temperate regions throughout Europe, Asia, North America, and North Africa.</p>
-                    <p><strong>Preferred locations:</strong> Thrives in disturbed soils, along roadsides, woodland edges, riverbanks, hedgerows, and waste ground.</p>
-                    <p><strong>Soil preference:</strong> Rich, moist, nitrogen-rich soils with high organic matter content. Often indicates fertile soil.</p>
-                    <p><strong>Sunlight:</strong> Prefers partial shade but tolerates full sun if soil remains moist.</p>
-                    <p><strong>Moisture:</strong> Requires consistently moist soil; commonly found near water sources.</p>
+                    <h3 data-i18n="plant.habitat">Habitat</h3>
+                    <p data-lang="en"><strong>Natural habitat:</strong> Found abundantly in temperate regions throughout Europe, Asia, North America, and North Africa.</p>
+                    <p data-lang="da"><strong>Naturligt voksested:</strong> Findes i stort antal i tempererede egne i hele Europa, Asien, Nordamerika og Nordafrika.</p>
+                    <p data-lang="fr"><strong>Habitat naturel :</strong> Très répandue dans les régions tempérées d'Europe, d'Asie, d'Amérique du Nord et d'Afrique du Nord.</p>
+                    <p data-lang="en"><strong>Preferred locations:</strong> Thrives in disturbed soils, along roadsides, woodland edges, riverbanks, hedgerows, and waste ground.</p>
+                    <p data-lang="da"><strong>Foretrukne steder:</strong> Trives på forstyrret jord, i vejkanter, skovbryn, ved åbredder, i hegn og på affaldspladser.</p>
+                    <p data-lang="fr"><strong>Lieux de prédilection :</strong> Prospère sur les sols perturbés, le long des routes, en lisière de bois, sur les berges, dans les haies et les terrains vagues.</p>
+                    <p data-lang="en"><strong>Soil preference:</strong> Rich, moist, nitrogen-rich soils with high organic matter content. Often indicates fertile soil.</p>
+                    <p data-lang="da"><strong>Jordbund:</strong> Næringsrig, fugtig og kvælstofrig jord med højt indhold af organisk materiale. Er ofte et tegn på frugtbar jord.</p>
+                    <p data-lang="fr"><strong>Sol préféré :</strong> Sols riches, humides et azotés, à forte teneur en matière organique. Indique souvent un sol fertile.</p>
+                    <p data-lang="en"><strong>Sunlight:</strong> Prefers partial shade but tolerates full sun if soil remains moist.</p>
+                    <p data-lang="da"><strong>Lys:</strong> Foretrækker halvskygge, men tåler fuld sol, hvis jorden holdes fugtig.</p>
+                    <p data-lang="fr"><strong>Ensoleillement :</strong> Préfère la mi-ombre mais tolère le plein soleil si le sol reste humide.</p>
+                    <p data-lang="en"><strong>Moisture:</strong> Requires consistently moist soil; commonly found near water sources.</p>
+                    <p data-lang="da"><strong>Fugtighed:</strong> Kræver konstant fugtig jord; findes ofte nær vand.</p>
+                    <p data-lang="fr"><strong>Humidité :</strong> A besoin d'un sol constamment humide ; on la trouve souvent près de l'eau.</p>
 
-                    <h3>Growing Conditions</h3>
-                    <p><strong>Perennial:</strong> Hardy perennial that spreads via creeping rhizomes and can form dense colonies.</p>
-                    <p><strong>Hardiness:</strong> Very hardy, survives in USDA zones 3-10. Tolerates temperatures down to -40°C.</p>
-                    <p><strong>Soil pH:</strong> Prefers slightly acidic to neutral pH (6.0-7.5).</p>
-                    <p><strong>Water:</strong> Keep soil consistently moist but well-drained. Established plants are drought-tolerant but quality diminishes.</p>
-                    <p><strong>Propagation:</strong> Can be grown from seed in early spring or by dividing rhizomes in spring or autumn.</p>
-                    <p><strong>Growth:</strong> Reaches 1-2 meters (3-6 feet) in height. Dies back in winter and re-emerges in spring.</p>
-                    <p><strong>Caution:</strong> Spreads vigorously and can become invasive. Plant in contained areas or manage carefully.</p>
+                    <h3 data-i18n="plant.growing">Growing Conditions</h3>
+                    <p data-lang="en"><strong>Perennial:</strong> Hardy perennial that spreads via creeping rhizomes and can form dense colonies.</p>
+                    <p data-lang="da"><strong>Flerårig:</strong> Hårdfør staude, der spreder sig med krybende jordstængler og kan danne tætte bestande.</p>
+                    <p data-lang="fr"><strong>Vivace :</strong> Vivace rustique qui se propage par des rhizomes traçants et peut former des colonies denses.</p>
+                    <p data-lang="en"><strong>Hardiness:</strong> Very hardy, survives in USDA zones 3-10. Tolerates temperatures down to -40°C.</p>
+                    <p data-lang="da"><strong>Hårdførhed:</strong> Meget hårdfør, overlever i USDA-zone 3-10. Tåler temperaturer ned til -40 °C.</p>
+                    <p data-lang="fr"><strong>Rusticité :</strong> Très rustique, survit en zones USDA 3-10. Supporte des températures jusqu'à -40 °C.</p>
+                    <p data-lang="en"><strong>Soil pH:</strong> Prefers slightly acidic to neutral pH (6.0-7.5).</p>
+                    <p data-lang="da"><strong>Jordens pH:</strong> Foretrækker let sur til neutral pH (6,0-7,5).</p>
+                    <p data-lang="fr"><strong>pH du sol :</strong> Préfère un pH légèrement acide à neutre (6,0-7,5).</p>
+                    <p data-lang="en"><strong>Water:</strong> Keep soil consistently moist but well-drained. Established plants are drought-tolerant but quality diminishes.</p>
+                    <p data-lang="da"><strong>Vand:</strong> Hold jorden konstant fugtig, men veldrænet. Etablerede planter tåler tørke, men kvaliteten forringes.</p>
+                    <p data-lang="fr"><strong>Arrosage :</strong> Garder le sol constamment humide mais bien drainé. Les plantes établies tolèrent la sécheresse, mais leur qualité diminue.</p>
+                    <p data-lang="en"><strong>Propagation:</strong> Can be grown from seed in early spring or by dividing rhizomes in spring or autumn.</p>
+                    <p data-lang="da"><strong>Formering:</strong> Kan sås tidligt om foråret eller formeres ved deling af jordstængler forår eller efterår.</p>
+                    <p data-lang="fr"><strong>Multiplication :</strong> Peut être semée au début du printemps ou multipliée par division des rhizomes au printemps ou à l'automne.</p>
+                    <p data-lang="en"><strong>Growth:</strong> Reaches 1-2 meters (3-6 feet) in height. Dies back in winter and re-emerges in spring.</p>
+                    <p data-lang="da"><strong>Vækst:</strong> Bliver 1-2 meter høj. Visner ned om vinteren og skyder igen om foråret.</p>
+                    <p data-lang="fr"><strong>Croissance :</strong> Atteint 1 à 2 mètres de hauteur. Disparaît en hiver et repousse au printemps.</p>
+                    <p data-lang="en"><strong>Caution:</strong> Spreads vigorously and can become invasive. Plant in contained areas or manage carefully.</p>
+                    <p data-lang="da"><strong>Bemærk:</strong> Spreder sig kraftigt og kan blive invasiv. Plant den et afgrænset sted, eller hold den nøje i ave.</p>
+                    <p data-lang="fr"><strong>Attention :</strong> Se propage vigoureusement et peut devenir envahissante. La planter dans un espace délimité ou la contrôler soigneusement.</p>
                 </div>
 
                 <div class="section clear">
-                    <h2>Active Constituents</h2>
-                    <p><strong>Leaves:</strong> Flavonoids, phenolic compounds, organic acids, vitamins, mineral salts, protein, boron, vitamins A, C, D, E, F, K, P. Proteins represent 30% of the dry mass. Mineral substances content is approximately 20% of the dry mass.</p>
-                    <p><strong>Root:</strong> Lectins, polysaccharides, sterols, lignans.</p>
-                    <p><strong>Fruits (seeds):</strong> Saturated and unsaturated fatty acids, carotenoids (β-carotene, lutein, violaxanthin), vitamins.</p>
+                    <h2 data-i18n="plant.constituents">Active Constituents</h2>
+                    <p data-lang="en"><strong>Leaves:</strong> Flavonoids, phenolic compounds, organic acids, vitamins, mineral salts, protein, boron, vitamins A, C, D, E, F, K, P. Proteins represent 30% of the dry mass. Mineral substances content is approximately 20% of the dry mass.</p>
+                    <p data-lang="da"><strong>Blade:</strong> Flavonoider, fenolforbindelser, organiske syrer, vitaminer, mineralsalte, protein, bor, vitamin A, C, D, E, F, K og P. Proteiner udgør 30 % af tørstoffet. Indholdet af mineraler er ca. 20 % af tørstoffet.</p>
+                    <p data-lang="fr"><strong>Feuilles :</strong> Flavonoïdes, composés phénoliques, acides organiques, vitamines, sels minéraux, protéines, bore, vitamines A, C, D, E, F, K, P. Les protéines représentent 30 % de la matière sèche. La teneur en substances minérales est d'environ 20 % de la matière sèche.</p>
+                    <p data-lang="en"><strong>Root:</strong> Lectins, polysaccharides, sterols, lignans.</p>
+                    <p data-lang="da"><strong>Rod:</strong> Lektiner, polysakkarider, steroler, lignaner.</p>
+                    <p data-lang="fr"><strong>Racine :</strong> Lectines, polysaccharides, stérols, lignanes.</p>
+                    <p data-lang="en"><strong>Fruits (seeds):</strong> Saturated and unsaturated fatty acids, carotenoids (β-carotene, lutein, violaxanthin), vitamins.</p>
+                    <p data-lang="da"><strong>Frugter (frø):</strong> Mættede og umættede fedtsyrer, carotenoider (β-caroten, lutein, violaxanthin), vitaminer.</p>
+                    <p data-lang="fr"><strong>Fruits (graines) :</strong> Acides gras saturés et insaturés, caroténoïdes (β-carotène, lutéine, violaxanthine), vitamines.</p>
                 </div>
 
                 <div class="section clear">
-                    <h2>Properties</h2>
-                    <p>Antiallergic, Anti-inflammatory (topical), Antilithic, Antirheumatic, Blood purifying, Hemostatic, Blood building, Choleretic, Uterine contractor, Galactagogue, Prostate growth inhibiting</p>
-                    <h3>Side Effects</h3>
-                    <p>Do not take in large quantities if you have kidney failure</p>
-                    <p>Do not take if you suffer from hemochromatosis (excess iron)</p>
-                    <p>Nettle is rich in vitamin K, therefore it is contraindicated if you are taking vitamin K antagonist anticoagulants (such as warfarin)</p>
+                    <h2 data-i18n="plant.properties">Properties</h2>
+                    <p data-plant="properties">Anti-inflammatory (general), Antibacterial, Antiviral (internal), Cholesterol lowering, Immunomodulating</p>
+                    <h3 data-i18n="plant.sideEffects">Side Effects</h3>
+                    <p data-lang="en">Do not take in large quantities if you have kidney failure</p>
+                    <p data-lang="da">Tag ikke store mængder, hvis du har nyresvigt.</p>
+                    <p data-lang="fr">Ne pas consommer en grande quantité en cas d'insuffisance rénale.</p>
+                    <p data-lang="en">Do not take if you suffer from hemochromatosis (excess iron)</p>
+                    <p data-lang="da">Tag den ikke, hvis du lider af hæmokromatose (jernophobning).</p>
+                    <p data-lang="fr">Ne pas consommer en cas d'hémochromatose (surcharge en fer).</p>
+                    <p data-lang="en">Nettle is rich in vitamin K, therefore it is contraindicated if you are taking vitamin K antagonist anticoagulants (such as warfarin)</p>
+                    <p data-lang="da">Brændenælde er rig på K-vitamin og er derfor kontraindiceret, hvis du tager blodfortyndende medicin af typen K-vitamin-antagonister (f.eks. warfarin).</p>
+                    <p data-lang="fr">L'ortie est riche en vitamine K ; elle est donc contre-indiquée en cas de traitement par anticoagulants antivitamine K (comme la warfarine).</p>
                 </div>
 
                 <div class="section clear">
-                    <h2>Pertinent Information</h2>
-                    <h3>Family</h3>
-                    <p>Urticaceae (Nettle family)</p>
-                    <h3>Parts Used</h3>
-                    <p>Leaves, whole plant, roots, seeds</p>
-                    <h3>Forms Used and Doses</h3>
-                    <p class="placeholder">[Add forms used and doses here]</p>
+                    <h2 data-i18n="plant.pertinent">Pertinent Information</h2>
+                    <h3 data-i18n="plant.family">Family</h3>
+                    <p data-plant="family">Urticaceae (Nettle family)</p>
+                    <h3 data-i18n="plant.partsUsed">Parts Used</h3>
+                    <p data-lang="en">Leaves, whole plant, roots, seeds</p>
+                    <p data-lang="da">Blade, hele planten, rødder, frø</p>
+                    <p data-lang="fr">Feuilles, plante entière, racines, graines</p>
+                    <h3 data-i18n="plant.forms">Forms Used and Doses</h3>
+                    <p data-i18n="plant.ph.forms" class="placeholder">[Add forms used and doses here]</p>
                 </div>
 
-                <div class="section clear">
-                    <h2>Personal Experience</h2>
-                    <h3>Taste</h3>
-                    <p class="placeholder">[Add your personal notes on taste here]</p>
+                <div class="section clear" hidden>
+                    <h2 data-i18n="plant.personal">Personal Experience</h2>
+                    <h3 data-i18n="plant.taste">Taste</h3>
+                    <p data-i18n="plant.ph.taste" class="placeholder">[Add your personal notes on taste here]</p>
 
-                    <h3>Effect</h3>
-                    <p class="placeholder">[Add your personal notes on effects here]</p>
+                    <h3 data-i18n="plant.effect">Effect</h3>
+                    <p data-i18n="plant.ph.effect" class="placeholder">[Add your personal notes on effects here]</p>
                 </div>
 
-                <div class="section clear">
-                    <h2>References</h2>
-                    <p class="placeholder">[Add reference books, authors, and page numbers here]</p>
+                <div class="section clear" hidden>
+                    <h2 data-i18n="plant.references">References</h2>
+                    <p data-i18n="plant.ph.references" class="placeholder">[Add reference books, authors, and page numbers here]</p>
                 </div>
             </div>
+
+            <div id="footer-placeholder"></div>
         </div>
     </body>
 

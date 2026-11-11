@@ -9,8 +9,9 @@
         <link rel="stylesheet" href="../styles.css">
         <script src="../utils.js"></script>
         <script src="../i18n.js"></script>
-        <script src="../page-transition.js"></script>
-        <script src="../navigation.js" defer></script>
+        <script src="../plants-data.js"></script>
+        <script src="../plant-page.js" defer></script>
+        <script src="../footer.js" defer></script>
     </head>
 
     <body>
@@ -18,109 +19,148 @@
             <a href="../index.html" class="back-link">← Back to Plant List</a>
 
             <div class="plant-detail">
-                <h1>Hawthorn</h1>
+                <h1 data-plant="name">Hawthorn</h1>
 
                 <div class="section">
-                    <h2>Botanical Name</h2>
+                    <h2 data-i18n="plant.botanicalName">Botanical Name</h2>
                     <p><em>Crataegus arter</em></p>
                 </div>
                 <div class="section">
-                    <h2>Common Names</h2>
-                    <p><strong>English:</strong> Hawthorn</p>
-                    <p><strong>Danish:</strong> Hvidtjørn</p>
-                    <p><strong>French:</strong> Aubépine</p>
+                    <h2 data-i18n="plant.commonNames">Common Names</h2>
+                    <p><strong data-i18n="plant.english">English:</strong> <span data-plant="name-en">Hawthorn</span></p>
+                    <p><strong data-i18n="plant.danish">Danish:</strong> <span data-plant="name-da">Hvidtjørn</span></p>
+                    <p><strong data-i18n="plant.french">French:</strong> <span data-plant="name-fr">Aubépine</span></p>
                 </div>
 
                 <div class="section clear">
-                    <h2>Habitat and Growing Conditions</h2>
+                    <h2 data-i18n="plant.habitatGrowing">Habitat and Growing Conditions</h2>
 
-                    <h3>Habitat</h3>
-                    <p><strong>Geographic:</strong> Native to southern Scandinavia, the Baltic region, and other parts
+                    <h3 data-i18n="plant.habitat">Habitat</h3>
+                    <p data-lang="en"><strong>Geographic:</strong> Native to southern Scandinavia, the Baltic region, and other parts
                         of Europe.</p>
-                    <p><strong>Location:</strong> Found in woodlands, hedges, thickets, and disturbed or semi-cleared
+                    <p data-lang="da"><strong>Udbredelse:</strong> Hjemmehørende i Sydskandinavien, Baltikum og andre dele af Europa.</p>
+                    <p data-lang="fr"><strong>Répartition :</strong> Originaire du sud de la Scandinavie, de la région balte et d'autres régions d'Europe.</p>
+                    <p data-lang="en"><strong>Location:</strong> Found in woodlands, hedges, thickets, and disturbed or semi-cleared
                         areas.</p>
-                    <p><strong>Elevation:</strong> Can grow from sea level up to 1,800 m altitude.</p>
-                    <p><strong>Soil:</strong> Grows on a variety of soils, including limestone, granite, or volcanic
+                    <p data-lang="da"><strong>Voksested:</strong> Findes i skove, hegn, krat og forstyrrede eller delvist ryddede områder.</p>
+                    <p data-lang="fr"><strong>Milieu :</strong> Pousse dans les bois, les haies, les fourrés et les zones perturbées ou partiellement défrichées.</p>
+                    <p data-lang="en"><strong>Elevation:</strong> Can grow from sea level up to 1,800 m altitude.</p>
+                    <p data-lang="da"><strong>Højde:</strong> Kan vokse fra havniveau op til 1.800 m over havet.</p>
+                    <p data-lang="fr"><strong>Altitude :</strong> Peut pousser du niveau de la mer jusqu'à 1 800 m d'altitude.</p>
+                    <p data-lang="en"><strong>Soil:</strong> Grows on a variety of soils, including limestone, granite, or volcanic
                         rock, and is adaptable to chalk, clay, loam, and sand. Avoid areas with constantly waterlogged
                         soil.</p>
+                    <p data-lang="da"><strong>Jord:</strong> Vokser på mange jordtyper, herunder kalksten, granit og vulkansk klippe, og tilpasser sig kalk-, ler-, muld- og sandjord. Undgå steder med konstant vandmættet jord.</p>
+                    <p data-lang="fr"><strong>Sol :</strong> Pousse sur des sols variés, notamment calcaires, granitiques ou volcaniques, et s'adapte aux sols crayeux, argileux, limoneux et sableux. Éviter les sols constamment détrempés.</p>
 
-                    <h3>Growing Conditions</h3>
-                    <p><strong>Sunlight:</strong> Prefers full sun to partial shade. It can grow in shade but may have
+                    <h3 data-i18n="plant.growing">Growing Conditions</h3>
+                    <p data-lang="en"><strong>Sunlight:</strong> Prefers full sun to partial shade. It can grow in shade but may have
                         poor growth and pale leaves in very low light.</p>
-                    <p><strong>Soil pH:</strong> Tolerates a range of soil pH levels, including acid, alkaline, or
+                    <p data-lang="da"><strong>Lys:</strong> Foretrækker fuld sol til halvskygge. Kan vokse i skygge, men får ved meget lidt lys ofte svag vækst og blege blade.</p>
+                    <p data-lang="fr"><strong>Ensoleillement :</strong> Préfère le plein soleil à la mi-ombre. Peut pousser à l'ombre, mais en très faible luminosité la croissance est faible et les feuilles pâles.</p>
+                    <p data-lang="en"><strong>Soil pH:</strong> Tolerates a range of soil pH levels, including acid, alkaline, or
                         neutral.</p>
-                    <p><strong>Water:</strong> Has average water needs. It is drought-tolerant once established but
+                    <p data-lang="da"><strong>Jordens pH:</strong> Tåler mange pH-niveauer – både sur, basisk og neutral jord.</p>
+                    <p data-lang="fr"><strong>pH du sol :</strong> Tolère une large gamme de pH : sols acides, alcalins ou neutres.</p>
+                    <p data-lang="en"><strong>Water:</strong> Has average water needs. It is drought-tolerant once established but
                         needs regular watering during its first year to develop a strong root system.</p>
-                    <p><strong>Hardiness:</strong> Very hardy, tolerating cold temperatures. Can withstand exposed
+                    <p data-lang="da"><strong>Vand:</strong> Har et gennemsnitligt vandbehov. Tåler tørke, når den er etableret, men skal vandes regelmæssigt det første år for at udvikle et stærkt rodnet.</p>
+                    <p data-lang="fr"><strong>Arrosage :</strong> Besoins en eau moyens. Résiste à la sécheresse une fois installée, mais doit être arrosée régulièrement la première année pour développer un système racinaire solide.</p>
+                    <p data-lang="en"><strong>Hardiness:</strong> Very hardy, tolerating cold temperatures. Can withstand exposed
                         conditions and urban pollution.</p>
-                    <p><strong>Pruning:</strong> Requires minimal pruning, typically just for removing dead, diseased,
+                    <p data-lang="da"><strong>Hårdførhed:</strong> Meget hårdfør og tåler kulde. Kan klare udsatte forhold og byforurening.</p>
+                    <p data-lang="fr"><strong>Rusticité :</strong> Très rustique, résiste au froid. Supporte les situations exposées et la pollution urbaine.</p>
+                    <p data-lang="en"><strong>Pruning:</strong> Requires minimal pruning, typically just for removing dead, diseased,
                         or misplaced branches. Pruning is best done in late winter.</p>
+                    <p data-lang="da"><strong>Beskæring:</strong> Kræver minimal beskæring, typisk kun fjernelse af døde, syge eller forkert placerede grene. Beskær helst sidst på vinteren.</p>
+                    <p data-lang="fr"><strong>Taille :</strong> Nécessite peu de taille, généralement seulement pour retirer les branches mortes, malades ou mal placées. Tailler de préférence en fin d'hiver.</p>
 
-                    <h3>Harvesting</h3>
-                    <p><strong>Leaves:</strong> Although leaves can be harvested in spring, summer, and autumn, they are much more beautiful and tender in spring when they are just emerging.</p>
+                    <h3 data-i18n="plant.harvesting">Harvesting</h3>
+                    <p data-lang="en"><strong>Leaves:</strong> Although leaves can be harvested in spring, summer, and autumn, they are much more beautiful and tender in spring when they are just emerging.</p>
+                    <p data-lang="da"><strong>Blade:</strong> Bladene kan høstes forår, sommer og efterår, men de er langt smukkest og mest møre om foråret, når de lige er sprunget ud.</p>
+                    <p data-lang="fr"><strong>Feuilles :</strong> Les feuilles peuvent être récoltées au printemps, en été et en automne, mais elles sont bien plus belles et tendres au printemps, lorsqu'elles viennent d'apparaître.</p>
 
-                    <p><strong>Flowers:</strong> Harvest flowers when barely open or still in bud, otherwise the petals will fall off during drying. Dry them away from sunlight in a dry place. Store in airtight jars to preserve them as long as possible away from moisture.</p>
+                    <p data-lang="en"><strong>Flowers:</strong> Harvest flowers when barely open or still in bud, otherwise the petals will fall off during drying. Dry them away from sunlight in a dry place. Store in airtight jars to preserve them as long as possible away from moisture.</p>
+                    <p data-lang="da"><strong>Blomster:</strong> Høst blomsterne, når de knap er sprunget ud eller stadig er i knop, ellers falder kronbladene af under tørringen. Tør dem et tørt sted uden direkte sollys. Opbevar dem i lufttætte glas, beskyttet mod fugt, så de holder sig længst muligt.</p>
+                    <p data-lang="fr"><strong>Fleurs :</strong> Récolter les fleurs à peine ouvertes ou encore en boutons, sinon les pétales tombent au séchage. Les faire sécher dans un endroit sec, à l'abri du soleil. Les conserver dans des bocaux hermétiques, à l'abri de l'humidité, pour les garder le plus longtemps possible.</p>
 
-                    <p><strong>Fruits:</strong> Harvest the fruits in autumn when they are still a beautiful red color. They will keep their nice red color which will darken slightly, and will wrinkle slightly while hardening.</p>
+                    <p data-lang="en"><strong>Fruits:</strong> Harvest the fruits in autumn when they are still a beautiful red color. They will keep their nice red color which will darken slightly, and will wrinkle slightly while hardening.</p>
+                    <p data-lang="da"><strong>Frugter:</strong> Høst frugterne om efteråret, mens de stadig har en smuk rød farve. De bevarer den røde farve, som bliver lidt mørkere, og rynker en smule, mens de hærder.</p>
+                    <p data-lang="fr"><strong>Fruits :</strong> Récolter les fruits en automne lorsqu'ils sont encore d'un beau rouge. Ils garderont leur belle couleur rouge, qui foncera légèrement, et se rideront un peu en durcissant.</p>
                 </div>
 
                 <div class="section clear">
-                    <h2>Active Constituents</h2>
-                    <p><strong>Flavonoids:</strong> These are a major group of beneficial compounds found in hawthorn
+                    <h2 data-i18n="plant.constituents">Active Constituents</h2>
+                    <p data-lang="en"><strong>Flavonoids:</strong> These are a major group of beneficial compounds found in hawthorn
                         leaves, flowers, and fruits (include hyperoside, rutin, isoquercetin, and vitexin).</p>
+                    <p data-lang="da"><strong>Flavonoider:</strong> En vigtig gruppe gavnlige stoffer, der findes i hvidtjørnens blade, blomster og frugter (bl.a. hyperosid, rutin, isoquercetin og vitexin).</p>
+                    <p data-lang="fr"><strong>Flavonoïdes :</strong> Un groupe majeur de composés bénéfiques présents dans les feuilles, les fleurs et les fruits de l'aubépine (notamment hyperoside, rutine, isoquercétine et vitexine).</p>
 
-                    <p><strong>Proanthocyanidins:</strong> Also known as OPCs, these are a type of flavonoid that are
+                    <p data-lang="en"><strong>Proanthocyanidins:</strong> Also known as OPCs, these are a type of flavonoid that are
                         particularly important for cardiovascular health. They are composed of smaller units like
                         catechin and epicatechin.</p>
+                    <p data-lang="da"><strong>Proanthocyanidiner:</strong> Også kendt som OPC'er – en type flavonoider, der er særligt vigtige for hjerte-kar-sundheden. De er opbygget af mindre enheder som catechin og epicatechin.</p>
+                    <p data-lang="fr"><strong>Proanthocyanidines :</strong> Également appelées OPC, ce sont des flavonoïdes particulièrement importants pour la santé cardiovasculaire. Elles sont composées d'unités plus petites comme la catéchine et l'épicatéchine.</p>
 
-                    <p><strong>Organic Acids:</strong> Hawthorn is rich in various organic acids (include malic, citric,
+                    <p data-lang="en"><strong>Organic Acids:</strong> Hawthorn is rich in various organic acids (include malic, citric,
                         and ascorbic acid).</p>
+                    <p data-lang="da"><strong>Organiske syrer:</strong> Hvidtjørn er rig på forskellige organiske syrer (bl.a. æblesyre, citronsyre og ascorbinsyre).</p>
+                    <p data-lang="fr"><strong>Acides organiques :</strong> L'aubépine est riche en divers acides organiques (notamment acide malique, citrique et ascorbique).</p>
 
-                    <p><strong>Triterpenes:</strong> Ursolic and oleanolic acid, found in hawthorn flowers and leaves.
+                    <p data-lang="en"><strong>Triterpenes:</strong> Ursolic and oleanolic acid, found in hawthorn flowers and leaves.
                     </p>
+                    <p data-lang="da"><strong>Triterpener:</strong> Ursolsyre og oleanolsyre, som findes i hvidtjørnens blomster og blade.</p>
+                    <p data-lang="fr"><strong>Triterpènes :</strong> Acide ursolique et acide oléanolique, présents dans les fleurs et les feuilles de l'aubépine.</p>
 
-                    <p><strong>Pectin:</strong> Hawthorn fruit is a source of pectin, a type of soluble fiber.</p>
+                    <p data-lang="en"><strong>Pectin:</strong> Hawthorn fruit is a source of pectin, a type of soluble fiber.</p>
+                    <p data-lang="da"><strong>Pektin:</strong> Hvidtjørnens frugter er en kilde til pektin, en type opløselige kostfibre.</p>
+                    <p data-lang="fr"><strong>Pectine :</strong> Le fruit de l'aubépine est une source de pectine, un type de fibre soluble.</p>
                 </div>
 
                 <div class="section clear">
-                    <h2>Properties</h2>
-                    <p>Antiarrhythmic, Antioxidant, Blood pressure regulating, Cardioprotective, Heart tonic,
-                        Vasodilator</p>
+                    <h2 data-i18n="plant.properties">Properties</h2>
+                    <p data-plant="properties">Antiarrhythmic, Antioxidant, Astringent, Blood pressure raising, Blood pressure regulating, Cardioprotective, Cholesterol lowering, Circulatory stimulant, Connective tissue strengthening, Heart tonic, Vasodilator</p>
 
-                    <h3>Uses</h3>
-                    <p>Hawthorn is the most well-known heart plant, the most respected, and probably the one that brings the most results in a wide variety of cases.</p>
+                    <h3 data-i18n="plant.uses">Uses</h3>
+                    <p data-lang="en">Hawthorn is the most well-known heart plant, the most respected, and probably the one that brings the most results in a wide variety of cases.</p>
+                    <p data-lang="da">Hvidtjørn er den mest kendte hjerteplante, den mest anerkendte og sandsynligvis den, der giver flest resultater i en lang række tilfælde.</p>
+                    <p data-lang="fr">L'aubépine est la plante du cœur la plus connue, la plus respectée, et probablement celle qui donne le plus de résultats dans une grande variété de cas.</p>
 
-                    <h3>Side Effects</h3>
-                    <p class="placeholder">[Add side effects/adverse effects here]</p>
+                    <h3 data-i18n="plant.sideEffects">Side Effects</h3>
+                    <p data-i18n="plant.ph.sideEffects" class="placeholder">[Add side effects/adverse effects here]</p>
                 </div>
 
                 <div class="section clear">
-                    <h2>Pertinent Information</h2>
-                    <h3>Family</h3>
-                    <p>Rosaceae (Rose family)</p>
-                    <h3>Parts Used</h3>
-                    <p>Flowers, leaves, and fruits. The flowers contain the highest concentration of flavonoids, while
+                    <h2 data-i18n="plant.pertinent">Pertinent Information</h2>
+                    <h3 data-i18n="plant.family">Family</h3>
+                    <p data-plant="family">Rosaceae (Rose family)</p>
+                    <h3 data-i18n="plant.partsUsed">Parts Used</h3>
+                    <p data-lang="en">Flowers, leaves, and fruits. The flowers contain the highest concentration of flavonoids, while
                         the leaves contain the most proanthocyanidins. To maximize the effectiveness of your
                         preparation, you can use all parts of the plant: leaves with small branch pieces, flowers, and
                         fruits.</p>
-                    <h3>Forms Used and Doses</h3>
-                    <p class="placeholder">[Add forms used and doses here]</p>
+                    <p data-lang="da">Blomster, blade og frugter. Blomsterne har det højeste indhold af flavonoider, mens bladene indeholder flest proanthocyanidiner. For at få den mest virksomme tilberedning kan du bruge alle plantens dele: blade med små kvistestykker, blomster og frugter.</p>
+                    <p data-lang="fr">Fleurs, feuilles et fruits. Les fleurs contiennent la plus forte concentration de flavonoïdes, tandis que les feuilles contiennent le plus de proanthocyanidines. Pour une préparation la plus efficace possible, on peut utiliser toutes les parties de la plante : feuilles avec de petits morceaux de rameaux, fleurs et fruits.</p>
+                    <h3 data-i18n="plant.forms">Forms Used and Doses</h3>
+                    <p data-i18n="plant.ph.forms" class="placeholder">[Add forms used and doses here]</p>
                 </div>
 
-                <div class="section clear">
-                    <h2>Personal Experience</h2>
-                    <h3>Taste</h3>
-                    <p class="placeholder">[Add your personal notes on taste here]</p>
+                <div class="section clear" hidden>
+                    <h2 data-i18n="plant.personal">Personal Experience</h2>
+                    <h3 data-i18n="plant.taste">Taste</h3>
+                    <p data-i18n="plant.ph.taste" class="placeholder">[Add your personal notes on taste here]</p>
 
-                    <h3>Effect</h3>
-                    <p class="placeholder">[Add your personal notes on effects here]</p>
+                    <h3 data-i18n="plant.effect">Effect</h3>
+                    <p data-i18n="plant.ph.effect" class="placeholder">[Add your personal notes on effects here]</p>
                 </div>
 
-                <div class="section clear">
-                    <h2>References</h2>
+                <div class="section clear" hidden>
+                    <h2 data-i18n="plant.references">References</h2>
                     <p>https://www.altheaprovence.com/aubepine-crataegus-monogyna/</p>
                 </div>
             </div>
+
+            <div id="footer-placeholder"></div>
         </div>
     </body>
 

@@ -108,7 +108,7 @@
                 return `<a href="${href}"${activeClass}>${label}</a>`;
             }).filter(Boolean).join('\n                ');
 
-            return `<nav class="system-nav" aria-label="Body systems navigation">
+            return `<nav class="system-nav" aria-label="${escapeHtml(translate('nav.aria', 'Main navigation'))}">
                 ${navHtml}
             </nav>`;
         } catch (error) {
@@ -123,10 +123,8 @@
     function injectNavigation() {
         try {
             const placeholder = document.getElementById('nav-placeholder');
-            if (!placeholder) {
-                console.error('[Navigation] nav-placeholder element not found');
-                return;
-            }
+            // Pages without a menu spot (plant pages use the back link instead)
+            if (!placeholder) return;
 
             const navHtml = createNavigation();
             if (!navHtml || typeof navHtml !== 'string') {

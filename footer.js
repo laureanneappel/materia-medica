@@ -10,10 +10,15 @@
      * Create footer HTML
      */
     function createFooter() {
-        return `<footer>
-            <p>Personal Materia Medica Collection</p>
-            <p class="disclaimer">Disclaimer: This website is for informational and educational purposes only. The information provided is not intended to diagnose, treat, cure, or prevent any disease. Always consult a qualified healthcare professional before using any herbal remedies or supplements. The author takes no responsibility for any consequences arising from the use of this information.</p>
-        </footer>`;
+        const footer = document.createElement('footer');
+        const title = document.createElement('p');
+        title.setAttribute('data-i18n', 'footer.title');
+        const disclaimer = document.createElement('p');
+        disclaimer.className = 'disclaimer';
+        disclaimer.setAttribute('data-i18n', 'footer.disclaimer');
+        footer.append(title, disclaimer);
+        if (window.I18n) window.I18n.applyTranslations(footer);
+        return footer;
     }
 
     /**
@@ -27,8 +32,7 @@
                 return;
             }
 
-            const footerHtml = createFooter();
-            placeholder.outerHTML = footerHtml;
+            placeholder.replaceWith(createFooter());
         } catch (error) {
             console.error('[Footer] Error in injectFooter:', error);
         }
