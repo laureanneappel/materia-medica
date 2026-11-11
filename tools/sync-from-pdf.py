@@ -154,6 +154,13 @@ def data_problems(plants, pdf_properties):
         for v in sorted(set(x for x in values if values.count(x) > 1)):
             problems.append('Two plants in plants-data.js have the same %s: "%s"' % (field, v))
 
+    # Botanical plates: plants-data.js "image" must point to an existing file
+    for p in plants:
+        if p.get('image') and not os.path.exists(path(p['image'])):
+            problems.append('%s: image "%s" does not exist' % (p['botanicalName'], p['image']))
+        if p.get('image') and not p.get('imageCredit'):
+            problems.append('%s: image has no imageCredit (where it comes from)' % p['botanicalName'])
+
     # Written text: content/<fileSlug>.html, optional, one per plant
     slugs = {p['fileSlug'] for p in plants}
     sections = {'habitat', 'constituents', 'uses', 'side-effects', 'parts-used', 'taste', 'effect', 'references'}

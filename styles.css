@@ -1161,41 +1161,83 @@ footer .disclaimer {
     color: var(--color-secondary);
 }
 
-/* Two columns: facts left, written text right */
-.plant-layout {
-    display: grid;
-    grid-template-columns: minmax(240px, 320px) minmax(0, 1fr);
-    gap: 40px;
-    align-items: start;
+/* Plate on the right; family, names, properties and text flow beside it */
+.plant-body {
+    display: flow-root;   /* keeps the floating plate inside */
 }
 
-.plant-detail.facts-only .plant-layout {
-    grid-template-columns: minmax(0, 1fr);
+/* Section headings in the text: one step below the properties heading */
+.plant-text .section {
+    margin-bottom: 24px;
 }
 
-.plant-detail.facts-only .plant-text {
-    display: none;
+.plant-text .section h2 {
+    font-size: 1.15em;
+    margin-bottom: 10px;
 }
 
-.plant-facts .section {
-    margin-bottom: 26px;
+.plant-text .section h3 {
+    font-size: 1em;
+    margin-top: 14px;
+    margin-bottom: 6px;
+}
+
+/* Family and names, right after the properties */
+.plant-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px 48px;
+    margin: 0 0 22px;
+    padding: 0 4px;
+}
+
+.plant-meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.plant-meta-label {
+    font-size: 0.8em;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-secondary);
+}
+
+.plant-meta .plant-names {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px 20px;
+}
+
+/* Keep each language label together with its name */
+.plant-meta .name-pair {
+    white-space: nowrap;
+}
+
+.plant-meta .name-lang {
+    color: var(--color-secondary);
+}
+
+/* At the bottom: plants with similar properties, across the full width */
+.plant-facts {
+    margin-top: 12px;
 }
 
 .plant-facts .section h2 {
     font-size: 1.15em;
 }
 
-.plant-text .section:first-child h2 {
-    margin-top: 0;
+.plant-facts .similar-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 40px;
 }
 
-/* Properties band under the plant name */
+/* Properties band: sits beside the plate, not under it */
 .plant-properties {
+    display: flow-root;
     margin: 0 0 32px;
-    padding: 20px 24px 22px;
-    background: rgba(var(--color-primary-rgb), 0.06);
-    border: 1px solid rgba(var(--color-primary-rgb), 0.18);
-    border-radius: 8px;
 }
 
 .plant-properties h2 {
@@ -1256,17 +1298,6 @@ footer .disclaimer {
     color: var(--color-primary);
 }
 
-/* Names in three languages */
-.plant-names {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 4px 12px;
-}
-
-.plant-names dt {
-    font-weight: bold;
-}
-
 /* Plants with similar properties */
 .similar-list {
     list-style: none;
@@ -1308,32 +1339,74 @@ footer .disclaimer {
     white-space: nowrap;
 }
 
-/* Facts only (nothing written yet): spread the facts over two columns on wide screens */
-@media (min-width: 900px) {
-    .plant-detail.facts-only .plant-facts {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        column-gap: 48px;
-    }
+/* Botanical plate: no frame; the white paper blends into the page and the edges fade out */
+.plant-plate {
+    float: right;
+    width: 320px;
+    margin: -8px -8px 20px 36px;
+}
 
-    .plant-detail.facts-only .plant-facts [data-similar-section] {
-        grid-column: 1 / -1;
-    }
+.plant-plate img {
+    display: block;
+    width: 100%;
+    height: auto;
+    mix-blend-mode: multiply;
+    opacity: 0.85;
+    /* Fade out evenly towards all four edges */
+    -webkit-mask-image:
+        linear-gradient(to right, transparent, #000 14%, #000 86%, transparent),
+        linear-gradient(to bottom, transparent, #000 10%, #000 88%, transparent);
+    -webkit-mask-composite: source-in;
+    mask-image:
+        linear-gradient(to right, transparent, #000 14%, #000 86%, transparent),
+        linear-gradient(to bottom, transparent, #000 10%, #000 88%, transparent);
+    mask-composite: intersect;
+}
 
-    .plant-detail.facts-only .similar-list {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        column-gap: 48px;
-    }
+.plant-plate figcaption {
+    margin-top: -4px;
+    font-size: 0.75em;
+    font-style: italic;
+    line-height: 1.4;
+    color: var(--color-secondary);
+    text-align: center;
+}
 
-    .plant-detail.facts-only .similar-list li:nth-last-child(2):nth-child(odd) {
-        border-bottom: 0;
-    }
+/* Section headings run under the plate, not through it */
+.plant-text .section h2 {
+    overflow: hidden;
 }
 
 @media (max-width: 899px) {
-    .plant-layout {
+    .plant-facts .similar-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    /* Phone: family and names, properties, plate, then the text */
+    .plant-body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .plant-meta { order: 1; }
+    .plant-properties { order: 2; }
+    .plant-plate { order: 3; }
+    .plant-text { order: 4; }
+
+    .plant-plate {
+        float: none;
+        width: auto;
+        max-width: 320px;
+        margin: 0 auto 24px;
+    }
+
+    .plant-facts .similar-list {
         grid-template-columns: minmax(0, 1fr);
-        gap: 0;
+    }
+
+    .plant-meta {
+        padding: 0 4px 20px;
     }
 }

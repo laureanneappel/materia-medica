@@ -28,7 +28,7 @@ The site is in **Danish** (default), **English** and **French**; the EN / DA / F
 
 - **index.html** - all plants, with search by name and filters by property and family
 - **property-statistics.html** - every property with the number of plants that have it: click to see the plants, sort A–Z or by number of plants, search properties and plants. Properties with subtypes (e.g. Antiinflammatoriske) are grouped
-- **plant.html** - the page for every plant (`plant.html?p=hawthorn`); it builds itself from the data. The properties come first, as tags in a band under the plant name. Below: facts on the left (family, names, and the 6 plants sharing the most properties) and written text on the right. Properties and family link to the plant list filtered on them (`index.html?property=Astringent`, `index.html?family=Rosaceae`)
+- **plant.html** - the page for every plant (`plant.html?p=hawthorn`); it builds itself from the data. Under the plant name: family and names, then the properties as tags, then the written text, with the plant's botanical plate (if it has one) on the right beside them; at the bottom, the 6 plants sharing the most properties. Plates live in `images/plants/` and are set in `plants-data.js` with `image` and `imageCredit`. Properties and family link to the plant list filtered on them (`index.html?property=Astringent`, `index.html?family=Rosaceae`)
 - **404.html** - sends old plant addresses (`plants/hawthorn.html`) to the new page
 
 ## Files

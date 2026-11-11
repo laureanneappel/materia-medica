@@ -82,6 +82,18 @@
         }
 
         renderSimilar(I18n, plant, lang);
+        renderPlate(plant, name);
+    }
+
+    // Botanical plate: plants-data.js "image" (path) and "imageCredit" (source line)
+    function renderPlate(plant, name) {
+        const figure = document.querySelector('[data-plant="plate"]');
+        if (!figure || !plant.image) return;
+        const img = figure.querySelector('img');
+        img.src = plant.image;
+        img.alt = name + ' (' + plant.botanicalName + ')';
+        figure.querySelector('figcaption').textContent = plant.imageCredit || '';
+        figure.hidden = false;
     }
 
     // The plants that share the most properties with this one
@@ -187,14 +199,6 @@
         renderData(I18n, plant);
         await renderContent(I18n, slug);
         handleEmptySpots(I18n);
-
-        // Nothing written yet (published site): show the facts in a single column
-        const text = document.querySelector('.plant-text');
-        const detail = document.querySelector('.plant-detail');
-        if (text && detail) {
-            const hasText = [...text.querySelectorAll(':scope > .section')].some(s => !s.hidden);
-            detail.classList.toggle('facts-only', !hasText);
-        }
     }
 
     if (document.readyState === 'loading') {

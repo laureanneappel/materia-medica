@@ -11,7 +11,9 @@ window.PLANTS_DATA = [
       "Hemostatic"
     ],
     "status": "enabled",
-    "fileSlug": "agrimony"
+    "fileSlug": "agrimony",
+    "image": "images/plants/agrimony.jpg",
+    "imageCredit": "Thomé, Flora von Deutschland (1885) · public domain"
   },
   {
     "commonName": "Albizia",
@@ -99,7 +101,9 @@ window.PLANTS_DATA = [
     ],
     "status": "enabled",
     "fileSlug": "angelica",
-    "family": "Apiaceae (Carrot family)"
+    "family": "Apiaceae (Carrot family)",
+    "image": "images/plants/angelica.jpg",
+    "imageCredit": "Köhler's Medizinal-Pflanzen (1887) · public domain"
   },
   {
     "commonName": "Anise",
@@ -115,7 +119,9 @@ window.PLANTS_DATA = [
       "Galactagogue"
     ],
     "status": "enabled",
-    "fileSlug": "anise"
+    "fileSlug": "anise",
+    "image": "images/plants/anise.jpg",
+    "imageCredit": "Köhler's Medizinal-Pflanzen (1887) · public domain"
   },
   {
     "commonName": "Arnica",
@@ -129,7 +135,9 @@ window.PLANTS_DATA = [
       "Antimicrobial"
     ],
     "status": "enabled",
-    "fileSlug": "arnica"
+    "fileSlug": "arnica",
+    "image": "images/plants/arnica.jpg",
+    "imageCredit": "Köhler's Medizinal-Pflanzen (1887) · public domain"
   },
   {
     "commonName": "Artichoke",
@@ -210,7 +218,9 @@ window.PLANTS_DATA = [
       "Interferon stimulating"
     ],
     "status": "enabled",
-    "fileSlug": "barberry"
+    "fileSlug": "barberry",
+    "image": "images/plants/barberry.jpg",
+    "imageCredit": "Thomé, Flora von Deutschland (1885) · public domain"
   },
   {
     "commonName": "Barberry species",
@@ -281,7 +291,9 @@ window.PLANTS_DATA = [
       "Kidney tonic"
     ],
     "status": "enabled",
-    "fileSlug": "birch"
+    "fileSlug": "birch",
+    "image": "images/plants/birch.jpg",
+    "imageCredit": "Thomé, Flora von Deutschland (1885) · public domain"
   },
   {
     "commonName": "Black Cohosh",
@@ -453,7 +465,9 @@ window.PLANTS_DATA = [
       "Venotonic"
     ],
     "status": "enabled",
-    "fileSlug": "butchers-broom"
+    "fileSlug": "butchers-broom",
+    "image": "images/plants/butchers-broom.jpg",
+    "imageCredit": "Thomé, Flora von Deutschland (1885) · public domain"
   },
   {
     "commonName": "Butternut",
@@ -477,7 +491,9 @@ window.PLANTS_DATA = [
       "Anticancer"
     ],
     "status": "enabled",
-    "fileSlug": "cacao"
+    "fileSlug": "cacao",
+    "image": "images/plants/cacao.jpg",
+    "imageCredit": "Köhler's Medizinal-Pflanzen (1887) · public domain"
   },
   {
     "commonName": "Calendula",
@@ -504,7 +520,9 @@ window.PLANTS_DATA = [
       "Woman tonic"
     ],
     "status": "enabled",
-    "fileSlug": "calendula"
+    "fileSlug": "calendula",
+    "image": "images/plants/calendula.jpg",
+    "imageCredit": "Köhler's Medizinal-Pflanzen (1887) · public domain"
   },
   {
     "commonName": "Cascara Sagrada",
@@ -516,7 +534,9 @@ window.PLANTS_DATA = [
       "Laxative"
     ],
     "status": "enabled",
-    "fileSlug": "cascara-sagrada"
+    "fileSlug": "cascara-sagrada",
+    "image": "images/plants/cascara-sagrada.jpg",
+    "imageCredit": "Köhler's Medizinal-Pflanzen (1887) · public domain"
   },
   {
     "commonName": "Cassia Cinnamon",
@@ -570,7 +590,9 @@ window.PLANTS_DATA = [
       "Weight reducing"
     ],
     "status": "enabled",
-    "fileSlug": "cayenne"
+    "fileSlug": "cayenne",
+    "image": "images/plants/cayenne.jpg",
+    "imageCredit": "Köhler's Medizinal-Pflanzen (1887): Capsicum annuum · public domain"
   },
   {
     "commonName": "Celery Seed",
@@ -587,7 +609,9 @@ window.PLANTS_DATA = [
       "Diuretic"
     ],
     "status": "enabled",
-    "fileSlug": "celery-seed"
+    "fileSlug": "celery-seed",
+    "image": "images/plants/celery-seed.jpg",
+    "imageCredit": "Thomé, Flora von Deutschland (1885) · public domain"
   },
   {
     "commonName": "Chaga",
@@ -669,7 +693,9 @@ window.PLANTS_DATA = [
       "Carminative"
     ],
     "status": "enabled",
-    "fileSlug": "cinnamon"
+    "fileSlug": "cinnamon",
+    "image": "images/plants/cinnamon.jpg",
+    "imageCredit": "Köhler's Medizinal-Pflanzen (1887) · public domain"
   },
   {
     "commonName": "Cinnamon species",
@@ -700,7 +726,9 @@ window.PLANTS_DATA = [
       "Lymphatic stimulant"
     ],
     "status": "enabled",
-    "fileSlug": "cleavers"
+    "fileSlug": "cleavers",
+    "image": "images/plants/cleavers.jpg",
+    "imageCredit": "Thomé, Flora von Deutschland (1885) · public domain"
   },
   {
     "commonName": "Codonopsis",
@@ -773,7 +801,9 @@ window.PLANTS_DATA = [
       "Diuretic"
     ],
     "status": "enabled",
-    "fileSlug": "cornsilk"
+    "fileSlug": "cornsilk",
+    "image": "images/plants/cornsilk.jpg",
+    "imageCredit": "Köhler's Medizinal-Pflanzen (1887) · public domain"
   },
   {
     "commonName": "Couch Grass",
@@ -806,7 +836,9 @@ window.PLANTS_DATA = [
       "Vasodilator"
     ],
     "status": "enabled",
-    "fileSlug": "cramp-bark"
+    "fileSlug": "cramp-bark",
+    "image": "images/plants/cramp-bark.jpg",
+    "imageCredit": "Thomé, Flora von Deutschland (1885) · public domain"
   },
   {
     "commonName": "Cranberry",
@@ -871,7 +903,9 @@ window.PLANTS_DATA = [
       "Laxative"
     ],
     "status": "enabled",
-    "fileSlug": "dandelion"
+    "fileSlug": "dandelion",
+    "image": "images/plants/dandelion.jpg",
+    "imageCredit": "Köhler's Medizinal-Pflanzen (1887) · public domain"
   },
   {
     "commonName": "Danshen",
@@ -978,7 +1012,9 @@ window.PLANTS_DATA = [
       "Diaphoretic"
     ],
     "status": "enabled",
-    "fileSlug": "elderberry"
+    "fileSlug": "elderberry",
+    "image": "images/plants/elderberry.jpg",
+    "imageCredit": "Köhler's Medizinal-Pflanzen (1887) · public domain"
   },
   {
     "commonName": "Elecampane",
@@ -995,7 +1031,9 @@ window.PLANTS_DATA = [
       "Mucolytic"
     ],
     "status": "enabled",
-    "fileSlug": "elecampane"
+    "fileSlug": "elecampane",
+    "image": "images/plants/elecampane.jpg",
+    "imageCredit": "Köhler's Medizinal-Pflanzen (1887) · public domain"
   },
   {
     "commonName": "Euphorbia",
@@ -1024,7 +1062,9 @@ window.PLANTS_DATA = [
       "Mucostatic (upper respiratory)"
     ],
     "status": "enabled",
-    "fileSlug": "eyebright"
+    "fileSlug": "eyebright",
+    "image": "images/plants/eyebright.jpg",
+    "imageCredit": "Thomé, Flora von Deutschland (1885): Euphrasia rostkoviana · public domain"
   },
   {
     "commonName": "False Unicorn Root",
@@ -1059,7 +1099,9 @@ window.PLANTS_DATA = [
       "Mucolytic"
     ],
     "status": "enabled",
-    "fileSlug": "fennel"
+    "fileSlug": "fennel",
+    "image": "images/plants/fennel.jpg",
+    "imageCredit": "Köhler's Medizinal-Pflanzen (1887) · public domain"
   },
   {
     "commonName": "Fenugreek",
@@ -1088,7 +1130,9 @@ window.PLANTS_DATA = [
       "Weight reducing"
     ],
     "status": "enabled",
-    "fileSlug": "fenugreek"
+    "fileSlug": "fenugreek",
+    "image": "images/plants/fenugreek.jpg",
+    "imageCredit": "Köhler's Medizinal-Pflanzen (1887) · public domain"
   },
   {
     "commonName": "Feverfew",
@@ -1104,7 +1148,9 @@ window.PLANTS_DATA = [
       "Vasodilator"
     ],
     "status": "enabled",
-    "fileSlug": "feverfew"
+    "fileSlug": "feverfew",
+    "image": "images/plants/feverfew.jpg",
+    "imageCredit": "Köhler's Medizinal-Pflanzen (1887) · public domain"
   },
   {
     "commonName": "Garlic",
@@ -1144,7 +1190,9 @@ window.PLANTS_DATA = [
     ],
     "status": "enabled",
     "fileSlug": "gentian",
-    "family": "Gentianaceae (Gentian family)"
+    "family": "Gentianaceae (Gentian family)",
+    "image": "images/plants/gentian.jpg",
+    "imageCredit": "Köhler's Medizinal-Pflanzen (1887) · public domain"
   },
   {
     "commonName": "German Chamomile",
@@ -1177,7 +1225,9 @@ window.PLANTS_DATA = [
     ],
     "status": "enabled",
     "fileSlug": "chamomile-german",
-    "family": "Asteraceae (Daisy family)"
+    "family": "Asteraceae (Daisy family)",
+    "image": "images/plants/chamomile-german.jpg",
+    "imageCredit": "Köhler's Medizinal-Pflanzen (1887) · public domain"
   },
   {
     "commonName": "Ginger",
@@ -1221,7 +1271,9 @@ window.PLANTS_DATA = [
       "Weight reducing"
     ],
     "status": "enabled",
-    "fileSlug": "ginger"
+    "fileSlug": "ginger",
+    "image": "images/plants/ginger.jpg",
+    "imageCredit": "Köhler's Medizinal-Pflanzen (1887) · public domain"
   },
   {
     "commonName": "Ginkgo",
@@ -1283,7 +1335,9 @@ window.PLANTS_DATA = [
       "Galactagogue"
     ],
     "status": "enabled",
-    "fileSlug": "goats-rue"
+    "fileSlug": "goats-rue",
+    "image": "images/plants/goats-rue.jpg",
+    "imageCredit": "Thomé, Flora von Deutschland (1885) · public domain"
   },
   {
     "commonName": "Golden Oyster Mushroom",
@@ -1338,7 +1392,9 @@ window.PLANTS_DATA = [
       "Mucous membrane tonic"
     ],
     "status": "enabled",
-    "fileSlug": "goldenrod"
+    "fileSlug": "goldenrod",
+    "image": "images/plants/goldenrod.jpg",
+    "imageCredit": "Thomé, Flora von Deutschland (1885) · public domain"
   },
   {
     "commonName": "Gotu Kola",
@@ -1377,7 +1433,9 @@ window.PLANTS_DATA = [
       "Venotonic"
     ],
     "status": "enabled",
-    "fileSlug": "grape-seed"
+    "fileSlug": "grape-seed",
+    "image": "images/plants/grape-seed.jpg",
+    "imageCredit": "Köhler's Medizinal-Pflanzen (1887) · public domain"
   },
   {
     "commonName": "Grapefruit",
@@ -1420,7 +1478,9 @@ window.PLANTS_DATA = [
       "Weight reducing"
     ],
     "status": "enabled",
-    "fileSlug": "green-tea"
+    "fileSlug": "green-tea",
+    "image": "images/plants/green-tea.jpg",
+    "imageCredit": "Köhler's Medizinal-Pflanzen (1887) · public domain"
   },
   {
     "commonName": "Grindelia",
@@ -1446,7 +1506,9 @@ window.PLANTS_DATA = [
       "Anti-inflammatory (musculoskeletal)"
     ],
     "status": "enabled",
-    "fileSlug": "guaiacum"
+    "fileSlug": "guaiacum",
+    "image": "images/plants/guaiacum.jpg",
+    "imageCredit": "Köhler's Medizinal-Pflanzen (1887) · public domain"
   },
   {
     "commonName": "Hawthorn",
@@ -1468,7 +1530,9 @@ window.PLANTS_DATA = [
       "Vasodilator"
     ],
     "status": "enabled",
-    "fileSlug": "hawthorn"
+    "fileSlug": "hawthorn",
+    "image": "images/plants/hawthorn.jpg",
+    "imageCredit": "Thomé, Flora von Deutschland (1885): Crataegus laevigata · public domain"
   },
   {
     "commonName": "Heartsease",
@@ -1483,7 +1547,9 @@ window.PLANTS_DATA = [
       "Laxative"
     ],
     "status": "enabled",
-    "fileSlug": "heartsease"
+    "fileSlug": "heartsease",
+    "image": "images/plants/heartsease.jpg",
+    "imageCredit": "Köhler's Medizinal-Pflanzen (1887) · public domain"
   },
   {
     "commonName": "Hemp",
@@ -1495,7 +1561,9 @@ window.PLANTS_DATA = [
       "Anticonvulsant (epilepsy)"
     ],
     "status": "enabled",
-    "fileSlug": "hemp"
+    "fileSlug": "hemp",
+    "image": "images/plants/hemp.jpg",
+    "imageCredit": "Köhler's Medizinal-Pflanzen (1887) · public domain"
   },
   {
     "commonName": "Hops",
@@ -1514,7 +1582,9 @@ window.PLANTS_DATA = [
       "Sedative"
     ],
     "status": "enabled",
-    "fileSlug": "hops"
+    "fileSlug": "hops",
+    "image": "images/plants/hops.jpg",
+    "imageCredit": "Köhler's Medizinal-Pflanzen (1887) · public domain"
   },
   {
     "commonName": "Horehound",
@@ -1529,7 +1599,9 @@ window.PLANTS_DATA = [
       "Mucolytic"
     ],
     "status": "enabled",
-    "fileSlug": "horehound"
+    "fileSlug": "horehound",
+    "image": "images/plants/horehound.jpg",
+    "imageCredit": "Köhler's Medizinal-Pflanzen (1887) · public domain"
   },
   {
     "commonName": "Horse Chestnut",
@@ -1541,7 +1613,9 @@ window.PLANTS_DATA = [
       "Venotonic"
     ],
     "status": "enabled",
-    "fileSlug": "horse-chestnut"
+    "fileSlug": "horse-chestnut",
+    "image": "images/plants/horse-chestnut.jpg",
+    "imageCredit": "Thomé, Flora von Deutschland (1885) · public domain"
   },
   {
     "commonName": "Horsetail",
@@ -1616,7 +1690,9 @@ window.PLANTS_DATA = [
       "Hemostatic"
     ],
     "status": "enabled",
-    "fileSlug": "ladys-mantle"
+    "fileSlug": "ladys-mantle",
+    "image": "images/plants/ladys-mantle.jpg",
+    "imageCredit": "Thomé, Flora von Deutschland (1885) · public domain"
   },
   {
     "commonName": "Lavender",
@@ -1634,7 +1710,9 @@ window.PLANTS_DATA = [
     ],
     "status": "enabled",
     "fileSlug": "lavender",
-    "family": "Lamiaceae (Mint family)"
+    "family": "Lamiaceae (Mint family)",
+    "image": "images/plants/lavender.jpg",
+    "imageCredit": "Köhler's Medizinal-Pflanzen (1887) · public domain"
   },
   {
     "commonName": "Lemon Balm",
@@ -1654,7 +1732,9 @@ window.PLANTS_DATA = [
       "Thyroid inhibiting (mild)"
     ],
     "status": "enabled",
-    "fileSlug": "lemon-balm"
+    "fileSlug": "lemon-balm",
+    "image": "images/plants/lemon-balm.jpg",
+    "imageCredit": "Köhler's Medizinal-Pflanzen (1887) · public domain"
   },
   {
     "commonName": "Licorice",
@@ -1688,7 +1768,9 @@ window.PLANTS_DATA = [
       "Tonic"
     ],
     "status": "enabled",
-    "fileSlug": "licorice"
+    "fileSlug": "licorice",
+    "image": "images/plants/licorice.jpg",
+    "imageCredit": "Köhler's Medizinal-Pflanzen (1887) · public domain"
   },
   {
     "commonName": "Linden",
@@ -1704,7 +1786,9 @@ window.PLANTS_DATA = [
       "Sedative"
     ],
     "status": "enabled",
-    "fileSlug": "linden"
+    "fileSlug": "linden",
+    "image": "images/plants/linden.jpg",
+    "imageCredit": "Köhler's Medizinal-Pflanzen (1887): Tilia cordata · public domain"
   },
   {
     "commonName": "Lion's Mane",
@@ -1744,7 +1828,9 @@ window.PLANTS_DATA = [
     ],
     "status": "enabled",
     "fileSlug": "marshmallow",
-    "family": "Malvaceae (Mallow family)"
+    "family": "Malvaceae (Mallow family)",
+    "image": "images/plants/marshmallow.jpg",
+    "imageCredit": "Köhler's Medizinal-Pflanzen (1887) · public domain"
   },
   {
     "commonName": "Meadowsweet",
@@ -1762,7 +1848,9 @@ window.PLANTS_DATA = [
       "Demulcent"
     ],
     "status": "enabled",
-    "fileSlug": "meadowsweet"
+    "fileSlug": "meadowsweet",
+    "image": "images/plants/meadowsweet.jpg",
+    "imageCredit": "Thomé, Flora von Deutschland (1885) · public domain"
   },
   {
     "commonName": "Milk Thistle",
@@ -1781,7 +1869,9 @@ window.PLANTS_DATA = [
       "Liver regenerating"
     ],
     "status": "enabled",
-    "fileSlug": "milk-thistle"
+    "fileSlug": "milk-thistle",
+    "image": "images/plants/milk-thistle.jpg",
+    "imageCredit": "Thomé, Flora von Deutschland (1885) · public domain"
   },
   {
     "commonName": "Motherwort",
@@ -1796,7 +1886,9 @@ window.PLANTS_DATA = [
       "Sedative"
     ],
     "status": "enabled",
-    "fileSlug": "motherwort"
+    "fileSlug": "motherwort",
+    "image": "images/plants/motherwort.jpg",
+    "imageCredit": "Thomé, Flora von Deutschland (1885) · public domain"
   },
   {
     "commonName": "Mugwort",
@@ -1808,7 +1900,9 @@ window.PLANTS_DATA = [
       "Cholagogue"
     ],
     "status": "enabled",
-    "fileSlug": "mugwort"
+    "fileSlug": "mugwort",
+    "image": "images/plants/mugwort.jpg",
+    "imageCredit": "Köhler's Medizinal-Pflanzen (1887) · public domain"
   },
   {
     "commonName": "Mullein",
@@ -1835,7 +1929,9 @@ window.PLANTS_DATA = [
       "Healing"
     ],
     "status": "enabled",
-    "fileSlug": "myrrh"
+    "fileSlug": "myrrh",
+    "image": "images/plants/myrrh.jpg",
+    "imageCredit": "Köhler's Medizinal-Pflanzen (1887) · public domain"
   },
   {
     "commonName": "Nettle species",
@@ -1857,7 +1953,9 @@ window.PLANTS_DATA = [
       "Uterine contracting"
     ],
     "status": "enabled",
-    "fileSlug": "nettle-species"
+    "fileSlug": "nettle-species",
+    "image": "images/plants/nettle-species.jpg",
+    "imageCredit": "Thomé, Flora von Deutschland (1885): Urtica dioica · public domain"
   },
   {
     "commonName": "Nettles",
@@ -1873,7 +1971,9 @@ window.PLANTS_DATA = [
       "Immunomodulating"
     ],
     "status": "enabled",
-    "fileSlug": "nettles"
+    "fileSlug": "nettles",
+    "image": "images/plants/nettles.jpg",
+    "imageCredit": "Thomé, Flora von Deutschland (1885) · public domain"
   },
   {
     "commonName": "Notoginseng",
@@ -1904,7 +2004,9 @@ window.PLANTS_DATA = [
       "Tonic"
     ],
     "status": "enabled",
-    "fileSlug": "oat-straw"
+    "fileSlug": "oat-straw",
+    "image": "images/plants/oat-straw.jpg",
+    "imageCredit": "Thomé, Flora von Deutschland (1885) · public domain"
   },
   {
     "commonName": "Olive Leaf",
@@ -1919,7 +2021,9 @@ window.PLANTS_DATA = [
       "Bitter tonic"
     ],
     "status": "enabled",
-    "fileSlug": "olive-leaf"
+    "fileSlug": "olive-leaf",
+    "image": "images/plants/olive-leaf.jpg",
+    "imageCredit": "Köhler's Medizinal-Pflanzen (1887) · public domain"
   },
   {
     "commonName": "Oregano",
@@ -1940,7 +2044,9 @@ window.PLANTS_DATA = [
       "Sedative"
     ],
     "status": "enabled",
-    "fileSlug": "oregano"
+    "fileSlug": "oregano",
+    "image": "images/plants/oregano.jpg",
+    "imageCredit": "Thomé, Flora von Deutschland (1885) · public domain"
   },
   {
     "commonName": "Oregon Grape",
@@ -2030,7 +2136,9 @@ window.PLANTS_DATA = [
       "Sedative"
     ],
     "status": "enabled",
-    "fileSlug": "peppermint"
+    "fileSlug": "peppermint",
+    "image": "images/plants/peppermint.jpg",
+    "imageCredit": "Köhler's Medizinal-Pflanzen (1887) · public domain"
   },
   {
     "commonName": "Phyllanthus",
@@ -2095,7 +2203,9 @@ window.PLANTS_DATA = [
     ],
     "status": "enabled",
     "fileSlug": "plantain",
-    "family": "Plantaginaceae (Plantain family)"
+    "family": "Plantaginaceae (Plantain family)",
+    "image": "images/plants/plantain.jpg",
+    "imageCredit": "Thomé, Flora von Deutschland (1885): Plantago major · public domain"
   },
   {
     "commonName": "Pleurisy Root",
@@ -2167,7 +2277,9 @@ window.PLANTS_DATA = [
       "Uterine tonic"
     ],
     "status": "enabled",
-    "fileSlug": "raspberry-leaf"
+    "fileSlug": "raspberry-leaf",
+    "image": "images/plants/raspberry-leaf.jpg",
+    "imageCredit": "Köhler's Medizinal-Pflanzen (1887) · public domain"
   },
   {
     "commonName": "Red Clover",
@@ -2192,7 +2304,9 @@ window.PLANTS_DATA = [
       "Woman tonic"
     ],
     "status": "enabled",
-    "fileSlug": "red-clover"
+    "fileSlug": "red-clover",
+    "image": "images/plants/red-clover.jpg",
+    "imageCredit": "Thomé, Flora von Deutschland (1885) · public domain"
   },
   {
     "commonName": "Rehmannia",
@@ -2285,7 +2399,9 @@ window.PLANTS_DATA = [
       "Immunomodulating"
     ],
     "status": "enabled",
-    "fileSlug": "rose-hips"
+    "fileSlug": "rose-hips",
+    "image": "images/plants/rose-hips.jpg",
+    "imageCredit": "Thomé, Flora von Deutschland (1885) · public domain"
   },
   {
     "commonName": "Rosemary",
@@ -2311,7 +2427,9 @@ window.PLANTS_DATA = [
       "Pain relieving"
     ],
     "status": "enabled",
-    "fileSlug": "rosemary"
+    "fileSlug": "rosemary",
+    "image": "images/plants/rosemary.jpg",
+    "imageCredit": "Köhler's Medizinal-Pflanzen (1887) · public domain"
   },
   {
     "commonName": "Sage",
@@ -2339,7 +2457,9 @@ window.PLANTS_DATA = [
       "Mucostatic (lower respiratory)"
     ],
     "status": "enabled",
-    "fileSlug": "sage"
+    "fileSlug": "sage",
+    "image": "images/plants/sage.jpg",
+    "imageCredit": "Köhler's Medizinal-Pflanzen (1887) · public domain"
   },
   {
     "commonName": "Sarsaparilla",
@@ -2356,7 +2476,9 @@ window.PLANTS_DATA = [
     ],
     "status": "enabled",
     "fileSlug": "sarsaparilla",
-    "family": "Smilacaceae (Greenbrier family)"
+    "family": "Smilacaceae (Greenbrier family)",
+    "image": "images/plants/sarsaparilla.jpg",
+    "imageCredit": "Köhler's Medizinal-Pflanzen (1887) · public domain"
   },
   {
     "commonName": "Saw Palmetto",
@@ -2520,7 +2642,9 @@ window.PLANTS_DATA = [
       "Pain relieving"
     ],
     "status": "enabled",
-    "fileSlug": "st-johns-wort"
+    "fileSlug": "st-johns-wort",
+    "image": "images/plants/st-johns-wort.jpg",
+    "imageCredit": "Köhler's Medizinal-Pflanzen (1887) · public domain"
   },
   {
     "commonName": "Strawberry",
@@ -2609,7 +2733,9 @@ window.PLANTS_DATA = [
       "Mucolytic"
     ],
     "status": "enabled",
-    "fileSlug": "thyme"
+    "fileSlug": "thyme",
+    "image": "images/plants/thyme.jpg",
+    "imageCredit": "Köhler's Medizinal-Pflanzen (1887) · public domain"
   },
   {
     "commonName": "Tree Peony",
@@ -2667,7 +2793,9 @@ window.PLANTS_DATA = [
       "Pain relieving"
     ],
     "status": "enabled",
-    "fileSlug": "turmeric"
+    "fileSlug": "turmeric",
+    "image": "images/plants/turmeric.jpg",
+    "imageCredit": "Köhler's Medizinal-Pflanzen (1887) · public domain"
   },
   {
     "commonName": "Uva Ursi",
@@ -2680,7 +2808,9 @@ window.PLANTS_DATA = [
     ],
     "status": "enabled",
     "fileSlug": "uva-ursi",
-    "family": "Ericaceae (Heath family)"
+    "family": "Ericaceae (Heath family)",
+    "image": "images/plants/uva-ursi.jpg",
+    "imageCredit": "Köhler's Medizinal-Pflanzen (1887) · public domain"
   },
   {
     "commonName": "Valerian",
@@ -2698,7 +2828,9 @@ window.PLANTS_DATA = [
       "Sedative"
     ],
     "status": "enabled",
-    "fileSlug": "valerian"
+    "fileSlug": "valerian",
+    "image": "images/plants/valerian.jpg",
+    "imageCredit": "Köhler's Medizinal-Pflanzen (1887) · public domain"
   },
   {
     "commonName": "Vervain",
@@ -2715,7 +2847,9 @@ window.PLANTS_DATA = [
       "Tonic"
     ],
     "status": "enabled",
-    "fileSlug": "vervain"
+    "fileSlug": "vervain",
+    "image": "images/plants/vervain.jpg",
+    "imageCredit": "Thomé, Flora von Deutschland (1885) · public domain"
   },
   {
     "commonName": "Vitex",
@@ -2765,7 +2899,9 @@ window.PLANTS_DATA = [
       "Pain relieving"
     ],
     "status": "enabled",
-    "fileSlug": "white-willow"
+    "fileSlug": "white-willow",
+    "image": "images/plants/white-willow.jpg",
+    "imageCredit": "Thomé, Flora von Deutschland (1885): Salix alba · public domain"
   },
   {
     "commonName": "Wild Cherry",
@@ -2815,7 +2951,9 @@ window.PLANTS_DATA = [
       "Venotonic"
     ],
     "status": "enabled",
-    "fileSlug": "witch-hazel"
+    "fileSlug": "witch-hazel",
+    "image": "images/plants/witch-hazel.jpg",
+    "imageCredit": "Köhler's Medizinal-Pflanzen (1887) · public domain"
   },
   {
     "commonName": "Wormwood",
@@ -2828,7 +2966,9 @@ window.PLANTS_DATA = [
       "Bitter tonic"
     ],
     "status": "enabled",
-    "fileSlug": "wormwood"
+    "fileSlug": "wormwood",
+    "image": "images/plants/wormwood.jpg",
+    "imageCredit": "Köhler's Medizinal-Pflanzen (1887) · public domain"
   },
   {
     "commonName": "Yarrow",
@@ -2852,7 +2992,9 @@ window.PLANTS_DATA = [
       "Vasodilator"
     ],
     "status": "enabled",
-    "fileSlug": "yarrow"
+    "fileSlug": "yarrow",
+    "image": "images/plants/yarrow.jpg",
+    "imageCredit": "Köhler's Medizinal-Pflanzen (1887) · public domain"
   },
   {
     "commonName": "Yellow Dock",
