@@ -92,6 +92,7 @@
         }
 
         renderSimilar(I18n, plant, lang);
+        renderPager(I18n, plant, lang);
         renderPlate(plant, name);
     }
 
@@ -104,6 +105,52 @@
         img.alt = name + ' (' + plant.botanicalName + ')';
         figure.querySelector('figcaption').textContent = plant.imageCredit || '';
         figure.hidden = false;
+    }
+
+    // Previous / next plant, in the order of the main page (by Latin name), wrapping around at the ends.
+    // The left and right arrow keys do the same.
+    function renderPager(I18n, plant, lang) {
+        const nav = document.querySelector('[data-plant="pager"]');
+        const all = (window.PLANTS_DATA || []).slice()
+            .sort((a, b) => (a.botanicalName || '').localeCompare(b.botanicalName || ''));
+        const i = all.findIndex(p => p.fileSlug === plant.fileSlug);
+        if (!nav || i < 0 || all.length < 2) return;
+        const prev = all[(i - 1 + all.length) % all.length];
+        const next = all[(i + 1) % all.length];
+        const nameOf = p => ({ en: p.commonName, da: p.danishName, fr: p.frenchName })[lang] || p.commonName;
+
+        const link = (p, dir) => {
+            const a = document.createElement('a');
+            a.href = I18n.withLang(window.Utils.plantUrl(p.fileSlug));
+            a.className = 'pager-' + dir;
+            a.rel = dir;
+            const label = document.createElement('span');
+            label.className = 'pager-label';
+            label.textContent = I18n.t(dir === 'prev' ? 'plant.prev' : 'plant.next');
+            const name = document.createElement('span');
+            name.className = 'pager-name';
+            name.textContent = nameOf(p);
+            const latin = document.createElement('em');
+            latin.className = 'pager-latin';
+            latin.textContent = p.botanicalName;
+            a.append(label, name, latin);
+            return a;
+        };
+        const pos = document.createElement('span');
+        pos.className = 'pager-position';
+        pos.textContent = (i + 1) + ' / ' + all.length;
+
+        nav.setAttribute('aria-label', I18n.t('plant.pager'));
+        nav.replaceChildren(link(prev, 'prev'), pos, link(next, 'next'));
+        nav.hidden = false;
+
+        document.addEventListener('keydown', e => {
+            if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
+            const t = e.target;
+            if (t && (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName))) return;
+            if (e.key === 'ArrowLeft') window.location.href = nav.querySelector('.pager-prev').href;
+            if (e.key === 'ArrowRight') window.location.href = nav.querySelector('.pager-next').href;
+        });
     }
 
     // The plants that share the most properties with this one
