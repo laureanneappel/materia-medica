@@ -7,7 +7,7 @@
     'use strict';
 
     // Import utilities from shared utils.js
-    const { escapeHtml, logError, logWarn, isValidString } = window.Utils || {};
+    const { escapeHtml } = window.Utils || {};
 
     // Validate that utils.js is loaded
     if (!window.Utils) {

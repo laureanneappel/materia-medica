@@ -8,7 +8,7 @@
     'use strict';
 
     // Import utilities from shared utils.js
-    const { escapeHtml, logError, logWarn, isValidString, isValidArray } = window.Utils || {};
+    const { escapeHtml } = window.Utils || {};
 
     // Validate that utils.js is loaded
     if (!window.Utils) {
@@ -63,7 +63,6 @@
             const commonNames = createCommonNamesHTML(plant);
 
             // Escape all dynamic content
-            const status = plant.status ? escapeHtml(plant.status) : '';
             const botanicalName = escapeHtml(plant.botanicalName);
 
             const url = window.Utils.plantUrl(plant.fileSlug);
@@ -76,7 +75,7 @@
                 : `<span class="card-initial" aria-hidden="true">${escapeHtml(plant.botanicalName.charAt(0))}</span>`;
 
             return `
-            <div class="plant-card ${status}">
+            <div class="plant-card">
                 <div class="card-plate">${plate}</div>
                 <div class="card-text">
                     <h3 class="card-latin"><a href="${href}"><em>${botanicalName}</em></a></h3>
@@ -162,15 +161,6 @@
 
             // Inject into container
             container.innerHTML = html;
-
-            // Call callback if provided
-            if (options.onComplete && typeof options.onComplete === 'function') {
-                try {
-                    options.onComplete(validPlants);
-                } catch (callbackError) {
-                    console.error('[PlantsRenderer] Error in onComplete callback:', callbackError);
-                }
-            }
         } catch (error) {
             console.error('[PlantsRenderer] Error rendering plant cards:', error);
             const container = document.getElementById(containerId);

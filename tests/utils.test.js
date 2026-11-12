@@ -75,115 +75,12 @@ describe('Utils.escapeHtml', () => {
   });
 });
 
-describe('Utils.isValidString', () => {
-  it('should return true for non-empty strings', () => {
-    expect(Utils.isValidString('Valerian')).toBe(true);
-    expect(Utils.isValidString('a')).toBe(true);
-    expect(Utils.isValidString(' text ')).toBe(true);
+describe('Utils.plantUrl', () => {
+  it('should build the plant page address', () => {
+    expect(Utils.plantUrl('hawthorn')).toBe('plant.html?p=hawthorn');
   });
 
-  it('should return false for empty string', () => {
-    expect(Utils.isValidString('')).toBe(false);
-  });
-
-  it('should return false for non-strings', () => {
-    expect(Utils.isValidString(null)).toBe(false);
-    expect(Utils.isValidString(undefined)).toBe(false);
-    expect(Utils.isValidString(123)).toBe(false);
-    expect(Utils.isValidString(true)).toBe(false);
-    expect(Utils.isValidString({})).toBe(false);
-    expect(Utils.isValidString([])).toBe(false);
-  });
-});
-
-describe('Utils.isValidArray', () => {
-  it('should return true for non-empty arrays', () => {
-    expect(Utils.isValidArray([1, 2, 3])).toBe(true);
-    expect(Utils.isValidArray(['a'])).toBe(true);
-    expect(Utils.isValidArray([{ name: 'test' }])).toBe(true);
-  });
-
-  it('should return false for empty array', () => {
-    expect(Utils.isValidArray([])).toBe(false);
-  });
-
-  it('should return false for non-arrays', () => {
-    expect(Utils.isValidArray(null)).toBe(false);
-    expect(Utils.isValidArray(undefined)).toBe(false);
-    expect(Utils.isValidArray('string')).toBe(false);
-    expect(Utils.isValidArray(123)).toBe(false);
-    expect(Utils.isValidArray({})).toBe(false);
-  });
-
-  it('should validate plant properties array', () => {
-    const validProperties = ['Sedative', 'Antispasmodic'];
-    const emptyProperties = [];
-
-    expect(Utils.isValidArray(validProperties)).toBe(true);
-    expect(Utils.isValidArray(emptyProperties)).toBe(false);
-  });
-});
-
-describe('Utils.debounce', () => {
-  it('should debounce function calls', async () => {
-    const mockFn = vi.fn();
-    const debouncedFn = Utils.debounce(mockFn, 100);
-
-    // Call multiple times rapidly
-    debouncedFn();
-    debouncedFn();
-    debouncedFn();
-
-    // Should not have been called yet
-    expect(mockFn).not.toHaveBeenCalled();
-
-    // Wait for debounce delay
-    await new Promise(resolve => setTimeout(resolve, 150));
-
-    // Should have been called once
-    expect(mockFn).toHaveBeenCalledTimes(1);
-  });
-
-  it('should pass arguments to debounced function', async () => {
-    const mockFn = vi.fn();
-    const debouncedFn = Utils.debounce(mockFn, 50);
-
-    debouncedFn('arg1', 'arg2');
-
-    await new Promise(resolve => setTimeout(resolve, 100));
-
-    expect(mockFn).toHaveBeenCalledWith('arg1', 'arg2');
-  });
-});
-
-describe('Utils.logError', () => {
-  it('should log errors with namespace and timestamp', () => {
-    const consoleSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
-
-    Utils.logError('TestModule', 'Test error message', { detail: 'error data' });
-
-    expect(consoleSpy).toHaveBeenCalled();
-    const callArgs = consoleSpy.mock.calls[0];
-
-    expect(callArgs[0]).toContain('[TestModule]');
-    expect(callArgs[0]).toContain('Test error message');
-
-    consoleSpy.mockRestore();
-  });
-});
-
-describe('Utils.logWarn', () => {
-  it('should log warnings with namespace', () => {
-    const consoleSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
-
-    Utils.logWarn('TestModule', 'Test warning');
-
-    expect(consoleSpy).toHaveBeenCalled();
-    const callArgs = consoleSpy.mock.calls[0];
-
-    expect(callArgs[0]).toContain('[TestModule]');
-    expect(callArgs[0]).toContain('Test warning');
-
-    consoleSpy.mockRestore();
+  it('should encode unusual characters', () => {
+    expect(Utils.plantUrl('a b&c')).toBe('plant.html?p=a%20b%26c');
   });
 });

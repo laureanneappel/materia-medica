@@ -59,7 +59,6 @@
    
 }
 
-
 /* CSS Custom Properties */
 :root {
     /* Color Palette */
@@ -72,9 +71,6 @@
     --color-card-bg: #f8f5f0;
     --color-card-border: #8b7355;
     --color-placeholder: #999;
-    --color-in-progress-bg: #f0ede6;
-    --color-in-progress-text: #8b9784;
-    --color-in-progress-botanical: #a89888;
 
     /* Spacing */
     --spacing-xs: 5px;
@@ -152,7 +148,7 @@ body {
     display: none;
 }
 
-/* Search and Filter Section */
+/* Search and filters on the main page: one row */
 .search-filter-section {
     margin-bottom: var(--spacing-lg);
     position: relative;
@@ -160,86 +156,71 @@ body {
 }
 
 .search-filter-row {
-    display: flex;
-    gap: var(--spacing-md);
-    align-items: center;
-    margin-bottom: var(--spacing-sm);
+    display: grid;
+    grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: 12px;
+    align-items: stretch;
 }
 
-.search-box {
-    flex: 1;
+.search-box,
+.filter-box {
     min-width: 0;
 }
 
-.search-box input {
+.search-box input,
+.filter-box input,
+.filter-box select {
     width: 100%;
-    padding: 10px 12px;
-    font-size: 0.95em;
+    height: 46px;
+    padding: 0 14px;
+    font-size: 1em;
     font-family: var(--font-family-serif);
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    background-color: #fff;
     color: var(--color-text);
-    transition: border-color 0.2s;
-}
-
-.search-box input:focus {
-    outline: none;
-    border-color: var(--color-primary);
-}
-
-.filter-box {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    flex-shrink: 0;
-}
-
-.filter-box label {
-    font-size: 0.9em;
-    color: var(--color-text);
-    white-space: nowrap;
+    background-color: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(139, 115, 85, 0.35);
+    border-radius: 6px;
+    transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 .filter-box select {
-    padding: 12px 40px 12px 16px;
-    font-size: 0.95em;
-    font-family: var(--font-family-serif);
-    font-weight: 500;
-    border: 2px solid rgba(var(--color-primary-rgb), 0.2);
-    border-radius: 8px;
-    background-color: var(--color-card-bg);
+    padding-right: 38px;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
     background-image: url("data:image/svg+xml,%3Csvg width='14' height='9' viewBox='0 0 14 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L7 7.5L13 1.5' stroke='%235A6F4F' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: right 14px center;
-    color: var(--color-text);
-    cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    min-width: 200px;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    box-shadow: 0 2px 4px rgba(139, 115, 85, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
 }
 
-.filter-box select:hover {
-    border-color: var(--color-primary);
-    background-color: rgba(var(--color-primary-rgb), 0.03);
-    box-shadow: 0 4px 8px rgba(139, 115, 85, 0.12), 0 2px 4px rgba(0, 0, 0, 0.06);
-}
-
+.search-box input:focus,
+.filter-box input:focus,
 .filter-box select:focus {
     outline: none;
     border-color: var(--color-primary);
-    background-color: #fff;
-    background-image: url("data:image/svg+xml,%3Csvg width='14' height='9' viewBox='0 0 14 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L7 7.5L13 1.5' stroke='%235A6F4F' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 14px center;
-    box-shadow: 0 0 0 4px rgba(var(--color-primary-rgb), 0.12), 0 4px 8px rgba(139, 115, 85, 0.15);
+    box-shadow: 0 0 0 3px rgba(var(--color-primary-rgb), 0.12);
 }
 
-.filter-box select:active {
-    box-shadow: 0 2px 4px rgba(var(--color-primary-rgb), 0.15);
+@media (max-width: 899px) {
+    .search-filter-row {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .search-filter-row .search-box {
+        grid-column: 1 / -1;
+    }
+
+    /* 16px stops iPhones from zooming into the field */
+    .search-box input,
+    .filter-box input,
+    .filter-box select {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-filter-row {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Active Filters Display */
@@ -325,9 +306,9 @@ body {
 
 /* Results Count */
 .results-count {
+    margin: 10px 0 var(--spacing-sm);
     color: var(--color-placeholder);
     font-size: 0.85em;
-    margin-bottom: var(--spacing-sm);
 }
 
 /* No Results Message */
@@ -439,99 +420,150 @@ header h1 {
     letter-spacing: 2px;
 }
 
-.subtitle {
-    font-style: italic;
-    color: var(--color-secondary);
-    font-size: 1.2em;
-    margin-top: var(--spacing-sm);
-}
-
-/* Plant List Styles */
+/* Plant cards on the main page: plate on top, names below; the whole card is a link */
 .plant-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 25px;
+    gap: 22px;
     margin-bottom: var(--spacing-lg);
 }
 
 .plant-card {
-    background-color: var(--color-card-bg);
-    border: 2px solid var(--color-card-border);
-    padding: 25px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    transition: transform 0.2s, box-shadow 0.2s;
-    position: relative;
-}
-
-.plant-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-}
-
-/* In progress plants - greyed out */
-.plant-card.in-progress {
-    background-color: var(--color-in-progress-bg);
-    opacity: 0.7;
-}
-
-.plant-card.in-progress h3 a {
-    color: var(--color-in-progress-text);
-}
-
-.plant-card.in-progress .botanical-name {
-    color: var(--color-in-progress-botanical);
-}
-
-/* Disabled plants - not in PDF */
-.plant-card.disabled {
-    background-color: #f5f5f5;
-    opacity: 0.5;
-    border-color: #d0d0d0;
-}
-
-.plant-card.disabled h3 a {
-    color: #999;
-}
-
-.plant-card.disabled .botanical-name {
-    color: #aaa;
-}
-
-.plant-card.disabled:hover {
-    transform: none;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.plant-card h3 {
-    margin-bottom: var(--spacing-sm);
-    color: var(--color-primary);
-    font-weight: normal;
-    font-size: 1.8em;
+    position: relative;   /* the card's link stretches over it */
 }
 
 .plant-card h3 a {
     color: var(--color-primary);
-    text-decoration: none;
 }
 
 .plant-card h3 a:hover {
     color: var(--color-primary-hover);
-    text-decoration: underline;
 }
 
-.botanical-name {
+.plant-list .plant-card {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(251, 249, 244, 0.92);
+    border: 1px solid rgba(139, 115, 85, 0.28);
+    border-radius: 6px;
+    box-shadow: 0 1px 2px rgba(58, 58, 58, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.plant-list .plant-card:hover,
+.plant-list .plant-card:focus-within {
+    transform: translateY(-3px);
+    border-color: rgba(var(--color-primary-rgb), 0.45);
+    box-shadow: 0 8px 20px rgba(58, 58, 58, 0.10);
+}
+
+/* The plate, blended into the card like a print */
+.card-plate {
+    height: 210px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 14px 0;
+}
+
+.card-plate img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+    opacity: 0.9;
+    transition: opacity 0.2s ease;
+    -webkit-mask-image:
+        linear-gradient(to right, transparent, #000 8%, #000 92%, transparent),
+        linear-gradient(to bottom, transparent, #000 7%, #000 92%, transparent);
+    -webkit-mask-composite: source-in;
+    mask-image:
+        linear-gradient(to right, transparent, #000 8%, #000 92%, transparent),
+        linear-gradient(to bottom, transparent, #000 7%, #000 92%, transparent);
+    mask-composite: intersect;
+}
+
+.plant-list .plant-card:hover .card-plate img {
+    opacity: 1;
+}
+
+.card-initial {
+    font-size: 5em;
     font-style: italic;
-    color: var(--color-secondary);
-    font-size: 1.1em;
+    line-height: 1;
+    color: rgba(var(--color-primary-rgb), 0.15);
 }
 
-.common-names {
-    font-size: 1.05em;
-    color: var(--color-text);
-    margin-top: 4px;
-    margin-bottom: 10px;
+.card-text {
+    padding: 12px 18px 16px;
+    text-align: center;
+}
+
+.plant-list .plant-card h3 {
+    margin: 0 0 4px;
+    font-size: 1.25em;
+    line-height: 1.25;
+}
+
+/* The whole card is clickable (the link stretches over it) */
+.plant-list .plant-card h3 a {
+    text-decoration: none;
+}
+
+.plant-list .plant-card h3 a::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+}
+
+.plant-list .plant-card h3 a:focus-visible {
+    outline: none;
+}
+
+.plant-list .plant-card:focus-within {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+.plant-list .plant-card .common-names {
+    margin: 0;
     line-height: 1.4;
+    font-size: 0.95em;
+    color: var(--color-secondary);
+}
+
+/* Phone: compact horizontal cards, small plate on the left */
+@media (max-width: 600px) {
+    .plant-list {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .plant-list .plant-card {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .card-plate {
+        flex: 0 0 84px;
+        height: 96px;
+        padding: 6px;
+    }
+
+    .card-initial {
+        font-size: 3em;
+    }
+
+    .card-text {
+        padding: 10px 14px 10px 4px;
+        text-align: left;
+    }
+
+    .plant-list .plant-card h3 {
+        font-size: 1.1em;
+    }
 }
 
 /* Plant Detail Page Styles */
@@ -587,11 +619,6 @@ html:not([lang="fr"]) .plant-detail [data-lang="fr"] {
 .section p {
     margin-bottom: 15px;
     text-align: justify;
-}
-
-.field-label {
-    font-weight: bold;
-    color: #5a6f4f;
 }
 
 .placeholder {
@@ -681,24 +708,6 @@ html:not([lang="fr"]) .plant-detail [data-lang="fr"] {
     color: white;
 }
 
-/* Visually hidden text for screen readers */
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
-}
-
-/* Indented List */
-.indented-list {
-    margin-left: 20px;
-}
-
 /* Footer Styles */
 footer {
     text-align: center;
@@ -746,29 +755,6 @@ footer .disclaimer {
 
 /* Small phones */
 @media (max-width: 480px) {
-    header h1 {
-        font-size: 1.8em;
-        letter-spacing: 1px;
-    }
-
-    .subtitle {
-        font-size: 1em;
-    }
-
-    .plant-list {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-
-    .plant-card {
-        padding: 15px;
-    }
-
-    .plant-card h3 {
-        font-size: 1.5em;
-    }
-
-
     /* Fix text justification on mobile */
     .section p {
         text-align: left;
@@ -782,22 +768,9 @@ footer .disclaimer {
 
 /* Large tablets and small desktops */
 @media (min-width: 1350px) and (max-width: 1439px) {
-    /* Optimize search/filter layout - smaller dropdowns */
-    .search-filter-row {
-        gap: 20px;
-    }
-
-    .filter-box select {
-        min-width: 180px;
-    }
-
     .plant-list {
         grid-template-columns: repeat(4, 1fr);
         gap: 24px;
-    }
-
-    header h1 {
-        font-size: 3em;
     }
 
     .container {
@@ -856,37 +829,6 @@ footer .disclaimer {
     body:has(.plant-detail)::before {
         left: calc((100vw - 1400px) / 2 - 200px);
     }
-}
-
-/* Loading States */
-.loading-state {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 60px 20px;
-    min-height: 300px;
-}
-
-.loading-spinner {
-    width: 50px;
-    height: 50px;
-    border: 4px solid rgba(90, 111, 79, 0.1);
-    border-top-color: var(--color-primary);
-    border-radius: 50%;
-    animation: spinner 0.8s linear infinite;
-}
-
-@keyframes spinner {
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-.loading-state p {
-    margin-top: 20px;
-    color: var(--color-secondary);
-    font-style: italic;
 }
 
 /* ---------- Properties page ---------- */
@@ -1426,212 +1368,6 @@ footer .disclaimer {
 
     .plant-meta {
         padding: 0 4px 20px;
-    }
-}
-
-/* ---------- Plant cards on the main page ---------- */
-
-.plant-list .plant-card {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    overflow: hidden;
-    background-color: rgba(251, 249, 244, 0.92);
-    border: 1px solid rgba(139, 115, 85, 0.28);
-    border-radius: 6px;
-    box-shadow: 0 1px 2px rgba(58, 58, 58, 0.04);
-    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-}
-
-.plant-list .plant-card:hover,
-.plant-list .plant-card:focus-within {
-    transform: translateY(-3px);
-    border-color: rgba(var(--color-primary-rgb), 0.45);
-    box-shadow: 0 8px 20px rgba(58, 58, 58, 0.10);
-}
-
-/* The plate, blended into the card like a print */
-.card-plate {
-    height: 210px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 14px 14px 0;
-}
-
-.card-plate img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    mix-blend-mode: multiply;
-    opacity: 0.9;
-    transition: opacity 0.2s ease;
-    -webkit-mask-image:
-        linear-gradient(to right, transparent, #000 8%, #000 92%, transparent),
-        linear-gradient(to bottom, transparent, #000 7%, #000 92%, transparent);
-    -webkit-mask-composite: source-in;
-    mask-image:
-        linear-gradient(to right, transparent, #000 8%, #000 92%, transparent),
-        linear-gradient(to bottom, transparent, #000 7%, #000 92%, transparent);
-    mask-composite: intersect;
-}
-
-.plant-list .plant-card:hover .card-plate img {
-    opacity: 1;
-}
-
-.card-initial {
-    font-size: 5em;
-    font-style: italic;
-    line-height: 1;
-    color: rgba(var(--color-primary-rgb), 0.15);
-}
-
-.card-text {
-    padding: 12px 18px 16px;
-    text-align: center;
-}
-
-.plant-list .plant-card h3 {
-    margin: 0 0 4px;
-    font-size: 1.25em;
-    line-height: 1.25;
-}
-
-/* The whole card is clickable (the link stretches over it) */
-.plant-list .plant-card h3 a {
-    text-decoration: none;
-}
-
-.plant-list .plant-card h3 a::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-}
-
-.plant-list .plant-card h3 a:focus-visible {
-    outline: none;
-}
-
-.plant-list .plant-card:focus-within {
-    outline: 2px solid var(--color-primary);
-    outline-offset: 2px;
-}
-
-.plant-list .plant-card .common-names {
-    margin: 0;
-    font-size: 0.95em;
-    color: var(--color-secondary);
-}
-
-.plant-list {
-    gap: 22px;
-}
-
-/* Phone: compact horizontal cards, small plate on the left */
-@media (max-width: 600px) {
-    .plant-list {
-        grid-template-columns: 1fr;
-        gap: 10px;
-    }
-
-    .plant-list .plant-card {
-        flex-direction: row;
-        align-items: center;
-    }
-
-    .card-plate {
-        flex: 0 0 84px;
-        height: 96px;
-        padding: 6px;
-    }
-
-    .card-initial {
-        font-size: 3em;
-    }
-
-    .card-text {
-        padding: 10px 14px 10px 4px;
-        text-align: left;
-    }
-
-    .plant-list .plant-card h3 {
-        font-size: 1.1em;
-    }
-}
-
-/* ---------- Search bar on the main page: one row ---------- */
-
-.search-filter-row {
-    display: grid;
-    grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.2fr) minmax(0, 1fr);
-    gap: 12px;
-    align-items: stretch;
-}
-
-.search-filter-row .filter-box {
-    display: block;
-    min-width: 0;
-}
-
-.search-box input,
-.filter-box input,
-.filter-box select {
-    width: 100%;
-    min-width: 0;
-    height: 46px;
-    padding: 0 14px;
-    font-size: 1em;
-    font-family: var(--font-family-serif);
-    color: var(--color-text);
-    background-color: rgba(255, 255, 255, 0.92);
-    border: 1px solid rgba(139, 115, 85, 0.35);
-    border-radius: 6px;
-    box-shadow: none;
-    box-sizing: border-box;
-}
-
-.filter-box select {
-    padding-right: 38px;
-    background-color: rgba(255, 255, 255, 0.92);
-}
-
-.search-box input:focus,
-.filter-box input:focus,
-.filter-box select:focus {
-    outline: none;
-    border-color: var(--color-primary);
-    box-shadow: 0 0 0 3px rgba(var(--color-primary-rgb), 0.12);
-}
-
-.filter-box select:hover {
-    box-shadow: none;
-}
-
-.results-count {
-    margin-top: 10px;
-}
-
-@media (max-width: 899px) {
-    .search-filter-row {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .search-filter-row .search-box {
-        grid-column: 1 / -1;
-    }
-
-    /* 16px stops iPhones from zooming into the field */
-    .search-box input,
-    .filter-box input,
-    .filter-box select {
-        font-size: 16px;
-    }
-}
-
-@media (max-width: 480px) {
-    .search-filter-row {
-        grid-template-columns: 1fr;
     }
 }
 

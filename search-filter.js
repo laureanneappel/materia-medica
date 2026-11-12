@@ -7,7 +7,7 @@
     'use strict';
 
     // Import utilities from shared utils.js
-    const { escapeHtml, logError, logWarn, isValidArray } = window.Utils || {};
+    const { escapeHtml } = window.Utils || {};
 
     // Validate that utils.js is loaded
     if (!window.Utils) {
@@ -235,23 +235,27 @@
         });
     }
 
+    // Lower case, without accents, words separated by single spaces and starting with a space,
+    // so that `words(name).includes(words(query))` means "a word of name starts with query"
+    function words(text) {
+        return ' ' + String(text).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
+            .replace(/[\s\-/(),.'×]+/g, ' ').trim();
+    }
+
     /**
      * Filter plants based on current filters
      */
     function filterPlants(plants) {
         let filtered = [...plants];
 
-        // Apply search text filter (searches common name, botanical name, and danish/french names)
+        // Search the English, Danish, French and Latin names. A name matches when one of its words
+        // starts with the search text ("ros" finds Rosmarin, not Asclepias tuberosa), and accents are
+        // ignored ("egla" finds Églantier).
         if (currentFilters.searchText) {
-            filtered = filtered.filter(plant => {
-                const searchText = currentFilters.searchText;
-                return (
-                    plant.commonName.toLowerCase().includes(searchText) ||
-                    plant.botanicalName.toLowerCase().includes(searchText) ||
-                    (plant.danishName && plant.danishName.toLowerCase().includes(searchText)) ||
-                    (plant.frenchName && plant.frenchName.toLowerCase().includes(searchText))
-                );
-            });
+            const query = words(currentFilters.searchText);
+            filtered = filtered.filter(plant =>
+                [plant.commonName, plant.danishName, plant.frenchName, plant.botanicalName]
+                    .some(name => name && words(name).includes(query)));
         }
 
         // Apply property filters (plant must have ALL selected properties)
@@ -299,28 +303,12 @@
         }
 
         // Sort by botanical name, the card title
-        const sorted = window.PlantsRenderer && window.PlantsRenderer.sortPlants
-            ? window.PlantsRenderer.sortPlants(plants)
-            : [...plants].sort((a, b) => a.botanicalName.localeCompare(b.botanicalName));
+        const sorted = window.PlantsRenderer.sortPlants(plants);
 
-        // Use PlantsRenderer to create cards if available
-        if (window.PlantsRenderer && window.PlantsRenderer.createPlantCardHTML) {
-            const html = sorted.map(plant =>
-                window.PlantsRenderer.createPlantCardHTML(plant)
-            ).filter(Boolean).join('\n');
-            container.innerHTML = html;
-        } else {
-            // Fallback rendering if PlantsRenderer is not available
-            console.warn('[SearchFilter] PlantsRenderer not available, using fallback rendering');
-            const html = sorted.map(plant => {
-                return `
-                    <div class="plant-card ${escapeHtml(plant.status || '')}">
-                        <h3><a href="${escapeHtml(window.Utils.plantUrl(plant.fileSlug))}">${escapeHtml(plant.commonName)}</a></h3>
-                        <p class="botanical-name">${escapeHtml(plant.botanicalName)}</p>
-                    </div>`;
-            }).join('\n');
-            container.innerHTML = html;
-        }
+        container.innerHTML = sorted
+            .map(plant => window.PlantsRenderer.createPlantCardHTML(plant))
+            .filter(Boolean)
+            .join('\n');
     }
 
     /**

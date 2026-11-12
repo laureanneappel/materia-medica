@@ -31,13 +31,11 @@ npm test             # re-run automatically when files change
 
 ### Shared helpers (`utils.test.js`)
 - HTML escaping (protection against injected HTML/scripts)
-- String and array validation
-- Debouncing
-- Error and warning logging
+- Links to plant pages (`plantUrl`)
 
 ## Current results
 
-3 test files, 44 tests, all passing.
+3 test files, 35 tests, all passing.
 
 ## Test framework
 
