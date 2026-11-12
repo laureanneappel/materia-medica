@@ -38,7 +38,7 @@ The site is in **Danish** (default), **English** and **French**; the EN / DA / F
 | `plants-data.js` | All plants: names, family, properties. Edit names and families here. |
 | `i18n.js` | Translations: labels, property names, families |
 | `plant.html`, `plant-page.js` | The plant page: names, properties and family from the data, written text from `content/` |
-| `content/<fileSlug>.html` | Text written about a plant (habitat, constituents, side effects…), in three languages |
+| `content/<fileSlug>.html` | Text written about a plant (habitat, constituents, parts used…), in three languages |
 | `plants-renderer.js`, `search-filter.js` | Plant list, search and filters on the main page |
 | `property-statistics-renderer.js` | The properties page |
 | `navigation.js`, `footer.js`, `utils.js` | Menu, footer, shared helpers |
@@ -102,7 +102,7 @@ The file has one `<section>` per part of the page, and one paragraph per languag
 </section>
 ```
 
-Sections: `habitat`, `constituents`, `parts-used`, `side-effects`, `uses`, `taste`, `effect`, `references`. `side-effects` and `uses` only appear on plants that have them; `taste`, `effect` and `references` are hidden for now. Leave out the ones you haven't written yet. The layout of every plant page is in `plant.html`; change it once and all plants follow.
+Sections: `habitat`, `constituents`, `parts-used`, `uses`, `taste`, `effect`, `references`. `uses` only appears on plants that have it; `taste`, `effect` and `references` are hidden for now. Leave out the ones you haven't written yet. The layout of every plant page is in `plant.html`; change it once and all plants follow.
 
 ## Viewing locally
 

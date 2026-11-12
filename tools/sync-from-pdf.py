@@ -180,7 +180,7 @@ def data_problems(plants, pdf_properties):
 
     # Written text: content/<fileSlug>.html, optional, one per plant
     slugs = {p['fileSlug'] for p in plants}
-    sections = {'habitat', 'constituents', 'uses', 'side-effects', 'parts-used', 'taste', 'effect', 'references'}
+    sections = {'habitat', 'constituents', 'uses', 'parts-used', 'taste', 'effect', 'references'}
     for f in sorted(glob.glob(path('content', '*.html'))):
         name = os.path.basename(f)
         if name[:-5] not in slugs:
