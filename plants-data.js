@@ -79,7 +79,7 @@ window.PLANTS_DATA = [
     "status": "enabled",
     "fileSlug": "andrographis",
     "image": "images/plants/andrographis.jpg",
-    "imageCredit": "Kirtikar & Basu, Indian Medicinal Plants (1918), plate 722 · public domain"
+    "imageCredit": "AI-generated illustration"
   },
   {
     "commonName": "Angelica",
