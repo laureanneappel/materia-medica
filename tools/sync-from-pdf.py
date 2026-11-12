@@ -17,12 +17,14 @@ What it updates:
   - PDF-MASTER-PLANT-LIST.txt       every plant named in the PDF
   - plants-data.js                  properties + status of each plant
   - PLANT-NAME-TRANSLATIONS.json    Latin -> en/da/fr names (regenerated from plants-data.js)
+  - pdf-notes.js                    the PDF's notes, e.g. "(kun udvortes)" after a plant, "Samt ..." under a heading
 
 It also checks plants-data.js, i18n.js and the written text in content/*.html.
 
 Lookup tables you maintain by hand:
   - DANISH-TO-ENGLISH-PROPERTIES.json   every PDF heading -> English property name
   - PDF-NAME-CORRECTIONS.json           PDF spelling variants/typos -> name used on the site
+  - NOTE-TRANSLATIONS.json              every note in the PDF -> English and French
   - i18n.js PROPERTY_TRANSLATIONS       English property -> Danish label / French label
 
 If the PDF contains a heading or plant the tables don't know, the script stops and
@@ -43,6 +45,8 @@ NOTE_LINE = re.compile(
     r'^(Samt\b|samt\b|Se også|Sammenfatning|Markussen|Medicinske svampe|Flavanoid|'
     r'Anti-allergiske urter|=== PAGE|\d+$)'
 )
+# Notes that belong to the property heading above them ("Samt ...", "Se også ...")
+PROPERTY_NOTE = re.compile(r'^(Samt\b|samt\b|Se også|Flavanoid|Anti-allergiske urter)')
 
 
 def path(*p):
@@ -101,10 +105,17 @@ def clean_name(raw):
     return re.sub(r'\s+', ' ', s).strip()
 
 
+def plant_note(raw, cleaned):
+    """The note the PDF adds after a plant name, e.g. "kun udvortes" in "Arnica montana (kun udvortes)"."""
+    rest = raw[len(cleaned):] if raw.startswith(cleaned) else ''
+    return re.sub(r'^[\s,\-(]+|[\s,)]+$', '', rest).strip()
+
+
 def parse(lines, headings):
-    """Return {danish heading: [raw plant lines]} and a list of unknown lines."""
+    """Return {danish heading: [raw plant lines]}, a list of unknown lines and
+    {danish heading: [notes under it]}."""
     by_norm = {norm(h): h for h in headings}
-    result, unknown = {}, []
+    result, unknown, notes = {}, [], {}
     current = None
     i = 0
     lines = [l.strip() for l in lines]
@@ -112,6 +123,8 @@ def parse(lines, headings):
         line = lines[i]
         nxt = lines[i + 1] if i + 1 < len(lines) else ''
         if not line or NOTE_LINE.match(line):
+            if current and PROPERTY_NOTE.match(line):
+                notes.setdefault(current, []).append(line)
             i += 1
             continue
         if norm(line + ' ' + nxt) in by_norm:      # heading split over two lines
@@ -129,7 +142,7 @@ def parse(lines, headings):
         else:
             result[current].append(line)
         i += 1
-    return result, unknown
+    return result, unknown, notes
 
 
 def i18n_block(source, const, lang):
@@ -216,7 +229,8 @@ def main():
     plants = load_plants()
     by_latin = {p['botanicalName']: p for p in plants}
 
-    sections, unknown_lines = parse(pdf_text(pdf), da_to_en.keys())
+    sections, unknown_lines, heading_notes = parse(pdf_text(pdf), da_to_en.keys())
+    note_tr = {k: v for k, v in load_json('NOTE-TRANSLATIONS.json').items() if not k.startswith('_')}
 
     problems = []
     if unknown_lines:
@@ -227,6 +241,7 @@ def main():
 
     expected = {name: set() for name in by_latin}
     pdf_map = {}
+    plant_notes = {}      # botanical name -> {English property: Danish note}
     for heading, raw_names in sections.items():
         en = da_to_en[heading]
         names = []
@@ -238,6 +253,10 @@ def main():
                                 'PDF-NAME-CORRECTIONS.json or DANISH-TO-ENGLISH-PROPERTIES.json.' % (raw, heading))
                 continue
             expected[name].add(en)
+            note = plant_note(raw, clean_name(raw))
+            if note:
+                old = plant_notes.setdefault(name, {}).get(en)
+                plant_notes[name][en] = note if not old or old == note else old + '; ' + note
             if name not in names:
                 names.append(name)
         pdf_map[heading] = sorted(names)
@@ -250,6 +269,21 @@ def main():
                             'content/%s.html if it exists (check it for text you want to keep first).' % (name, p['commonName'], p['fileSlug']))
 
     problems += data_problems(plants, set(da_to_en.values()))
+
+    # Notes from the PDF, with their English and French translations (NOTE-TRANSLATIONS.json)
+    def translated(note):
+        t = note_tr.get(note)
+        if not t or not t.get('en') or not t.get('fr'):
+            problems.append('Note "%s" has no English/French translation in NOTE-TRANSLATIONS.json' % note)
+            return {'da': note, 'en': note, 'fr': note}
+        return {'da': note, 'en': t['en'], 'fr': t['fr']}
+    notes_out = {
+        'plants': {name: {prop: translated(n) for prop, n in sorted(v.items())} for name, v in sorted(plant_notes.items())},
+        'properties': {da_to_en[h]: [translated(n) for n in ns] for h, ns in sorted(heading_notes.items())},
+    }
+    all_notes = set(n for v in plant_notes.values() for n in v.values()) | set(n for ns in heading_notes.values() for n in ns)
+    for unused in sorted(set(note_tr) - all_notes):
+        print('  (NOTE-TRANSLATIONS.json has a note no longer in the PDF: "%s")' % unused)
 
     if problems:
         print('\nSTOPPED - nothing was written:')
@@ -278,6 +312,10 @@ def main():
         return
 
     write_json('PDF-PROPERTIES-TO-PLANTS.json', pdf_map)
+    with open(path('pdf-notes.js'), 'w', encoding='utf-8') as f:
+        f.write('// Generated by tools/sync-from-pdf.py from the reference PDF - do not edit by hand.\n')
+        f.write('// plants: botanical name -> property -> note; properties: property -> notes. Each note in da/en/fr.\n')
+        f.write('window.PDF_NOTES = ' + json.dumps(notes_out, ensure_ascii=False, indent=1) + ';\n')
     write_plants(plants)
     write_json('PLANT-NAME-TRANSLATIONS.json', {
         p['botanicalName']: {'en': p['commonName'], 'da': p.get('danishName', ''), 'fr': p.get('frenchName', '')}

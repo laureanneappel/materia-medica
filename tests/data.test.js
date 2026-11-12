@@ -106,3 +106,33 @@ describe('plant page and written text', () => {
         }
     });
 });
+
+describe('notes from the PDF (pdf-notes.js)', () => {
+    const src = read('pdf-notes.js');
+    const notes = JSON.parse(src.slice(src.indexOf('{'), src.lastIndexOf('}') + 1));
+    const byName = new Map(plants.map(p => [p.botanicalName, p]));
+    const allProps = new Set(plants.flatMap(p => p.properties));
+
+    it('every plant note belongs to a plant that has that property', () => {
+        for (const [name, props] of Object.entries(notes.plants)) {
+            expect(byName.has(name), name).toBe(true);
+            for (const prop of Object.keys(props)) {
+                expect(byName.get(name).properties.includes(prop), `${name}: ${prop}`).toBe(true);
+            }
+        }
+    });
+
+    it('every property note belongs to an existing property', () => {
+        expect(Object.keys(notes.properties).filter(p => !allProps.has(p))).toEqual([]);
+    });
+
+    it('every note exists in Danish, English and French', () => {
+        const all = [...Object.values(notes.plants).flatMap(Object.values), ...Object.values(notes.properties).flat()];
+        for (const n of all) for (const lang of ['da', 'en', 'fr']) expect(n[lang], JSON.stringify(n)).toBeTruthy();
+    });
+
+    it('plant and properties pages load the notes', () => {
+        expect(read('plant.html').includes('pdf-notes.js')).toBe(true);
+        expect(read('property-statistics.html').includes('pdf-notes.js')).toBe(true);
+    });
+});

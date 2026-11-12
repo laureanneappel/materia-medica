@@ -353,6 +353,7 @@ body {
 
 /* bg1 botanical illustration positioned at top right corner */
 body:has(main .plant-list)::after,
+body:has(main .prop-list)::after,
 body:has(.plant-detail)::after {
     content: '';
     position: fixed;
@@ -372,6 +373,7 @@ body:has(.plant-detail)::after {
 
 /* bg2 botanical illustration positioned at bottom left corner */
 body:has(main .plant-list)::before,
+body:has(main .prop-list)::before,
 body:has(.plant-detail)::before {
     content: '';
     position: fixed;
@@ -392,6 +394,7 @@ body:has(.plant-detail)::before {
 
 /* Ensure content appears above background effects */
 body:has(main .plant-list) .container,
+body:has(main .prop-list) .container,
 body:has(.plant-detail) .container {
     position: relative;
     z-index: 1;
@@ -737,6 +740,7 @@ footer .disclaimer {
 @media (max-width: 1349px) {
     /* Hide only bg2 (bottom left) background images on mobile devices - keep bg1 (top right) visible */
     body:has(main .plant-list)::before,
+    body:has(main .prop-list)::before,
     body:has(.plant-detail)::before {
         display: none !important;
     }
@@ -805,12 +809,14 @@ footer .disclaimer {
 
     /* Adjust background image positioning on large screens - bg1 on right */
     body:has(main .plant-list)::after,
+    body:has(main .prop-list)::after,
     body:has(.plant-detail)::after {
         right: calc((100vw - 1400px) / 2 - 250px);
     }
 
     /* Adjust background image positioning on large screens - bg2 on left */
     body:has(main .plant-list)::before,
+    body:has(main .prop-list)::before,
     body:has(.plant-detail)::before {
         left: calc((100vw - 1400px) / 2 - 250px);
     }
@@ -820,12 +826,14 @@ footer .disclaimer {
 @media (min-width: 1920px) {
     /* Keep background image from going too far right on very large screens - bg1 */
     body:has(main .plant-list)::after,
+    body:has(main .prop-list)::after,
     body:has(.plant-detail)::after {
         right: calc((100vw - 1400px) / 2 - 200px);
     }
 
     /* Keep background image from going too far left on very large screens - bg2 */
     body:has(main .plant-list)::before,
+    body:has(main .prop-list)::before,
     body:has(.plant-detail)::before {
         left: calc((100vw - 1400px) / 2 - 200px);
     }
@@ -954,7 +962,14 @@ footer .disclaimer {
 }
 
 .prop-list {
-    border-top: 1px solid rgba(139, 115, 85, 0.25);
+    border: 1px solid rgba(139, 115, 85, 0.25);
+    border-radius: 6px;
+    background-color: rgba(251, 249, 244, 0.92);
+    overflow: hidden;
+}
+
+.prop-list > .prop-item:last-child {
+    border-bottom: 0;
 }
 
 .prop-item {
@@ -968,7 +983,7 @@ footer .disclaimer {
     align-items: center;
     gap: 12px;
     width: 100%;
-    padding: 11px 6px;
+    padding: 11px 14px;
     font: inherit;
     text-align: left;
     color: var(--color-text);
@@ -1458,4 +1473,25 @@ header h1 {
     .plant-list .plant-card h3 {
         font-size: 1.05em;
     }
+}
+
+/* Notes from the PDF, e.g. "kun udvortes", inside a property tag or after a plant chip */
+.tag-note,
+.chip-note {
+    font-size: 0.82em;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.tag-note::before,
+.chip-note::before {
+    content: ' · ';
+    font-style: normal;
+}
+
+.prop-note {
+    margin: 10px 0 0;
+    font-size: 0.88em;
+    font-style: italic;
+    color: var(--color-secondary);
 }

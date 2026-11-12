@@ -155,6 +155,10 @@
         return n === 1 ? t('props.plantCount.one') : t('props.plantCount.many').replace('{count}', n);
     }
 
+    // Notes from the PDF (pdf-notes.js): after a plant ("kun udvortes") and under a property ("Samt ...")
+    const NOTES = window.PDF_NOTES || { plants: {}, properties: {} };
+    const noteText = (note) => note ? (note[lang()] || note.da) : '';
+
     function renderChips(item) {
         const q = state.search;
         const plants = [...item.plants].sort((a, b) => compare(plantName(a), plantName(b)));
@@ -162,9 +166,13 @@
             const url = window.Utils.plantUrl(p.fileSlug);
             const href = I18n ? I18n.withLang(url) : url;
             const hit = q && plantMatches(p, q) ? ' is-match' : '';
-            return `<a class="plant-chip${hit}" href="${escapeHtml(href)}" title="${escapeHtml(p.botanicalName)}">${escapeHtml(plantName(p))}</a>`;
+            const note = noteText((NOTES.plants[p.botanicalName] || {})[item.key]);
+            const noteHtml = note ? `<span class="chip-note">${escapeHtml(note)}</span>` : '';
+            return `<a class="plant-chip${hit}" href="${escapeHtml(href)}" title="${escapeHtml(p.botanicalName)}">${escapeHtml(plantName(p))}${noteHtml}</a>`;
         }).join('');
-        return `<div class="plant-chips">${chips}</div>`;
+        const propNotes = (NOTES.properties[item.key] || [])
+            .map(n => `<p class="prop-note">${escapeHtml(noteText(n))}</p>`).join('');
+        return `<div class="plant-chips">${chips}</div>${propNotes}`;
     }
 
     function renderItem(item, nested) {

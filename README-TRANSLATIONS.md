@@ -37,13 +37,14 @@ python3 tools/sync-from-pdf.py --check   # show differences, write nothing
 python3 tools/sync-from-pdf.py           # apply them
 ```
 
-It updates the properties in `plants-data.js`, and regenerates `PDF-PROPERTIES-TO-PLANTS.json`, `PDF-MASTER-PLANT-LIST.txt` and `PLANT-NAME-TRANSLATIONS.json`.
+It updates the properties in `plants-data.js`, writes the PDF's notes to `pdf-notes.js`, and regenerates `PDF-PROPERTIES-TO-PLANTS.json`, `PDF-MASTER-PLANT-LIST.txt` and `PLANT-NAME-TRANSLATIONS.json`.
 
 It stops without changing anything, and says what to do, when:
 - the PDF has a heading it doesn't know
 - the PDF has a plant name it doesn't know
 - a plant on the site is no longer in the PDF
 - a property, family or label has no Danish or French translation in `i18n.js`
+- a note in the PDF has no English or French translation in `NOTE-TRANSLATIONS.json`
 - a plant is missing a name or a family, or two plants share a name
 - a file in `content/` has no plant (for example an iCloud copy like `hops 2.html`), or uses an unknown section
 - text written in several languages is missing a version
@@ -53,10 +54,11 @@ It stops without changing anything, and says what to do, when:
 1. Save the new PDF in the project folder (name starting with `Egenskaber`)
 2. Run `python3 tools/sync-from-pdf.py --check`
 3. **New heading?** Add it to `DANISH-TO-ENGLISH-PROPERTIES.json`, and its Danish and French labels to `PROPERTY_TRANSLATIONS` in `i18n.js`
-4. **New spelling of a known plant?** Add it to `PDF-NAME-CORRECTIONS.json`
-5. **New plant?** Add it to `plants-data.js` (its page appears automatically)
-6. **Plant removed?** Remove it from `plants-data.js`, and its `content/` file if it has one
-7. Run `python3 tools/sync-from-pdf.py`
+4. **New note?** (e.g. "(mild)" after a plant, or "Samt ..." under a heading) Add it with its English and French translation to `NOTE-TRANSLATIONS.json`
+5. **New spelling of a known plant?** Add it to `PDF-NAME-CORRECTIONS.json`
+6. **New plant?** Add it to `plants-data.js` (its page appears automatically)
+7. **Plant removed?** Remove it from `plants-data.js`, and its `content/` file if it has one
+8. Run `python3 tools/sync-from-pdf.py`
 
 ## Lookup files
 

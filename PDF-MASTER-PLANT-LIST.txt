@@ -1,6 +1,6 @@
 PDF MASTER PLANT LIST - Egenskaber, redigeret  21.9.26.pdf
 Total: 157 unique botanical plant names
-Generated: 2026-11-11 by tools/sync-from-pdf.py
+Generated: 2026-11-12 by tools/sync-from-pdf.py
 
 1. Achillea millefolium
 2. Aesculus hippocastanum

@@ -68,9 +68,19 @@
             props.textContent = '';
             setText('[data-plant="property-count"]', list.length ? '(' + list.length + ')' : '');
             if (!list.length) props.textContent = I18n.t('plant.noProperties');
+            // Notes the PDF adds for this plant, e.g. "kun udvortes" (pdf-notes.js)
+            const notes = ((window.PDF_NOTES || {}).plants || {})[plant.botanicalName] || {};
             list.forEach(p => {
                 const tag = listLink('property', p.value, p.label);
                 tag.className = 'tag';
+                const note = notes[p.value];
+                if (note) {
+                    const small = document.createElement('span');
+                    small.className = 'tag-note';
+                    small.textContent = note[lang] || note.da;
+                    tag.append(small);
+                    tag.title = p.label + ' (' + (note[lang] || note.da) + ')';
+                }
                 props.append(tag);
             });
         }

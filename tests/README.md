@@ -35,7 +35,7 @@ npm test             # re-run automatically when files change
 
 ## Current results
 
-3 test files, 35 tests, all passing.
+3 test files, 39 tests, all passing.
 
 ## Test framework
 
